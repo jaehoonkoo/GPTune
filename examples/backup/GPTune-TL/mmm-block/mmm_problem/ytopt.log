@@ -1,0 +1,255 @@
+2022-01-19 12:46:31|10160|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-01-19 12:46:32|10160|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-01-19 12:46:35|10160|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x7f8e4d15cef0>', proc_info: {'node_ip_address': '127.0.0.1', 'raylet_ip_address': '127.0.0.1', 'redis_address': '127.0.0.1:6379', 'object_store_address': '/tmp/ray/session_2022-01-19_12-46-32_795628_10160/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-01-19_12-46-32_795628_10160/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-01-19_12-46-32_795628_10160', 'metrics_export_port': 52500, 'node_id': '032b936e9c33c5d5444ec7c36c57b931f3c0e12bf91c6cf61ddf57c6'}
+2022-01-19 12:46:35|10160|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 127.0.0.1
+2022-01-19 12:46:35|10160|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 52500,
+  'NodeID': '032b936e9c33c5d5444ec7c36c57b931f3c0e12bf91c6cf61ddf57c6',
+  'NodeManagerAddress': '127.0.0.1',
+  'NodeManagerHostname': 'jkmbpanl.local',
+  'NodeManagerPort': 52380,
+  'ObjectManagerPort': 52379,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-01-19_12-46-32_795628_10160/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-01-19_12-46-32_795628_10160/sockets/raylet',
+  'Resources': {'CPU': 8.0,
+                'memory': 4456056423.0,
+                'node:127.0.0.1': 1.0,
+                'object_store_memory': 2228028211.0},
+  'alive': True}]
+2022-01-19 12:46:35|10160|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem.Problem'}
+2022-01-19 12:46:35|10160|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    BLOCK_SIZE, Type: UniformFloat, Range: [1.0, 10.0], Default: 5.0
+
+2022-01-19 12:46:35|10160|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-01-19 12:46:35|10160|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-01-19 12:46:35|10160|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-01-19 12:46:35|10160|ERROR|ytopt:50] Uncaught exception:
+Traceback (most recent call last):
+  File "/Users/jkoo/opt/anaconda3/envs/ytune/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/Users/jkoo/opt/anaconda3/envs/ytune/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/Users/jkoo/research/github/ytopt/ytopt/ytopt/search/ambs.py", line 106, in <module>
+    search = AMBS(**vars(args))
+  File "/Users/jkoo/research/github/ytopt/ytopt/ytopt/search/ambs.py", line 53, in __init__
+    liar_strategy=liar_strategy)
+  File "/Users/jkoo/research/github/ytopt/ytopt/ytopt/search/optimizer/optimizer.py", line 43, in __init__
+    n_initial_points=n_init
+  File "/Users/jkoo/.local/lib/python3.7/site-packages/skopt/optimizer/optimizer.py", line 271, in __init__
+    self.space = Space(dimensions)
+  File "/Users/jkoo/.local/lib/python3.7/site-packages/skopt/space/space.py", line 771, in __init__
+    self.dimensions = [check_dimension(dim) for dim in dimensions]
+  File "/Users/jkoo/.local/lib/python3.7/site-packages/skopt/space/space.py", line 771, in <listcomp>
+    self.dimensions = [check_dimension(dim) for dim in dimensions]
+  File "/Users/jkoo/.local/lib/python3.7/site-packages/skopt/space/space.py", line 91, in check_dimension
+    raise ValueError("Dimension has to be a list or tuple.")
+ValueError: Dimension has to be a list or tuple.
+2022-01-19 12:47:05|10324|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-01-19 12:47:05|10324|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-01-19 12:47:08|10324|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x7fc8c50e6170>', proc_info: {'node_ip_address': '127.0.0.1', 'raylet_ip_address': '127.0.0.1', 'redis_address': '127.0.0.1:6379', 'object_store_address': '/tmp/ray/session_2022-01-19_12-47-05_836529_10324/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-01-19_12-47-05_836529_10324/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-01-19_12-47-05_836529_10324', 'metrics_export_port': 58934, 'node_id': 'e1249830128803a0692e3415fa0aa5791bd4d6ab58acdb6e9bc25cc0'}
+2022-01-19 12:47:08|10324|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 127.0.0.1
+2022-01-19 12:47:08|10324|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 58934,
+  'NodeID': 'e1249830128803a0692e3415fa0aa5791bd4d6ab58acdb6e9bc25cc0',
+  'NodeManagerAddress': '127.0.0.1',
+  'NodeManagerHostname': 'jkmbpanl.local',
+  'NodeManagerPort': 52527,
+  'ObjectManagerPort': 52526,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-01-19_12-47-05_836529_10324/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-01-19_12-47-05_836529_10324/sockets/raylet',
+  'Resources': {'CPU': 8.0,
+                'memory': 4570280756.0,
+                'node:127.0.0.1': 1.0,
+                'object_store_memory': 2285140377.0},
+  'alive': True}]
+2022-01-19 12:47:08|10324|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem.Problem'}
+2022-01-19 12:47:08|10324|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    BLOCK_SIZE, Type: UniformFloat, Range: [1.0, 10.0], Default: 5.0
+
+2022-01-19 12:47:08|10324|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-01-19 12:47:08|10324|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-01-19 12:47:08|10324|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-01-19 12:47:08|10324|ERROR|ytopt:50] Uncaught exception:
+Traceback (most recent call last):
+  File "/Users/jkoo/opt/anaconda3/envs/ytune/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/Users/jkoo/opt/anaconda3/envs/ytune/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/Users/jkoo/research/github/ytopt/ytopt/ytopt/search/ambs.py", line 106, in <module>
+    search = AMBS(**vars(args))
+  File "/Users/jkoo/research/github/ytopt/ytopt/ytopt/search/ambs.py", line 53, in __init__
+    liar_strategy=liar_strategy)
+  File "/Users/jkoo/research/github/ytopt/ytopt/ytopt/search/optimizer/optimizer.py", line 43, in __init__
+    n_initial_points=n_init
+  File "/Users/jkoo/.local/lib/python3.7/site-packages/skopt/optimizer/optimizer.py", line 271, in __init__
+    self.space = Space(dimensions)
+  File "/Users/jkoo/.local/lib/python3.7/site-packages/skopt/space/space.py", line 771, in __init__
+    self.dimensions = [check_dimension(dim) for dim in dimensions]
+  File "/Users/jkoo/.local/lib/python3.7/site-packages/skopt/space/space.py", line 771, in <listcomp>
+    self.dimensions = [check_dimension(dim) for dim in dimensions]
+  File "/Users/jkoo/.local/lib/python3.7/site-packages/skopt/space/space.py", line 91, in check_dimension
+    raise ValueError("Dimension has to be a list or tuple.")
+ValueError: Dimension has to be a list or tuple.
+2022-01-19 12:50:49|10927|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-01-19 12:50:50|10927|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-01-19 12:50:52|10927|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x7fe90f1a7170>', proc_info: {'node_ip_address': '127.0.0.1', 'raylet_ip_address': '127.0.0.1', 'redis_address': '127.0.0.1:6379', 'object_store_address': '/tmp/ray/session_2022-01-19_12-50-50_217348_10927/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-01-19_12-50-50_217348_10927/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-01-19_12-50-50_217348_10927', 'metrics_export_port': 60342, 'node_id': '3691f33e365ee1773179f6aa9d4981d3951a1b7ccab5e0379c322838'}
+2022-01-19 12:50:52|10927|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 127.0.0.1
+2022-01-19 12:50:52|10927|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 60342,
+  'NodeID': '3691f33e365ee1773179f6aa9d4981d3951a1b7ccab5e0379c322838',
+  'NodeManagerAddress': '127.0.0.1',
+  'NodeManagerHostname': 'jkmbpanl.local',
+  'NodeManagerPort': 52682,
+  'ObjectManagerPort': 52681,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-01-19_12-50-50_217348_10927/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-01-19_12-50-50_217348_10927/sockets/raylet',
+  'Resources': {'CPU': 8.0,
+                'memory': 4557452084.0,
+                'node:127.0.0.1': 1.0,
+                'object_store_memory': 2278726041.0},
+  'alive': True}]
+2022-01-19 12:50:52|10927|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem.Problem'}
+2022-01-19 12:50:52|10927|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    BLOCK_SIZE, Type: UniformFloat, Range: [1.0, 10.0], Default: 5.0
+
+2022-01-19 12:50:52|10927|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-01-19 12:50:52|10927|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-01-19 12:50:52|10927|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-01-19 12:50:52|10927|ERROR|ytopt:50] Uncaught exception:
+Traceback (most recent call last):
+  File "/Users/jkoo/opt/anaconda3/envs/ytune/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/Users/jkoo/opt/anaconda3/envs/ytune/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/Users/jkoo/research/github/ytopt/ytopt/ytopt/search/ambs.py", line 106, in <module>
+    search = AMBS(**vars(args))
+  File "/Users/jkoo/research/github/ytopt/ytopt/ytopt/search/ambs.py", line 53, in __init__
+    liar_strategy=liar_strategy)
+  File "/Users/jkoo/research/github/ytopt/ytopt/ytopt/search/optimizer/optimizer.py", line 43, in __init__
+    n_initial_points=n_init
+  File "/Users/jkoo/.local/lib/python3.7/site-packages/skopt/optimizer/optimizer.py", line 271, in __init__
+    self.space = Space(dimensions)
+  File "/Users/jkoo/.local/lib/python3.7/site-packages/skopt/space/space.py", line 771, in __init__
+    self.dimensions = [check_dimension(dim) for dim in dimensions]
+  File "/Users/jkoo/.local/lib/python3.7/site-packages/skopt/space/space.py", line 771, in <listcomp>
+    self.dimensions = [check_dimension(dim) for dim in dimensions]
+  File "/Users/jkoo/.local/lib/python3.7/site-packages/skopt/space/space.py", line 91, in check_dimension
+    raise ValueError("Dimension has to be a list or tuple.")
+ValueError: Dimension has to be a list or tuple.
+2022-01-19 12:51:17|11046|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-01-19 12:51:17|11046|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-01-19 12:51:20|11046|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x7fcf448e7170>', proc_info: {'node_ip_address': '127.0.0.1', 'raylet_ip_address': '127.0.0.1', 'redis_address': '127.0.0.1:6379', 'object_store_address': '/tmp/ray/session_2022-01-19_12-51-17_647131_11046/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-01-19_12-51-17_647131_11046/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-01-19_12-51-17_647131_11046', 'metrics_export_port': 62743, 'node_id': '67486982b5078801b625d59cbacdbaf4663dff1f2af1e72991b8745f'}
+2022-01-19 12:51:20|11046|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 127.0.0.1
+2022-01-19 12:51:20|11046|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 62743,
+  'NodeID': '67486982b5078801b625d59cbacdbaf4663dff1f2af1e72991b8745f',
+  'NodeManagerAddress': '127.0.0.1',
+  'NodeManagerHostname': 'jkmbpanl.local',
+  'NodeManagerPort': 52828,
+  'ObjectManagerPort': 52827,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-01-19_12-51-17_647131_11046/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-01-19_12-51-17_647131_11046/sockets/raylet',
+  'Resources': {'CPU': 8.0,
+                'memory': 4548661248.0,
+                'node:127.0.0.1': 1.0,
+                'object_store_memory': 2274330624.0},
+  'alive': True}]
+2022-01-19 12:51:20|11046|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem.Problem'}
+2022-01-19 12:51:20|11046|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    BLOCK_SIZE, Type: UniformInteger, Range: [1, 10], Default: 5
+
+2022-01-19 12:51:20|11046|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-01-19 12:51:20|11046|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-01-19 12:51:20|11046|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-01-19 12:51:20|11046|ERROR|ytopt:50] Uncaught exception:
+Traceback (most recent call last):
+  File "/Users/jkoo/opt/anaconda3/envs/ytune/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/Users/jkoo/opt/anaconda3/envs/ytune/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/Users/jkoo/research/github/ytopt/ytopt/ytopt/search/ambs.py", line 106, in <module>
+    search = AMBS(**vars(args))
+  File "/Users/jkoo/research/github/ytopt/ytopt/ytopt/search/ambs.py", line 53, in __init__
+    liar_strategy=liar_strategy)
+  File "/Users/jkoo/research/github/ytopt/ytopt/ytopt/search/optimizer/optimizer.py", line 43, in __init__
+    n_initial_points=n_init
+  File "/Users/jkoo/.local/lib/python3.7/site-packages/skopt/optimizer/optimizer.py", line 271, in __init__
+    self.space = Space(dimensions)
+  File "/Users/jkoo/.local/lib/python3.7/site-packages/skopt/space/space.py", line 771, in __init__
+    self.dimensions = [check_dimension(dim) for dim in dimensions]
+  File "/Users/jkoo/.local/lib/python3.7/site-packages/skopt/space/space.py", line 771, in <listcomp>
+    self.dimensions = [check_dimension(dim) for dim in dimensions]
+  File "/Users/jkoo/.local/lib/python3.7/site-packages/skopt/space/space.py", line 91, in check_dimension
+    raise ValueError("Dimension has to be a list or tuple.")
+ValueError: Dimension has to be a list or tuple.
+2022-01-19 13:24:09|15095|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-01-19 13:24:10|15095|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-01-19 13:24:13|15095|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x7fdf59ec6730>', proc_info: {'node_ip_address': '127.0.0.1', 'raylet_ip_address': '127.0.0.1', 'redis_address': '127.0.0.1:6379', 'object_store_address': '/tmp/ray/session_2022-01-19_13-24-10_582278_15095/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-01-19_13-24-10_582278_15095/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-01-19_13-24-10_582278_15095', 'metrics_export_port': 55883, 'node_id': '61c61431fdf81f853b1a77b5484298a6262f4b5e0a5322dfa02ef007'}
+2022-01-19 13:24:13|15095|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 127.0.0.1
+2022-01-19 13:24:13|15095|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 55883,
+  'NodeID': '61c61431fdf81f853b1a77b5484298a6262f4b5e0a5322dfa02ef007',
+  'NodeManagerAddress': '127.0.0.1',
+  'NodeManagerHostname': 'jkmbpanl.local',
+  'NodeManagerPort': 53228,
+  'ObjectManagerPort': 53227,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-01-19_13-24-10_582278_15095/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-01-19_13-24-10_582278_15095/sockets/raylet',
+  'Resources': {'CPU': 8.0,
+                'memory': 4821437646.0,
+                'node:127.0.0.1': 1.0,
+                'object_store_memory': 2410718822.0},
+  'alive': True}]
+2022-01-19 13:24:13|15095|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem.Problem'}
+2022-01-19 13:24:13|15095|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    BLOCK_SIZE, Type: UniformInteger, Range: [1, 10], Default: 5
+
+2022-01-19 13:24:13|15095|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-01-19 13:24:13|15095|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-01-19 13:24:13|15095|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-01-19 13:24:13|15095|ERROR|ytopt:50] Uncaught exception:
+Traceback (most recent call last):
+  File "/Users/jkoo/opt/anaconda3/envs/ytune1/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/Users/jkoo/opt/anaconda3/envs/ytune1/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/Users/jkoo/research/github/ytopt/ytopt/ytopt/search/ambs.py", line 106, in <module>
+    search = AMBS(**vars(args))
+  File "/Users/jkoo/research/github/ytopt/ytopt/ytopt/search/ambs.py", line 53, in __init__
+    liar_strategy=liar_strategy)
+  File "/Users/jkoo/research/github/ytopt/ytopt/ytopt/search/optimizer/optimizer.py", line 43, in __init__
+    n_initial_points=n_init
+  File "/Users/jkoo/.local/lib/python3.7/site-packages/skopt/optimizer/optimizer.py", line 271, in __init__
+    self.space = Space(dimensions)
+  File "/Users/jkoo/.local/lib/python3.7/site-packages/skopt/space/space.py", line 771, in __init__
+    self.dimensions = [check_dimension(dim) for dim in dimensions]
+  File "/Users/jkoo/.local/lib/python3.7/site-packages/skopt/space/space.py", line 771, in <listcomp>
+    self.dimensions = [check_dimension(dim) for dim in dimensions]
+  File "/Users/jkoo/.local/lib/python3.7/site-packages/skopt/space/space.py", line 91, in check_dimension
+    raise ValueError("Dimension has to be a list or tuple.")
+ValueError: Dimension has to be a list or tuple.

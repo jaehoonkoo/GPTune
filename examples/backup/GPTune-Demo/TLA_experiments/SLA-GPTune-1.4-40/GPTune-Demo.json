@@ -1,0 +1,4678 @@
+{
+  "tuning_problem_name": "GPTune-Demo",
+  "tuning_problem_category": "Unknown",
+  "surrogate_model": [
+    {
+      "hyperparameters": [
+        0.04882361203622242,
+        1.0,
+        0.08665331750301476,
+        1e-05,
+        0.8134257057169053
+      ],
+      "model_stats": {
+        "log_likelihood": -16.387029196684953,
+        "neg_log_likelihood": 16.387029196684953,
+        "gradients": [
+          -4.7650011210237375e-06,
+          0.0,
+          9.038243023451464e-08,
+          0.003177731457856495,
+          1.3802718572542005e-06
+        ],
+        "iterations": 39
+      },
+      "task_parameters": [
+        [
+          1.4
+        ]
+      ],
+      "function_evaluations": [
+        "492c5172-89fe-11ec-a481-acde48001122",
+        "492c72ce-89fe-11ec-a481-acde48001122",
+        "492c959c-89fe-11ec-a481-acde48001122",
+        "492cb842-89fe-11ec-a481-acde48001122",
+        "492cddcc-89fe-11ec-a481-acde48001122",
+        "492d0540-89fe-11ec-a481-acde48001122",
+        "492d3ace-89fe-11ec-a481-acde48001122",
+        "492d6cf6-89fe-11ec-a481-acde48001122",
+        "492da144-89fe-11ec-a481-acde48001122",
+        "492dd90c-89fe-11ec-a481-acde48001122",
+        "492e1ab6-89fe-11ec-a481-acde48001122",
+        "492e6336-89fe-11ec-a481-acde48001122",
+        "492ea8e6-89fe-11ec-a481-acde48001122",
+        "492efbe8-89fe-11ec-a481-acde48001122",
+        "492f4832-89fe-11ec-a481-acde48001122",
+        "492fa1ce-89fe-11ec-a481-acde48001122",
+        "492ff7a0-89fe-11ec-a481-acde48001122",
+        "49304d18-89fe-11ec-a481-acde48001122",
+        "4930b64a-89fe-11ec-a481-acde48001122",
+        "4931364c-89fe-11ec-a481-acde48001122"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 10.0,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "x",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 1.0,
+          "optimize": true
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 20,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "4a5269a6-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "hyperparameters": [
+        0.04095884827635758,
+        1.0,
+        0.7040284904177627,
+        1e-05,
+        0.007930979435710594
+      ],
+      "model_stats": {
+        "log_likelihood": -18.92242863342869,
+        "neg_log_likelihood": 18.92242863342869,
+        "gradients": [
+          -6.4002393793671786e-06,
+          0.0,
+          -9.913498249858321e-06,
+          0.0018635287361687528,
+          -1.7714150966387232e-09
+        ],
+        "iterations": 55
+      },
+      "task_parameters": [
+        [
+          1.4
+        ]
+      ],
+      "function_evaluations": [
+        "492c5172-89fe-11ec-a481-acde48001122",
+        "492c72ce-89fe-11ec-a481-acde48001122",
+        "492c959c-89fe-11ec-a481-acde48001122",
+        "492cb842-89fe-11ec-a481-acde48001122",
+        "492cddcc-89fe-11ec-a481-acde48001122",
+        "492d0540-89fe-11ec-a481-acde48001122",
+        "492d3ace-89fe-11ec-a481-acde48001122",
+        "492d6cf6-89fe-11ec-a481-acde48001122",
+        "492da144-89fe-11ec-a481-acde48001122",
+        "492dd90c-89fe-11ec-a481-acde48001122",
+        "492e1ab6-89fe-11ec-a481-acde48001122",
+        "492e6336-89fe-11ec-a481-acde48001122",
+        "492ea8e6-89fe-11ec-a481-acde48001122",
+        "492efbe8-89fe-11ec-a481-acde48001122",
+        "492f4832-89fe-11ec-a481-acde48001122",
+        "492fa1ce-89fe-11ec-a481-acde48001122",
+        "492ff7a0-89fe-11ec-a481-acde48001122",
+        "49304d18-89fe-11ec-a481-acde48001122",
+        "4930b64a-89fe-11ec-a481-acde48001122",
+        "4931364c-89fe-11ec-a481-acde48001122",
+        "4bacbd38-89fe-11ec-a481-acde48001122"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 10.0,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "x",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 1.0,
+          "optimize": true
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 24,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "4cbdfcfa-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "hyperparameters": [
+        0.04112724275040671,
+        1.0,
+        0.6711288714461394,
+        1e-05,
+        0.13819770309266266
+      ],
+      "model_stats": {
+        "log_likelihood": -19.483688629549057,
+        "neg_log_likelihood": 19.483688629549057,
+        "gradients": [
+          1.045727593407264e-08,
+          0.0,
+          -7.256422462909029e-09,
+          0.0020807908022059014,
+          -4.1299746955658634e-10
+        ],
+        "iterations": 33
+      },
+      "task_parameters": [
+        [
+          1.4
+        ]
+      ],
+      "function_evaluations": [
+        "492c5172-89fe-11ec-a481-acde48001122",
+        "492c72ce-89fe-11ec-a481-acde48001122",
+        "492c959c-89fe-11ec-a481-acde48001122",
+        "492cb842-89fe-11ec-a481-acde48001122",
+        "492cddcc-89fe-11ec-a481-acde48001122",
+        "492d0540-89fe-11ec-a481-acde48001122",
+        "492d3ace-89fe-11ec-a481-acde48001122",
+        "492d6cf6-89fe-11ec-a481-acde48001122",
+        "492da144-89fe-11ec-a481-acde48001122",
+        "492dd90c-89fe-11ec-a481-acde48001122",
+        "492e1ab6-89fe-11ec-a481-acde48001122",
+        "492e6336-89fe-11ec-a481-acde48001122",
+        "492ea8e6-89fe-11ec-a481-acde48001122",
+        "492efbe8-89fe-11ec-a481-acde48001122",
+        "492f4832-89fe-11ec-a481-acde48001122",
+        "492fa1ce-89fe-11ec-a481-acde48001122",
+        "492ff7a0-89fe-11ec-a481-acde48001122",
+        "49304d18-89fe-11ec-a481-acde48001122",
+        "4930b64a-89fe-11ec-a481-acde48001122",
+        "4931364c-89fe-11ec-a481-acde48001122",
+        "4bacbd38-89fe-11ec-a481-acde48001122",
+        "4e2ed9c4-89fe-11ec-a481-acde48001122"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 10.0,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "x",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 1.0,
+          "optimize": true
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 28,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "4f308afc-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "hyperparameters": [
+        0.0007997899862971096,
+        1.0,
+        0.9837277899005358,
+        1e-05,
+        0.2411189270221001
+      ],
+      "model_stats": {
+        "log_likelihood": -33.10735386471794,
+        "neg_log_likelihood": 33.10735386471794,
+        "gradients": [
+          7.942866610930318e-94,
+          0.0,
+          2.3177528179012773e-06,
+          2.356091635932442e-11,
+          2.739584989065627e-07
+        ],
+        "iterations": 7
+      },
+      "task_parameters": [
+        [
+          1.4
+        ]
+      ],
+      "function_evaluations": [
+        "492c5172-89fe-11ec-a481-acde48001122",
+        "492c72ce-89fe-11ec-a481-acde48001122",
+        "492c959c-89fe-11ec-a481-acde48001122",
+        "492cb842-89fe-11ec-a481-acde48001122",
+        "492cddcc-89fe-11ec-a481-acde48001122",
+        "492d0540-89fe-11ec-a481-acde48001122",
+        "492d3ace-89fe-11ec-a481-acde48001122",
+        "492d6cf6-89fe-11ec-a481-acde48001122",
+        "492da144-89fe-11ec-a481-acde48001122",
+        "492dd90c-89fe-11ec-a481-acde48001122",
+        "492e1ab6-89fe-11ec-a481-acde48001122",
+        "492e6336-89fe-11ec-a481-acde48001122",
+        "492ea8e6-89fe-11ec-a481-acde48001122",
+        "492efbe8-89fe-11ec-a481-acde48001122",
+        "492f4832-89fe-11ec-a481-acde48001122",
+        "492fa1ce-89fe-11ec-a481-acde48001122",
+        "492ff7a0-89fe-11ec-a481-acde48001122",
+        "49304d18-89fe-11ec-a481-acde48001122",
+        "4930b64a-89fe-11ec-a481-acde48001122",
+        "4931364c-89fe-11ec-a481-acde48001122",
+        "4bacbd38-89fe-11ec-a481-acde48001122",
+        "4e2ed9c4-89fe-11ec-a481-acde48001122",
+        "5086c59c-89fe-11ec-a481-acde48001122"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 10.0,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "x",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 1.0,
+          "optimize": true
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 32,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "51828bca-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "hyperparameters": [
+        0.04023815713587242,
+        1.0,
+        0.6776317934372788,
+        1e-05,
+        0.005149767223860436
+      ],
+      "model_stats": {
+        "log_likelihood": -19.716096710286408,
+        "neg_log_likelihood": 19.716096710286408,
+        "gradients": [
+          6.639742553213906e-06,
+          0.0,
+          -1.4307035982596972e-06,
+          0.002704881057580554,
+          -1.1198531251616073e-10
+        ],
+        "iterations": 41
+      },
+      "task_parameters": [
+        [
+          1.4
+        ]
+      ],
+      "function_evaluations": [
+        "492c5172-89fe-11ec-a481-acde48001122",
+        "492c72ce-89fe-11ec-a481-acde48001122",
+        "492c959c-89fe-11ec-a481-acde48001122",
+        "492cb842-89fe-11ec-a481-acde48001122",
+        "492cddcc-89fe-11ec-a481-acde48001122",
+        "492d0540-89fe-11ec-a481-acde48001122",
+        "492d3ace-89fe-11ec-a481-acde48001122",
+        "492d6cf6-89fe-11ec-a481-acde48001122",
+        "492da144-89fe-11ec-a481-acde48001122",
+        "492dd90c-89fe-11ec-a481-acde48001122",
+        "492e1ab6-89fe-11ec-a481-acde48001122",
+        "492e6336-89fe-11ec-a481-acde48001122",
+        "492ea8e6-89fe-11ec-a481-acde48001122",
+        "492efbe8-89fe-11ec-a481-acde48001122",
+        "492f4832-89fe-11ec-a481-acde48001122",
+        "492fa1ce-89fe-11ec-a481-acde48001122",
+        "492ff7a0-89fe-11ec-a481-acde48001122",
+        "49304d18-89fe-11ec-a481-acde48001122",
+        "4930b64a-89fe-11ec-a481-acde48001122",
+        "4931364c-89fe-11ec-a481-acde48001122",
+        "4bacbd38-89fe-11ec-a481-acde48001122",
+        "4e2ed9c4-89fe-11ec-a481-acde48001122",
+        "5086c59c-89fe-11ec-a481-acde48001122",
+        "52d440ea-89fe-11ec-a481-acde48001122"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 10.0,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "x",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 1.0,
+          "optimize": true
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 36,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "53e1eea6-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "hyperparameters": [
+        0.04000522044658748,
+        1.0,
+        0.21909558344544472,
+        1e-05,
+        0.6675992825403407
+      ],
+      "model_stats": {
+        "log_likelihood": -18.464167789316768,
+        "neg_log_likelihood": 18.464167789316768,
+        "gradients": [
+          7.64476911285144e-06,
+          0.0,
+          -3.236352674740317e-07,
+          0.004814755532374859,
+          -1.3166911134732118e-06
+        ],
+        "iterations": 43
+      },
+      "task_parameters": [
+        [
+          1.4
+        ]
+      ],
+      "function_evaluations": [
+        "492c5172-89fe-11ec-a481-acde48001122",
+        "492c72ce-89fe-11ec-a481-acde48001122",
+        "492c959c-89fe-11ec-a481-acde48001122",
+        "492cb842-89fe-11ec-a481-acde48001122",
+        "492cddcc-89fe-11ec-a481-acde48001122",
+        "492d0540-89fe-11ec-a481-acde48001122",
+        "492d3ace-89fe-11ec-a481-acde48001122",
+        "492d6cf6-89fe-11ec-a481-acde48001122",
+        "492da144-89fe-11ec-a481-acde48001122",
+        "492dd90c-89fe-11ec-a481-acde48001122",
+        "492e1ab6-89fe-11ec-a481-acde48001122",
+        "492e6336-89fe-11ec-a481-acde48001122",
+        "492ea8e6-89fe-11ec-a481-acde48001122",
+        "492efbe8-89fe-11ec-a481-acde48001122",
+        "492f4832-89fe-11ec-a481-acde48001122",
+        "492fa1ce-89fe-11ec-a481-acde48001122",
+        "492ff7a0-89fe-11ec-a481-acde48001122",
+        "49304d18-89fe-11ec-a481-acde48001122",
+        "4930b64a-89fe-11ec-a481-acde48001122",
+        "4931364c-89fe-11ec-a481-acde48001122",
+        "4bacbd38-89fe-11ec-a481-acde48001122",
+        "4e2ed9c4-89fe-11ec-a481-acde48001122",
+        "5086c59c-89fe-11ec-a481-acde48001122",
+        "52d440ea-89fe-11ec-a481-acde48001122",
+        "55344f06-89fe-11ec-a481-acde48001122"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 10.0,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "x",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 1.0,
+          "optimize": true
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 40,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "56333b92-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "hyperparameters": [
+        0.03887679842748487,
+        1.0,
+        0.6692724768011105,
+        1e-05,
+        0.0013324132332219742
+      ],
+      "model_stats": {
+        "log_likelihood": -19.11390967572838,
+        "neg_log_likelihood": 19.11390967572838,
+        "gradients": [
+          4.935350332857524e-07,
+          0.0,
+          -3.325484865257522e-07,
+          0.006120633501376442,
+          -1.7642485644056224e-12
+        ],
+        "iterations": 61
+      },
+      "task_parameters": [
+        [
+          1.4
+        ]
+      ],
+      "function_evaluations": [
+        "492c5172-89fe-11ec-a481-acde48001122",
+        "492c72ce-89fe-11ec-a481-acde48001122",
+        "492c959c-89fe-11ec-a481-acde48001122",
+        "492cb842-89fe-11ec-a481-acde48001122",
+        "492cddcc-89fe-11ec-a481-acde48001122",
+        "492d0540-89fe-11ec-a481-acde48001122",
+        "492d3ace-89fe-11ec-a481-acde48001122",
+        "492d6cf6-89fe-11ec-a481-acde48001122",
+        "492da144-89fe-11ec-a481-acde48001122",
+        "492dd90c-89fe-11ec-a481-acde48001122",
+        "492e1ab6-89fe-11ec-a481-acde48001122",
+        "492e6336-89fe-11ec-a481-acde48001122",
+        "492ea8e6-89fe-11ec-a481-acde48001122",
+        "492efbe8-89fe-11ec-a481-acde48001122",
+        "492f4832-89fe-11ec-a481-acde48001122",
+        "492fa1ce-89fe-11ec-a481-acde48001122",
+        "492ff7a0-89fe-11ec-a481-acde48001122",
+        "49304d18-89fe-11ec-a481-acde48001122",
+        "4930b64a-89fe-11ec-a481-acde48001122",
+        "4931364c-89fe-11ec-a481-acde48001122",
+        "4bacbd38-89fe-11ec-a481-acde48001122",
+        "4e2ed9c4-89fe-11ec-a481-acde48001122",
+        "5086c59c-89fe-11ec-a481-acde48001122",
+        "52d440ea-89fe-11ec-a481-acde48001122",
+        "55344f06-89fe-11ec-a481-acde48001122",
+        "57a6c8b8-89fe-11ec-a481-acde48001122"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 10.0,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "x",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 1.0,
+          "optimize": true
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 44,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "58e0e9fc-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "hyperparameters": [
+        0.03927755328038636,
+        1.0,
+        0.6622209336448356,
+        1e-05,
+        0.0005235006294754406
+      ],
+      "model_stats": {
+        "log_likelihood": -18.994486654063188,
+        "neg_log_likelihood": 18.994486654063188,
+        "gradients": [
+          -1.1298402702634124e-06,
+          0.0,
+          1.9081786195584982e-07,
+          0.007807136638008947,
+          1.5793568896134902e-13
+        ],
+        "iterations": 55
+      },
+      "task_parameters": [
+        [
+          1.4
+        ]
+      ],
+      "function_evaluations": [
+        "492c5172-89fe-11ec-a481-acde48001122",
+        "492c72ce-89fe-11ec-a481-acde48001122",
+        "492c959c-89fe-11ec-a481-acde48001122",
+        "492cb842-89fe-11ec-a481-acde48001122",
+        "492cddcc-89fe-11ec-a481-acde48001122",
+        "492d0540-89fe-11ec-a481-acde48001122",
+        "492d3ace-89fe-11ec-a481-acde48001122",
+        "492d6cf6-89fe-11ec-a481-acde48001122",
+        "492da144-89fe-11ec-a481-acde48001122",
+        "492dd90c-89fe-11ec-a481-acde48001122",
+        "492e1ab6-89fe-11ec-a481-acde48001122",
+        "492e6336-89fe-11ec-a481-acde48001122",
+        "492ea8e6-89fe-11ec-a481-acde48001122",
+        "492efbe8-89fe-11ec-a481-acde48001122",
+        "492f4832-89fe-11ec-a481-acde48001122",
+        "492fa1ce-89fe-11ec-a481-acde48001122",
+        "492ff7a0-89fe-11ec-a481-acde48001122",
+        "49304d18-89fe-11ec-a481-acde48001122",
+        "4930b64a-89fe-11ec-a481-acde48001122",
+        "4931364c-89fe-11ec-a481-acde48001122",
+        "4bacbd38-89fe-11ec-a481-acde48001122",
+        "4e2ed9c4-89fe-11ec-a481-acde48001122",
+        "5086c59c-89fe-11ec-a481-acde48001122",
+        "52d440ea-89fe-11ec-a481-acde48001122",
+        "55344f06-89fe-11ec-a481-acde48001122",
+        "57a6c8b8-89fe-11ec-a481-acde48001122",
+        "5a7120b6-89fe-11ec-a481-acde48001122"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 10.0,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "x",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 1.0,
+          "optimize": true
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 49,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "5b7b4cde-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "hyperparameters": [
+        0.03794110118624036,
+        1.0,
+        0.5257139339370606,
+        1e-05,
+        0.32603585543097174
+      ],
+      "model_stats": {
+        "log_likelihood": -19.089621023232006,
+        "neg_log_likelihood": 19.089621023232006,
+        "gradients": [
+          9.361390565062942e-06,
+          0.0,
+          -1.0961894325589583e-06,
+          0.006603876816407435,
+          -4.4329903081674615e-07
+        ],
+        "iterations": 36
+      },
+      "task_parameters": [
+        [
+          1.4
+        ]
+      ],
+      "function_evaluations": [
+        "492c5172-89fe-11ec-a481-acde48001122",
+        "492c72ce-89fe-11ec-a481-acde48001122",
+        "492c959c-89fe-11ec-a481-acde48001122",
+        "492cb842-89fe-11ec-a481-acde48001122",
+        "492cddcc-89fe-11ec-a481-acde48001122",
+        "492d0540-89fe-11ec-a481-acde48001122",
+        "492d3ace-89fe-11ec-a481-acde48001122",
+        "492d6cf6-89fe-11ec-a481-acde48001122",
+        "492da144-89fe-11ec-a481-acde48001122",
+        "492dd90c-89fe-11ec-a481-acde48001122",
+        "492e1ab6-89fe-11ec-a481-acde48001122",
+        "492e6336-89fe-11ec-a481-acde48001122",
+        "492ea8e6-89fe-11ec-a481-acde48001122",
+        "492efbe8-89fe-11ec-a481-acde48001122",
+        "492f4832-89fe-11ec-a481-acde48001122",
+        "492fa1ce-89fe-11ec-a481-acde48001122",
+        "492ff7a0-89fe-11ec-a481-acde48001122",
+        "49304d18-89fe-11ec-a481-acde48001122",
+        "4930b64a-89fe-11ec-a481-acde48001122",
+        "4931364c-89fe-11ec-a481-acde48001122",
+        "4bacbd38-89fe-11ec-a481-acde48001122",
+        "4e2ed9c4-89fe-11ec-a481-acde48001122",
+        "5086c59c-89fe-11ec-a481-acde48001122",
+        "52d440ea-89fe-11ec-a481-acde48001122",
+        "55344f06-89fe-11ec-a481-acde48001122",
+        "57a6c8b8-89fe-11ec-a481-acde48001122",
+        "5a7120b6-89fe-11ec-a481-acde48001122",
+        "5ccc77ac-89fe-11ec-a481-acde48001122"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 10.0,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "x",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 1.0,
+          "optimize": true
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 52,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "5dc91480-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "hyperparameters": [
+        0.038147159060459665,
+        1.0,
+        0.05155506604462406,
+        1e-05,
+        0.753977342975869
+      ],
+      "model_stats": {
+        "log_likelihood": -18.695733772703818,
+        "neg_log_likelihood": 18.695733772703818,
+        "gradients": [
+          -8.720275294080756e-08,
+          0.0,
+          6.115195905209703e-09,
+          0.007942934915674802,
+          1.3486091710035453e-07
+        ],
+        "iterations": 51
+      },
+      "task_parameters": [
+        [
+          1.4
+        ]
+      ],
+      "function_evaluations": [
+        "492c5172-89fe-11ec-a481-acde48001122",
+        "492c72ce-89fe-11ec-a481-acde48001122",
+        "492c959c-89fe-11ec-a481-acde48001122",
+        "492cb842-89fe-11ec-a481-acde48001122",
+        "492cddcc-89fe-11ec-a481-acde48001122",
+        "492d0540-89fe-11ec-a481-acde48001122",
+        "492d3ace-89fe-11ec-a481-acde48001122",
+        "492d6cf6-89fe-11ec-a481-acde48001122",
+        "492da144-89fe-11ec-a481-acde48001122",
+        "492dd90c-89fe-11ec-a481-acde48001122",
+        "492e1ab6-89fe-11ec-a481-acde48001122",
+        "492e6336-89fe-11ec-a481-acde48001122",
+        "492ea8e6-89fe-11ec-a481-acde48001122",
+        "492efbe8-89fe-11ec-a481-acde48001122",
+        "492f4832-89fe-11ec-a481-acde48001122",
+        "492fa1ce-89fe-11ec-a481-acde48001122",
+        "492ff7a0-89fe-11ec-a481-acde48001122",
+        "49304d18-89fe-11ec-a481-acde48001122",
+        "4930b64a-89fe-11ec-a481-acde48001122",
+        "4931364c-89fe-11ec-a481-acde48001122",
+        "4bacbd38-89fe-11ec-a481-acde48001122",
+        "4e2ed9c4-89fe-11ec-a481-acde48001122",
+        "5086c59c-89fe-11ec-a481-acde48001122",
+        "52d440ea-89fe-11ec-a481-acde48001122",
+        "55344f06-89fe-11ec-a481-acde48001122",
+        "57a6c8b8-89fe-11ec-a481-acde48001122",
+        "5a7120b6-89fe-11ec-a481-acde48001122",
+        "5ccc77ac-89fe-11ec-a481-acde48001122",
+        "5f1b495c-89fe-11ec-a481-acde48001122"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 10.0,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "x",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 1.0,
+          "optimize": true
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 56,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "601e53c6-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "hyperparameters": [
+        0.038419548582607044,
+        1.0,
+        0.6010509544254352,
+        1e-05,
+        0.11381521833946748
+      ],
+      "model_stats": {
+        "log_likelihood": -18.09195785357035,
+        "neg_log_likelihood": 18.09195785357035,
+        "gradients": [
+          6.375695358329381e-07,
+          0.0,
+          2.6755427002811416e-06,
+          0.00960805948485347,
+          1.1532707377970297e-07
+        ],
+        "iterations": 51
+      },
+      "task_parameters": [
+        [
+          1.4
+        ]
+      ],
+      "function_evaluations": [
+        "492c5172-89fe-11ec-a481-acde48001122",
+        "492c72ce-89fe-11ec-a481-acde48001122",
+        "492c959c-89fe-11ec-a481-acde48001122",
+        "492cb842-89fe-11ec-a481-acde48001122",
+        "492cddcc-89fe-11ec-a481-acde48001122",
+        "492d0540-89fe-11ec-a481-acde48001122",
+        "492d3ace-89fe-11ec-a481-acde48001122",
+        "492d6cf6-89fe-11ec-a481-acde48001122",
+        "492da144-89fe-11ec-a481-acde48001122",
+        "492dd90c-89fe-11ec-a481-acde48001122",
+        "492e1ab6-89fe-11ec-a481-acde48001122",
+        "492e6336-89fe-11ec-a481-acde48001122",
+        "492ea8e6-89fe-11ec-a481-acde48001122",
+        "492efbe8-89fe-11ec-a481-acde48001122",
+        "492f4832-89fe-11ec-a481-acde48001122",
+        "492fa1ce-89fe-11ec-a481-acde48001122",
+        "492ff7a0-89fe-11ec-a481-acde48001122",
+        "49304d18-89fe-11ec-a481-acde48001122",
+        "4930b64a-89fe-11ec-a481-acde48001122",
+        "4931364c-89fe-11ec-a481-acde48001122",
+        "4bacbd38-89fe-11ec-a481-acde48001122",
+        "4e2ed9c4-89fe-11ec-a481-acde48001122",
+        "5086c59c-89fe-11ec-a481-acde48001122",
+        "52d440ea-89fe-11ec-a481-acde48001122",
+        "55344f06-89fe-11ec-a481-acde48001122",
+        "57a6c8b8-89fe-11ec-a481-acde48001122",
+        "5a7120b6-89fe-11ec-a481-acde48001122",
+        "5ccc77ac-89fe-11ec-a481-acde48001122",
+        "5f1b495c-89fe-11ec-a481-acde48001122",
+        "616f34e8-89fe-11ec-a481-acde48001122"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 10.0,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "x",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 1.0,
+          "optimize": true
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 17,
+        "tm_sec": 0,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "627ae9fe-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "hyperparameters": [
+        0.03727982930283103,
+        1.0,
+        0.4543946116329887,
+        1e-05,
+        0.37266006999213813
+      ],
+      "model_stats": {
+        "log_likelihood": -17.72564029089738,
+        "neg_log_likelihood": 17.72564029089738,
+        "gradients": [
+          -2.3863877984808823e-06,
+          0.0,
+          3.410076345744528e-07,
+          0.013968263541623152,
+          2.0844243309170452e-07
+        ],
+        "iterations": 78
+      },
+      "task_parameters": [
+        [
+          1.4
+        ]
+      ],
+      "function_evaluations": [
+        "492c5172-89fe-11ec-a481-acde48001122",
+        "492c72ce-89fe-11ec-a481-acde48001122",
+        "492c959c-89fe-11ec-a481-acde48001122",
+        "492cb842-89fe-11ec-a481-acde48001122",
+        "492cddcc-89fe-11ec-a481-acde48001122",
+        "492d0540-89fe-11ec-a481-acde48001122",
+        "492d3ace-89fe-11ec-a481-acde48001122",
+        "492d6cf6-89fe-11ec-a481-acde48001122",
+        "492da144-89fe-11ec-a481-acde48001122",
+        "492dd90c-89fe-11ec-a481-acde48001122",
+        "492e1ab6-89fe-11ec-a481-acde48001122",
+        "492e6336-89fe-11ec-a481-acde48001122",
+        "492ea8e6-89fe-11ec-a481-acde48001122",
+        "492efbe8-89fe-11ec-a481-acde48001122",
+        "492f4832-89fe-11ec-a481-acde48001122",
+        "492fa1ce-89fe-11ec-a481-acde48001122",
+        "492ff7a0-89fe-11ec-a481-acde48001122",
+        "49304d18-89fe-11ec-a481-acde48001122",
+        "4930b64a-89fe-11ec-a481-acde48001122",
+        "4931364c-89fe-11ec-a481-acde48001122",
+        "4bacbd38-89fe-11ec-a481-acde48001122",
+        "4e2ed9c4-89fe-11ec-a481-acde48001122",
+        "5086c59c-89fe-11ec-a481-acde48001122",
+        "52d440ea-89fe-11ec-a481-acde48001122",
+        "55344f06-89fe-11ec-a481-acde48001122",
+        "57a6c8b8-89fe-11ec-a481-acde48001122",
+        "5a7120b6-89fe-11ec-a481-acde48001122",
+        "5ccc77ac-89fe-11ec-a481-acde48001122",
+        "5f1b495c-89fe-11ec-a481-acde48001122",
+        "616f34e8-89fe-11ec-a481-acde48001122",
+        "640ffdfe-89fe-11ec-a481-acde48001122"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 10.0,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "x",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 1.0,
+          "optimize": true
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 17,
+        "tm_sec": 5,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "653b03ea-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "hyperparameters": [
+        0.03727350720383912,
+        1.0,
+        0.5181324539616082,
+        1e-05,
+        0.24727936803374292
+      ],
+      "model_stats": {
+        "log_likelihood": -17.21215666045583,
+        "neg_log_likelihood": 17.21215666045583,
+        "gradients": [
+          -2.0103859894484498e-07,
+          0.0,
+          -1.3043782054467101e-08,
+          0.015876621557604536,
+          -3.078823196389635e-09
+        ],
+        "iterations": 31
+      },
+      "task_parameters": [
+        [
+          1.4
+        ]
+      ],
+      "function_evaluations": [
+        "492c5172-89fe-11ec-a481-acde48001122",
+        "492c72ce-89fe-11ec-a481-acde48001122",
+        "492c959c-89fe-11ec-a481-acde48001122",
+        "492cb842-89fe-11ec-a481-acde48001122",
+        "492cddcc-89fe-11ec-a481-acde48001122",
+        "492d0540-89fe-11ec-a481-acde48001122",
+        "492d3ace-89fe-11ec-a481-acde48001122",
+        "492d6cf6-89fe-11ec-a481-acde48001122",
+        "492da144-89fe-11ec-a481-acde48001122",
+        "492dd90c-89fe-11ec-a481-acde48001122",
+        "492e1ab6-89fe-11ec-a481-acde48001122",
+        "492e6336-89fe-11ec-a481-acde48001122",
+        "492ea8e6-89fe-11ec-a481-acde48001122",
+        "492efbe8-89fe-11ec-a481-acde48001122",
+        "492f4832-89fe-11ec-a481-acde48001122",
+        "492fa1ce-89fe-11ec-a481-acde48001122",
+        "492ff7a0-89fe-11ec-a481-acde48001122",
+        "49304d18-89fe-11ec-a481-acde48001122",
+        "4930b64a-89fe-11ec-a481-acde48001122",
+        "4931364c-89fe-11ec-a481-acde48001122",
+        "4bacbd38-89fe-11ec-a481-acde48001122",
+        "4e2ed9c4-89fe-11ec-a481-acde48001122",
+        "5086c59c-89fe-11ec-a481-acde48001122",
+        "52d440ea-89fe-11ec-a481-acde48001122",
+        "55344f06-89fe-11ec-a481-acde48001122",
+        "57a6c8b8-89fe-11ec-a481-acde48001122",
+        "5a7120b6-89fe-11ec-a481-acde48001122",
+        "5ccc77ac-89fe-11ec-a481-acde48001122",
+        "5f1b495c-89fe-11ec-a481-acde48001122",
+        "616f34e8-89fe-11ec-a481-acde48001122",
+        "640ffdfe-89fe-11ec-a481-acde48001122",
+        "66e6fe6a-89fe-11ec-a481-acde48001122"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 10.0,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "x",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 1.0,
+          "optimize": true
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 17,
+        "tm_sec": 10,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "6809883a-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "hyperparameters": [
+        0.037255017190288835,
+        1.0,
+        0.21793889841735123,
+        4.21902972027461e-06,
+        0.601478256335865
+      ],
+      "model_stats": {
+        "log_likelihood": -12.808386197707257,
+        "neg_log_likelihood": 12.808386197707257,
+        "gradients": [
+          1.002479936813571e-05,
+          0.0,
+          8.730202694096079e-08,
+          -4.6264672325102563e-07,
+          2.898406137319398e-07
+        ],
+        "iterations": 95
+      },
+      "task_parameters": [
+        [
+          1.4
+        ]
+      ],
+      "function_evaluations": [
+        "492c5172-89fe-11ec-a481-acde48001122",
+        "492c72ce-89fe-11ec-a481-acde48001122",
+        "492c959c-89fe-11ec-a481-acde48001122",
+        "492cb842-89fe-11ec-a481-acde48001122",
+        "492cddcc-89fe-11ec-a481-acde48001122",
+        "492d0540-89fe-11ec-a481-acde48001122",
+        "492d3ace-89fe-11ec-a481-acde48001122",
+        "492d6cf6-89fe-11ec-a481-acde48001122",
+        "492da144-89fe-11ec-a481-acde48001122",
+        "492dd90c-89fe-11ec-a481-acde48001122",
+        "492e1ab6-89fe-11ec-a481-acde48001122",
+        "492e6336-89fe-11ec-a481-acde48001122",
+        "492ea8e6-89fe-11ec-a481-acde48001122",
+        "492efbe8-89fe-11ec-a481-acde48001122",
+        "492f4832-89fe-11ec-a481-acde48001122",
+        "492fa1ce-89fe-11ec-a481-acde48001122",
+        "492ff7a0-89fe-11ec-a481-acde48001122",
+        "49304d18-89fe-11ec-a481-acde48001122",
+        "4930b64a-89fe-11ec-a481-acde48001122",
+        "4931364c-89fe-11ec-a481-acde48001122",
+        "4bacbd38-89fe-11ec-a481-acde48001122",
+        "4e2ed9c4-89fe-11ec-a481-acde48001122",
+        "5086c59c-89fe-11ec-a481-acde48001122",
+        "52d440ea-89fe-11ec-a481-acde48001122",
+        "55344f06-89fe-11ec-a481-acde48001122",
+        "57a6c8b8-89fe-11ec-a481-acde48001122",
+        "5a7120b6-89fe-11ec-a481-acde48001122",
+        "5ccc77ac-89fe-11ec-a481-acde48001122",
+        "5f1b495c-89fe-11ec-a481-acde48001122",
+        "616f34e8-89fe-11ec-a481-acde48001122",
+        "640ffdfe-89fe-11ec-a481-acde48001122",
+        "66e6fe6a-89fe-11ec-a481-acde48001122",
+        "6983b37a-89fe-11ec-a481-acde48001122"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 10.0,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "x",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 1.0,
+          "optimize": true
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 17,
+        "tm_sec": 14,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "6adf93c4-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "hyperparameters": [
+        0.036763063836118846,
+        1.0,
+        0.5850708920466091,
+        1e-05,
+        0.08394846662814545
+      ],
+      "model_stats": {
+        "log_likelihood": -14.859437441334517,
+        "neg_log_likelihood": 14.859437441334517,
+        "gradients": [
+          -9.774214504432166e-07,
+          0.0,
+          4.2040483094751835e-07,
+          4.635901916045132,
+          1.0129042493645102e-08
+        ],
+        "iterations": 39
+      },
+      "task_parameters": [
+        [
+          1.4
+        ]
+      ],
+      "function_evaluations": [
+        "492c5172-89fe-11ec-a481-acde48001122",
+        "492c72ce-89fe-11ec-a481-acde48001122",
+        "492c959c-89fe-11ec-a481-acde48001122",
+        "492cb842-89fe-11ec-a481-acde48001122",
+        "492cddcc-89fe-11ec-a481-acde48001122",
+        "492d0540-89fe-11ec-a481-acde48001122",
+        "492d3ace-89fe-11ec-a481-acde48001122",
+        "492d6cf6-89fe-11ec-a481-acde48001122",
+        "492da144-89fe-11ec-a481-acde48001122",
+        "492dd90c-89fe-11ec-a481-acde48001122",
+        "492e1ab6-89fe-11ec-a481-acde48001122",
+        "492e6336-89fe-11ec-a481-acde48001122",
+        "492ea8e6-89fe-11ec-a481-acde48001122",
+        "492efbe8-89fe-11ec-a481-acde48001122",
+        "492f4832-89fe-11ec-a481-acde48001122",
+        "492fa1ce-89fe-11ec-a481-acde48001122",
+        "492ff7a0-89fe-11ec-a481-acde48001122",
+        "49304d18-89fe-11ec-a481-acde48001122",
+        "4930b64a-89fe-11ec-a481-acde48001122",
+        "4931364c-89fe-11ec-a481-acde48001122",
+        "4bacbd38-89fe-11ec-a481-acde48001122",
+        "4e2ed9c4-89fe-11ec-a481-acde48001122",
+        "5086c59c-89fe-11ec-a481-acde48001122",
+        "52d440ea-89fe-11ec-a481-acde48001122",
+        "55344f06-89fe-11ec-a481-acde48001122",
+        "57a6c8b8-89fe-11ec-a481-acde48001122",
+        "5a7120b6-89fe-11ec-a481-acde48001122",
+        "5ccc77ac-89fe-11ec-a481-acde48001122",
+        "5f1b495c-89fe-11ec-a481-acde48001122",
+        "616f34e8-89fe-11ec-a481-acde48001122",
+        "640ffdfe-89fe-11ec-a481-acde48001122",
+        "66e6fe6a-89fe-11ec-a481-acde48001122",
+        "6983b37a-89fe-11ec-a481-acde48001122",
+        "6c86a55a-89fe-11ec-a481-acde48001122"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 10.0,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "x",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 1.0,
+          "optimize": true
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 17,
+        "tm_sec": 19,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "6dcc7d4a-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "hyperparameters": [
+        0.03706769446383728,
+        1.0,
+        0.5641918363875199,
+        1e-05,
+        0.06997637848334722
+      ],
+      "model_stats": {
+        "log_likelihood": -15.060935040204711,
+        "neg_log_likelihood": 15.060935040204711,
+        "gradients": [
+          -1.0136918717762455e-05,
+          0.0,
+          1.0883976244713267e-06,
+          6.960410305016446,
+          1.889142819955225e-08
+        ],
+        "iterations": 103
+      },
+      "task_parameters": [
+        [
+          1.4
+        ]
+      ],
+      "function_evaluations": [
+        "492c5172-89fe-11ec-a481-acde48001122",
+        "492c72ce-89fe-11ec-a481-acde48001122",
+        "492c959c-89fe-11ec-a481-acde48001122",
+        "492cb842-89fe-11ec-a481-acde48001122",
+        "492cddcc-89fe-11ec-a481-acde48001122",
+        "492d0540-89fe-11ec-a481-acde48001122",
+        "492d3ace-89fe-11ec-a481-acde48001122",
+        "492d6cf6-89fe-11ec-a481-acde48001122",
+        "492da144-89fe-11ec-a481-acde48001122",
+        "492dd90c-89fe-11ec-a481-acde48001122",
+        "492e1ab6-89fe-11ec-a481-acde48001122",
+        "492e6336-89fe-11ec-a481-acde48001122",
+        "492ea8e6-89fe-11ec-a481-acde48001122",
+        "492efbe8-89fe-11ec-a481-acde48001122",
+        "492f4832-89fe-11ec-a481-acde48001122",
+        "492fa1ce-89fe-11ec-a481-acde48001122",
+        "492ff7a0-89fe-11ec-a481-acde48001122",
+        "49304d18-89fe-11ec-a481-acde48001122",
+        "4930b64a-89fe-11ec-a481-acde48001122",
+        "4931364c-89fe-11ec-a481-acde48001122",
+        "4bacbd38-89fe-11ec-a481-acde48001122",
+        "4e2ed9c4-89fe-11ec-a481-acde48001122",
+        "5086c59c-89fe-11ec-a481-acde48001122",
+        "52d440ea-89fe-11ec-a481-acde48001122",
+        "55344f06-89fe-11ec-a481-acde48001122",
+        "57a6c8b8-89fe-11ec-a481-acde48001122",
+        "5a7120b6-89fe-11ec-a481-acde48001122",
+        "5ccc77ac-89fe-11ec-a481-acde48001122",
+        "5f1b495c-89fe-11ec-a481-acde48001122",
+        "616f34e8-89fe-11ec-a481-acde48001122",
+        "640ffdfe-89fe-11ec-a481-acde48001122",
+        "66e6fe6a-89fe-11ec-a481-acde48001122",
+        "6983b37a-89fe-11ec-a481-acde48001122",
+        "6c86a55a-89fe-11ec-a481-acde48001122",
+        "6f6951dc-89fe-11ec-a481-acde48001122"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 10.0,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "x",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 1.0,
+          "optimize": true
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 17,
+        "tm_sec": 24,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "70b26592-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "hyperparameters": [
+        0.03730782207034889,
+        1.0,
+        0.049756826797241464,
+        1e-05,
+        0.7170303001965928
+      ],
+      "model_stats": {
+        "log_likelihood": -13.566665738021335,
+        "neg_log_likelihood": 13.566665738021335,
+        "gradients": [
+          2.7193475034437142e-05,
+          0.0,
+          -1.3879478943934487e-07,
+          7.0291622000406155,
+          -2.8683670763030022e-06
+        ],
+        "iterations": 152
+      },
+      "task_parameters": [
+        [
+          1.4
+        ]
+      ],
+      "function_evaluations": [
+        "492c5172-89fe-11ec-a481-acde48001122",
+        "492c72ce-89fe-11ec-a481-acde48001122",
+        "492c959c-89fe-11ec-a481-acde48001122",
+        "492cb842-89fe-11ec-a481-acde48001122",
+        "492cddcc-89fe-11ec-a481-acde48001122",
+        "492d0540-89fe-11ec-a481-acde48001122",
+        "492d3ace-89fe-11ec-a481-acde48001122",
+        "492d6cf6-89fe-11ec-a481-acde48001122",
+        "492da144-89fe-11ec-a481-acde48001122",
+        "492dd90c-89fe-11ec-a481-acde48001122",
+        "492e1ab6-89fe-11ec-a481-acde48001122",
+        "492e6336-89fe-11ec-a481-acde48001122",
+        "492ea8e6-89fe-11ec-a481-acde48001122",
+        "492efbe8-89fe-11ec-a481-acde48001122",
+        "492f4832-89fe-11ec-a481-acde48001122",
+        "492fa1ce-89fe-11ec-a481-acde48001122",
+        "492ff7a0-89fe-11ec-a481-acde48001122",
+        "49304d18-89fe-11ec-a481-acde48001122",
+        "4930b64a-89fe-11ec-a481-acde48001122",
+        "4931364c-89fe-11ec-a481-acde48001122",
+        "4bacbd38-89fe-11ec-a481-acde48001122",
+        "4e2ed9c4-89fe-11ec-a481-acde48001122",
+        "5086c59c-89fe-11ec-a481-acde48001122",
+        "52d440ea-89fe-11ec-a481-acde48001122",
+        "55344f06-89fe-11ec-a481-acde48001122",
+        "57a6c8b8-89fe-11ec-a481-acde48001122",
+        "5a7120b6-89fe-11ec-a481-acde48001122",
+        "5ccc77ac-89fe-11ec-a481-acde48001122",
+        "5f1b495c-89fe-11ec-a481-acde48001122",
+        "616f34e8-89fe-11ec-a481-acde48001122",
+        "640ffdfe-89fe-11ec-a481-acde48001122",
+        "66e6fe6a-89fe-11ec-a481-acde48001122",
+        "6983b37a-89fe-11ec-a481-acde48001122",
+        "6c86a55a-89fe-11ec-a481-acde48001122",
+        "6f6951dc-89fe-11ec-a481-acde48001122",
+        "725a399c-89fe-11ec-a481-acde48001122"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 10.0,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "x",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 1.0,
+          "optimize": true
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 17,
+        "tm_sec": 29,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "73720a12-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "hyperparameters": [
+        0.037496816833807366,
+        1.0,
+        0.07653835840831846,
+        1e-05,
+        0.6957549564165966
+      ],
+      "model_stats": {
+        "log_likelihood": -11.512762897547937,
+        "neg_log_likelihood": 11.512762897547937,
+        "gradients": [
+          -5.134835704190266e-06,
+          0.0,
+          3.192425754861006e-07,
+          7.0751983699966745,
+          4.038344457057974e-06
+        ],
+        "iterations": 34
+      },
+      "task_parameters": [
+        [
+          1.4
+        ]
+      ],
+      "function_evaluations": [
+        "492c5172-89fe-11ec-a481-acde48001122",
+        "492c72ce-89fe-11ec-a481-acde48001122",
+        "492c959c-89fe-11ec-a481-acde48001122",
+        "492cb842-89fe-11ec-a481-acde48001122",
+        "492cddcc-89fe-11ec-a481-acde48001122",
+        "492d0540-89fe-11ec-a481-acde48001122",
+        "492d3ace-89fe-11ec-a481-acde48001122",
+        "492d6cf6-89fe-11ec-a481-acde48001122",
+        "492da144-89fe-11ec-a481-acde48001122",
+        "492dd90c-89fe-11ec-a481-acde48001122",
+        "492e1ab6-89fe-11ec-a481-acde48001122",
+        "492e6336-89fe-11ec-a481-acde48001122",
+        "492ea8e6-89fe-11ec-a481-acde48001122",
+        "492efbe8-89fe-11ec-a481-acde48001122",
+        "492f4832-89fe-11ec-a481-acde48001122",
+        "492fa1ce-89fe-11ec-a481-acde48001122",
+        "492ff7a0-89fe-11ec-a481-acde48001122",
+        "49304d18-89fe-11ec-a481-acde48001122",
+        "4930b64a-89fe-11ec-a481-acde48001122",
+        "4931364c-89fe-11ec-a481-acde48001122",
+        "4bacbd38-89fe-11ec-a481-acde48001122",
+        "4e2ed9c4-89fe-11ec-a481-acde48001122",
+        "5086c59c-89fe-11ec-a481-acde48001122",
+        "52d440ea-89fe-11ec-a481-acde48001122",
+        "55344f06-89fe-11ec-a481-acde48001122",
+        "57a6c8b8-89fe-11ec-a481-acde48001122",
+        "5a7120b6-89fe-11ec-a481-acde48001122",
+        "5ccc77ac-89fe-11ec-a481-acde48001122",
+        "5f1b495c-89fe-11ec-a481-acde48001122",
+        "616f34e8-89fe-11ec-a481-acde48001122",
+        "640ffdfe-89fe-11ec-a481-acde48001122",
+        "66e6fe6a-89fe-11ec-a481-acde48001122",
+        "6983b37a-89fe-11ec-a481-acde48001122",
+        "6c86a55a-89fe-11ec-a481-acde48001122",
+        "6f6951dc-89fe-11ec-a481-acde48001122",
+        "725a399c-89fe-11ec-a481-acde48001122",
+        "74c8f916-89fe-11ec-a481-acde48001122"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 10.0,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "x",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 1.0,
+          "optimize": true
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 17,
+        "tm_sec": 33,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "75f474e6-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "hyperparameters": [
+        0.03762506221593623,
+        1.0,
+        0.5491288677672913,
+        1e-05,
+        0.09634264319837232
+      ],
+      "model_stats": {
+        "log_likelihood": -9.70870448757806,
+        "neg_log_likelihood": 9.70870448757806,
+        "gradients": [
+          2.9916608722354498e-06,
+          0.0,
+          1.751216700540681e-07,
+          7.105707177251784,
+          5.918914025571098e-09
+        ],
+        "iterations": 48
+      },
+      "task_parameters": [
+        [
+          1.4
+        ]
+      ],
+      "function_evaluations": [
+        "492c5172-89fe-11ec-a481-acde48001122",
+        "492c72ce-89fe-11ec-a481-acde48001122",
+        "492c959c-89fe-11ec-a481-acde48001122",
+        "492cb842-89fe-11ec-a481-acde48001122",
+        "492cddcc-89fe-11ec-a481-acde48001122",
+        "492d0540-89fe-11ec-a481-acde48001122",
+        "492d3ace-89fe-11ec-a481-acde48001122",
+        "492d6cf6-89fe-11ec-a481-acde48001122",
+        "492da144-89fe-11ec-a481-acde48001122",
+        "492dd90c-89fe-11ec-a481-acde48001122",
+        "492e1ab6-89fe-11ec-a481-acde48001122",
+        "492e6336-89fe-11ec-a481-acde48001122",
+        "492ea8e6-89fe-11ec-a481-acde48001122",
+        "492efbe8-89fe-11ec-a481-acde48001122",
+        "492f4832-89fe-11ec-a481-acde48001122",
+        "492fa1ce-89fe-11ec-a481-acde48001122",
+        "492ff7a0-89fe-11ec-a481-acde48001122",
+        "49304d18-89fe-11ec-a481-acde48001122",
+        "4930b64a-89fe-11ec-a481-acde48001122",
+        "4931364c-89fe-11ec-a481-acde48001122",
+        "4bacbd38-89fe-11ec-a481-acde48001122",
+        "4e2ed9c4-89fe-11ec-a481-acde48001122",
+        "5086c59c-89fe-11ec-a481-acde48001122",
+        "52d440ea-89fe-11ec-a481-acde48001122",
+        "55344f06-89fe-11ec-a481-acde48001122",
+        "57a6c8b8-89fe-11ec-a481-acde48001122",
+        "5a7120b6-89fe-11ec-a481-acde48001122",
+        "5ccc77ac-89fe-11ec-a481-acde48001122",
+        "5f1b495c-89fe-11ec-a481-acde48001122",
+        "616f34e8-89fe-11ec-a481-acde48001122",
+        "640ffdfe-89fe-11ec-a481-acde48001122",
+        "66e6fe6a-89fe-11ec-a481-acde48001122",
+        "6983b37a-89fe-11ec-a481-acde48001122",
+        "6c86a55a-89fe-11ec-a481-acde48001122",
+        "6f6951dc-89fe-11ec-a481-acde48001122",
+        "725a399c-89fe-11ec-a481-acde48001122",
+        "74c8f916-89fe-11ec-a481-acde48001122",
+        "77a4e794-89fe-11ec-a481-acde48001122"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 10.0,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "x",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 1.0,
+          "optimize": true
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 17,
+        "tm_sec": 38,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "78dff4b4-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "hyperparameters": [
+        0.03740871440905762,
+        1.0,
+        0.5384856178711462,
+        1e-05,
+        0.14066787048225185
+      ],
+      "model_stats": {
+        "log_likelihood": -6.819626538892194,
+        "neg_log_likelihood": 6.819626538892194,
+        "gradients": [
+          1.0589851548976247e-08,
+          0.0,
+          -4.903995431959629e-09,
+          7.959252505984833,
+          -3.537934389896691e-10
+        ],
+        "iterations": 42
+      },
+      "task_parameters": [
+        [
+          1.4
+        ]
+      ],
+      "function_evaluations": [
+        "492c5172-89fe-11ec-a481-acde48001122",
+        "492c72ce-89fe-11ec-a481-acde48001122",
+        "492c959c-89fe-11ec-a481-acde48001122",
+        "492cb842-89fe-11ec-a481-acde48001122",
+        "492cddcc-89fe-11ec-a481-acde48001122",
+        "492d0540-89fe-11ec-a481-acde48001122",
+        "492d3ace-89fe-11ec-a481-acde48001122",
+        "492d6cf6-89fe-11ec-a481-acde48001122",
+        "492da144-89fe-11ec-a481-acde48001122",
+        "492dd90c-89fe-11ec-a481-acde48001122",
+        "492e1ab6-89fe-11ec-a481-acde48001122",
+        "492e6336-89fe-11ec-a481-acde48001122",
+        "492ea8e6-89fe-11ec-a481-acde48001122",
+        "492efbe8-89fe-11ec-a481-acde48001122",
+        "492f4832-89fe-11ec-a481-acde48001122",
+        "492fa1ce-89fe-11ec-a481-acde48001122",
+        "492ff7a0-89fe-11ec-a481-acde48001122",
+        "49304d18-89fe-11ec-a481-acde48001122",
+        "4930b64a-89fe-11ec-a481-acde48001122",
+        "4931364c-89fe-11ec-a481-acde48001122",
+        "4bacbd38-89fe-11ec-a481-acde48001122",
+        "4e2ed9c4-89fe-11ec-a481-acde48001122",
+        "5086c59c-89fe-11ec-a481-acde48001122",
+        "52d440ea-89fe-11ec-a481-acde48001122",
+        "55344f06-89fe-11ec-a481-acde48001122",
+        "57a6c8b8-89fe-11ec-a481-acde48001122",
+        "5a7120b6-89fe-11ec-a481-acde48001122",
+        "5ccc77ac-89fe-11ec-a481-acde48001122",
+        "5f1b495c-89fe-11ec-a481-acde48001122",
+        "616f34e8-89fe-11ec-a481-acde48001122",
+        "640ffdfe-89fe-11ec-a481-acde48001122",
+        "66e6fe6a-89fe-11ec-a481-acde48001122",
+        "6983b37a-89fe-11ec-a481-acde48001122",
+        "6c86a55a-89fe-11ec-a481-acde48001122",
+        "6f6951dc-89fe-11ec-a481-acde48001122",
+        "725a399c-89fe-11ec-a481-acde48001122",
+        "74c8f916-89fe-11ec-a481-acde48001122",
+        "77a4e794-89fe-11ec-a481-acde48001122",
+        "7a7556e8-89fe-11ec-a481-acde48001122"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 10.0,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "x",
+          "transformer": "normalize",
+          "type": "real",
+          "lower_bound": 0.0,
+          "upper_bound": 1.0,
+          "optimize": true
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 17,
+        "tm_sec": 43,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "7bae2f6c-89fe-11ec-a481-acde48001122"
+    }
+  ],
+  "func_eval": [
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.901571
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 1.009596
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.00959561866657,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 18,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "492c5172-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.481821
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 1.119461
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.119461005679873,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 18,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "492c72ce-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.965718
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 1.009668
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.0096681410965755,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 18,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "492c959c-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.225429
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 0.928161
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.928160987978552,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 18,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "492cb842-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.345378
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 0.971359
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.9713589871453348,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 18,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "492cddcc-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.162465
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 0.955503
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.9555027444700062,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 18,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "492d0540-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.520519
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 1.040364
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.0403638959289452,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 18,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "492d3ace-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.437778
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 0.880796
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.8807963361729306,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 18,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "492d6cf6-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.11144
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 1.494358
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.494357790856138,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 18,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "492da144-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.853849
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 0.987578
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.987578261806355,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 18,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "492dd90c-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.814488
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 0.997542
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.9975419980424942,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 18,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "492e1ab6-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.708061
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 0.995858
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.9958579041313262,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 18,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "492e6336-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.046485
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 0.912082
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.9120820045210202,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 18,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "492ea8e6-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.590406
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 0.995328
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.9953283133183841,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 18,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "492efbe8-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.68167
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 1.009448
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.0094479387359152,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 18,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "492f4832-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.793573
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 1.004047
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.0040469693509848,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 18,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "492fa1ce-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.390184
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 0.857257
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.8572568196070639,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 18,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "492ff7a0-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.609329
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 0.986756
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.9867562025851951,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 18,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "49304d18-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.094628
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 1.113622
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.1136217383834466,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 18,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "4930b64a-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.276967
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 1.0017
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.0016999836358647,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 18,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "4931364c-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.190536
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 1.017982
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.0179823884576882,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 22,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "4bacbd38-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.999781
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 1.006121
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.006120605951928,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 26,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "4e2ed9c4-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.000195
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 1.02444
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.0244401261372844,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 30,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "5086c59c-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.464274
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 0.898269
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.8982690948861694,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 34,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "52d440ea-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.068222
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 0.750408
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.7504075694431546,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 38,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "55344f06-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.550907
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 1.043168
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.0431684545087039,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 42,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "57a6c8b8-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.748792
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 1.000115
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.0001147031482436,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 47,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "5a7120b6-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.251374
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 1.003166
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.0031658680106077,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 51,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "5ccc77ac-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.934019
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 0.992743
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.9927431157327608,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 55,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "5f1b495c-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.311111
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 0.957204
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.9572040272137997,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 16,
+        "tm_sec": 59,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "616f34e8-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.373139
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 0.913622
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.9136216355463229,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 17,
+        "tm_sec": 3,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "640ffdfe-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.648246
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 0.975535
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.9755349242113147,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 17,
+        "tm_sec": 8,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "66e6fe6a-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.068093
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 0.753401
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.7534013803694988,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 17,
+        "tm_sec": 12,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "6983b37a-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.069537
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 0.736639
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.736638776183026,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 17,
+        "tm_sec": 17,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "6c86a55a-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.017872
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 1.132994
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.1329938149798682,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 17,
+        "tm_sec": 22,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "6f6951dc-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.87445
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 1.009188
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.0091878373371195,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 17,
+        "tm_sec": 27,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "725a399c-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.729461
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 1.001066
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.0010660273021728,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 17,
+        "tm_sec": 31,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "74c8f916-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.98658
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 1.002043
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.0020429886769782,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 17,
+        "tm_sec": 36,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "77a4e794-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.070097
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 0.740276
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.7402761967450471,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 17,
+        "tm_sec": 41,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "7a7556e8-89fe-11ec-a481-acde48001122"
+    },
+    {
+      "task_parameter": {
+        "t": 1.4
+      },
+      "tuning_parameter": {
+        "x": 0.069373
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mac",
+        "intel": {
+          "nodes": 1,
+          "cores": 8
+        }
+      },
+      "software_configuration": {
+        "openmpi": {
+          "version_split": [
+            4,
+            0,
+            1
+          ]
+        },
+        "scalapack": {
+          "version_split": [
+            2,
+            1,
+            0
+          ]
+        },
+        "gcc": {
+          "version_split": [
+            10,
+            2,
+            0
+          ]
+        }
+      },
+      "evaluation_result": {
+        "y": 0.736656
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.7366558341533289,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 9,
+        "tm_hour": 17,
+        "tm_min": 17,
+        "tm_sec": 45,
+        "tm_wday": 2,
+        "tm_yday": 40,
+        "tm_isdst": 0
+      },
+      "uid": "7d5941c6-89fe-11ec-a481-acde48001122"
+    }
+  ]
+}

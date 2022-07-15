@@ -1,0 +1,5527 @@
+{
+  "tuning_problem_name": "heat-3d",
+  "tuning_problem_category": null,
+  "surrogate_model": [],
+  "func_eval": [
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "100",
+        "p4": "32",
+        "p5": "64"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 31.603144
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 31.603144,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 37,
+        "tm_sec": 1,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "14bef81e-fe56-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": "#pragma clang loop(m2) pack array(B) allocate(malloc)",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "128",
+        "p4": "8",
+        "p5": "80"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.00052
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.0005196618836798159,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 37,
+        "tm_sec": 1,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "14bfde00-fe56-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": "#pragma clang loop(m2) pack array(B) allocate(malloc)",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "128",
+        "p4": "20",
+        "p5": "4"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.050804
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.050804306288679504,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 37,
+        "tm_sec": 2,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "158b5896-fe56-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": "#pragma clang loop(m2) pack array(B) allocate(malloc)",
+        "p2": " ",
+        "p3": "128",
+        "p4": "2048",
+        "p5": "128"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 2.57157
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 2.5715702017131994,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 37,
+        "tm_sec": 2,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "158c85ea-fe56-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "4",
+        "p4": "4",
+        "p5": "16"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 44.207724
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 44.2077235,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 40,
+        "tm_sec": 5,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "82c1d2a0-fe56-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "4",
+        "p4": "8",
+        "p5": "4"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.000977
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.0009769746937973124,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 40,
+        "tm_sec": 5,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "82c3851e-fe56-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": " ",
+        "p3": "4",
+        "p4": "4",
+        "p5": "100"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.012757
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.012756997706139764,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 40,
+        "tm_sec": 5,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "82c4aea8-fe56-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "4",
+        "p4": "8",
+        "p5": "8"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 4.122586
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 4.122586400977386,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 40,
+        "tm_sec": 5,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "82c5d92c-fe56-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": "#pragma clang loop(m2) pack array(B) allocate(malloc)",
+        "p2": " ",
+        "p3": "4",
+        "p4": "4",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 22.17264
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 22.1726405,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 41,
+        "tm_sec": 59,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "c6a229d4-fe56-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "80",
+        "p4": "4",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.000282
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.0002818748405767344,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 41,
+        "tm_sec": 59,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "c6a4342c-fe56-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": "#pragma clang loop(m2) pack array(B) allocate(malloc)",
+        "p2": " ",
+        "p3": "20",
+        "p4": "4",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.01026
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.010259875182314644,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 41,
+        "tm_sec": 59,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "c6a56cf2-fe56-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "16",
+        "p4": "4",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 1.705783
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.705782826297405,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 41,
+        "tm_sec": 59,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "c6a6ab44-fe56-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": " ",
+        "p3": "4",
+        "p4": "4",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 22.250774
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 22.2507735,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 43,
+        "tm_sec": 41,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "034a9fa6-fe57-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": " ",
+        "p3": "4",
+        "p4": "4",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.000464
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.0004638569737493151,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 43,
+        "tm_sec": 41,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "034cc4e8-fe57-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": "#pragma clang loop(m2) pack array(B) allocate(malloc)",
+        "p2": " ",
+        "p3": "100",
+        "p4": "4",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.015815
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.01581476016337087,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 43,
+        "tm_sec": 41,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "034e1ffa-fe57-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": " ",
+        "p3": "8",
+        "p4": "4",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 1.835198
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.8351982166367178,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 43,
+        "tm_sec": 41,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "034f6bd0-fe57-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "16",
+        "p4": "8",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 14.921563
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 14.921562999999999,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 45,
+        "tm_sec": 8,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "3779d828-fe57-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "16",
+        "p4": "16",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.000296
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.0002962320178089011,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 45,
+        "tm_sec": 8,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "377c092c-fe57-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "80",
+        "p4": "4",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.005864
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.005863819928329517,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 45,
+        "tm_sec": 8,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "377d6204-fe57-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "100",
+        "p4": "8",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 2.27399
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 2.2739896416643846,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 45,
+        "tm_sec": 8,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "377ec63a-fe57-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "8",
+        "p4": "50",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 14.619763
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 14.6197625,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 46,
+        "tm_sec": 25,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "655387c6-fe57-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "4",
+        "p4": "2048",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.00029
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.0002903710251602648,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 46,
+        "tm_sec": 25,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "65552b12-fe57-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "4",
+        "p4": "100",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.005736
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.005735817540179557,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 46,
+        "tm_sec": 25,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "6556a280-fe57-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "8",
+        "p4": "2048",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 1.911125
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.9111246684388208,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 46,
+        "tm_sec": 25,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "6558112e-fe57-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "4",
+        "p4": "2048",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 15.665201
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 15.665200500000001,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 47,
+        "tm_sec": 45,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "94aebc7a-fe57-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "8",
+        "p4": "2048",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.000288
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.0002884023759323527,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 47,
+        "tm_sec": 45,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "94b07cf4-fe57-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "16",
+        "p4": "128",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.005788
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.00578768747176473,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 47,
+        "tm_sec": 45,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "94b1f2e6-fe57-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": "#pragma clang loop(m2) pack array(B) allocate(malloc)",
+        "p2": " ",
+        "p3": "8",
+        "p4": "2048",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 2.140988
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 2.140988102792005,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 47,
+        "tm_sec": 45,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "94b38494-fe57-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "16",
+        "p4": "64",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 14.569771
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 14.5697715,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 49,
+        "tm_sec": 5,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "c4b6aaae-fe57-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "4",
+        "p4": "32",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.000301
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.00030086130965148737,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 49,
+        "tm_sec": 5,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "c4b87320-fe57-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "8",
+        "p4": "128",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.005731
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.005731275949376573,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 49,
+        "tm_sec": 5,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "c4b9fc90-fe57-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": "#pragma clang loop(m2) pack array(B) allocate(malloc)",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "4",
+        "p4": "8",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 2.596425
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 2.596425045779486,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 49,
+        "tm_sec": 5,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "c4bb8c54-fe57-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": "#pragma clang loop(m2) pack array(B) allocate(malloc)",
+        "p2": " ",
+        "p3": "8",
+        "p4": "80",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 20.907108
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 20.907107500000002,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 50,
+        "tm_sec": 41,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "fdfaa234-fe57-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": "#pragma clang loop(m2) pack array(B) allocate(malloc)",
+        "p2": " ",
+        "p3": "4",
+        "p4": "128",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.000526
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.0005264997736733122,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 50,
+        "tm_sec": 41,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "fdfc7992-fe57-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": "#pragma clang loop(m2) pack array(B) allocate(malloc)",
+        "p2": " ",
+        "p3": "4",
+        "p4": "8",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.010676
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.010676401912088596,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 50,
+        "tm_sec": 41,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "fdfe13ec-fe57-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": "#pragma clang loop(m2) pack array(B) allocate(malloc)",
+        "p2": " ",
+        "p3": "4",
+        "p4": "32",
+        "p5": "4"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 8.942934
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 8.942933669571175,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 50,
+        "tm_sec": 41,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "fdffd4de-fe57-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "128",
+        "p4": "64",
+        "p5": "4"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 42.657752
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 42.657752,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 53,
+        "tm_sec": 24,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "5f2c4544-fe58-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "80",
+        "p4": "8",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.00029
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.0002904942459913065,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 53,
+        "tm_sec": 24,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "5f2e4042-fe58-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "64",
+        "p4": "8",
+        "p5": "50"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.004266
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.004265776755761663,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 53,
+        "tm_sec": 24,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "5f2fef3c-fe58-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "128",
+        "p4": "20",
+        "p5": "50"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 2.578236
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 2.5782363395178054,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 53,
+        "tm_sec": 24,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "5f31947c-fe58-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "8",
+        "p4": "2048",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 14.640166
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 14.6401665,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 54,
+        "tm_sec": 55,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "950ec74a-fe58-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "8",
+        "p4": "128",
+        "p5": "100"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.0003
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.0003002104085125612,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 54,
+        "tm_sec": 55,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "9510f8ee-fe58-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "8",
+        "p4": "80",
+        "p5": "100"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.006762
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.006762083909332392,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 54,
+        "tm_sec": 55,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "9512bf1c-fe58-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "4",
+        "p4": "2048",
+        "p5": "80"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 2.1266
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 2.1266001510435606,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 54,
+        "tm_sec": 55,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "95147c26-fe58-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "128",
+        "p4": "2048",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 14.654359
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 14.654359,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 56,
+        "tm_sec": 43,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "d58fe13c-fe58-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "100",
+        "p4": "128",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.000264
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.0002635697229504139,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 56,
+        "tm_sec": 43,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "d59201ba-fe58-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": "#pragma clang loop(m2) pack array(B) allocate(malloc)",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "4",
+        "p4": "2048",
+        "p5": "64"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.009422
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.009422454757239884,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 56,
+        "tm_sec": 43,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "d593d580-fe58-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "4",
+        "p4": "4",
+        "p5": "128"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 1.77806
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.7780595766189218,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 19,
+        "tm_min": 56,
+        "tm_sec": 43,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "d5959b22-fe58-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": "#pragma clang loop(m2) pack array(B) allocate(malloc)",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "8",
+        "p4": "2048",
+        "p5": "8"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 71.918296
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 71.9182965,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 1,
+        "tm_sec": 20,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "7aba00c0-fe59-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "4",
+        "p4": "20",
+        "p5": "64"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.000306
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.00030610099368448096,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 1,
+        "tm_sec": 20,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "7abc4e3e-fe59-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "4",
+        "p4": "50",
+        "p5": "64"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.00583
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.005829585379920403,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 1,
+        "tm_sec": 20,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "7abe23f8-fe59-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "4",
+        "p4": "20",
+        "p5": "64"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 2.6114
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 2.611400372484262,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 1,
+        "tm_sec": 20,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "7abffeee-fe59-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "20",
+        "p4": "128",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 14.730212
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 14.730212,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 3,
+        "tm_sec": 47,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "d28e9fb8-fe59-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "20",
+        "p4": "128",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.000283
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.00028259247161069117,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 3,
+        "tm_sec": 47,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "d2916f04-fe59-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "128",
+        "p4": "100",
+        "p5": "80"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.006323
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.006322578894344037,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 3,
+        "tm_sec": 48,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "d29355f8-fe59-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": " ",
+        "p3": "128",
+        "p4": "100",
+        "p5": "20"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 6.235984
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 6.23598359194611,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 3,
+        "tm_sec": 48,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "d2953a12-fe59-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "128",
+        "p4": "100",
+        "p5": "80"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 52.039135
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 52.0391345,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 7,
+        "tm_sec": 5,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "484fd29e-fe5a-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "128",
+        "p4": "50",
+        "p5": "64"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.000452
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.00045150996910159596,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 7,
+        "tm_sec": 5,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "4852320a-fe5a-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "128",
+        "p4": "128",
+        "p5": "64"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.008292
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.0082923025821143,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 7,
+        "tm_sec": 5,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "48542de4-fe5a-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "4",
+        "p4": "20",
+        "p5": "128"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 1.415675
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.4156747414665545,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 7,
+        "tm_sec": 5,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "48567608-fe5a-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "96",
+        "p4": "4",
+        "p5": "20"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 30.862986
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 30.862986,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 10,
+        "tm_sec": 28,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "c16a2292-fe5a-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "4",
+        "p4": "50",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.000303
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.0003031484406459964,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 10,
+        "tm_sec": 28,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "c16cb3cc-fe5a-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "8",
+        "p4": "8",
+        "p5": "128"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.005725
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.0057250721648813225,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 10,
+        "tm_sec": 28,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "c16ebfaa-fe5a-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "32",
+        "p4": "8",
+        "p5": "100"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 3.628747
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 3.628746838806853,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 10,
+        "tm_sec": 28,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "c170edb6-fe5a-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "4",
+        "p4": "16",
+        "p5": "20"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 31.743976
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 31.7439765,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 13,
+        "tm_sec": 35,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "30b4cfb2-fe5b-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "128",
+        "p4": "2048",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.000258
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.0002579010439417914,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 13,
+        "tm_sec": 35,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "30b75462-fe5b-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "128",
+        "p4": "2048",
+        "p5": "128"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.026028
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.02602795318531153,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 13,
+        "tm_sec": 35,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "30b96b9e-fe5b-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": "#pragma clang loop(m2) pack array(B) allocate(malloc)",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "4",
+        "p4": "128",
+        "p5": "128"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 2.527466
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 2.5274661400865055,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 13,
+        "tm_sec": 35,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "30bbb548-fe5b-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "80",
+        "p4": "64",
+        "p5": "32"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 62.665043
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 62.665043,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 18,
+        "tm_sec": 35,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "e3d8d53e-fe5b-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "100",
+        "p4": "2048",
+        "p5": "32"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.000277
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.00027674519159218624,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 18,
+        "tm_sec": 35,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "e3dc2784-fe5b-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": " ",
+        "p3": "8",
+        "p4": "4",
+        "p5": "50"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.009939
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.009938506426167067,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 18,
+        "tm_sec": 36,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "e3de78a4-fe5b-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "4",
+        "p4": "16",
+        "p5": "16"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 3.798028
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 3.798028484460868,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 18,
+        "tm_sec": 36,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "e3e1ce8c-fe5b-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "8",
+        "p4": "8",
+        "p5": "128"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 21.616762
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 21.616762,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 20,
+        "tm_sec": 50,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "33f5d1f2-fe5c-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": "#pragma clang loop(m2) pack array(B) allocate(malloc)",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "4",
+        "p4": "2048",
+        "p5": "20"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.000621
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.0006206401881995631,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 20,
+        "tm_sec": 50,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "33f8c786-fe5c-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": "#pragma clang loop(m2) pack array(B) allocate(malloc)",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "16",
+        "p4": "128",
+        "p5": "20"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.014329
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.014328759083523233,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 20,
+        "tm_sec": 50,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "33faf92a-fe5c-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": "#pragma clang loop(m2) pack array(B) allocate(malloc)",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "4",
+        "p4": "128",
+        "p5": "16"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 4.215902
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 4.215902410786067,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 20,
+        "tm_sec": 50,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "33fd38ca-fe5c-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": " ",
+        "p3": "4",
+        "p4": "50",
+        "p5": "16"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 49.316531
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 49.316531,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 24,
+        "tm_sec": 54,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "c5667d62-fe5c-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": " ",
+        "p3": "100",
+        "p4": "80",
+        "p5": "16"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.001248
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.0012484189167241292,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 24,
+        "tm_sec": 54,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "c56964fa-fe5c-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": " ",
+        "p3": "16",
+        "p4": "4",
+        "p5": "8"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.035148
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.03514823565218589,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 24,
+        "tm_sec": 54,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "c56bd0d2-fe5c-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "4",
+        "p4": "2048",
+        "p5": "4"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 3.049999
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 3.0499985400293492,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 24,
+        "tm_sec": 54,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "c56e24f4-fe5c-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "4",
+        "p4": "8",
+        "p5": "4"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 124.601367
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 124.601367,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 32,
+        "tm_sec": 33,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "d73aa1de-fe5d-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "128",
+        "p4": "4",
+        "p5": "80"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.000264
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.0002635012021920494,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 32,
+        "tm_sec": 33,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "d73d5ba4-fe5d-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "20",
+        "p4": "4",
+        "p5": "80"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.005679
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.005678525908770673,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 32,
+        "tm_sec": 33,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "d73fa8aa-fe5d-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": "#pragma clang loop(m2) pack array(B) allocate(malloc)",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "4",
+        "p4": "32",
+        "p5": "64"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 3.356748
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 3.3567480532171294,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 32,
+        "tm_sec": 33,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "d742816a-fe5d-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "96",
+        "p4": "20",
+        "p5": "8"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 37.94264
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 37.94264,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 35,
+        "tm_sec": 45,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "49567ad6-fe5e-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "64",
+        "p4": "8",
+        "p5": "50"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.000305
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.00030464844362124545,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 35,
+        "tm_sec": 45,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "495962e6-fe5e-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": "#pragma clang loop(m2) pack array(B) allocate(malloc)",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "16",
+        "p4": "16",
+        "p5": "32"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.019598
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.019598471673659995,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 35,
+        "tm_sec": 45,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "495bd0ee-fe5e-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": "#pragma clang loop(m2) pack array(B) allocate(malloc)",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "8",
+        "p4": "4",
+        "p5": "32"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 3.047497
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 3.047496756117654,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 35,
+        "tm_sec": 45,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "495e3118-fe5e-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "128",
+        "p4": "100",
+        "p5": "20"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 48.015072
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 48.015072,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 40,
+        "tm_sec": 11,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "e7cc7044-fe5e-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "8",
+        "p4": "2048",
+        "p5": "50"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.000291
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.00029073727482451005,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 40,
+        "tm_sec": 11,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "e7cf7aaa-fe5e-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "128",
+        "p4": "128",
+        "p5": "20"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.006864
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.0068641289701236435,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 40,
+        "tm_sec": 11,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "e7d1e72c-fe5e-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "20",
+        "p4": "128",
+        "p5": "128"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 2.625547
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 2.625547393955375,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 40,
+        "tm_sec": 11,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "e7d454e4-fe5e-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": "#pragma clang loop(m2) pack array(B) allocate(malloc)",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "16",
+        "p4": "128",
+        "p5": "32"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 50.221844
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 50.221844000000004,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 43,
+        "tm_sec": 15,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "556bd360-fe5f-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": "#pragma clang loop(m2) pack array(B) allocate(malloc)",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "80",
+        "p4": "4",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.00065
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.0006499077299946736,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 43,
+        "tm_sec": 15,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "556ebb52-fe5f-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "4",
+        "p4": "2048",
+        "p5": "8"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.026093
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.026093232790184488,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 43,
+        "tm_sec": 15,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "55714598-fe5f-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "4",
+        "p4": "16",
+        "p5": "4"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 3.811005
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 3.811004941681447,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 43,
+        "tm_sec": 15,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "5574060c-fe5f-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "4",
+        "p4": "2048",
+        "p5": "50"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 32.826105
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 32.826105,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 46,
+        "tm_sec": 41,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "d09d2106-fe5f-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "4",
+        "p4": "128",
+        "p5": "128"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.000302
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.00030241473325993187,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 46,
+        "tm_sec": 41,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "d0a01866-fe5f-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "32",
+        "p4": "2048",
+        "p5": "50"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.005745
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.005745230974612465,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 46,
+        "tm_sec": 41,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "d0a2d60a-fe5f-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": " ",
+        "p3": "8",
+        "p4": "20",
+        "p5": "128"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 1.37295
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.3729496062973015,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 46,
+        "tm_sec": 41,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "d0a566b8-fe5f-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "50",
+        "p4": "2048",
+        "p5": "16"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 50.971302
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 50.971302,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 51,
+        "tm_sec": 40,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "82db1b84-fe60-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "4",
+        "p4": "100",
+        "p5": "64"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.000303
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.0003034858364625757,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 51,
+        "tm_sec": 40,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "82de6726-fe60-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "20",
+        "p4": "2048",
+        "p5": "32"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.007611
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.00761073866811081,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 51,
+        "tm_sec": 40,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "82e118c2-fe60-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "16",
+        "p4": "128",
+        "p5": "128"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 2.130471
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 2.130471299459211,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 51,
+        "tm_sec": 40,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "82e3baaa-fe60-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "80",
+        "p4": "2048",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 15.955445
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 15.9554455,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 54,
+        "tm_sec": 31,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "e8da8492-fe60-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "16",
+        "p4": "128",
+        "p5": "32"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.000271
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.00027105199158985885,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 54,
+        "tm_sec": 31,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "e8dd9146-fe60-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "20",
+        "p4": "2048",
+        "p5": "50"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.004368
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.004368212035698054,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 54,
+        "tm_sec": 31,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "e8e03644-fe60-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": " ",
+        "p3": "8",
+        "p4": "2048",
+        "p5": "100"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 2.778116
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 2.7781162112167372,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 54,
+        "tm_sec": 31,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "e8e33272-fe60-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": "#pragma clang loop(m2) pack array(B) allocate(malloc)",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "128",
+        "p4": "16",
+        "p5": "128"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 37.668049
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 37.668049499999995,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 58,
+        "tm_sec": 13,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "6d0f0ba2-fe61-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "128",
+        "p4": "128",
+        "p5": "32"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.000282
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.0002815084306158006,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 58,
+        "tm_sec": 13,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "6d123a34-fe61-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "128",
+        "p4": "100",
+        "p5": "32"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.007759
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.007759243462479433,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 58,
+        "tm_sec": 13,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "6d1502d2-fe61-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "4",
+        "p4": "8",
+        "p5": "128"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 2.060376
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 2.060375835678281,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 20,
+        "tm_min": 58,
+        "tm_sec": 13,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "6d17c08a-fe61-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "4",
+        "p4": "2048",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 14.593562
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 14.593562,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 21,
+        "tm_min": 1,
+        "tm_sec": 28,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "e12296b2-fe61-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "4",
+        "p4": "128",
+        "p5": "64"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.000303
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.00030286428533468873,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 21,
+        "tm_min": 1,
+        "tm_sec": 28,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "e125e470-fe61-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "16",
+        "p4": "128",
+        "p5": "20"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.007204
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.007204151662464679,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 21,
+        "tm_min": 1,
+        "tm_sec": 28,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "e128f958-fe61-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "8",
+        "p4": "32",
+        "p5": "128"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 1.359924
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.359924097554944,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 21,
+        "tm_min": 1,
+        "tm_sec": 28,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "e12bf89c-fe61-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 1000,
+        "t1": 200
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "32",
+        "p4": "100",
+        "p5": "256"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 14.709976
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 14.7099765,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 21,
+        "tm_min": 2,
+        "tm_sec": 48,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "109af1d2-fe62-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 40,
+        "t1": 20
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "128",
+        "p4": "2048",
+        "p5": "100"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.000269
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.00026943836208955494,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 21,
+        "tm_min": 2,
+        "tm_sec": 48,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "109e327a-fe62-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 100,
+        "t1": 40
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "100",
+        "p4": "100",
+        "p5": "20"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.006931
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.006930744866851478,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 21,
+        "tm_min": 2,
+        "tm_sec": 48,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "10a10950-fe62-11ec-abde-5cff35e2561e"
+    },
+    {
+      "task_parameter": {
+        "t0": 500,
+        "t1": 120
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "8",
+        "p4": "4",
+        "p5": "100"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "amd": {
+          "nodes": 1,
+          "cores": 2
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 2.086737
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 2.08673681761075,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 7,
+        "tm_mday": 7,
+        "tm_hour": 21,
+        "tm_min": 2,
+        "tm_sec": 48,
+        "tm_wday": 3,
+        "tm_yday": 188,
+        "tm_isdst": 1
+      },
+      "uid": "10a3e260-fe62-11ec-abde-5cff35e2561e"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+p0,p1,p2,p3,p4,p5,t0,t1,objective,elapsed_sec
+ ,#pragma clang loop(m2) pack array(B) allocate(malloc), ,32,2048,20,1000,200,38.3929125,126.89457368850708
+ ,#pragma clang loop(m2) pack array(B) allocate(malloc), ,8,64,8,1000,200,68.657351,344.43679094314575
+ , , ,100,8,4,1000,200,31.253695,449.43344926834106
+ , , ,80,32,50,1000,200,31.485379,554.696986913681
+#pragma clang loop(j2) pack array(A) allocate(malloc), ,"#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",50,64,16,1000,200,57.799946,740.1817138195038
+ ,#pragma clang loop(m2) pack array(B) allocate(malloc),"#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",16,32,128,1000,200,32.614345,848.1005754470825
+ ,#pragma clang loop(m2) pack array(B) allocate(malloc),"#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",100,4,8,1000,200,81.28147050000001,1101.8930490016935
+#pragma clang loop(j2) pack array(A) allocate(malloc), ,"#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",80,4,16,1000,200,40.0432545,1232.757129907608
+ ,#pragma clang loop(m2) pack array(B) allocate(malloc), ,128,20,64,1000,200,39.9529285,1363.9563219547272
+#pragma clang loop(j2) pack array(A) allocate(malloc), ,"#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",20,100,128,1000,200,31.4122145,1468.3482475280762
+#pragma clang loop(j2) pack array(A) allocate(malloc),#pragma clang loop(m2) pack array(B) allocate(malloc),"#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",32,80,64,1000,200,59.051492,1656.7045290470123
+#pragma clang loop(j2) pack array(A) allocate(malloc), ,"#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",96,2048,256,1000,200,42.1197205,1792.889530658722
+#pragma clang loop(j2) pack array(A) allocate(malloc), , ,4,50,100,1000,200,32.9082655,1902.6607511043549
+#pragma clang loop(j2) pack array(A) allocate(malloc),#pragma clang loop(m2) pack array(B) allocate(malloc), ,4,16,32,1000,200,50.6881105,2067.1257967948914
+#pragma clang loop(j2) pack array(A) allocate(malloc),#pragma clang loop(m2) pack array(B) allocate(malloc), ,64,100,100,1000,200,42.7534075,2208.492578983307
+#pragma clang loop(j2) pack array(A) allocate(malloc),#pragma clang loop(m2) pack array(B) allocate(malloc), ,128,4,32,1000,200,50.1307955,2373.9655661582947
+#pragma clang loop(j2) pack array(A) allocate(malloc), , ,96,4,256,1000,200,21.837396,2452.7207791805267
+#pragma clang loop(j2) pack array(A) allocate(malloc), , ,64,4,256,1000,200,21.946512,2531.233186483383
+ , , ,4,4,256,1000,200,15.794736,2589.376507997513
+ ,#pragma clang loop(m2) pack array(B) allocate(malloc), ,96,4,256,1000,200,21.5819155,2668.0244846343994
+#pragma clang loop(j2) pack array(A) allocate(malloc), ,"#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",16,4,256,1000,200,33.672396,2780.821796655655
+ , , ,50,20,256,1000,200,14.7595415,2836.756748914718
+#pragma clang loop(j2) pack array(A) allocate(malloc), , ,50,2048,256,1000,200,21.2473435,2913.688503265381
+#pragma clang loop(j2) pack array(A) allocate(malloc), , ,80,2048,256,1000,200,21.375347,2989.7211697101593
+#pragma clang loop(j2) pack array(A) allocate(malloc), , ,4,2048,256,1000,200,21.202768,3066.220857858658
+#pragma clang loop(j2) pack array(A) allocate(malloc),#pragma clang loop(m2) pack array(B) allocate(malloc), ,4,2048,256,1000,200,28.1102035,3162.668405532837
+#pragma clang loop(j2) pack array(A) allocate(malloc), , ,32,128,128,1000,200,34.952375,3279.8532803058624
+ , ,"#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",80,128,256,1000,200,16.0293365,3340.3296658992767
+#pragma clang loop(j2) pack array(A) allocate(malloc),#pragma clang loop(m2) pack array(B) allocate(malloc),"#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",128,4,256,1000,200,46.0899565,3492.7371034622192
+ , ,"#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",4,4,256,1000,200,15.965872000000001,3553.0410826206207

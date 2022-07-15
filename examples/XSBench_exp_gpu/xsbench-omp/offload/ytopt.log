@@ -1,0 +1,1912 @@
+2022-02-11 10:14:29|160198|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-11 10:14:30|160198|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-11 10:14:38|160198|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x200818552830>', proc_info: {'node_ip_address': '128.219.134.82', 'raylet_ip_address': '128.219.134.82', 'redis_address': '128.219.134.82:6379', 'object_store_address': '/tmp/ray/session_2022-02-11_10-14-30_075094_160198/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-02-11_10-14-30_075094_160198/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-02-11_10-14-30_075094_160198', 'metrics_export_port': 49771, 'gcs_address': '128.219.134.82:47888', 'address': '128.219.134.82:6379', 'node_id': '0e1448575932f7b93a8228c5af1efdf194b6e509d5d75b0db33e9daa'}
+2022-02-11 10:14:38|160198|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 10.134.0.42
+2022-02-11 10:14:38|160198|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 49771,
+  'NodeID': '0e1448575932f7b93a8228c5af1efdf194b6e509d5d75b0db33e9daa',
+  'NodeManagerAddress': '128.219.134.82',
+  'NodeManagerHostname': 'batch2',
+  'NodeManagerPort': 42967,
+  'ObjectManagerPort': 42811,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-02-11_10-14-30_075094_160198/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-02-11_10-14-30_075094_160198/sockets/raylet',
+  'Resources': {'CPU': 128.0,
+                'GPU': 4.0,
+                'accelerator_type:V100': 1.0,
+                'memory': 335563889664.0,
+                'node:128.219.134.82': 1.0,
+                'object_store_memory': 148098809856.0},
+  'alive': True}]
+2022-02-11 10:14:38|160198|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem.Problem'}
+2022-02-11 10:14:38|160198|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    p0, Type: Ordinal, Sequence: {2, 4, 8, 16, 21, 32, 42}, Default: 42
+    p1, Type: Categorical, Choices: {cores, threads, sockets}, Default: cores
+    p2, Type: Categorical, Choices: {TRUE, FALSE}, Default: TRUE
+    p3, Type: Categorical, Choices: {#pragma omp parallel for,  }, Default:  
+    p4, Type: Categorical, Choices: {simd,  }, Default:  
+    p5, Type: Categorical, Choices: {dist_schedule(static,256), dist_schedule(static,512), dist_schedule(static,1024), dist_schedule(static,2048), dist_schedule(static,4096),  }, Default:  
+    p6, Type: Categorical, Choices: {schedule(static,1), schedule(static,2), schedule(static,4), schedule(static,8), schedule(static,16), schedule(static,32),  }, Default:  
+
+2022-02-11 10:14:38|160198|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-02-11 10:14:38|160198|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-02-11 10:14:38|160198|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-02-11 10:14:38|160198|INFO|ytopt.search.hps.optimizer.optimizer:58] Using skopt.Optimizer with RF base_estimator
+2022-02-11 10:14:38|160198|INFO|ytopt.search.hps.ambs:79] Generating 1 initial points...
+2022-02-11 10:14:40|160198|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '16', 'p1': 'threads', 'p2': 'FALSE', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': ' '}
+2022-02-11 10:14:40|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:0.00
+2022-02-11 10:14:43|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:2.54
+2022-02-11 10:14:45|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:4.54
+2022-02-11 10:14:47|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:6.54
+2022-02-11 10:14:49|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:8.54
+2022-02-11 10:14:51|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:10.54
+2022-02-11 10:14:53|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:12.54
+2022-02-11 10:14:55|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:14.54
+2022-02-11 10:14:57|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:16.54
+2022-02-11 10:14:59|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:18.54
+2022-02-11 10:15:01|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:20.54
+2022-02-11 10:15:03|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:22.54
+2022-02-11 10:15:05|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:24.54
+2022-02-11 10:15:07|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:26.54
+2022-02-11 10:15:09|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:28.54
+2022-02-11 10:15:11|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:30.54
+2022-02-11 10:15:13|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:32.54
+2022-02-11 10:15:15|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:34.54
+2022-02-11 10:15:17|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:36.54
+2022-02-11 10:15:19|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:38.54
+2022-02-11 10:15:21|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:40.54
+2022-02-11 10:15:23|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:42.54
+2022-02-11 10:15:25|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:44.54
+2022-02-11 10:15:27|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:46.54
+2022-02-11 10:15:29|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:48.54
+2022-02-11 10:15:31|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:50.54
+2022-02-11 10:15:33|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:52.54
+2022-02-11 10:15:35|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:54.54
+2022-02-11 10:15:37|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:56.54
+2022-02-11 10:15:39|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:58.54
+2022-02-11 10:15:41|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:0.54
+2022-02-11 10:15:43|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:2.54
+2022-02-11 10:15:45|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:4.54
+2022-02-11 10:15:47|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:6.54
+2022-02-11 10:15:49|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:8.54
+2022-02-11 10:15:51|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:10.54
+2022-02-11 10:15:51|160198|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "16", "p1": "threads", "p2": "FALSE", "p3": "#pragma omp parallel for", "p4": "simd", "p5": "dist_schedule(static,1024)", "p6": " "} --> 66.323
+2022-02-11 10:15:51|160198|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '16', 'p1': 'threads', 'p2': 'FALSE', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': ' '} y: 66.323
+2022-02-11 10:15:51|160198|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-11 10:15:51|160198|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '16', 'p1': 'threads', 'p2': 'FALSE', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': ' '} --> ('16', 'threads', 'FALSE', '#pragma omp parallel for', 'simd', 'dist_schedule(static,1024)', ' '): evaluated objective: 66.323
+2022-02-11 10:15:53|160198|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-11 10:15:54|160198|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['8', 'threads', 'FALSE', ' ', ' ', 'dist_schedule(static,512)', 'schedule(static,1)'] lie: 66.323
+2022-02-11 10:15:54|160198|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '8', 'p1': 'threads', 'p2': 'FALSE', 'p3': ' ', 'p4': ' ', 'p5': 'dist_schedule(static,512)', 'p6': 'schedule(static,1)'}
+2022-02-11 10:15:56|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:15.23
+2022-02-11 10:15:56|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:15.77
+2022-02-11 10:15:58|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:17.77
+2022-02-11 10:16:00|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:19.77
+2022-02-11 10:16:02|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:21.77
+2022-02-11 10:16:04|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:23.77
+2022-02-11 10:16:06|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:25.77
+2022-02-11 10:16:08|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:27.77
+2022-02-11 10:16:10|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:29.77
+2022-02-11 10:16:12|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:31.77
+2022-02-11 10:16:14|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:33.77
+2022-02-11 10:16:16|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:35.77
+2022-02-11 10:16:18|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:37.77
+2022-02-11 10:16:20|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:39.77
+2022-02-11 10:16:22|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:41.77
+2022-02-11 10:16:24|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:43.77
+2022-02-11 10:16:26|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:45.77
+2022-02-11 10:16:28|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:47.77
+2022-02-11 10:16:30|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:49.77
+2022-02-11 10:16:32|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:51.77
+2022-02-11 10:16:34|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:53.77
+2022-02-11 10:16:36|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:55.77
+2022-02-11 10:16:38|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:57.77
+2022-02-11 10:16:40|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:59.77
+2022-02-11 10:16:42|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:1.77
+2022-02-11 10:16:44|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:3.77
+2022-02-11 10:16:46|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:5.77
+2022-02-11 10:16:48|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:7.77
+2022-02-11 10:16:50|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:9.77
+2022-02-11 10:16:52|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:11.77
+2022-02-11 10:16:54|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:13.77
+2022-02-11 10:16:56|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:15.77
+2022-02-11 10:16:58|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:17.77
+2022-02-11 10:17:00|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:19.77
+2022-02-11 10:17:00|160198|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "8", "p1": "threads", "p2": "FALSE", "p3": " ", "p4": " ", "p5": "dist_schedule(static,512)", "p6": "schedule(static,1)"} --> 64.005
+2022-02-11 10:17:00|160198|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '8', 'p1': 'threads', 'p2': 'FALSE', 'p3': ' ', 'p4': ' ', 'p5': 'dist_schedule(static,512)', 'p6': 'schedule(static,1)'} y: 64.005
+2022-02-11 10:17:00|160198|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-11 10:17:00|160198|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '8', 'p1': 'threads', 'p2': 'FALSE', 'p3': ' ', 'p4': ' ', 'p5': 'dist_schedule(static,512)', 'p6': 'schedule(static,1)'} --> ('8', 'threads', 'FALSE', ' ', ' ', 'dist_schedule(static,512)', 'schedule(static,1)'): evaluated objective: 64.005
+2022-02-11 10:17:02|160198|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-11 10:17:03|160198|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['8', 'threads', 'FALSE', '#pragma omp parallel for', ' ', 'dist_schedule(static,4096)', 'schedule(static,4)'] lie: 66.323
+2022-02-11 10:17:03|160198|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '8', 'p1': 'threads', 'p2': 'FALSE', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'dist_schedule(static,4096)', 'p6': 'schedule(static,4)'}
+2022-02-11 10:17:05|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:24.45
+2022-02-11 10:17:05|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:24.98
+2022-02-11 10:17:07|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:26.99
+2022-02-11 10:17:09|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:28.98
+2022-02-11 10:17:11|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:30.98
+2022-02-11 10:17:13|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:32.98
+2022-02-11 10:17:15|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:34.98
+2022-02-11 10:17:17|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:36.98
+2022-02-11 10:17:19|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:38.98
+2022-02-11 10:17:21|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:40.98
+2022-02-11 10:17:23|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:42.98
+2022-02-11 10:17:25|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:44.98
+2022-02-11 10:17:27|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:46.98
+2022-02-11 10:17:29|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:48.98
+2022-02-11 10:17:31|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:50.98
+2022-02-11 10:17:33|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:52.98
+2022-02-11 10:17:35|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:54.98
+2022-02-11 10:17:37|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:56.99
+2022-02-11 10:17:39|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:58.98
+2022-02-11 10:17:41|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:0.98
+2022-02-11 10:17:43|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:2.98
+2022-02-11 10:17:45|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:4.98
+2022-02-11 10:17:47|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:6.98
+2022-02-11 10:17:49|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:8.98
+2022-02-11 10:17:51|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:10.98
+2022-02-11 10:17:53|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:12.98
+2022-02-11 10:17:55|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:14.98
+2022-02-11 10:17:57|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:16.98
+2022-02-11 10:17:59|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:18.98
+2022-02-11 10:18:01|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:20.98
+2022-02-11 10:18:03|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:22.98
+2022-02-11 10:18:05|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:24.98
+2022-02-11 10:18:07|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:26.98
+2022-02-11 10:18:09|160198|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:28.98
+2022-02-11 10:18:09|160198|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "8", "p1": "threads", "p2": "FALSE", "p3": "#pragma omp parallel for", "p4": " ", "p5": "dist_schedule(static,4096)", "p6": "schedule(static,4)"} --> 64.347
+2022-02-11 10:18:09|160198|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '8', 'p1': 'threads', 'p2': 'FALSE', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'dist_schedule(static,4096)', 'p6': 'schedule(static,4)'} y: 64.347
+2022-02-11 10:18:09|160198|INFO|ytopt.search.hps.ambs:101] Hyperopt driver finishing
+2022-02-11 10:40:21|3703277|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-11 10:40:22|3703277|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-11 10:40:29|3703277|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x20081a573830>', proc_info: {'node_ip_address': '128.219.134.85', 'raylet_ip_address': '128.219.134.85', 'redis_address': '128.219.134.85:6379', 'object_store_address': '/tmp/ray/session_2022-02-11_10-40-22_459429_3703277/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-02-11_10-40-22_459429_3703277/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-02-11_10-40-22_459429_3703277', 'metrics_export_port': 55873, 'gcs_address': '128.219.134.85:65023', 'address': '128.219.134.85:6379', 'node_id': 'aeaf556470948d4b43aa59e146e2178094f035f0e6101c12ecfedfe0'}
+2022-02-11 10:40:29|3703277|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 10.134.0.45
+2022-02-11 10:40:29|3703277|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 55873,
+  'NodeID': 'aeaf556470948d4b43aa59e146e2178094f035f0e6101c12ecfedfe0',
+  'NodeManagerAddress': '128.219.134.85',
+  'NodeManagerHostname': 'batch5',
+  'NodeManagerPort': 33061,
+  'ObjectManagerPort': 40377,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-02-11_10-40-22_459429_3703277/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-02-11_10-40-22_459429_3703277/sockets/raylet',
+  'Resources': {'CPU': 128.0,
+                'GPU': 4.0,
+                'accelerator_type:V100': 1.0,
+                'memory': 331852218983.0,
+                'node:128.219.134.85': 1.0,
+                'object_store_memory': 146508093849.0},
+  'alive': True}]
+2022-02-11 10:40:29|3703277|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem.Problem'}
+2022-02-11 10:40:29|3703277|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    p0, Type: Ordinal, Sequence: {2, 4, 8, 16, 21, 32, 42}, Default: 42
+    p1, Type: Categorical, Choices: {cores, threads, sockets}, Default: cores
+    p2, Type: Categorical, Choices: {TRUE, FALSE}, Default: TRUE
+    p3, Type: Categorical, Choices: {#pragma omp parallel for,  }, Default:  
+    p4, Type: Categorical, Choices: {simd,  }, Default:  
+    p5, Type: Categorical, Choices: {dist_schedule(static,256), dist_schedule(static,512), dist_schedule(static,1024), dist_schedule(static,2048), dist_schedule(static,4096),  }, Default:  
+    p6, Type: Categorical, Choices: {schedule(static,1), schedule(static,2), schedule(static,4), schedule(static,8), schedule(static,16), schedule(static,32),  }, Default:  
+
+2022-02-11 10:40:29|3703277|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-02-11 10:40:29|3703277|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-02-11 10:40:29|3703277|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-02-11 10:40:29|3703277|INFO|ytopt.search.hps.optimizer.optimizer:58] Using skopt.Optimizer with RF base_estimator
+2022-02-11 10:40:29|3703277|INFO|ytopt.search.hps.ambs:79] Generating 1 initial points...
+2022-02-11 10:40:32|3703277|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '16', 'p1': 'threads', 'p2': 'FALSE', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': ' '}
+2022-02-11 10:40:32|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:0.00
+2022-02-11 10:40:34|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:2.54
+2022-02-11 10:40:36|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:4.54
+2022-02-11 10:40:38|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:6.54
+2022-02-11 10:40:40|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:8.54
+2022-02-11 10:40:42|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:10.54
+2022-02-11 10:40:44|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:12.54
+2022-02-11 10:40:46|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:14.54
+2022-02-11 10:40:48|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:16.54
+2022-02-11 10:40:50|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:18.54
+2022-02-11 10:40:52|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:20.54
+2022-02-11 10:40:54|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:22.54
+2022-02-11 10:40:56|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:24.54
+2022-02-11 10:40:58|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:26.54
+2022-02-11 10:41:00|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:28.54
+2022-02-11 10:41:02|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:30.54
+2022-02-11 10:41:04|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:32.54
+2022-02-11 10:41:06|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:34.54
+2022-02-11 10:41:08|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:36.54
+2022-02-11 10:41:10|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:38.54
+2022-02-11 10:41:12|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:40.54
+2022-02-11 10:41:14|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:42.54
+2022-02-11 10:41:16|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:44.54
+2022-02-11 10:41:18|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:46.54
+2022-02-11 10:41:20|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:48.54
+2022-02-11 10:41:22|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:50.54
+2022-02-11 10:41:24|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:52.54
+2022-02-11 10:41:26|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:54.54
+2022-02-11 10:41:28|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:56.54
+2022-02-11 10:41:30|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:58.54
+2022-02-11 10:41:32|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:0.54
+2022-02-11 10:41:34|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:2.54
+2022-02-11 10:41:36|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:4.54
+2022-02-11 10:41:38|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:6.54
+2022-02-11 10:41:40|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:8.54
+2022-02-11 10:41:42|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:10.54
+2022-02-11 10:41:44|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:12.54
+2022-02-11 10:41:44|3703277|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "16", "p1": "threads", "p2": "FALSE", "p3": "#pragma omp parallel for", "p4": "simd", "p5": "dist_schedule(static,1024)", "p6": " "} --> 68.927
+2022-02-11 10:41:44|3703277|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '16', 'p1': 'threads', 'p2': 'FALSE', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': ' '} y: 68.927
+2022-02-11 10:41:44|3703277|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-11 10:41:44|3703277|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '16', 'p1': 'threads', 'p2': 'FALSE', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': ' '} --> ('16', 'threads', 'FALSE', '#pragma omp parallel for', 'simd', 'dist_schedule(static,1024)', ' '): evaluated objective: 68.927
+2022-02-11 10:41:46|3703277|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-11 10:41:48|3703277|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['8', 'threads', 'FALSE', ' ', ' ', 'dist_schedule(static,512)', 'schedule(static,1)'] lie: 68.927
+2022-02-11 10:41:48|3703277|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '8', 'p1': 'threads', 'p2': 'FALSE', 'p3': ' ', 'p4': ' ', 'p5': 'dist_schedule(static,512)', 'p6': 'schedule(static,1)'}
+2022-02-11 10:41:49|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:17.25
+2022-02-11 10:41:50|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:17.78
+2022-02-11 10:41:52|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:19.78
+2022-02-11 10:41:54|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:21.78
+2022-02-11 10:41:56|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:23.78
+2022-02-11 10:41:58|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:25.78
+2022-02-11 10:42:00|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:27.78
+2022-02-11 10:42:02|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:29.78
+2022-02-11 10:42:04|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:31.78
+2022-02-11 10:42:06|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:33.78
+2022-02-11 10:42:08|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:35.78
+2022-02-11 10:42:10|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:37.78
+2022-02-11 10:42:12|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:39.78
+2022-02-11 10:42:14|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:41.78
+2022-02-11 10:42:16|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:43.78
+2022-02-11 10:42:18|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:45.78
+2022-02-11 10:42:20|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:47.78
+2022-02-11 10:42:22|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:49.78
+2022-02-11 10:42:24|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:51.78
+2022-02-11 10:42:26|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:53.78
+2022-02-11 10:42:28|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:55.78
+2022-02-11 10:42:30|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:57.78
+2022-02-11 10:42:32|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:59.78
+2022-02-11 10:42:34|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:1.78
+2022-02-11 10:42:36|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:3.78
+2022-02-11 10:42:38|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:5.78
+2022-02-11 10:42:40|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:7.78
+2022-02-11 10:42:42|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:9.78
+2022-02-11 10:42:44|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:11.78
+2022-02-11 10:42:46|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:13.78
+2022-02-11 10:42:48|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:15.78
+2022-02-11 10:42:50|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:17.78
+2022-02-11 10:42:52|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:19.78
+2022-02-11 10:42:54|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:21.78
+2022-02-11 10:42:56|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:23.78
+2022-02-11 10:42:58|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:25.78
+2022-02-11 10:42:58|3703277|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "8", "p1": "threads", "p2": "FALSE", "p3": " ", "p4": " ", "p5": "dist_schedule(static,512)", "p6": "schedule(static,1)"} --> 67.511
+2022-02-11 10:42:58|3703277|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '8', 'p1': 'threads', 'p2': 'FALSE', 'p3': ' ', 'p4': ' ', 'p5': 'dist_schedule(static,512)', 'p6': 'schedule(static,1)'} y: 67.511
+2022-02-11 10:42:58|3703277|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-11 10:42:58|3703277|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '8', 'p1': 'threads', 'p2': 'FALSE', 'p3': ' ', 'p4': ' ', 'p5': 'dist_schedule(static,512)', 'p6': 'schedule(static,1)'} --> ('8', 'threads', 'FALSE', ' ', ' ', 'dist_schedule(static,512)', 'schedule(static,1)'): evaluated objective: 67.511
+2022-02-11 10:42:59|3703277|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-11 10:43:01|3703277|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['8', 'threads', 'FALSE', '#pragma omp parallel for', ' ', 'dist_schedule(static,4096)', 'schedule(static,4)'] lie: 68.927
+2022-02-11 10:43:01|3703277|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '8', 'p1': 'threads', 'p2': 'FALSE', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'dist_schedule(static,4096)', 'p6': 'schedule(static,4)'}
+2022-02-11 10:43:03|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:30.57
+2022-02-11 10:43:03|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:31.10
+2022-02-11 10:43:05|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:33.10
+2022-02-11 10:43:07|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:35.10
+2022-02-11 10:43:09|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:37.10
+2022-02-11 10:43:11|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:39.10
+2022-02-11 10:43:13|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:41.10
+2022-02-11 10:43:15|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:43.10
+2022-02-11 10:43:17|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:45.10
+2022-02-11 10:43:19|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:47.10
+2022-02-11 10:43:21|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:49.10
+2022-02-11 10:43:23|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:51.10
+2022-02-11 10:43:25|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:53.10
+2022-02-11 10:43:27|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:55.10
+2022-02-11 10:43:29|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:57.10
+2022-02-11 10:43:31|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:59.10
+2022-02-11 10:43:33|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:1.10
+2022-02-11 10:43:35|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:3.10
+2022-02-11 10:43:37|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:5.10
+2022-02-11 10:43:39|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:7.10
+2022-02-11 10:43:41|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:9.10
+2022-02-11 10:43:43|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:11.10
+2022-02-11 10:43:45|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:13.10
+2022-02-11 10:43:47|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:15.10
+2022-02-11 10:43:49|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:17.10
+2022-02-11 10:43:51|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:19.10
+2022-02-11 10:43:53|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:21.10
+2022-02-11 10:43:55|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:23.10
+2022-02-11 10:43:57|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:25.10
+2022-02-11 10:43:59|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:27.10
+2022-02-11 10:44:01|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:29.10
+2022-02-11 10:44:03|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:31.10
+2022-02-11 10:44:05|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:33.10
+2022-02-11 10:44:07|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:35.10
+2022-02-11 10:44:09|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:37.10
+2022-02-11 10:44:11|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:39.10
+2022-02-11 10:44:11|3703277|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "8", "p1": "threads", "p2": "FALSE", "p3": "#pragma omp parallel for", "p4": " ", "p5": "dist_schedule(static,4096)", "p6": "schedule(static,4)"} --> 67.262
+2022-02-11 10:44:11|3703277|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '8', 'p1': 'threads', 'p2': 'FALSE', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'dist_schedule(static,4096)', 'p6': 'schedule(static,4)'} y: 67.262
+2022-02-11 10:44:11|3703277|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-11 10:44:11|3703277|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '8', 'p1': 'threads', 'p2': 'FALSE', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'dist_schedule(static,4096)', 'p6': 'schedule(static,4)'} --> ('8', 'threads', 'FALSE', '#pragma omp parallel for', ' ', 'dist_schedule(static,4096)', 'schedule(static,4)'): evaluated objective: 67.262
+2022-02-11 10:44:13|3703277|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-11 10:44:14|3703277|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['16', 'cores', 'TRUE', '#pragma omp parallel for', ' ', 'dist_schedule(static,4096)', 'schedule(static,16)'] lie: 68.927
+2022-02-11 10:44:14|3703277|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '16', 'p1': 'cores', 'p2': 'TRUE', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'dist_schedule(static,4096)', 'p6': 'schedule(static,16)'}
+2022-02-11 10:44:16|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:43.85
+2022-02-11 10:44:16|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:44.39
+2022-02-11 10:44:18|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:46.39
+2022-02-11 10:44:20|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:48.39
+2022-02-11 10:44:22|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:50.39
+2022-02-11 10:44:24|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:52.39
+2022-02-11 10:44:26|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:54.39
+2022-02-11 10:44:28|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:56.39
+2022-02-11 10:44:30|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:58.39
+2022-02-11 10:44:32|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:0.39
+2022-02-11 10:44:34|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:2.39
+2022-02-11 10:44:36|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:4.39
+2022-02-11 10:44:38|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:6.39
+2022-02-11 10:44:40|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:8.39
+2022-02-11 10:44:42|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:10.39
+2022-02-11 10:44:44|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:12.39
+2022-02-11 10:44:46|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:14.39
+2022-02-11 10:44:48|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:16.39
+2022-02-11 10:44:50|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:18.39
+2022-02-11 10:44:52|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:20.39
+2022-02-11 10:44:54|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:22.39
+2022-02-11 10:44:56|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:24.39
+2022-02-11 10:44:58|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:26.39
+2022-02-11 10:45:00|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:28.39
+2022-02-11 10:45:02|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:30.39
+2022-02-11 10:45:04|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:32.39
+2022-02-11 10:45:06|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:34.39
+2022-02-11 10:45:08|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:36.39
+2022-02-11 10:45:10|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:38.39
+2022-02-11 10:45:12|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:40.39
+2022-02-11 10:45:14|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:42.39
+2022-02-11 10:45:16|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:44.39
+2022-02-11 10:45:18|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:46.39
+2022-02-11 10:45:20|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:48.39
+2022-02-11 10:45:22|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:50.39
+2022-02-11 10:45:24|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:52.39
+2022-02-11 10:45:24|3703277|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "16", "p1": "cores", "p2": "TRUE", "p3": "#pragma omp parallel for", "p4": " ", "p5": "dist_schedule(static,4096)", "p6": "schedule(static,16)"} --> 67.23
+2022-02-11 10:45:24|3703277|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '16', 'p1': 'cores', 'p2': 'TRUE', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'dist_schedule(static,4096)', 'p6': 'schedule(static,16)'} y: 67.23
+2022-02-11 10:45:24|3703277|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-11 10:45:24|3703277|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '16', 'p1': 'cores', 'p2': 'TRUE', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'dist_schedule(static,4096)', 'p6': 'schedule(static,16)'} --> ('16', 'cores', 'TRUE', '#pragma omp parallel for', ' ', 'dist_schedule(static,4096)', 'schedule(static,16)'): evaluated objective: 67.23
+2022-02-11 10:45:26|3703277|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-11 10:45:28|3703277|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['42', 'threads', 'TRUE', '#pragma omp parallel for', ' ', 'dist_schedule(static,256)', ' '] lie: 68.927
+2022-02-11 10:45:28|3703277|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '42', 'p1': 'threads', 'p2': 'TRUE', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'dist_schedule(static,256)', 'p6': ' '}
+2022-02-11 10:45:29|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:57.04
+2022-02-11 10:45:30|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:57.58
+2022-02-11 10:45:32|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:59.58
+2022-02-11 10:45:34|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:1.58
+2022-02-11 10:45:36|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:3.58
+2022-02-11 10:45:38|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:5.58
+2022-02-11 10:45:40|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:7.58
+2022-02-11 10:45:42|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:9.58
+2022-02-11 10:45:44|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:11.58
+2022-02-11 10:45:46|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:13.58
+2022-02-11 10:45:48|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:15.58
+2022-02-11 10:45:50|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:17.58
+2022-02-11 10:45:52|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:19.58
+2022-02-11 10:45:54|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:21.58
+2022-02-11 10:45:56|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:23.58
+2022-02-11 10:45:58|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:25.58
+2022-02-11 10:46:00|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:27.58
+2022-02-11 10:46:02|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:29.58
+2022-02-11 10:46:04|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:31.58
+2022-02-11 10:46:06|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:33.58
+2022-02-11 10:46:08|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:35.58
+2022-02-11 10:46:10|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:37.58
+2022-02-11 10:46:12|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:39.58
+2022-02-11 10:46:14|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:41.58
+2022-02-11 10:46:16|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:43.58
+2022-02-11 10:46:18|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:45.58
+2022-02-11 10:46:20|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:47.58
+2022-02-11 10:46:22|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:49.58
+2022-02-11 10:46:24|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:51.58
+2022-02-11 10:46:26|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:53.58
+2022-02-11 10:46:28|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:55.58
+2022-02-11 10:46:30|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:57.58
+2022-02-11 10:46:32|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:59.58
+2022-02-11 10:46:34|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:1.58
+2022-02-11 10:46:36|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:3.58
+2022-02-11 10:46:38|3703277|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:5.58
+2022-02-11 10:46:38|3703277|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "42", "p1": "threads", "p2": "TRUE", "p3": "#pragma omp parallel for", "p4": " ", "p5": "dist_schedule(static,256)", "p6": " "} --> 67.336
+2022-02-11 10:46:38|3703277|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '42', 'p1': 'threads', 'p2': 'TRUE', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'dist_schedule(static,256)', 'p6': ' '} y: 67.336
+2022-02-11 10:46:38|3703277|INFO|ytopt.search.hps.ambs:101] Hyperopt driver finishing
+2022-02-18 14:24:31|1746048|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-18 14:24:36|1746048|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-18 14:36:45|1770243|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-18 14:36:48|1770243|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-18 20:41:15|44910|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-18 20:41:21|44910|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-18 20:47:55|10729|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-18 20:48:01|10729|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-18 20:48:16|10729|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x7f70fb076950>', proc_info: {'node_ip_address': '140.221.69.22', 'raylet_ip_address': '140.221.69.22', 'redis_address': '140.221.69.22:6379', 'object_store_address': '/tmp/ray/session_2022-02-18_20-48-01_884149_10729/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-02-18_20-48-01_884149_10729/sockets/raylet', 'webui_url': '127.0.0.1:8265', 'session_dir': '/tmp/ray/session_2022-02-18_20-48-01_884149_10729', 'metrics_export_port': 55960, 'node_id': 'ce20d57c696ccaa08250758506fc0d3c7b5a3cdb0ce24c465f92c56b'}
+2022-02-18 20:48:16|10729|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 10.236.1.195
+2022-02-18 20:48:16|10729|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 55960,
+  'NodeID': 'ce20d57c696ccaa08250758506fc0d3c7b5a3cdb0ce24c465f92c56b',
+  'NodeManagerAddress': '140.221.69.22',
+  'NodeManagerHostname': 'thetalogin6',
+  'NodeManagerPort': 34615,
+  'ObjectManagerPort': 46663,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-02-18_20-48-01_884149_10729/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-02-18_20-48-01_884149_10729/sockets/raylet',
+  'Resources': {'CPU': 32.0,
+                'memory': 137356750644.0,
+                'node:140.221.69.22': 1.0,
+                'object_store_memory': 63152893132.0},
+  'alive': True}]
+2022-02-18 20:48:16|10729|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem.Problem'}
+2022-02-18 20:48:16|10729|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    p0, Type: Ordinal, Sequence: {2, 4, 8, 16, 21, 32, 42}, Default: 42
+    p1, Type: Categorical, Choices: {cores, threads, sockets}, Default: cores
+    p2, Type: Categorical, Choices: {TRUE, FALSE}, Default: TRUE
+    p3, Type: Categorical, Choices: {#pragma omp parallel for,  }, Default:  
+    p4, Type: Categorical, Choices: {simd,  }, Default:  
+    p5, Type: Categorical, Choices: {dist_schedule(static,256), dist_schedule(static,512), dist_schedule(static,1024), dist_schedule(static,2048), dist_schedule(static,4096),  }, Default:  
+    p6, Type: Categorical, Choices: {schedule(static,1), schedule(static,2), schedule(static,4), schedule(static,8), schedule(static,16), schedule(static,32),  }, Default:  
+
+2022-02-18 20:48:16|10729|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-02-18 20:48:16|10729|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-02-18 20:48:16|10729|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-02-18 20:48:16|10729|INFO|ytopt.search.hps.optimizer.optimizer:51] Using skopt.Optimizer with RF base_estimator
+2022-02-18 20:48:16|10729|INFO|ytopt.search.hps.ambs:79] Generating 1 initial points...
+2022-02-18 20:48:17|10729|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '21', 'p1': 'threads', 'p2': 'TRUE', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'dist_schedule(static,512)', 'p6': 'schedule(static,16)'}
+2022-02-18 20:48:17|10729|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:0.00
+2022-02-18 20:48:20|10729|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:2.54
+2022-02-18 20:48:20|10729|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "21", "p1": "threads", "p2": "TRUE", "p3": "#pragma omp parallel for", "p4": "simd", "p5": "dist_schedule(static,512)", "p6": "schedule(static,16)"} --> 1.0
+2022-02-18 20:48:20|10729|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '21', 'p1': 'threads', 'p2': 'TRUE', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'dist_schedule(static,512)', 'p6': 'schedule(static,16)'} y: 1.0
+2022-02-18 20:48:20|10729|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-18 20:48:20|10729|DEBUG|ytopt.search.hps.optimizer.optimizer:119] tell: {'p0': '21', 'p1': 'threads', 'p2': 'TRUE', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'dist_schedule(static,512)', 'p6': 'schedule(static,16)'} --> ('21', 'threads', 'TRUE', '#pragma omp parallel for', 'simd', 'dist_schedule(static,512)', 'schedule(static,16)'): evaluated objective: 1.0
+2022-02-18 20:48:20|10729|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-18 20:48:20|10729|DEBUG|ytopt.search.hps.optimizer.optimizer:84] _ask: ['42', 'cores', 'FALSE', ' ', ' ', 'dist_schedule(static,4096)', 'schedule(static,16)'] lie: 1.0
+2022-02-18 20:48:20|10729|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '42', 'p1': 'cores', 'p2': 'FALSE', 'p3': ' ', 'p4': ' ', 'p5': 'dist_schedule(static,4096)', 'p6': 'schedule(static,16)'}
+2022-02-18 20:48:22|10729|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:4.64
+2022-02-18 20:48:22|10729|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "42", "p1": "cores", "p2": "FALSE", "p3": " ", "p4": " ", "p5": "dist_schedule(static,4096)", "p6": "schedule(static,16)"} --> 1.0
+2022-02-18 20:48:22|10729|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '42', 'p1': 'cores', 'p2': 'FALSE', 'p3': ' ', 'p4': ' ', 'p5': 'dist_schedule(static,4096)', 'p6': 'schedule(static,16)'} y: 1.0
+2022-02-18 20:48:22|10729|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-18 20:48:22|10729|DEBUG|ytopt.search.hps.optimizer.optimizer:119] tell: {'p0': '42', 'p1': 'cores', 'p2': 'FALSE', 'p3': ' ', 'p4': ' ', 'p5': 'dist_schedule(static,4096)', 'p6': 'schedule(static,16)'} --> ('42', 'cores', 'FALSE', ' ', ' ', 'dist_schedule(static,4096)', 'schedule(static,16)'): evaluated objective: 1.0
+2022-02-18 20:48:22|10729|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-18 20:48:22|10729|DEBUG|ytopt.search.hps.optimizer.optimizer:84] _ask: ['8', 'threads', 'TRUE', '#pragma omp parallel for', 'simd', 'dist_schedule(static,512)', 'schedule(static,32)'] lie: 1.0
+2022-02-18 20:48:22|10729|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '8', 'p1': 'threads', 'p2': 'TRUE', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'dist_schedule(static,512)', 'p6': 'schedule(static,32)'}
+2022-02-18 20:48:24|10729|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:6.68
+2022-02-18 20:48:24|10729|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "8", "p1": "threads", "p2": "TRUE", "p3": "#pragma omp parallel for", "p4": "simd", "p5": "dist_schedule(static,512)", "p6": "schedule(static,32)"} --> 1.0
+2022-02-18 20:48:24|10729|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '8', 'p1': 'threads', 'p2': 'TRUE', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'dist_schedule(static,512)', 'p6': 'schedule(static,32)'} y: 1.0
+2022-02-18 20:48:24|10729|INFO|ytopt.search.hps.ambs:101] Hyperopt driver finishing
+2022-02-18 20:48:41|12507|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-18 20:48:41|12507|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-18 20:48:48|12507|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x7f9f8a2a2950>', proc_info: {'node_ip_address': '140.221.69.22', 'raylet_ip_address': '140.221.69.22', 'redis_address': '140.221.69.22:6379', 'object_store_address': '/tmp/ray/session_2022-02-18_20-48-41_873013_12507/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-02-18_20-48-41_873013_12507/sockets/raylet', 'webui_url': '127.0.0.1:8265', 'session_dir': '/tmp/ray/session_2022-02-18_20-48-41_873013_12507', 'metrics_export_port': 59384, 'node_id': 'fb82d131f124acd7db227cf3449c7f0a0134b4c747e08516324ec712'}
+2022-02-18 20:48:48|12507|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 10.236.1.195
+2022-02-18 20:48:48|12507|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 59384,
+  'NodeID': 'fb82d131f124acd7db227cf3449c7f0a0134b4c747e08516324ec712',
+  'NodeManagerAddress': '140.221.69.22',
+  'NodeManagerHostname': 'thetalogin6',
+  'NodeManagerPort': 45169,
+  'ObjectManagerPort': 40783,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-02-18_20-48-41_873013_12507/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-02-18_20-48-41_873013_12507/sockets/raylet',
+  'Resources': {'CPU': 32.0,
+                'memory': 136911612109.0,
+                'node:140.221.69.22': 1.0,
+                'object_store_memory': 62962119475.0},
+  'alive': True}]
+2022-02-18 20:48:48|12507|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem.Problem'}
+2022-02-18 20:48:48|12507|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    p0, Type: Ordinal, Sequence: {2, 4, 8, 16, 21, 32, 42}, Default: 42
+    p1, Type: Categorical, Choices: {cores, threads, sockets}, Default: cores
+    p2, Type: Categorical, Choices: {TRUE, FALSE}, Default: TRUE
+    p3, Type: Categorical, Choices: {#pragma omp parallel for,  }, Default:  
+    p4, Type: Categorical, Choices: {simd,  }, Default:  
+    p5, Type: Categorical, Choices: {dist_schedule(static,256), dist_schedule(static,512), dist_schedule(static,1024), dist_schedule(static,2048), dist_schedule(static,4096),  }, Default:  
+    p6, Type: Categorical, Choices: {schedule(static,1), schedule(static,2), schedule(static,4), schedule(static,8), schedule(static,16), schedule(static,32),  }, Default:  
+
+2022-02-18 20:48:48|12507|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-02-18 20:48:48|12507|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-02-18 20:48:48|12507|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-02-18 20:48:48|12507|INFO|ytopt.search.hps.optimizer.optimizer:51] Using skopt.Optimizer with RF base_estimator
+2022-02-18 20:48:48|12507|INFO|ytopt.search.hps.ambs:79] Generating 1 initial points...
+2022-02-18 20:48:49|12507|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '4', 'p1': 'sockets', 'p2': 'FALSE', 'p3': ' ', 'p4': ' ', 'p5': 'dist_schedule(static,512)', 'p6': 'schedule(static,8)'}
+2022-02-18 20:48:49|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:0.00
+2022-02-18 20:48:52|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:2.54
+2022-02-18 20:48:54|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:4.54
+2022-02-18 20:48:56|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:6.55
+2022-02-18 20:48:58|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:8.54
+2022-02-18 20:49:00|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:10.54
+2022-02-18 20:49:02|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:12.54
+2022-02-18 20:49:04|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:14.54
+2022-02-18 20:49:06|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:16.54
+2022-02-18 20:49:08|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:18.54
+2022-02-18 20:49:10|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:20.54
+2022-02-18 20:49:12|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:22.54
+2022-02-18 20:49:12|12507|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "4", "p1": "sockets", "p2": "FALSE", "p3": " ", "p4": " ", "p5": "dist_schedule(static,512)", "p6": "schedule(static,8)"} --> 1
+2022-02-18 20:49:12|12507|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '4', 'p1': 'sockets', 'p2': 'FALSE', 'p3': ' ', 'p4': ' ', 'p5': 'dist_schedule(static,512)', 'p6': 'schedule(static,8)'} y: 1
+2022-02-18 20:49:12|12507|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-18 20:49:12|12507|DEBUG|ytopt.search.hps.optimizer.optimizer:119] tell: {'p0': '4', 'p1': 'sockets', 'p2': 'FALSE', 'p3': ' ', 'p4': ' ', 'p5': 'dist_schedule(static,512)', 'p6': 'schedule(static,8)'} --> ('4', 'sockets', 'FALSE', ' ', ' ', 'dist_schedule(static,512)', 'schedule(static,8)'): evaluated objective: 1
+2022-02-18 20:49:12|12507|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-18 20:49:12|12507|DEBUG|ytopt.search.hps.optimizer.optimizer:84] _ask: ['32', 'cores', 'TRUE', ' ', ' ', 'dist_schedule(static,4096)', 'schedule(static,16)'] lie: 1
+2022-02-18 20:49:12|12507|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '32', 'p1': 'cores', 'p2': 'TRUE', 'p3': ' ', 'p4': ' ', 'p5': 'dist_schedule(static,4096)', 'p6': 'schedule(static,16)'}
+2022-02-18 20:49:14|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:24.73
+2022-02-18 20:49:16|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:26.54
+2022-02-18 20:49:18|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:28.54
+2022-02-18 20:49:20|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:30.54
+2022-02-18 20:49:22|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:32.54
+2022-02-18 20:49:24|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:34.54
+2022-02-18 20:49:26|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:36.54
+2022-02-18 20:49:28|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:38.54
+2022-02-18 20:49:30|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:40.54
+2022-02-18 20:49:32|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:42.54
+2022-02-18 20:49:34|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:44.54
+2022-02-18 20:49:36|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:46.54
+2022-02-18 20:49:38|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:48.54
+2022-02-18 20:49:38|12507|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "32", "p1": "cores", "p2": "TRUE", "p3": " ", "p4": " ", "p5": "dist_schedule(static,4096)", "p6": "schedule(static,16)"} --> 1
+2022-02-18 20:49:38|12507|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '32', 'p1': 'cores', 'p2': 'TRUE', 'p3': ' ', 'p4': ' ', 'p5': 'dist_schedule(static,4096)', 'p6': 'schedule(static,16)'} y: 1
+2022-02-18 20:49:38|12507|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-18 20:49:38|12507|DEBUG|ytopt.search.hps.optimizer.optimizer:119] tell: {'p0': '32', 'p1': 'cores', 'p2': 'TRUE', 'p3': ' ', 'p4': ' ', 'p5': 'dist_schedule(static,4096)', 'p6': 'schedule(static,16)'} --> ('32', 'cores', 'TRUE', ' ', ' ', 'dist_schedule(static,4096)', 'schedule(static,16)'): evaluated objective: 1
+2022-02-18 20:49:38|12507|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-18 20:49:39|12507|DEBUG|ytopt.search.hps.optimizer.optimizer:84] _ask: ['8', 'cores', 'TRUE', '#pragma omp parallel for', ' ', 'dist_schedule(static,512)', 'schedule(static,32)'] lie: 1
+2022-02-18 20:49:39|12507|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '8', 'p1': 'cores', 'p2': 'TRUE', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'dist_schedule(static,512)', 'p6': 'schedule(static,32)'}
+2022-02-18 20:49:40|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:51.12
+2022-02-18 20:49:42|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:52.54
+2022-02-18 20:49:44|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:54.54
+2022-02-18 20:49:46|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:56.54
+2022-02-18 20:49:48|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:58.51
+2022-02-18 20:49:50|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:0.51
+2022-02-18 20:49:52|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:2.54
+2022-02-18 20:49:54|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:4.54
+2022-02-18 20:49:56|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:6.54
+2022-02-18 20:49:58|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:8.54
+2022-02-18 20:50:00|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:10.54
+2022-02-18 20:50:02|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:12.54
+2022-02-18 20:50:04|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:14.54
+2022-02-18 20:50:06|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:16.55
+2022-02-18 20:50:08|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:18.55
+2022-02-18 20:50:10|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:20.54
+2022-02-18 20:50:12|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:22.54
+2022-02-18 20:50:14|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:24.55
+2022-02-18 20:50:16|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:26.51
+2022-02-18 20:50:18|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:28.55
+2022-02-18 20:50:20|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:30.54
+2022-02-18 20:50:22|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:32.54
+2022-02-18 20:50:27|12507|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:37.72
+2022-02-18 22:15:56|53938|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-18 22:16:03|53938|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-22 16:57:05|21185|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-22 16:57:11|21185|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-22 16:57:47|21185|ERROR|ytopt:50] Uncaught exception:
+Traceback (most recent call last):
+  File "/home/jkoo/.conda/envs/ytune/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/jkoo/.conda/envs/ytune/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/lus/theta-fs0/projects/EE-ECP/jkoo/github/ytopt/ytopt/search/ambs.py", line 106, in <module>
+    search = AMBS(**vars(args))
+  File "/lus/theta-fs0/projects/EE-ECP/jkoo/github/ytopt/ytopt/search/ambs.py", line 45, in __init__
+    super().__init__(**kwargs)
+  File "/lus/theta-fs0/projects/EE-ECP/jkoo/github/ytopt/ytopt/search/search.py", line 41, in __init__
+    self.evaluator = Evaluator.create(self.problem, method=evaluator, redis_address=redis_address)
+  File "/lus/theta-fs0/projects/EE-ECP/jkoo/github/ytopt/ytopt/evaluator/evaluate.py", line 75, in create
+    Eval = RayEvaluator(problem, cache_key=cache_key, redis_address=redis_address)
+  File "/lus/theta-fs0/projects/EE-ECP/jkoo/github/ytopt/ytopt/evaluator/ray_evaluator.py", line 100, in __init__
+    infos = ray.init()
+  File "/home/jkoo/.conda/envs/ytune/lib/python3.7/site-packages/ray/_private/client_mode_hook.py", line 82, in wrapper
+    return func(*args, **kwargs)
+  File "/home/jkoo/.conda/envs/ytune/lib/python3.7/site-packages/ray/worker.py", line 924, in init
+    job_config=job_config)
+  File "/home/jkoo/.conda/envs/ytune/lib/python3.7/site-packages/ray/worker.py", line 1332, in connect
+    worker_shim_pid)
+KeyboardInterrupt
+2022-02-22 12:09:17|1539970|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-22 12:09:22|1539970|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-22 12:18:15|1556606|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-22 12:18:22|1556606|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-22 19:50:35|879203|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-22 19:50:35|879203|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-22 19:50:43|879203|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x152d34530050>', proc_info: {'node_ip_address': '10.70.150.12', 'raylet_ip_address': '10.70.150.12', 'redis_address': '10.70.150.12:6379', 'object_store_address': '/tmp/ray/session_2022-02-22_19-50-35_500250_879203/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-02-22_19-50-35_500250_879203/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-02-22_19-50-35_500250_879203', 'metrics_export_port': 59449, 'gcs_address': '10.70.150.12:45055', 'node_id': '4c12801b38f2698ef1609b38e27eddac0be52e8a981eb555cc8ddb60'}
+2022-02-22 19:50:43|879203|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 10.70.150.12
+2022-02-22 19:50:43|879203|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 59449,
+  'NodeID': '4c12801b38f2698ef1609b38e27eddac0be52e8a981eb555cc8ddb60',
+  'NodeManagerAddress': '10.70.150.12',
+  'NodeManagerHostname': 'gpu2',
+  'NodeManagerPort': 41669,
+  'ObjectManagerPort': 35149,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-02-22_19-50-35_500250_879203/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-02-22_19-50-35_500250_879203/sockets/raylet',
+  'Resources': {'CPU': 256.0,
+                'GPU': 1.0,
+                'accelerator_type:A100': 1.0,
+                'memory': 852911639552.0,
+                'node:10.70.150.12': 1.0,
+                'object_store_memory': 200000000000.0},
+  'alive': True}]
+2022-02-22 19:50:43|879203|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem.Problem'}
+2022-02-22 19:50:43|879203|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    p0, Type: Ordinal, Sequence: {2, 4, 8, 16, 21, 32, 42}, Default: 42
+    p1, Type: Categorical, Choices: {cores, threads, sockets}, Default: cores
+    p2, Type: Categorical, Choices: {close, spread, master}, Default: close
+    p3, Type: Categorical, Choices: {#pragma omp parallel for,  }, Default:  
+    p4, Type: Categorical, Choices: {simd,  }, Default:  
+    p5, Type: Categorical, Choices: {dist_schedule(static,256), dist_schedule(static,512), dist_schedule(static,1024), dist_schedule(static,2048), dist_schedule(static,4096),  }, Default:  
+    p6, Type: Categorical, Choices: {schedule(static,1), schedule(static,2), schedule(static,4), schedule(static,8), schedule(static,16), schedule(static,32),  }, Default:  
+
+2022-02-22 19:50:43|879203|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-02-22 19:50:43|879203|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-02-22 19:50:43|879203|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-02-22 19:50:43|879203|INFO|ytopt.search.hps.optimizer.optimizer:58] Using skopt.Optimizer with RF base_estimator
+2022-02-22 19:50:43|879203|INFO|ytopt.search.hps.ambs:79] Generating 1 initial points...
+2022-02-22 19:50:45|879203|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'}
+2022-02-22 19:50:45|879203|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:0.00
+2022-02-22 19:50:45|879203|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "16", "p1": "threads", "p2": "spread", "p3": " ", "p4": "simd", "p5": "dist_schedule(static,1024)", "p6": "schedule(static,8)"} --> 1
+2022-02-22 19:50:45|879203|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'} y: 1
+2022-02-22 19:50:45|879203|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-22 19:50:45|879203|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'} --> ('16', 'threads', 'spread', ' ', 'simd', 'dist_schedule(static,1024)', 'schedule(static,8)'): evaluated objective: 1
+2022-02-22 19:50:46|879203|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-22 19:50:47|879203|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['2', 'cores', 'master', '#pragma omp parallel for', 'simd', ' ', 'schedule(static,16)'] lie: 1
+2022-02-22 19:50:47|879203|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': ' ', 'p6': 'schedule(static,16)'}
+2022-02-22 19:50:49|879203|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:4.16
+2022-02-22 19:50:49|879203|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "2", "p1": "cores", "p2": "master", "p3": "#pragma omp parallel for", "p4": "simd", "p5": " ", "p6": "schedule(static,16)"} --> 1
+2022-02-22 19:50:49|879203|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': ' ', 'p6': 'schedule(static,16)'} y: 1
+2022-02-22 19:50:49|879203|INFO|ytopt.search.hps.ambs:101] Hyperopt driver finishing
+2022-02-22 19:51:47|887420|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-22 19:51:47|887420|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-22 19:51:56|887420|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x14f808367050>', proc_info: {'node_ip_address': '10.70.150.12', 'raylet_ip_address': '10.70.150.12', 'redis_address': '10.70.150.12:6379', 'object_store_address': '/tmp/ray/session_2022-02-22_19-51-47_846863_887420/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-02-22_19-51-47_846863_887420/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-02-22_19-51-47_846863_887420', 'metrics_export_port': 52031, 'gcs_address': '10.70.150.12:35693', 'node_id': 'b069d9b2c41e758d1a9316f1870d08243bb68d7bd8fe7472da0e03cf'}
+2022-02-22 19:51:56|887420|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 10.70.150.12
+2022-02-22 19:51:56|887420|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 52031,
+  'NodeID': 'b069d9b2c41e758d1a9316f1870d08243bb68d7bd8fe7472da0e03cf',
+  'NodeManagerAddress': '10.70.150.12',
+  'NodeManagerHostname': 'gpu2',
+  'NodeManagerPort': 40237,
+  'ObjectManagerPort': 33143,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-02-22_19-51-47_846863_887420/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-02-22_19-51-47_846863_887420/sockets/raylet',
+  'Resources': {'CPU': 256.0,
+                'GPU': 1.0,
+                'accelerator_type:A100': 1.0,
+                'memory': 852907834368.0,
+                'node:10.70.150.12': 1.0,
+                'object_store_memory': 200000000000.0},
+  'alive': True}]
+2022-02-22 19:51:56|887420|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem.Problem'}
+2022-02-22 19:51:56|887420|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    p0, Type: Ordinal, Sequence: {2, 4, 8, 16, 21, 32, 42}, Default: 42
+    p1, Type: Categorical, Choices: {cores, threads, sockets}, Default: cores
+    p2, Type: Categorical, Choices: {close, spread, master}, Default: close
+    p3, Type: Categorical, Choices: {#pragma omp parallel for,  }, Default:  
+    p4, Type: Categorical, Choices: {simd,  }, Default:  
+    p5, Type: Categorical, Choices: {dist_schedule(static,256), dist_schedule(static,512), dist_schedule(static,1024), dist_schedule(static,2048), dist_schedule(static,4096),  }, Default:  
+    p6, Type: Categorical, Choices: {schedule(static,1), schedule(static,2), schedule(static,4), schedule(static,8), schedule(static,16), schedule(static,32),  }, Default:  
+
+2022-02-22 19:51:56|887420|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-02-22 19:51:56|887420|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-02-22 19:51:56|887420|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-02-22 19:51:56|887420|INFO|ytopt.search.hps.optimizer.optimizer:58] Using skopt.Optimizer with RF base_estimator
+2022-02-22 19:51:56|887420|INFO|ytopt.search.hps.ambs:79] Generating 1 initial points...
+2022-02-22 19:51:57|887420|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'}
+2022-02-22 19:51:57|887420|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:0.00
+2022-02-22 19:51:58|887420|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "16", "p1": "threads", "p2": "spread", "p3": " ", "p4": "simd", "p5": "dist_schedule(static,1024)", "p6": "schedule(static,8)"} --> 1
+2022-02-22 19:51:58|887420|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'} y: 1
+2022-02-22 19:51:58|887420|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-22 19:51:58|887420|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'} --> ('16', 'threads', 'spread', ' ', 'simd', 'dist_schedule(static,1024)', 'schedule(static,8)'): evaluated objective: 1
+2022-02-22 19:51:59|887420|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-22 19:51:59|887420|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['2', 'cores', 'master', '#pragma omp parallel for', 'simd', ' ', 'schedule(static,16)'] lie: 1
+2022-02-22 19:51:59|887420|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': ' ', 'p6': 'schedule(static,16)'}
+2022-02-22 19:52:01|887420|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:4.17
+2022-02-22 19:52:01|887420|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "2", "p1": "cores", "p2": "master", "p3": "#pragma omp parallel for", "p4": "simd", "p5": " ", "p6": "schedule(static,16)"} --> 1
+2022-02-22 19:52:01|887420|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': ' ', 'p6': 'schedule(static,16)'} y: 1
+2022-02-22 19:52:01|887420|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-22 19:52:01|887420|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': ' ', 'p6': 'schedule(static,16)'} --> ('2', 'cores', 'master', '#pragma omp parallel for', 'simd', ' ', 'schedule(static,16)'): evaluated objective: 1
+2022-02-22 19:52:02|887420|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-22 19:52:03|887420|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['32', 'cores', 'master', ' ', 'simd', 'dist_schedule(static,256)', 'schedule(static,2)'] lie: 1
+2022-02-22 19:52:03|887420|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '32', 'p1': 'cores', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,256)', 'p6': 'schedule(static,2)'}
+2022-02-22 19:52:03|887420|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:5.84
+2022-02-22 19:52:03|887420|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "32", "p1": "cores", "p2": "master", "p3": " ", "p4": "simd", "p5": "dist_schedule(static,256)", "p6": "schedule(static,2)"} --> 1
+2022-02-22 19:52:03|887420|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '32', 'p1': 'cores', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,256)', 'p6': 'schedule(static,2)'} y: 1
+2022-02-22 19:52:03|887420|INFO|ytopt.search.hps.ambs:101] Hyperopt driver finishing
+2022-02-22 19:53:29|896087|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-22 19:53:29|896087|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-22 19:53:38|896087|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x14cf77aac050>', proc_info: {'node_ip_address': '10.70.150.12', 'raylet_ip_address': '10.70.150.12', 'redis_address': '10.70.150.12:6379', 'object_store_address': '/tmp/ray/session_2022-02-22_19-53-29_829470_896087/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-02-22_19-53-29_829470_896087/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-02-22_19-53-29_829470_896087', 'metrics_export_port': 57740, 'gcs_address': '10.70.150.12:42547', 'node_id': '186eb76679e234db9d939f25d0367ea7324945067ce4986873cd22f6'}
+2022-02-22 19:53:38|896087|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 10.70.150.12
+2022-02-22 19:53:38|896087|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 57740,
+  'NodeID': '186eb76679e234db9d939f25d0367ea7324945067ce4986873cd22f6',
+  'NodeManagerAddress': '10.70.150.12',
+  'NodeManagerHostname': 'gpu2',
+  'NodeManagerPort': 32815,
+  'ObjectManagerPort': 34053,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-02-22_19-53-29_829470_896087/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-02-22_19-53-29_829470_896087/sockets/raylet',
+  'Resources': {'CPU': 256.0,
+                'GPU': 1.0,
+                'accelerator_type:A100': 1.0,
+                'memory': 852903455744.0,
+                'node:10.70.150.12': 1.0,
+                'object_store_memory': 200000000000.0},
+  'alive': True}]
+2022-02-22 19:53:38|896087|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem.Problem'}
+2022-02-22 19:53:38|896087|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    p0, Type: Ordinal, Sequence: {2, 4, 8, 16, 21, 32, 42}, Default: 42
+    p1, Type: Categorical, Choices: {cores, threads, sockets}, Default: cores
+    p2, Type: Categorical, Choices: {close, spread, master}, Default: close
+    p3, Type: Categorical, Choices: {#pragma omp parallel for,  }, Default:  
+    p4, Type: Categorical, Choices: {simd,  }, Default:  
+    p5, Type: Categorical, Choices: {dist_schedule(static,256), dist_schedule(static,512), dist_schedule(static,1024), dist_schedule(static,2048), dist_schedule(static,4096),  }, Default:  
+    p6, Type: Categorical, Choices: {schedule(static,1), schedule(static,2), schedule(static,4), schedule(static,8), schedule(static,16), schedule(static,32),  }, Default:  
+
+2022-02-22 19:53:38|896087|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-02-22 19:53:38|896087|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-02-22 19:53:38|896087|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-02-22 19:53:38|896087|INFO|ytopt.search.hps.optimizer.optimizer:58] Using skopt.Optimizer with RF base_estimator
+2022-02-22 19:53:38|896087|INFO|ytopt.search.hps.ambs:79] Generating 1 initial points...
+2022-02-22 19:53:39|896087|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'}
+2022-02-22 19:53:39|896087|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:0.00
+2022-02-22 19:53:42|896087|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:2.54
+2022-02-22 19:53:42|896087|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "16", "p1": "threads", "p2": "spread", "p3": " ", "p4": "simd", "p5": "dist_schedule(static,1024)", "p6": "schedule(static,8)"} --> 1
+2022-02-22 19:53:42|896087|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'} y: 1
+2022-02-22 19:53:42|896087|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-22 19:53:42|896087|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'} --> ('16', 'threads', 'spread', ' ', 'simd', 'dist_schedule(static,1024)', 'schedule(static,8)'): evaluated objective: 1
+2022-02-22 19:53:43|896087|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-22 19:53:44|896087|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['2', 'cores', 'master', '#pragma omp parallel for', 'simd', ' ', 'schedule(static,16)'] lie: 1
+2022-02-22 19:53:44|896087|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': ' ', 'p6': 'schedule(static,16)'}
+2022-02-22 19:53:45|896087|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:5.67
+2022-02-22 19:53:45|896087|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "2", "p1": "cores", "p2": "master", "p3": "#pragma omp parallel for", "p4": "simd", "p5": " ", "p6": "schedule(static,16)"} --> 1
+2022-02-22 19:53:45|896087|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': ' ', 'p6': 'schedule(static,16)'} y: 1
+2022-02-22 19:53:45|896087|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-22 19:53:45|896087|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': ' ', 'p6': 'schedule(static,16)'} --> ('2', 'cores', 'master', '#pragma omp parallel for', 'simd', ' ', 'schedule(static,16)'): evaluated objective: 1
+2022-02-22 19:53:46|896087|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-22 19:53:47|896087|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['32', 'cores', 'master', ' ', 'simd', 'dist_schedule(static,256)', 'schedule(static,2)'] lie: 1
+2022-02-22 19:53:47|896087|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '32', 'p1': 'cores', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,256)', 'p6': 'schedule(static,2)'}
+2022-02-22 19:53:47|896087|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:7.67
+2022-02-22 19:53:47|896087|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "32", "p1": "cores", "p2": "master", "p3": " ", "p4": "simd", "p5": "dist_schedule(static,256)", "p6": "schedule(static,2)"} --> 1
+2022-02-22 19:53:47|896087|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '32', 'p1': 'cores', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,256)', 'p6': 'schedule(static,2)'} y: 1
+2022-02-22 19:53:47|896087|INFO|ytopt.search.hps.ambs:101] Hyperopt driver finishing
+2022-02-22 19:56:30|906742|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-22 19:56:30|906742|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-22 19:56:38|906742|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x148217e4c170>', proc_info: {'node_ip_address': '10.70.150.12', 'raylet_ip_address': '10.70.150.12', 'redis_address': '10.70.150.12:6379', 'object_store_address': '/tmp/ray/session_2022-02-22_19-56-30_501701_906742/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-02-22_19-56-30_501701_906742/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-02-22_19-56-30_501701_906742', 'metrics_export_port': 51197, 'gcs_address': '10.70.150.12:45567', 'node_id': 'c8db09d8ac4081cf540a8e92d1c799b39d89c6992e6de44f43ece67d'}
+2022-02-22 19:56:38|906742|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 10.70.150.12
+2022-02-22 19:56:38|906742|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 51197,
+  'NodeID': 'c8db09d8ac4081cf540a8e92d1c799b39d89c6992e6de44f43ece67d',
+  'NodeManagerAddress': '10.70.150.12',
+  'NodeManagerHostname': 'gpu2',
+  'NodeManagerPort': 38519,
+  'ObjectManagerPort': 45417,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-02-22_19-56-30_501701_906742/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-02-22_19-56-30_501701_906742/sockets/raylet',
+  'Resources': {'CPU': 256.0,
+                'GPU': 1.0,
+                'accelerator_type:A100': 1.0,
+                'memory': 852796660736.0,
+                'node:10.70.150.12': 1.0,
+                'object_store_memory': 200000000000.0},
+  'alive': True}]
+2022-02-22 19:56:38|906742|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem.Problem'}
+2022-02-22 19:56:38|906742|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    p0, Type: Ordinal, Sequence: {2, 4, 8, 16, 21, 32, 42}, Default: 42
+    p1, Type: Categorical, Choices: {cores, threads, sockets}, Default: cores
+    p2, Type: Categorical, Choices: {close, spread, master}, Default: close
+    p3, Type: Categorical, Choices: {#pragma omp parallel for,  }, Default:  
+    p4, Type: Categorical, Choices: {simd,  }, Default:  
+    p5, Type: Categorical, Choices: {dist_schedule(static,256), dist_schedule(static,512), dist_schedule(static,1024), dist_schedule(static,2048), dist_schedule(static,4096),  }, Default:  
+    p6, Type: Categorical, Choices: {schedule(static,1), schedule(static,2), schedule(static,4), schedule(static,8), schedule(static,16), schedule(static,32),  }, Default:  
+
+2022-02-22 19:56:38|906742|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-02-22 19:56:38|906742|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-02-22 19:56:38|906742|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-02-22 19:56:38|906742|INFO|ytopt.search.hps.optimizer.optimizer:58] Using skopt.Optimizer with RF base_estimator
+2022-02-22 19:56:38|906742|INFO|ytopt.search.hps.ambs:79] Generating 1 initial points...
+2022-02-22 19:56:40|906742|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'}
+2022-02-22 19:56:40|906742|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:0.00
+2022-02-22 19:56:42|906742|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:2.54
+2022-02-22 19:56:42|906742|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "16", "p1": "threads", "p2": "spread", "p3": " ", "p4": "simd", "p5": "dist_schedule(static,1024)", "p6": "schedule(static,8)"} --> 1
+2022-02-22 19:56:42|906742|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'} y: 1
+2022-02-22 19:56:42|906742|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-22 19:56:42|906742|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'} --> ('16', 'threads', 'spread', ' ', 'simd', 'dist_schedule(static,1024)', 'schedule(static,8)'): evaluated objective: 1
+2022-02-22 19:56:43|906742|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-22 19:56:44|906742|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['2', 'cores', 'master', '#pragma omp parallel for', 'simd', ' ', 'schedule(static,16)'] lie: 1
+2022-02-22 19:56:44|906742|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': ' ', 'p6': 'schedule(static,16)'}
+2022-02-22 19:56:45|906742|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:5.71
+2022-02-22 19:56:45|906742|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "2", "p1": "cores", "p2": "master", "p3": "#pragma omp parallel for", "p4": "simd", "p5": " ", "p6": "schedule(static,16)"} --> 1
+2022-02-22 19:56:45|906742|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': ' ', 'p6': 'schedule(static,16)'} y: 1
+2022-02-22 19:56:45|906742|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-22 19:56:45|906742|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': ' ', 'p6': 'schedule(static,16)'} --> ('2', 'cores', 'master', '#pragma omp parallel for', 'simd', ' ', 'schedule(static,16)'): evaluated objective: 1
+2022-02-22 19:56:46|906742|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-22 19:56:47|906742|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['32', 'cores', 'master', ' ', 'simd', 'dist_schedule(static,256)', 'schedule(static,2)'] lie: 1
+2022-02-22 19:56:47|906742|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '32', 'p1': 'cores', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,256)', 'p6': 'schedule(static,2)'}
+2022-02-22 19:56:47|906742|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:7.68
+2022-02-22 19:56:47|906742|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "32", "p1": "cores", "p2": "master", "p3": " ", "p4": "simd", "p5": "dist_schedule(static,256)", "p6": "schedule(static,2)"} --> 1
+2022-02-22 19:56:47|906742|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '32', 'p1': 'cores', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,256)', 'p6': 'schedule(static,2)'} y: 1
+2022-02-22 19:56:47|906742|INFO|ytopt.search.hps.ambs:101] Hyperopt driver finishing
+2022-02-22 19:57:18|914857|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-22 19:57:18|914857|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-22 19:57:26|914857|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x1474b9547170>', proc_info: {'node_ip_address': '10.70.150.12', 'raylet_ip_address': '10.70.150.12', 'redis_address': '10.70.150.12:6379', 'object_store_address': '/tmp/ray/session_2022-02-22_19-57-18_292285_914857/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-02-22_19-57-18_292285_914857/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-02-22_19-57-18_292285_914857', 'metrics_export_port': 41430, 'gcs_address': '10.70.150.12:37021', 'node_id': '5cb525083e12484ab14a9fb849563d94e9feb349aaa1726495cda357'}
+2022-02-22 19:57:26|914857|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 10.70.150.12
+2022-02-22 19:57:26|914857|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 41430,
+  'NodeID': '5cb525083e12484ab14a9fb849563d94e9feb349aaa1726495cda357',
+  'NodeManagerAddress': '10.70.150.12',
+  'NodeManagerHostname': 'gpu2',
+  'NodeManagerPort': 46681,
+  'ObjectManagerPort': 41239,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-02-22_19-57-18_292285_914857/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-02-22_19-57-18_292285_914857/sockets/raylet',
+  'Resources': {'CPU': 256.0,
+                'GPU': 1.0,
+                'accelerator_type:A100': 1.0,
+                'memory': 852821777408.0,
+                'node:10.70.150.12': 1.0,
+                'object_store_memory': 200000000000.0},
+  'alive': True}]
+2022-02-22 19:57:26|914857|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem.Problem'}
+2022-02-22 19:57:26|914857|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    p0, Type: Ordinal, Sequence: {2, 4, 8, 16, 21, 32, 42}, Default: 42
+    p1, Type: Categorical, Choices: {cores, threads, sockets}, Default: cores
+    p2, Type: Categorical, Choices: {close, spread, master}, Default: close
+    p3, Type: Categorical, Choices: {#pragma omp parallel for,  }, Default:  
+    p4, Type: Categorical, Choices: {simd,  }, Default:  
+    p5, Type: Categorical, Choices: {dist_schedule(static,256), dist_schedule(static,512), dist_schedule(static,1024), dist_schedule(static,2048), dist_schedule(static,4096),  }, Default:  
+    p6, Type: Categorical, Choices: {schedule(static,1), schedule(static,2), schedule(static,4), schedule(static,8), schedule(static,16), schedule(static,32),  }, Default:  
+
+2022-02-22 19:57:26|914857|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-02-22 19:57:26|914857|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-02-22 19:57:26|914857|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-02-22 19:57:26|914857|INFO|ytopt.search.hps.optimizer.optimizer:58] Using skopt.Optimizer with RF base_estimator
+2022-02-22 19:57:26|914857|INFO|ytopt.search.hps.ambs:79] Generating 1 initial points...
+2022-02-22 19:57:27|914857|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'}
+2022-02-22 19:57:27|914857|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:0.00
+2022-02-22 19:57:28|914857|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "16", "p1": "threads", "p2": "spread", "p3": " ", "p4": "simd", "p5": "dist_schedule(static,1024)", "p6": "schedule(static,8)"} --> 1
+2022-02-22 19:57:28|914857|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'} y: 1
+2022-02-22 19:57:28|914857|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-22 19:57:28|914857|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'} --> ('16', 'threads', 'spread', ' ', 'simd', 'dist_schedule(static,1024)', 'schedule(static,8)'): evaluated objective: 1
+2022-02-22 19:57:29|914857|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-22 19:57:29|914857|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['2', 'cores', 'master', '#pragma omp parallel for', 'simd', ' ', 'schedule(static,16)'] lie: 1
+2022-02-22 19:57:29|914857|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': ' ', 'p6': 'schedule(static,16)'}
+2022-02-22 19:57:31|914857|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:4.20
+2022-02-22 19:57:31|914857|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "2", "p1": "cores", "p2": "master", "p3": "#pragma omp parallel for", "p4": "simd", "p5": " ", "p6": "schedule(static,16)"} --> 1
+2022-02-22 19:57:31|914857|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': ' ', 'p6': 'schedule(static,16)'} y: 1
+2022-02-22 19:57:31|914857|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-22 19:57:31|914857|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': ' ', 'p6': 'schedule(static,16)'} --> ('2', 'cores', 'master', '#pragma omp parallel for', 'simd', ' ', 'schedule(static,16)'): evaluated objective: 1
+2022-02-22 19:57:32|914857|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-22 19:57:33|914857|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['32', 'cores', 'master', ' ', 'simd', 'dist_schedule(static,256)', 'schedule(static,2)'] lie: 1
+2022-02-22 19:57:33|914857|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '32', 'p1': 'cores', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,256)', 'p6': 'schedule(static,2)'}
+2022-02-22 19:57:33|914857|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:5.89
+2022-02-22 19:57:33|914857|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "32", "p1": "cores", "p2": "master", "p3": " ", "p4": "simd", "p5": "dist_schedule(static,256)", "p6": "schedule(static,2)"} --> 1
+2022-02-22 19:57:33|914857|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '32', 'p1': 'cores', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,256)', 'p6': 'schedule(static,2)'} y: 1
+2022-02-22 19:57:33|914857|INFO|ytopt.search.hps.ambs:101] Hyperopt driver finishing
+2022-02-22 20:18:27|945700|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-22 20:18:30|945700|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-22 20:18:39|945700|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x15020df9b050>', proc_info: {'node_ip_address': '10.70.150.12', 'raylet_ip_address': '10.70.150.12', 'redis_address': '10.70.150.12:6379', 'object_store_address': '/tmp/ray/session_2022-02-22_20-18-30_386305_945700/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-02-22_20-18-30_386305_945700/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-02-22_20-18-30_386305_945700', 'metrics_export_port': 56705, 'gcs_address': '10.70.150.12:41427', 'node_id': '3dfd8e81bb24cb2e9269af44f8d21ad6844973098f25f3aa511115c0'}
+2022-02-22 20:18:39|945700|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 10.70.150.12
+2022-02-22 20:18:39|945700|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 56705,
+  'NodeID': '3dfd8e81bb24cb2e9269af44f8d21ad6844973098f25f3aa511115c0',
+  'NodeManagerAddress': '10.70.150.12',
+  'NodeManagerHostname': 'gpu2',
+  'NodeManagerPort': 35225,
+  'ObjectManagerPort': 46579,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-02-22_20-18-30_386305_945700/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-02-22_20-18-30_386305_945700/sockets/raylet',
+  'Resources': {'CPU': 256.0,
+                'GPU': 1.0,
+                'accelerator_type:A100': 1.0,
+                'memory': 853038111744.0,
+                'node:10.70.150.12': 1.0,
+                'object_store_memory': 200000000000.0},
+  'alive': True}]
+2022-02-22 20:18:39|945700|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem.Problem'}
+2022-02-22 20:18:39|945700|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    p0, Type: Ordinal, Sequence: {2, 4, 8, 16, 21, 32, 42}, Default: 42
+    p1, Type: Categorical, Choices: {cores, threads, sockets}, Default: cores
+    p2, Type: Categorical, Choices: {close, spread, master}, Default: close
+    p3, Type: Categorical, Choices: {#pragma omp parallel for,  }, Default:  
+    p4, Type: Categorical, Choices: {simd,  }, Default:  
+    p5, Type: Categorical, Choices: {dist_schedule(static,256), dist_schedule(static,512), dist_schedule(static,1024), dist_schedule(static,2048), dist_schedule(static,4096),  }, Default:  
+    p6, Type: Categorical, Choices: {schedule(static,1), schedule(static,2), schedule(static,4), schedule(static,8), schedule(static,16), schedule(static,32),  }, Default:  
+
+2022-02-22 20:18:39|945700|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-02-22 20:18:39|945700|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-02-22 20:18:39|945700|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-02-22 20:18:39|945700|INFO|ytopt.search.hps.optimizer.optimizer:58] Using skopt.Optimizer with RF base_estimator
+2022-02-22 20:18:39|945700|INFO|ytopt.search.hps.ambs:79] Generating 1 initial points...
+2022-02-22 20:18:40|945700|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'}
+2022-02-22 20:18:40|945700|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:0.00
+2022-02-22 20:18:43|945700|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:2.54
+2022-02-22 20:18:43|945700|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "16", "p1": "threads", "p2": "spread", "p3": " ", "p4": "simd", "p5": "dist_schedule(static,1024)", "p6": "schedule(static,8)"} --> 1
+2022-02-22 20:18:43|945700|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'} y: 1
+2022-02-22 20:18:43|945700|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-22 20:18:43|945700|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'} --> ('16', 'threads', 'spread', ' ', 'simd', 'dist_schedule(static,1024)', 'schedule(static,8)'): evaluated objective: 1
+2022-02-22 20:18:44|945700|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-22 20:18:44|945700|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['2', 'cores', 'master', '#pragma omp parallel for', 'simd', ' ', 'schedule(static,16)'] lie: 1
+2022-02-22 20:18:44|945700|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': ' ', 'p6': 'schedule(static,16)'}
+2022-02-22 20:18:46|945700|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:5.71
+2022-02-22 20:18:46|945700|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "2", "p1": "cores", "p2": "master", "p3": "#pragma omp parallel for", "p4": "simd", "p5": " ", "p6": "schedule(static,16)"} --> 1
+2022-02-22 20:18:46|945700|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': ' ', 'p6': 'schedule(static,16)'} y: 1
+2022-02-22 20:18:46|945700|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-22 20:18:46|945700|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': ' ', 'p6': 'schedule(static,16)'} --> ('2', 'cores', 'master', '#pragma omp parallel for', 'simd', ' ', 'schedule(static,16)'): evaluated objective: 1
+2022-02-22 20:18:47|945700|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-22 20:18:48|945700|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['32', 'cores', 'master', ' ', 'simd', 'dist_schedule(static,256)', 'schedule(static,2)'] lie: 1
+2022-02-22 20:18:48|945700|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '32', 'p1': 'cores', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,256)', 'p6': 'schedule(static,2)'}
+2022-02-22 20:18:48|945700|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:7.68
+2022-02-22 20:18:48|945700|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "32", "p1": "cores", "p2": "master", "p3": " ", "p4": "simd", "p5": "dist_schedule(static,256)", "p6": "schedule(static,2)"} --> 1
+2022-02-22 20:18:48|945700|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '32', 'p1': 'cores', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,256)', 'p6': 'schedule(static,2)'} y: 1
+2022-02-22 20:18:48|945700|INFO|ytopt.search.hps.ambs:101] Hyperopt driver finishing
+2022-02-22 22:34:24|1153107|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-22 22:34:27|1153107|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-22 22:34:35|1153107|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x152288e14050>', proc_info: {'node_ip_address': '10.70.150.12', 'raylet_ip_address': '10.70.150.12', 'redis_address': '10.70.150.12:6379', 'object_store_address': '/tmp/ray/session_2022-02-22_22-34-27_392132_1153107/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-02-22_22-34-27_392132_1153107/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-02-22_22-34-27_392132_1153107', 'metrics_export_port': 55773, 'gcs_address': '10.70.150.12:36741', 'node_id': '6f60abec199e0e0042cc571c0adcc259457e12c1f0f49ce6e709edea'}
+2022-02-22 22:34:35|1153107|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 10.70.150.12
+2022-02-22 22:34:35|1153107|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 55773,
+  'NodeID': '6f60abec199e0e0042cc571c0adcc259457e12c1f0f49ce6e709edea',
+  'NodeManagerAddress': '10.70.150.12',
+  'NodeManagerHostname': 'gpu2',
+  'NodeManagerPort': 38909,
+  'ObjectManagerPort': 37085,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-02-22_22-34-27_392132_1153107/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-02-22_22-34-27_392132_1153107/sockets/raylet',
+  'Resources': {'CPU': 256.0,
+                'GPU': 1.0,
+                'accelerator_type:A100': 1.0,
+                'memory': 853009804288.0,
+                'node:10.70.150.12': 1.0,
+                'object_store_memory': 200000000000.0},
+  'alive': True}]
+2022-02-22 22:34:35|1153107|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem.Problem'}
+2022-02-22 22:34:35|1153107|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    p0, Type: Ordinal, Sequence: {2, 4, 8, 16, 21, 32, 42}, Default: 42
+    p1, Type: Categorical, Choices: {cores, threads, sockets}, Default: cores
+    p2, Type: Categorical, Choices: {close, spread, master}, Default: close
+    p3, Type: Categorical, Choices: {#pragma omp parallel for,  }, Default:  
+    p4, Type: Categorical, Choices: {simd,  }, Default:  
+    p5, Type: Categorical, Choices: {dist_schedule(static,256), dist_schedule(static,512), dist_schedule(static,1024), dist_schedule(static,2048), dist_schedule(static,4096),  }, Default:  
+    p6, Type: Categorical, Choices: {schedule(static,1), schedule(static,2), schedule(static,4), schedule(static,8), schedule(static,16), schedule(static,32),  }, Default:  
+
+2022-02-22 22:34:35|1153107|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-02-22 22:34:35|1153107|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-02-22 22:34:35|1153107|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-02-22 22:34:35|1153107|INFO|ytopt.search.hps.optimizer.optimizer:58] Using skopt.Optimizer with RF base_estimator
+2022-02-22 22:34:35|1153107|INFO|ytopt.search.hps.ambs:79] Generating 1 initial points...
+2022-02-22 22:34:37|1153107|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'}
+2022-02-22 22:34:37|1153107|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:0.00
+2022-02-22 22:34:40|1153107|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:2.54
+2022-02-22 22:34:40|1153107|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "16", "p1": "threads", "p2": "spread", "p3": " ", "p4": "simd", "p5": "dist_schedule(static,1024)", "p6": "schedule(static,8)"} --> 1
+2022-02-22 22:34:40|1153107|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'} y: 1
+2022-02-22 22:34:40|1153107|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-22 22:34:40|1153107|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'} --> ('16', 'threads', 'spread', ' ', 'simd', 'dist_schedule(static,1024)', 'schedule(static,8)'): evaluated objective: 1
+2022-02-22 22:34:40|1153107|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-22 22:34:41|1153107|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['2', 'cores', 'master', '#pragma omp parallel for', 'simd', ' ', 'schedule(static,16)'] lie: 1
+2022-02-22 22:34:41|1153107|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': ' ', 'p6': 'schedule(static,16)'}
+2022-02-22 22:34:43|1153107|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:5.76
+2022-02-22 22:34:43|1153107|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "2", "p1": "cores", "p2": "master", "p3": "#pragma omp parallel for", "p4": "simd", "p5": " ", "p6": "schedule(static,16)"} --> 1
+2022-02-22 22:34:43|1153107|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': ' ', 'p6': 'schedule(static,16)'} y: 1
+2022-02-22 22:34:43|1153107|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-22 22:34:43|1153107|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': ' ', 'p6': 'schedule(static,16)'} --> ('2', 'cores', 'master', '#pragma omp parallel for', 'simd', ' ', 'schedule(static,16)'): evaluated objective: 1
+2022-02-22 22:34:44|1153107|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-22 22:34:44|1153107|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['32', 'cores', 'master', ' ', 'simd', 'dist_schedule(static,256)', 'schedule(static,2)'] lie: 1
+2022-02-22 22:34:44|1153107|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '32', 'p1': 'cores', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,256)', 'p6': 'schedule(static,2)'}
+2022-02-22 22:34:45|1153107|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:7.67
+2022-02-22 22:34:46|1153107|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:8.54
+2022-02-22 22:34:46|1153107|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "32", "p1": "cores", "p2": "master", "p3": " ", "p4": "simd", "p5": "dist_schedule(static,256)", "p6": "schedule(static,2)"} --> 1
+2022-02-22 22:34:46|1153107|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '32', 'p1': 'cores', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,256)', 'p6': 'schedule(static,2)'} y: 1
+2022-02-22 22:34:46|1153107|INFO|ytopt.search.hps.ambs:101] Hyperopt driver finishing
+2022-02-22 22:38:46|1165427|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-22 22:38:47|1165427|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-22 22:38:55|1165427|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x1488498c7050>', proc_info: {'node_ip_address': '10.70.150.12', 'raylet_ip_address': '10.70.150.12', 'redis_address': '10.70.150.12:6379', 'object_store_address': '/tmp/ray/session_2022-02-22_22-38-47_265841_1165427/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-02-22_22-38-47_265841_1165427/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-02-22_22-38-47_265841_1165427', 'metrics_export_port': 50437, 'gcs_address': '10.70.150.12:33627', 'node_id': 'a435660b7be8ed7a2905f9480f43ee4607697a54a3c1773c81dbdcb6'}
+2022-02-22 22:38:55|1165427|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 10.70.150.12
+2022-02-22 22:38:55|1165427|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 50437,
+  'NodeID': 'a435660b7be8ed7a2905f9480f43ee4607697a54a3c1773c81dbdcb6',
+  'NodeManagerAddress': '10.70.150.12',
+  'NodeManagerHostname': 'gpu2',
+  'NodeManagerPort': 41667,
+  'ObjectManagerPort': 45405,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-02-22_22-38-47_265841_1165427/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-02-22_22-38-47_265841_1165427/sockets/raylet',
+  'Resources': {'CPU': 256.0,
+                'GPU': 1.0,
+                'accelerator_type:A100': 1.0,
+                'memory': 852901387264.0,
+                'node:10.70.150.12': 1.0,
+                'object_store_memory': 200000000000.0},
+  'alive': True}]
+2022-02-22 22:38:55|1165427|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem.Problem'}
+2022-02-22 22:38:55|1165427|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    p0, Type: Ordinal, Sequence: {2, 4, 8, 16, 21, 32, 42}, Default: 42
+    p1, Type: Categorical, Choices: {cores, threads, sockets}, Default: cores
+    p2, Type: Categorical, Choices: {close, spread, master}, Default: close
+    p3, Type: Categorical, Choices: {#pragma omp parallel for,  }, Default:  
+    p4, Type: Categorical, Choices: {simd,  }, Default:  
+    p5, Type: Categorical, Choices: {dist_schedule(static,256), dist_schedule(static,512), dist_schedule(static,1024), dist_schedule(static,2048), dist_schedule(static,4096),  }, Default:  
+    p6, Type: Categorical, Choices: {schedule(static,1), schedule(static,2), schedule(static,4), schedule(static,8), schedule(static,16), schedule(static,32),  }, Default:  
+
+2022-02-22 22:38:55|1165427|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-02-22 22:38:55|1165427|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-02-22 22:38:55|1165427|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-02-22 22:38:55|1165427|INFO|ytopt.search.hps.optimizer.optimizer:58] Using skopt.Optimizer with RF base_estimator
+2022-02-22 22:38:55|1165427|INFO|ytopt.search.hps.ambs:79] Generating 1 initial points...
+2022-02-22 22:38:56|1165427|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'}
+2022-02-22 22:38:56|1165427|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:0.00
+2022-02-22 22:38:59|1165427|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:2.54
+2022-02-22 22:38:59|1165427|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "16", "p1": "threads", "p2": "spread", "p3": " ", "p4": "simd", "p5": "dist_schedule(static,1024)", "p6": "schedule(static,8)"} --> 0.003
+2022-02-22 22:38:59|1165427|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'} y: 0.003
+2022-02-22 22:38:59|1165427|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-22 22:38:59|1165427|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'} --> ('16', 'threads', 'spread', ' ', 'simd', 'dist_schedule(static,1024)', 'schedule(static,8)'): evaluated objective: 0.003
+2022-02-22 22:39:00|1165427|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-22 22:39:01|1165427|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['2', 'cores', 'master', '#pragma omp parallel for', 'simd', ' ', 'schedule(static,16)'] lie: 0.003
+2022-02-22 22:39:01|1165427|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': ' ', 'p6': 'schedule(static,16)'}
+2022-02-22 22:39:02|1165427|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:5.68
+2022-02-22 22:39:02|1165427|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "2", "p1": "cores", "p2": "master", "p3": "#pragma omp parallel for", "p4": "simd", "p5": " ", "p6": "schedule(static,16)"} --> 0.003
+2022-02-22 22:39:02|1165427|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': ' ', 'p6': 'schedule(static,16)'} y: 0.003
+2022-02-22 22:39:02|1165427|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-22 22:39:02|1165427|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': ' ', 'p6': 'schedule(static,16)'} --> ('2', 'cores', 'master', '#pragma omp parallel for', 'simd', ' ', 'schedule(static,16)'): evaluated objective: 0.003
+2022-02-22 22:39:03|1165427|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-22 22:39:04|1165427|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['32', 'cores', 'master', ' ', 'simd', 'dist_schedule(static,256)', 'schedule(static,2)'] lie: 0.003
+2022-02-22 22:39:04|1165427|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '32', 'p1': 'cores', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,256)', 'p6': 'schedule(static,2)'}
+2022-02-22 22:39:04|1165427|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:7.66
+2022-02-22 22:39:05|1165427|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:8.54
+2022-02-22 22:39:05|1165427|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "32", "p1": "cores", "p2": "master", "p3": " ", "p4": "simd", "p5": "dist_schedule(static,256)", "p6": "schedule(static,2)"} --> 0.003
+2022-02-22 22:39:05|1165427|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '32', 'p1': 'cores', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,256)', 'p6': 'schedule(static,2)'} y: 0.003
+2022-02-22 22:39:05|1165427|INFO|ytopt.search.hps.ambs:101] Hyperopt driver finishing
+2022-02-22 22:46:48|1183641|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-22 22:46:49|1183641|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-22 22:46:57|1183641|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x153d8714e050>', proc_info: {'node_ip_address': '10.70.150.12', 'raylet_ip_address': '10.70.150.12', 'redis_address': '10.70.150.12:6379', 'object_store_address': '/tmp/ray/session_2022-02-22_22-46-49_235152_1183641/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-02-22_22-46-49_235152_1183641/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-02-22_22-46-49_235152_1183641', 'metrics_export_port': 55874, 'gcs_address': '10.70.150.12:41699', 'node_id': 'aa028262eb1fdfdc0552498f96b7b2f3428eddf5fe4057a7709faeb0'}
+2022-02-22 22:46:57|1183641|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 10.70.150.12
+2022-02-22 22:46:57|1183641|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 55874,
+  'NodeID': 'aa028262eb1fdfdc0552498f96b7b2f3428eddf5fe4057a7709faeb0',
+  'NodeManagerAddress': '10.70.150.12',
+  'NodeManagerHostname': 'gpu2',
+  'NodeManagerPort': 43925,
+  'ObjectManagerPort': 44827,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-02-22_22-46-49_235152_1183641/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-02-22_22-46-49_235152_1183641/sockets/raylet',
+  'Resources': {'CPU': 256.0,
+                'GPU': 1.0,
+                'accelerator_type:A100': 1.0,
+                'memory': 852831779840.0,
+                'node:10.70.150.12': 1.0,
+                'object_store_memory': 200000000000.0},
+  'alive': True}]
+2022-02-22 22:46:57|1183641|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem.Problem'}
+2022-02-22 22:46:57|1183641|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    p0, Type: Ordinal, Sequence: {2, 4, 8, 16, 21, 32, 42}, Default: 42
+    p1, Type: Categorical, Choices: {cores, threads, sockets}, Default: cores
+    p2, Type: Categorical, Choices: {close, spread, master}, Default: close
+    p3, Type: Categorical, Choices: {#pragma omp parallel for,  }, Default:  
+    p4, Type: Categorical, Choices: {simd,  }, Default:  
+    p5, Type: Categorical, Choices: {dist_schedule(static,256), dist_schedule(static,512), dist_schedule(static,1024), dist_schedule(static,2048), dist_schedule(static,4096),  }, Default:  
+    p6, Type: Categorical, Choices: {schedule(static,1), schedule(static,2), schedule(static,4), schedule(static,8), schedule(static,16), schedule(static,32),  }, Default:  
+
+2022-02-22 22:46:57|1183641|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-02-22 22:46:57|1183641|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-02-22 22:46:57|1183641|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-02-22 22:46:57|1183641|INFO|ytopt.search.hps.optimizer.optimizer:58] Using skopt.Optimizer with RF base_estimator
+2022-02-22 22:46:57|1183641|INFO|ytopt.search.hps.ambs:79] Generating 1 initial points...
+2022-02-22 22:46:59|1183641|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'}
+2022-02-22 22:46:59|1183641|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:0.00
+2022-02-22 22:47:01|1183641|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:2.54
+2022-02-22 22:47:01|1183641|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "16", "p1": "threads", "p2": "spread", "p3": " ", "p4": "simd", "p5": "dist_schedule(static,1024)", "p6": "schedule(static,8)"} --> 0.237
+2022-02-22 22:47:01|1183641|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'} y: 0.237
+2022-02-22 22:47:01|1183641|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-22 22:47:01|1183641|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'} --> ('16', 'threads', 'spread', ' ', 'simd', 'dist_schedule(static,1024)', 'schedule(static,8)'): evaluated objective: 0.237
+2022-02-22 22:47:02|1183641|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-22 22:47:03|1183641|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['2', 'cores', 'master', '#pragma omp parallel for', 'simd', ' ', 'schedule(static,16)'] lie: 0.237
+2022-02-22 22:47:03|1183641|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': ' ', 'p6': 'schedule(static,16)'}
+2022-02-22 22:47:04|1183641|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:5.70
+2022-02-22 22:47:04|1183641|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "2", "p1": "cores", "p2": "master", "p3": "#pragma omp parallel for", "p4": "simd", "p5": " ", "p6": "schedule(static,16)"} --> 0.229
+2022-02-22 22:47:04|1183641|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': ' ', 'p6': 'schedule(static,16)'} y: 0.229
+2022-02-22 22:47:04|1183641|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-22 22:47:04|1183641|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': ' ', 'p6': 'schedule(static,16)'} --> ('2', 'cores', 'master', '#pragma omp parallel for', 'simd', ' ', 'schedule(static,16)'): evaluated objective: 0.229
+2022-02-22 22:47:05|1183641|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-22 22:47:06|1183641|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['32', 'cores', 'master', ' ', 'simd', 'dist_schedule(static,256)', 'schedule(static,2)'] lie: 0.237
+2022-02-22 22:47:06|1183641|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '32', 'p1': 'cores', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,256)', 'p6': 'schedule(static,2)'}
+2022-02-22 22:47:06|1183641|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:7.68
+2022-02-22 22:47:07|1183641|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:8.54
+2022-02-22 22:47:07|1183641|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "32", "p1": "cores", "p2": "master", "p3": " ", "p4": "simd", "p5": "dist_schedule(static,256)", "p6": "schedule(static,2)"} --> 0.221
+2022-02-22 22:47:07|1183641|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '32', 'p1': 'cores', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,256)', 'p6': 'schedule(static,2)'} y: 0.221
+2022-02-22 22:47:07|1183641|INFO|ytopt.search.hps.ambs:101] Hyperopt driver finishing
+2022-02-23 14:00:42|197567|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-23 14:00:45|197567|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-23 14:00:54|197567|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x14f612a19050>', proc_info: {'node_ip_address': '10.70.150.11', 'raylet_ip_address': '10.70.150.11', 'redis_address': '10.70.150.11:6379', 'object_store_address': '/tmp/ray/session_2022-02-23_14-00-45_815726_197567/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-02-23_14-00-45_815726_197567/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-02-23_14-00-45_815726_197567', 'metrics_export_port': 65431, 'gcs_address': '10.70.150.11:35669', 'node_id': '118294c9714fb57e4ec0c385daefaeb87061d6dba2b9551caa67d3fb'}
+2022-02-23 14:00:54|197567|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 10.70.150.11
+2022-02-23 14:00:54|197567|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 65431,
+  'NodeID': '118294c9714fb57e4ec0c385daefaeb87061d6dba2b9551caa67d3fb',
+  'NodeManagerAddress': '10.70.150.11',
+  'NodeManagerHostname': 'gpu1',
+  'NodeManagerPort': 35995,
+  'ObjectManagerPort': 42419,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-02-23_14-00-45_815726_197567/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-02-23_14-00-45_815726_197567/sockets/raylet',
+  'Resources': {'CPU': 256.0,
+                'GPU': 1.0,
+                'accelerator_type:A100': 1.0,
+                'memory': 853921950720.0,
+                'node:10.70.150.11': 1.0,
+                'object_store_memory': 200000000000.0},
+  'alive': True}]
+2022-02-23 14:00:54|197567|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem.Problem'}
+2022-02-23 14:00:54|197567|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    p0, Type: Ordinal, Sequence: {2, 4, 8, 16, 21, 32, 42}, Default: 42
+    p1, Type: Categorical, Choices: {cores, threads, sockets}, Default: cores
+    p2, Type: Categorical, Choices: {close, spread, master}, Default: close
+    p3, Type: Categorical, Choices: {#pragma omp parallel for,  }, Default:  
+    p4, Type: Categorical, Choices: {simd,  }, Default:  
+    p5, Type: Categorical, Choices: {dist_schedule(static,256), dist_schedule(static,512), dist_schedule(static,1024), dist_schedule(static,2048), dist_schedule(static,4096),  }, Default:  
+    p6, Type: Categorical, Choices: {schedule(static,1), schedule(static,2), schedule(static,4), schedule(static,8), schedule(static,16), schedule(static,32),  }, Default:  
+
+2022-02-23 14:00:54|197567|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-02-23 14:00:54|197567|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-02-23 14:00:54|197567|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-02-23 14:00:54|197567|INFO|ytopt.search.hps.optimizer.optimizer:58] Using skopt.Optimizer with RF base_estimator
+2022-02-23 14:00:54|197567|INFO|ytopt.search.hps.ambs:79] Generating 1 initial points...
+2022-02-23 14:00:56|197567|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'}
+2022-02-23 14:00:56|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:0.00
+2022-02-23 14:00:58|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:2.54
+2022-02-23 14:01:00|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:4.54
+2022-02-23 14:01:02|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:6.54
+2022-02-23 14:01:04|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:8.54
+2022-02-23 14:01:06|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:10.54
+2022-02-23 14:01:08|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:12.54
+2022-02-23 14:01:10|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:14.54
+2022-02-23 14:01:12|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:16.54
+2022-02-23 14:01:14|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:18.54
+2022-02-23 14:01:16|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:20.54
+2022-02-23 14:01:18|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:22.54
+2022-02-23 14:01:20|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:24.54
+2022-02-23 14:01:22|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:26.54
+2022-02-23 14:01:24|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:28.54
+2022-02-23 14:01:26|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:30.54
+2022-02-23 14:01:28|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:32.54
+2022-02-23 14:01:30|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:34.54
+2022-02-23 14:01:32|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:36.54
+2022-02-23 14:01:34|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:38.54
+2022-02-23 14:01:36|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:40.54
+2022-02-23 14:01:38|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:42.54
+2022-02-23 14:01:40|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:44.54
+2022-02-23 14:01:42|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:46.54
+2022-02-23 14:01:44|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:48.54
+2022-02-23 14:01:46|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:50.54
+2022-02-23 14:01:48|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:52.54
+2022-02-23 14:01:50|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:54.54
+2022-02-23 14:01:52|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:56.54
+2022-02-23 14:01:54|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:58.54
+2022-02-23 14:01:56|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:0.54
+2022-02-23 14:01:58|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:2.54
+2022-02-23 14:02:00|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:4.54
+2022-02-23 14:02:02|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:6.54
+2022-02-23 14:02:04|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:8.54
+2022-02-23 14:02:06|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:10.54
+2022-02-23 14:02:08|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:12.54
+2022-02-23 14:02:10|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:14.54
+2022-02-23 14:02:12|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:16.54
+2022-02-23 14:02:14|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:18.54
+2022-02-23 14:02:16|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:20.54
+2022-02-23 14:02:18|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:22.54
+2022-02-23 14:02:20|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:24.54
+2022-02-23 14:02:22|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:26.54
+2022-02-23 14:02:24|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:28.54
+2022-02-23 14:02:26|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:30.54
+2022-02-23 14:02:28|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:32.54
+2022-02-23 14:02:30|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:34.54
+2022-02-23 14:02:32|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:36.54
+2022-02-23 14:02:34|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:38.54
+2022-02-23 14:02:36|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:40.54
+2022-02-23 14:02:38|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:42.54
+2022-02-23 14:02:40|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:44.54
+2022-02-23 14:02:42|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:46.54
+2022-02-23 14:02:44|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:48.54
+2022-02-23 14:02:46|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:50.54
+2022-02-23 14:02:48|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:52.54
+2022-02-23 14:02:50|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:54.54
+2022-02-23 14:02:52|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:56.54
+2022-02-23 14:02:54|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:58.54
+2022-02-23 14:02:56|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:0.54
+2022-02-23 14:02:58|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:2.54
+2022-02-23 14:03:00|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:4.54
+2022-02-23 14:03:02|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:6.54
+2022-02-23 14:03:04|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:8.54
+2022-02-23 14:03:06|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:10.54
+2022-02-23 14:03:08|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:12.54
+2022-02-23 14:03:10|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:14.54
+2022-02-23 14:03:12|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:16.54
+2022-02-23 14:03:14|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:18.55
+2022-02-23 14:03:16|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:20.54
+2022-02-23 14:03:18|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:22.54
+2022-02-23 14:03:20|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:24.54
+2022-02-23 14:03:22|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:26.54
+2022-02-23 14:03:24|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:28.54
+2022-02-23 14:03:26|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:30.54
+2022-02-23 14:03:28|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:32.54
+2022-02-23 14:03:30|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:34.54
+2022-02-23 14:03:32|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:36.54
+2022-02-23 14:03:34|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:38.54
+2022-02-23 14:03:36|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:40.54
+2022-02-23 14:03:38|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:42.54
+2022-02-23 14:03:40|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:44.54
+2022-02-23 14:03:42|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:46.54
+2022-02-23 14:03:44|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:48.54
+2022-02-23 14:03:46|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:50.54
+2022-02-23 14:03:48|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:52.54
+2022-02-23 14:03:50|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:54.54
+2022-02-23 14:03:52|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:56.54
+2022-02-23 14:03:54|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:58.54
+2022-02-23 14:03:54|197567|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "16", "p1": "threads", "p2": "spread", "p3": " ", "p4": "simd", "p5": "dist_schedule(static,1024)", "p6": "schedule(static,8)"} --> 175.359
+2022-02-23 14:03:54|197567|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'} y: 175.359
+2022-02-23 14:03:54|197567|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-23 14:03:54|197567|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)'} --> ('16', 'threads', 'spread', ' ', 'simd', 'dist_schedule(static,1024)', 'schedule(static,8)'): evaluated objective: 175.359
+2022-02-23 14:03:55|197567|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-23 14:03:56|197567|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['2', 'cores', 'master', '#pragma omp parallel for', 'simd', ' ', 'schedule(static,16)'] lie: 175.359
+2022-02-23 14:03:56|197567|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': ' ', 'p6': 'schedule(static,16)'}
+2022-02-23 14:03:57|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:1.67
+2022-02-23 14:03:58|197567|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:2.54
+2022-02-23 14:03:59|197567|INFO|ytopt.search.hps.ambs:101] Hyperopt driver finishing
+2022-02-24 19:09:44|890675|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-24 19:09:44|890675|ERROR|ytopt:50] Uncaught exception:
+Traceback (most recent call last):
+  File "/home/jkoo/.conda/envs/ytune/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/jkoo/.conda/envs/ytune/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/lcrc/project/EE-ECP/jkoo/github/ytune/ytopt/ytopt/search/ambs.py", line 106, in <module>
+    search = AMBS(**vars(args))
+  File "/lcrc/project/EE-ECP/jkoo/github/ytune/ytopt/ytopt/search/ambs.py", line 45, in __init__
+    super().__init__(**kwargs)
+  File "/lcrc/project/EE-ECP/jkoo/github/ytune/ytopt/ytopt/search/search.py", line 38, in __init__
+    self.problem = util.generic_loader(problem, 'Problem')
+  File "/lcrc/project/EE-ECP/jkoo/github/ytune/ytopt/ytopt/search/util.py", line 125, in generic_loader
+    return load_attr_from(target)
+  File "/lcrc/project/EE-ECP/jkoo/github/ytune/ytopt/ytopt/search/util.py", line 100, in load_attr_from
+    module = import_module(str_module)
+  File "/home/jkoo/.conda/envs/ytune/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 965, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'problem_all'
+2022-02-24 19:09:50|890838|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-24 19:09:50|890838|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-24 19:09:59|890838|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x15428d7564d0>', proc_info: {'node_ip_address': '10.70.150.14', 'raylet_ip_address': '10.70.150.14', 'redis_address': '10.70.150.14:6379', 'object_store_address': '/tmp/ray/session_2022-02-24_19-09-50_656041_890838/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-02-24_19-09-50_656041_890838/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-02-24_19-09-50_656041_890838', 'metrics_export_port': 52184, 'gcs_address': '10.70.150.14:43731', 'node_id': '7c9dafae31bd924e160fcf06e881e925eacaaad92a28513348a0c7c8'}
+2022-02-24 19:09:59|890838|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 10.70.150.14
+2022-02-24 19:09:59|890838|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 52184,
+  'NodeID': '7c9dafae31bd924e160fcf06e881e925eacaaad92a28513348a0c7c8',
+  'NodeManagerAddress': '10.70.150.14',
+  'NodeManagerHostname': 'gpu4',
+  'NodeManagerPort': 43787,
+  'ObjectManagerPort': 43845,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-02-24_19-09-50_656041_890838/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-02-24_19-09-50_656041_890838/sockets/raylet',
+  'Resources': {'CPU': 256.0,
+                'GPU': 1.0,
+                'accelerator_type:A100': 1.0,
+                'memory': 852516916224.0,
+                'node:10.70.150.14': 1.0,
+                'object_store_memory': 200000000000.0},
+  'alive': True}]
+2022-02-24 19:09:59|890838|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem.Problem'}
+2022-02-24 19:09:59|890838|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    p0, Type: Ordinal, Sequence: {2, 4, 8, 16, 21, 32, 42}, Default: 42
+    p1, Type: Categorical, Choices: {cores, threads, sockets}, Default: cores
+    p2, Type: Categorical, Choices: {close, spread, master}, Default: close
+    p3, Type: Categorical, Choices: {#pragma omp parallel for,  }, Default:  
+    p4, Type: Categorical, Choices: {simd,  }, Default:  
+    p5, Type: Categorical, Choices: {dist_schedule(static,256), dist_schedule(static,512), dist_schedule(static,1024), dist_schedule(static,2048), dist_schedule(static,4096),  }, Default:  
+    p6, Type: Categorical, Choices: {schedule(static,1), schedule(static,2), schedule(static,4), schedule(static,8), schedule(static,16), schedule(static,32),  }, Default:  
+    p7, Type: Categorical, Choices: {dynamic, static}, Default: static
+
+2022-02-24 19:09:59|890838|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-02-24 19:09:59|890838|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-02-24 19:09:59|890838|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-02-24 19:09:59|890838|INFO|ytopt.search.hps.optimizer.optimizer:58] Using skopt.Optimizer with RF base_estimator
+2022-02-24 19:09:59|890838|INFO|ytopt.search.hps.ambs:79] Generating 1 initial points...
+2022-02-24 19:10:01|890838|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)', 'p7': 'dynamic'}
+2022-02-24 19:10:01|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:0.00
+2022-02-24 19:10:03|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:2.54
+2022-02-24 19:10:05|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:4.54
+2022-02-24 19:10:07|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:6.54
+2022-02-24 19:10:09|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:8.54
+2022-02-24 19:10:11|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:10.54
+2022-02-24 19:10:13|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:12.54
+2022-02-24 19:10:15|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:14.54
+2022-02-24 19:10:17|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:16.54
+2022-02-24 19:10:19|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:18.54
+2022-02-24 19:10:21|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:20.54
+2022-02-24 19:10:23|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:22.54
+2022-02-24 19:10:25|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:24.54
+2022-02-24 19:10:27|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:26.54
+2022-02-24 19:10:29|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:28.54
+2022-02-24 19:10:31|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:30.54
+2022-02-24 19:10:33|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:32.54
+2022-02-24 19:10:35|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:34.54
+2022-02-24 19:10:37|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:36.54
+2022-02-24 19:10:39|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:38.54
+2022-02-24 19:10:41|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:40.54
+2022-02-24 19:10:43|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:42.54
+2022-02-24 19:10:45|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:44.54
+2022-02-24 19:10:47|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:46.54
+2022-02-24 19:10:49|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:48.54
+2022-02-24 19:10:51|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:50.54
+2022-02-24 19:10:53|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:52.54
+2022-02-24 19:10:55|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:54.54
+2022-02-24 19:10:57|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:56.55
+2022-02-24 19:10:59|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:58.54
+2022-02-24 19:11:01|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:0.54
+2022-02-24 19:11:03|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:2.54
+2022-02-24 19:11:05|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:4.54
+2022-02-24 19:11:07|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:6.54
+2022-02-24 19:11:09|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:8.54
+2022-02-24 19:11:11|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:10.54
+2022-02-24 19:11:13|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:12.54
+2022-02-24 19:11:15|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:14.54
+2022-02-24 19:11:17|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:16.54
+2022-02-24 19:11:19|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:18.54
+2022-02-24 19:11:21|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:20.54
+2022-02-24 19:11:23|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:22.54
+2022-02-24 19:11:25|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:24.54
+2022-02-24 19:11:27|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:26.54
+2022-02-24 19:11:29|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:28.54
+2022-02-24 19:11:31|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:30.54
+2022-02-24 19:11:33|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:32.55
+2022-02-24 19:11:35|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:34.54
+2022-02-24 19:11:37|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:36.54
+2022-02-24 19:11:39|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:38.54
+2022-02-24 19:11:41|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:40.54
+2022-02-24 19:11:43|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:42.54
+2022-02-24 19:11:45|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:44.54
+2022-02-24 19:11:47|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:46.54
+2022-02-24 19:11:49|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:48.54
+2022-02-24 19:11:51|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:50.54
+2022-02-24 19:11:53|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:52.54
+2022-02-24 19:11:55|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:54.54
+2022-02-24 19:11:57|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:56.54
+2022-02-24 19:11:59|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:58.54
+2022-02-24 19:12:01|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:0.54
+2022-02-24 19:12:03|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:2.54
+2022-02-24 19:12:05|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:4.54
+2022-02-24 19:12:07|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:6.54
+2022-02-24 19:12:09|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:8.54
+2022-02-24 19:12:11|890838|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:10.54
+2022-02-24 19:12:12|890838|INFO|ytopt.search.hps.ambs:101] Hyperopt driver finishing
+2022-02-24 19:28:16|938713|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-24 19:28:16|938713|ERROR|ytopt:50] Uncaught exception:
+Traceback (most recent call last):
+  File "/home/jkoo/.conda/envs/ytune/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/jkoo/.conda/envs/ytune/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/lcrc/project/EE-ECP/jkoo/github/ytune/ytopt/ytopt/search/ambs.py", line 106, in <module>
+    search = AMBS(**vars(args))
+  File "/lcrc/project/EE-ECP/jkoo/github/ytune/ytopt/ytopt/search/ambs.py", line 45, in __init__
+    super().__init__(**kwargs)
+  File "/lcrc/project/EE-ECP/jkoo/github/ytune/ytopt/ytopt/search/search.py", line 38, in __init__
+    self.problem = util.generic_loader(problem, 'Problem')
+  File "/lcrc/project/EE-ECP/jkoo/github/ytune/ytopt/ytopt/search/util.py", line 125, in generic_loader
+    return load_attr_from(target)
+  File "/lcrc/project/EE-ECP/jkoo/github/ytune/ytopt/ytopt/search/util.py", line 100, in load_attr_from
+    module = import_module(str_module)
+  File "/home/jkoo/.conda/envs/ytune/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 965, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'problem_all'
+2022-02-24 19:28:22|939286|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-24 19:28:22|939286|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-24 19:28:31|939286|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x14c179f1d560>', proc_info: {'node_ip_address': '10.70.150.14', 'raylet_ip_address': '10.70.150.14', 'redis_address': '10.70.150.14:6379', 'object_store_address': '/tmp/ray/session_2022-02-24_19-28-22_625926_939286/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-02-24_19-28-22_625926_939286/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-02-24_19-28-22_625926_939286', 'metrics_export_port': 58817, 'gcs_address': '10.70.150.14:39107', 'node_id': '456d4672a14236b4590abe2664e4c832417aeac9f7743c8c09a04b60'}
+2022-02-24 19:28:31|939286|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 10.70.150.14
+2022-02-24 19:28:31|939286|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 58817,
+  'NodeID': '456d4672a14236b4590abe2664e4c832417aeac9f7743c8c09a04b60',
+  'NodeManagerAddress': '10.70.150.14',
+  'NodeManagerHostname': 'gpu4',
+  'NodeManagerPort': 42607,
+  'ObjectManagerPort': 39553,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-02-24_19-28-22_625926_939286/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-02-24_19-28-22_625926_939286/sockets/raylet',
+  'Resources': {'CPU': 256.0,
+                'GPU': 1.0,
+                'accelerator_type:A100': 1.0,
+                'memory': 852505902080.0,
+                'node:10.70.150.14': 1.0,
+                'object_store_memory': 200000000000.0},
+  'alive': True}]
+2022-02-24 19:28:31|939286|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem.Problem'}
+2022-02-24 19:28:31|939286|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    p0, Type: Ordinal, Sequence: {2, 4, 8, 16, 21, 32, 42}, Default: 42
+    p1, Type: Categorical, Choices: {cores, threads, sockets}, Default: cores
+    p2, Type: Categorical, Choices: {close, spread, master}, Default: close
+    p3, Type: Categorical, Choices: {#pragma omp parallel for,  }, Default:  
+    p4, Type: Categorical, Choices: {simd,  }, Default:  
+    p5, Type: Categorical, Choices: {dist_schedule(static,256), dist_schedule(static,512), dist_schedule(static,1024), dist_schedule(static,2048), dist_schedule(static,4096),  }, Default:  
+    p6, Type: Categorical, Choices: {schedule(static,1), schedule(static,2), schedule(static,4), schedule(static,8), schedule(static,16), schedule(static,32),  }, Default:  
+    p7, Type: Categorical, Choices: {dynamic, static}, Default: static
+
+2022-02-24 19:28:31|939286|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-02-24 19:28:31|939286|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-02-24 19:28:31|939286|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-02-24 19:28:31|939286|INFO|ytopt.search.hps.optimizer.optimizer:58] Using skopt.Optimizer with RF base_estimator
+2022-02-24 19:28:31|939286|INFO|ytopt.search.hps.ambs:79] Generating 1 initial points...
+2022-02-24 19:28:33|939286|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)', 'p7': 'dynamic'}
+2022-02-24 19:28:33|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:0.00
+2022-02-24 19:28:36|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:2.54
+2022-02-24 19:28:38|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:4.54
+2022-02-24 19:28:40|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:6.54
+2022-02-24 19:28:42|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:8.54
+2022-02-24 19:28:44|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:10.54
+2022-02-24 19:28:46|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:12.54
+2022-02-24 19:28:48|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:14.54
+2022-02-24 19:28:50|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:16.54
+2022-02-24 19:28:52|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:18.54
+2022-02-24 19:28:54|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:20.54
+2022-02-24 19:28:56|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:22.54
+2022-02-24 19:28:58|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:24.54
+2022-02-24 19:29:00|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:26.54
+2022-02-24 19:29:02|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:28.54
+2022-02-24 19:29:04|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:30.54
+2022-02-24 19:29:06|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:32.54
+2022-02-24 19:29:08|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:34.54
+2022-02-24 19:29:10|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:36.54
+2022-02-24 19:29:12|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:38.54
+2022-02-24 19:29:14|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:40.54
+2022-02-24 19:29:16|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:42.54
+2022-02-24 19:29:18|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:44.54
+2022-02-24 19:29:20|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:46.54
+2022-02-24 19:29:22|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:48.54
+2022-02-24 19:29:24|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:50.54
+2022-02-24 19:29:26|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:52.54
+2022-02-24 19:29:28|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:54.54
+2022-02-24 19:29:30|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:56.54
+2022-02-24 19:29:32|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:58.54
+2022-02-24 19:29:34|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:0.54
+2022-02-24 19:29:36|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:2.54
+2022-02-24 19:29:38|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:4.54
+2022-02-24 19:29:40|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:6.54
+2022-02-24 19:29:42|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:8.54
+2022-02-24 19:29:44|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:10.54
+2022-02-24 19:29:46|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:12.54
+2022-02-24 19:29:48|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:14.54
+2022-02-24 19:29:50|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:16.54
+2022-02-24 19:29:52|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:18.54
+2022-02-24 19:29:54|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:20.54
+2022-02-24 19:29:56|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:22.54
+2022-02-24 19:29:58|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:24.54
+2022-02-24 19:30:00|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:26.54
+2022-02-24 19:30:02|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:28.54
+2022-02-24 19:30:04|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:30.54
+2022-02-24 19:30:06|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:32.54
+2022-02-24 19:30:08|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:34.54
+2022-02-24 19:30:10|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:36.54
+2022-02-24 19:30:12|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:38.54
+2022-02-24 19:30:14|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:40.54
+2022-02-24 19:30:16|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:42.54
+2022-02-24 19:30:18|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:44.54
+2022-02-24 19:30:20|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:46.54
+2022-02-24 19:30:22|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:48.54
+2022-02-24 19:30:24|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:50.54
+2022-02-24 19:30:26|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:52.54
+2022-02-24 19:30:28|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:54.54
+2022-02-24 19:30:30|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:56.54
+2022-02-24 19:30:32|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:01:58.54
+2022-02-24 19:30:34|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:0.54
+2022-02-24 19:30:36|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:2.54
+2022-02-24 19:30:38|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:4.54
+2022-02-24 19:30:40|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:6.54
+2022-02-24 19:30:42|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:8.54
+2022-02-24 19:30:44|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:10.54
+2022-02-24 19:30:46|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:12.54
+2022-02-24 19:30:48|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:14.54
+2022-02-24 19:30:50|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:16.54
+2022-02-24 19:30:52|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:18.54
+2022-02-24 19:30:54|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:20.54
+2022-02-24 19:30:56|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:22.54
+2022-02-24 19:30:58|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:24.54
+2022-02-24 19:31:00|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:26.54
+2022-02-24 19:31:02|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:28.54
+2022-02-24 19:31:04|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:30.54
+2022-02-24 19:31:06|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:32.54
+2022-02-24 19:31:08|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:34.54
+2022-02-24 19:31:10|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:36.54
+2022-02-24 19:31:12|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:38.54
+2022-02-24 19:31:14|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:40.54
+2022-02-24 19:31:16|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:42.54
+2022-02-24 19:31:18|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:44.54
+2022-02-24 19:31:20|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:46.54
+2022-02-24 19:31:22|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:48.54
+2022-02-24 19:31:24|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:50.54
+2022-02-24 19:31:26|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:52.54
+2022-02-24 19:31:28|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:54.54
+2022-02-24 19:31:30|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:56.54
+2022-02-24 19:31:32|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:02:58.54
+2022-02-24 19:31:34|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:0.54
+2022-02-24 19:31:36|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:2.54
+2022-02-24 19:31:38|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:4.54
+2022-02-24 19:31:40|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:6.54
+2022-02-24 19:31:42|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:8.54
+2022-02-24 19:31:44|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:10.54
+2022-02-24 19:31:46|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:12.54
+2022-02-24 19:31:48|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:14.54
+2022-02-24 19:31:50|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:16.54
+2022-02-24 19:31:52|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:18.54
+2022-02-24 19:31:54|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:20.54
+2022-02-24 19:31:56|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:22.54
+2022-02-24 19:31:58|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:24.54
+2022-02-24 19:32:00|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:26.54
+2022-02-24 19:32:02|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:28.54
+2022-02-24 19:32:04|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:30.54
+2022-02-24 19:32:06|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:32.54
+2022-02-24 19:32:08|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:34.54
+2022-02-24 19:32:10|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:36.54
+2022-02-24 19:32:12|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:38.54
+2022-02-24 19:32:14|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:40.54
+2022-02-24 19:32:16|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:42.54
+2022-02-24 19:32:18|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:44.54
+2022-02-24 19:32:20|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:46.54
+2022-02-24 19:32:22|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:48.54
+2022-02-24 19:32:24|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:50.54
+2022-02-24 19:32:26|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:52.54
+2022-02-24 19:32:28|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:54.54
+2022-02-24 19:32:30|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:56.54
+2022-02-24 19:32:32|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:03:58.54
+2022-02-24 19:32:34|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:0.54
+2022-02-24 19:32:36|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:2.54
+2022-02-24 19:32:38|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:4.54
+2022-02-24 19:32:40|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:6.54
+2022-02-24 19:32:42|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:8.54
+2022-02-24 19:32:44|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:10.54
+2022-02-24 19:32:46|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:12.54
+2022-02-24 19:32:48|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:14.54
+2022-02-24 19:32:50|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:16.54
+2022-02-24 19:32:52|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:18.54
+2022-02-24 19:32:54|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:20.54
+2022-02-24 19:32:56|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:22.54
+2022-02-24 19:32:58|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:24.54
+2022-02-24 19:33:00|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:26.54
+2022-02-24 19:33:02|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:28.54
+2022-02-24 19:33:04|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:30.54
+2022-02-24 19:33:06|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:32.54
+2022-02-24 19:33:08|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:34.54
+2022-02-24 19:33:10|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:36.54
+2022-02-24 19:33:12|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:38.54
+2022-02-24 19:33:14|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:40.54
+2022-02-24 19:33:16|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:42.54
+2022-02-24 19:33:18|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:44.54
+2022-02-24 19:33:20|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:46.54
+2022-02-24 19:33:22|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:48.54
+2022-02-24 19:33:24|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:50.54
+2022-02-24 19:33:26|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:52.54
+2022-02-24 19:33:28|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:54.54
+2022-02-24 19:33:30|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:56.54
+2022-02-24 19:33:32|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:04:58.54
+2022-02-24 19:33:34|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:0.54
+2022-02-24 19:33:36|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:2.54
+2022-02-24 19:33:38|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:4.54
+2022-02-24 19:33:40|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:6.54
+2022-02-24 19:33:42|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:8.54
+2022-02-24 19:33:44|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:10.54
+2022-02-24 19:33:46|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:12.54
+2022-02-24 19:33:48|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:14.54
+2022-02-24 19:33:50|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:16.51
+2022-02-24 19:33:52|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:18.54
+2022-02-24 19:33:54|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:20.54
+2022-02-24 19:33:56|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:22.54
+2022-02-24 19:33:58|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:24.54
+2022-02-24 19:34:00|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:26.54
+2022-02-24 19:34:02|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:28.54
+2022-02-24 19:34:04|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:30.54
+2022-02-24 19:34:06|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:32.54
+2022-02-24 19:34:08|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:34.54
+2022-02-24 19:34:10|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:36.54
+2022-02-24 19:34:12|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:38.54
+2022-02-24 19:34:14|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:40.54
+2022-02-24 19:34:16|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:42.54
+2022-02-24 19:34:18|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:44.54
+2022-02-24 19:34:20|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:46.54
+2022-02-24 19:34:22|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:48.54
+2022-02-24 19:34:24|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:50.54
+2022-02-24 19:34:26|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:52.54
+2022-02-24 19:34:28|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:54.54
+2022-02-24 19:34:30|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:56.54
+2022-02-24 19:34:32|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:05:58.54
+2022-02-24 19:34:34|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:0.54
+2022-02-24 19:34:36|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:2.54
+2022-02-24 19:34:38|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:4.54
+2022-02-24 19:34:40|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:6.54
+2022-02-24 19:34:42|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:8.54
+2022-02-24 19:34:44|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:10.54
+2022-02-24 19:34:46|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:12.54
+2022-02-24 19:34:48|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:14.54
+2022-02-24 19:34:50|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:16.54
+2022-02-24 19:34:52|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:18.54
+2022-02-24 19:34:54|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:20.54
+2022-02-24 19:34:56|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:22.54
+2022-02-24 19:34:58|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:24.54
+2022-02-24 19:35:00|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:26.54
+2022-02-24 19:35:02|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:28.54
+2022-02-24 19:35:04|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:30.54
+2022-02-24 19:35:06|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:32.54
+2022-02-24 19:35:08|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:34.54
+2022-02-24 19:35:10|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:36.54
+2022-02-24 19:35:12|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:38.54
+2022-02-24 19:35:14|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:40.54
+2022-02-24 19:35:16|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:42.54
+2022-02-24 19:35:18|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:44.54
+2022-02-24 19:35:20|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:46.54
+2022-02-24 19:35:22|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:48.54
+2022-02-24 19:35:24|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:50.54
+2022-02-24 19:35:26|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:52.54
+2022-02-24 19:35:28|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:54.54
+2022-02-24 19:35:30|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:56.54
+2022-02-24 19:35:32|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:06:58.54
+2022-02-24 19:35:34|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:0.54
+2022-02-24 19:35:36|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:2.54
+2022-02-24 19:35:38|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:4.54
+2022-02-24 19:35:40|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:6.54
+2022-02-24 19:35:42|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:8.54
+2022-02-24 19:35:44|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:10.54
+2022-02-24 19:35:46|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:12.54
+2022-02-24 19:35:48|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:14.54
+2022-02-24 19:35:50|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:16.54
+2022-02-24 19:35:52|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:18.54
+2022-02-24 19:35:54|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:20.54
+2022-02-24 19:35:56|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:22.54
+2022-02-24 19:35:58|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:24.54
+2022-02-24 19:36:00|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:26.54
+2022-02-24 19:36:02|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:28.54
+2022-02-24 19:36:04|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:30.54
+2022-02-24 19:36:06|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:32.54
+2022-02-24 19:36:08|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:34.54
+2022-02-24 19:36:10|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:36.52
+2022-02-24 19:36:12|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:38.54
+2022-02-24 19:36:14|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:40.54
+2022-02-24 19:36:16|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:42.54
+2022-02-24 19:36:18|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:44.54
+2022-02-24 19:36:20|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:46.54
+2022-02-24 19:36:22|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:48.54
+2022-02-24 19:36:24|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:50.54
+2022-02-24 19:36:26|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:52.54
+2022-02-24 19:36:28|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:54.54
+2022-02-24 19:36:30|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:56.54
+2022-02-24 19:36:32|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:07:58.54
+2022-02-24 19:36:34|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:0.54
+2022-02-24 19:36:36|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:2.54
+2022-02-24 19:36:38|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:4.54
+2022-02-24 19:36:40|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:6.54
+2022-02-24 19:36:42|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:8.54
+2022-02-24 19:36:44|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:10.54
+2022-02-24 19:36:46|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:12.54
+2022-02-24 19:36:48|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:14.54
+2022-02-24 19:36:50|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:16.54
+2022-02-24 19:36:52|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:18.54
+2022-02-24 19:36:54|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:20.54
+2022-02-24 19:36:56|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:22.54
+2022-02-24 19:36:58|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:24.54
+2022-02-24 19:37:00|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:26.54
+2022-02-24 19:37:02|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:28.54
+2022-02-24 19:37:04|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:30.54
+2022-02-24 19:37:06|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:32.54
+2022-02-24 19:37:08|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:34.54
+2022-02-24 19:37:10|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:36.54
+2022-02-24 19:37:12|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:38.54
+2022-02-24 19:37:14|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:40.54
+2022-02-24 19:37:16|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:42.54
+2022-02-24 19:37:18|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:44.54
+2022-02-24 19:37:20|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:46.54
+2022-02-24 19:37:22|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:48.54
+2022-02-24 19:37:22|939286|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "16", "p1": "threads", "p2": "spread", "p3": " ", "p4": "simd", "p5": "dist_schedule(static,1024)", "p6": "schedule(static,8)", "p7": "dynamic"} --> 175.683
+2022-02-24 19:37:22|939286|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)', 'p7': 'dynamic'} y: 175.683
+2022-02-24 19:37:22|939286|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-24 19:37:22|939286|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)', 'p7': 'dynamic'} --> ('16', 'threads', 'spread', ' ', 'simd', 'dist_schedule(static,1024)', 'schedule(static,8)', 'dynamic'): evaluated objective: 175.683
+2022-02-24 19:37:23|939286|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-24 19:37:24|939286|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['2', 'threads', 'master', ' ', 'simd', ' ', 'schedule(static,32)', 'dynamic'] lie: 175.683
+2022-02-24 19:37:24|939286|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '2', 'p1': 'threads', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': ' ', 'p6': 'schedule(static,32)', 'p7': 'dynamic'}
+2022-02-24 19:37:25|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:52.13
+2022-02-24 19:37:26|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:52.67
+2022-02-24 19:37:28|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:54.67
+2022-02-24 19:37:30|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:56.67
+2022-02-24 19:37:32|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:08:58.67
+2022-02-24 19:37:34|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:09:0.67
+2022-02-24 19:37:36|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:09:2.67
+2022-02-24 19:37:38|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:09:4.67
+2022-02-24 19:37:40|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:09:6.67
+2022-02-24 19:37:42|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:09:8.67
+2022-02-24 19:37:44|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:09:10.67
+2022-02-24 19:37:46|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:09:12.67
+2022-02-24 19:37:48|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:09:14.67
+2022-02-24 19:37:50|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:09:16.67
+2022-02-24 19:37:52|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:09:18.67
+2022-02-24 19:37:54|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:09:20.67
+2022-02-24 19:37:56|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:09:22.67
+2022-02-24 19:37:58|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:09:24.64
+2022-02-24 19:38:00|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:09:26.67
+2022-02-24 19:38:02|939286|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:09:28.67
+2022-02-24 19:38:02|939286|INFO|ytopt.search.hps.ambs:101] Hyperopt driver finishing
+2022-02-24 19:51:47|1021155|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-24 19:51:47|1021155|ERROR|ytopt:50] Uncaught exception:
+Traceback (most recent call last):
+  File "/home/jkoo/.conda/envs/ytune/lib/python3.7/runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "/home/jkoo/.conda/envs/ytune/lib/python3.7/runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "/lcrc/project/EE-ECP/jkoo/github/ytune/ytopt/ytopt/search/ambs.py", line 106, in <module>
+    search = AMBS(**vars(args))
+  File "/lcrc/project/EE-ECP/jkoo/github/ytune/ytopt/ytopt/search/ambs.py", line 45, in __init__
+    super().__init__(**kwargs)
+  File "/lcrc/project/EE-ECP/jkoo/github/ytune/ytopt/ytopt/search/search.py", line 38, in __init__
+    self.problem = util.generic_loader(problem, 'Problem')
+  File "/lcrc/project/EE-ECP/jkoo/github/ytune/ytopt/ytopt/search/util.py", line 125, in generic_loader
+    return load_attr_from(target)
+  File "/lcrc/project/EE-ECP/jkoo/github/ytune/ytopt/ytopt/search/util.py", line 100, in load_attr_from
+    module = import_module(str_module)
+  File "/home/jkoo/.conda/envs/ytune/lib/python3.7/importlib/__init__.py", line 127, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 1006, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 965, in _find_and_load_unlocked
+ModuleNotFoundError: No module named 'problem_all'
+2022-02-24 19:52:05|1021509|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-24 19:52:05|1021509|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-24 19:52:13|1021509|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x1472f08954d0>', proc_info: {'node_ip_address': '10.70.150.14', 'raylet_ip_address': '10.70.150.14', 'redis_address': '10.70.150.14:6379', 'object_store_address': '/tmp/ray/session_2022-02-24_19-52-05_766413_1021509/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-02-24_19-52-05_766413_1021509/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-02-24_19-52-05_766413_1021509', 'metrics_export_port': 54535, 'gcs_address': '10.70.150.14:34573', 'node_id': '7062c3742bc71fefa30a4730831876cf66bc26b133aba8279e77540f'}
+2022-02-24 19:52:13|1021509|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 10.70.150.14
+2022-02-24 19:52:13|1021509|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 54535,
+  'NodeID': '7062c3742bc71fefa30a4730831876cf66bc26b133aba8279e77540f',
+  'NodeManagerAddress': '10.70.150.14',
+  'NodeManagerHostname': 'gpu4',
+  'NodeManagerPort': 36989,
+  'ObjectManagerPort': 37849,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-02-24_19-52-05_766413_1021509/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-02-24_19-52-05_766413_1021509/sockets/raylet',
+  'Resources': {'CPU': 256.0,
+                'GPU': 1.0,
+                'accelerator_type:A100': 1.0,
+                'memory': 852505582592.0,
+                'node:10.70.150.14': 1.0,
+                'object_store_memory': 200000000000.0},
+  'alive': True}]
+2022-02-24 19:52:13|1021509|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem.Problem'}
+2022-02-24 19:52:13|1021509|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    p0, Type: Ordinal, Sequence: {2, 4, 8, 16, 21, 32, 42}, Default: 42
+    p1, Type: Categorical, Choices: {cores, threads, sockets}, Default: cores
+    p2, Type: Categorical, Choices: {close, spread, master}, Default: close
+    p3, Type: Categorical, Choices: {#pragma omp parallel for,  }, Default:  
+    p4, Type: Categorical, Choices: {simd,  }, Default:  
+    p5, Type: Categorical, Choices: {dist_schedule(static,256), dist_schedule(static,512), dist_schedule(static,1024), dist_schedule(static,2048), dist_schedule(static,4096),  }, Default:  
+    p6, Type: Categorical, Choices: {schedule(static,1), schedule(static,2), schedule(static,4), schedule(static,8), schedule(static,16), schedule(static,32),  }, Default:  
+    p7, Type: Categorical, Choices: {dynamic, static}, Default: static
+
+2022-02-24 19:52:13|1021509|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-02-24 19:52:13|1021509|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-02-24 19:52:13|1021509|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-02-24 19:52:13|1021509|INFO|ytopt.search.hps.optimizer.optimizer:58] Using skopt.Optimizer with RF base_estimator
+2022-02-24 19:52:13|1021509|INFO|ytopt.search.hps.ambs:79] Generating 1 initial points...
+2022-02-24 19:52:15|1021509|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'dist_schedule(static,1024)', 'p6': 'schedule(static,8)', 'p7': 'dynamic'}
+2022-02-24 19:52:15|1021509|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:0.00
+2022-02-24 19:52:18|1021509|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:2.54
+2022-02-24 19:52:20|1021509|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:4.54
+2022-02-24 19:52:22|1021509|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:6.54
+2022-02-24 19:52:24|1021509|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:8.54
+2022-02-24 19:52:26|1021509|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:10.54
+2022-02-24 19:52:28|1021509|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:12.54
+2022-02-24 19:52:30|1021509|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:14.54
+2022-02-24 19:52:32|1021509|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:16.54
+2022-02-24 19:52:34|1021509|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:18.54
+2022-02-24 19:52:36|1021509|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:20.54
+2022-02-24 19:52:38|1021509|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:22.54
+2022-02-24 19:52:40|1021509|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:24.54
+2022-02-24 19:52:42|1021509|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:26.54
+2022-02-24 19:52:44|1021509|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:28.54
+2022-02-24 19:52:46|1021509|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:30.54
+2022-02-24 19:52:48|1021509|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:32.54
+2022-02-24 19:52:50|1021509|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:34.54
+2022-02-24 19:52:52|1021509|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:36.54
+2022-02-24 19:52:54|1021509|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:38.54
+2022-02-24 19:52:56|1021509|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:40.54
+2022-02-24 19:52:58|1021509|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:42.54
+2022-02-24 19:52:58|1021509|INFO|ytopt.search.hps.ambs:101] Hyperopt driver finishing

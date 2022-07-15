@@ -1,0 +1,819 @@
+{
+  "tuning_problem_name": "xsbench",
+  "tuning_problem_category": "Unknown",
+  "surrogate_model": [
+    {
+      "hyperparameters": [
+        1.271942802629116,
+        0.06325914962062107,
+        0.03983516723891914,
+        0.01878083331225876,
+        0.7899276859315699,
+        3.944693721523509,
+        12.610949124584778,
+        3.6447923712950496,
+        1.0,
+        0.1555088228346767,
+        9.99999719285495e-06,
+        2.1446733928415505
+      ],
+      "model_stats": {
+        "log_likelihood": -4.397103636957834,
+        "neg_log_likelihood": 4.397103636957834,
+        "gradients": [
+          1.4424094247802582e-240,
+          1.6207401935978708e-237,
+          2.472962305017387e-237,
+          1.3653007898843274e-236,
+          1.2957192432921307e-239,
+          6.590731986074149e-241,
+          1.6270190809375872e-242,
+          4.9582331806289284e-241,
+          0.0,
+          -5.015604901457323e-09,
+          -3.225285486738642e-13,
+          -2.9670209146885716e-07
+        ],
+        "iterations": 10
+      },
+      "task_parameters": [
+        [
+          1000000
+        ]
+      ],
+      "function_evaluations": [
+        "947a370e-8e07-11ec-9266-a4bf0138e125",
+        "a032809c-8e07-11ec-9266-a4bf0138e125"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "int",
+          "lower_bound": 100000,
+          "upper_bound": 10000000,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "p0",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "name": "p1",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "10",
+            "20",
+            "40",
+            "64",
+            "80",
+            "100",
+            "128",
+            "160",
+            "200"
+          ]
+        },
+        {
+          "name": "p2",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma clang loop unrolling full",
+            " "
+          ]
+        },
+        {
+          "name": "p3",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma omp parallel for",
+            " "
+          ]
+        },
+        {
+          "name": "p4",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p5",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p6",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "cores",
+            "threads",
+            "sockets"
+          ]
+        },
+        {
+          "name": "p7",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "compact",
+            "scatter",
+            "balanced",
+            "none",
+            "disabled",
+            "explicit"
+          ]
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 15,
+        "tm_hour": 2,
+        "tm_min": 33,
+        "tm_sec": 16,
+        "tm_wday": 1,
+        "tm_yday": 46,
+        "tm_isdst": 0
+      },
+      "uid": "a16fbe5c-8e07-11ec-9266-a4bf0138e125"
+    },
+    {
+      "hyperparameters": [
+        47.41848367783807,
+        0.3483953251518184,
+        4.474039735858058,
+        44.28300734721326,
+        1.9948141429345463,
+        5.661861641725697,
+        0.7558931830487207,
+        0.021568694407979053,
+        1.0,
+        4.750514718454885,
+        9.999985719826356e-06,
+        0.03373934181350839
+      ],
+      "model_stats": {
+        "log_likelihood": -6.5945510138810075,
+        "neg_log_likelihood": 6.5945510138810075,
+        "gradients": [
+          4.681096255970474e-52,
+          1.6319629897969433e-48,
+          5.838998517879153e-51,
+          2.85945471029987e-52,
+          4.033088272735396e-49,
+          4.9120408749906625e-50,
+          2.3764863867507483e-49,
+          8.01157312141093e-46,
+          0.0,
+          -6.596679925784776e-06,
+          -1.3886222644429547e-11,
+          -3.161461899959763e-09
+        ],
+        "iterations": 8
+      },
+      "task_parameters": [
+        [
+          1000000
+        ]
+      ],
+      "function_evaluations": [
+        "947a370e-8e07-11ec-9266-a4bf0138e125",
+        "a032809c-8e07-11ec-9266-a4bf0138e125",
+        "ae5d6ccc-8e07-11ec-9266-a4bf0138e125"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "int",
+          "lower_bound": 100000,
+          "upper_bound": 10000000,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "p0",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "name": "p1",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "10",
+            "20",
+            "40",
+            "64",
+            "80",
+            "100",
+            "128",
+            "160",
+            "200"
+          ]
+        },
+        {
+          "name": "p2",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma clang loop unrolling full",
+            " "
+          ]
+        },
+        {
+          "name": "p3",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma omp parallel for",
+            " "
+          ]
+        },
+        {
+          "name": "p4",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p5",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p6",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "cores",
+            "threads",
+            "sockets"
+          ]
+        },
+        {
+          "name": "p7",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "compact",
+            "scatter",
+            "balanced",
+            "none",
+            "disabled",
+            "explicit"
+          ]
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 15,
+        "tm_hour": 2,
+        "tm_min": 33,
+        "tm_sec": 40,
+        "tm_wday": 1,
+        "tm_yday": 46,
+        "tm_isdst": 0
+      },
+      "uid": "afdff2ea-8e07-11ec-9266-a4bf0138e125"
+    },
+    {
+      "hyperparameters": [
+        8536788.382787097,
+        38.231613517964476,
+        100000000.0,
+        100000000.0,
+        75.11090272175115,
+        425.32916709880675,
+        100000000.0,
+        100000000.0,
+        1.0,
+        4.881139698410737,
+        1e-10,
+        0.015285137731466602
+      ],
+      "model_stats": {
+        "log_likelihood": 7.392348868745712,
+        "neg_log_likelihood": -7.392348868745712,
+        "gradients": [
+          3.746592234778174e-09,
+          3.447444782977982e-07,
+          4.127286347069468e-11,
+          9.091575348165718e-11,
+          2.021115258799e-05,
+          1.91643839198008e-06,
+          1.0229251499986918e-12,
+          4.1320951359610444e-11,
+          0.0,
+          -1.585807514410551e-05,
+          -4.781213530891281e-05,
+          -1.518068153707145e-09
+        ],
+        "iterations": 144
+      },
+      "task_parameters": [
+        [
+          1000000
+        ]
+      ],
+      "function_evaluations": [
+        "947a370e-8e07-11ec-9266-a4bf0138e125",
+        "a032809c-8e07-11ec-9266-a4bf0138e125",
+        "ae5d6ccc-8e07-11ec-9266-a4bf0138e125",
+        "bcffb7a8-8e07-11ec-9266-a4bf0138e125"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "int",
+          "lower_bound": 100000,
+          "upper_bound": 10000000,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "p0",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "name": "p1",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "10",
+            "20",
+            "40",
+            "64",
+            "80",
+            "100",
+            "128",
+            "160",
+            "200"
+          ]
+        },
+        {
+          "name": "p2",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma clang loop unrolling full",
+            " "
+          ]
+        },
+        {
+          "name": "p3",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma omp parallel for",
+            " "
+          ]
+        },
+        {
+          "name": "p4",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p5",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p6",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "cores",
+            "threads",
+            "sockets"
+          ]
+        },
+        {
+          "name": "p7",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "compact",
+            "scatter",
+            "balanced",
+            "none",
+            "disabled",
+            "explicit"
+          ]
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 15,
+        "tm_hour": 2,
+        "tm_min": 34,
+        "tm_sec": 4,
+        "tm_wday": 1,
+        "tm_yday": 46,
+        "tm_isdst": 0
+      },
+      "uid": "be2c794a-8e07-11ec-9266-a4bf0138e125"
+    }
+  ],
+  "func_eval": [
+    {
+      "task_parameter": {
+        "t": 1000000
+      },
+      "tuning_parameter": {
+        "p0": "5",
+        "p1": "100",
+        "p2": " ",
+        "p3": " ",
+        "p4": "256",
+        "p5": "2",
+        "p6": "threads",
+        "p7": "explicit"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mymachine",
+        "skylake": {
+          "nodes": 1,
+          "cores": 28
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 2.14934
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 2.14934,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 15,
+        "tm_hour": 2,
+        "tm_min": 32,
+        "tm_sec": 54,
+        "tm_wday": 1,
+        "tm_yday": 46,
+        "tm_isdst": 0
+      },
+      "uid": "947a370e-8e07-11ec-9266-a4bf0138e125"
+    },
+    {
+      "task_parameter": {
+        "t": 1000000
+      },
+      "tuning_parameter": {
+        "p0": "7",
+        "p1": "10",
+        "p2": "#pragma clang loop unrolling full",
+        "p3": "#pragma omp parallel for",
+        "p4": "8",
+        "p5": "128",
+        "p6": "sockets",
+        "p7": "scatter"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mymachine",
+        "skylake": {
+          "nodes": 1,
+          "cores": 28
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 2.211475
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 2.211475,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 15,
+        "tm_hour": 2,
+        "tm_min": 33,
+        "tm_sec": 14,
+        "tm_wday": 1,
+        "tm_yday": 46,
+        "tm_isdst": 0
+      },
+      "uid": "a032809c-8e07-11ec-9266-a4bf0138e125"
+    },
+    {
+      "task_parameter": {
+        "t": 1000000
+      },
+      "tuning_parameter": {
+        "p0": "3",
+        "p1": "20",
+        "p2": "#pragma clang loop unrolling full",
+        "p3": "#pragma omp parallel for",
+        "p4": "256",
+        "p5": "4",
+        "p6": "sockets",
+        "p7": "none"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mymachine",
+        "skylake": {
+          "nodes": 1,
+          "cores": 28
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 2.17822
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 2.17822,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 15,
+        "tm_hour": 2,
+        "tm_min": 33,
+        "tm_sec": 38,
+        "tm_wday": 1,
+        "tm_yday": 46,
+        "tm_isdst": 0
+      },
+      "uid": "ae5d6ccc-8e07-11ec-9266-a4bf0138e125"
+    },
+    {
+      "task_parameter": {
+        "t": 1000000
+      },
+      "tuning_parameter": {
+        "p0": "4",
+        "p1": "160",
+        "p2": "#pragma clang loop unrolling full",
+        "p3": "#pragma omp parallel for",
+        "p4": "8",
+        "p5": "16",
+        "p6": "cores",
+        "p7": "compact"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mymachine",
+        "skylake": {
+          "nodes": 1,
+          "cores": 28
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 2.16404
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 2.16404,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 15,
+        "tm_hour": 2,
+        "tm_min": 34,
+        "tm_sec": 2,
+        "tm_wday": 1,
+        "tm_yday": 46,
+        "tm_isdst": 0
+      },
+      "uid": "bcffb7a8-8e07-11ec-9266-a4bf0138e125"
+    },
+    {
+      "task_parameter": {
+        "t": 1000000
+      },
+      "tuning_parameter": {
+        "p0": "5",
+        "p1": "200",
+        "p2": "#pragma clang loop unrolling full",
+        "p3": "#pragma omp parallel for",
+        "p4": "256",
+        "p5": "2",
+        "p6": "sockets",
+        "p7": "balanced"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mymachine",
+        "skylake": {
+          "nodes": 1,
+          "cores": 28
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 2.160925
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 2.1609249999999998,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 15,
+        "tm_hour": 2,
+        "tm_min": 34,
+        "tm_sec": 26,
+        "tm_wday": 1,
+        "tm_yday": 46,
+        "tm_isdst": 0
+      },
+      "uid": "cb562792-8e07-11ec-9266-a4bf0138e125"
+    }
+  ]
+}

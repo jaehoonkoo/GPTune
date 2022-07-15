@@ -1,0 +1,75 @@
+2022-02-18 22:46:52|71585|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-18 22:46:53|71585|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-18 22:46:59|71585|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x7f0e12ffecb0>', proc_info: {'node_ip_address': '10.128.3.55', 'raylet_ip_address': '10.128.3.55', 'redis_address': '10.128.3.55:6379', 'object_store_address': '/tmp/ray/session_2022-02-18_22-46-53_564816_71585/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-02-18_22-46-53_564816_71585/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-02-18_22-46-53_564816_71585', 'metrics_export_port': 63133, 'node_id': '5504fe264e466d00aba58ebc70178071098edd64136be2c2b64f7153'}
+2022-02-18 22:46:59|71585|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 10.128.3.55
+2022-02-18 22:46:59|71585|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 63133,
+  'NodeID': '5504fe264e466d00aba58ebc70178071098edd64136be2c2b64f7153',
+  'NodeManagerAddress': '10.128.3.55',
+  'NodeManagerHostname': 'thetamom3',
+  'NodeManagerPort': 42451,
+  'ObjectManagerPort': 41707,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-02-18_22-46-53_564816_71585/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-02-18_22-46-53_564816_71585/sockets/raylet',
+  'Resources': {'CPU': 72.0,
+                'memory': 78237962445.0,
+                'node:10.128.3.55': 1.0,
+                'object_store_memory': 37816269619.0},
+  'alive': True}]
+2022-02-18 22:46:59|71585|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem.Problem'}
+2022-02-18 22:46:59|71585|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    p0, Type: Ordinal, Sequence: {8, 16, 32, 64, 128, 256}, Default: 64
+    p1, Type: Categorical, Choices: {cores, threads, sockets}, Default: cores
+    p2, Type: Categorical, Choices: {close, spread, master}, Default: close
+    p3, Type: Categorical, Choices: {dynamic, static}, Default: static
+
+2022-02-18 22:46:59|71585|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-02-18 22:46:59|71585|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-02-18 22:46:59|71585|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-02-18 22:46:59|71585|INFO|ytopt.search.hps.optimizer.optimizer:51] Using skopt.Optimizer with RF base_estimator
+2022-02-18 22:46:59|71585|INFO|ytopt.search.hps.ambs:79] Generating 1 initial points...
+2022-02-18 22:47:00|71585|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '64', 'p1': 'cores', 'p2': 'close', 'p3': 'dynamic'}
+2022-02-18 22:47:00|71585|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:0.00
+2022-02-18 22:47:02|71585|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:2.54
+2022-02-18 22:47:04|71585|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:4.54
+2022-02-18 22:47:06|71585|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:6.54
+2022-02-18 22:47:08|71585|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:8.54
+2022-02-18 22:47:10|71585|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:10.54
+2022-02-18 22:47:12|71585|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:12.54
+2022-02-18 22:47:14|71585|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:14.54
+2022-02-18 22:47:14|71585|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "64", "p1": "cores", "p2": "close", "p3": "dynamic"} --> 6.67
+2022-02-18 22:47:14|71585|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '64', 'p1': 'cores', 'p2': 'close', 'p3': 'dynamic'} y: 6.67
+2022-02-18 22:47:14|71585|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-18 22:47:14|71585|DEBUG|ytopt.search.hps.optimizer.optimizer:119] tell: {'p0': '64', 'p1': 'cores', 'p2': 'close', 'p3': 'dynamic'} --> ('64', 'cores', 'close', 'dynamic'): evaluated objective: 6.67
+2022-02-18 22:47:15|71585|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-18 22:47:16|71585|DEBUG|ytopt.search.hps.optimizer.optimizer:84] _ask: ['256', 'sockets', 'spread', 'dynamic'] lie: 6.67
+2022-02-18 22:47:16|71585|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '256', 'p1': 'sockets', 'p2': 'spread', 'p3': 'dynamic'}
+2022-02-18 22:47:17|71585|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:17.29
+2022-02-18 22:47:18|71585|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:18.54
+2022-02-18 22:47:20|71585|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:20.54
+2022-02-18 22:47:22|71585|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:22.54
+2022-02-18 22:47:24|71585|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:24.54
+2022-02-18 22:47:26|71585|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:26.54
+2022-02-18 22:47:28|71585|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:28.54
+2022-02-18 22:47:28|71585|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "256", "p1": "sockets", "p2": "spread", "p3": "dynamic"} --> 6.19
+2022-02-18 22:47:28|71585|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '256', 'p1': 'sockets', 'p2': 'spread', 'p3': 'dynamic'} y: 6.19
+2022-02-18 22:47:28|71585|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-18 22:47:28|71585|DEBUG|ytopt.search.hps.optimizer.optimizer:119] tell: {'p0': '256', 'p1': 'sockets', 'p2': 'spread', 'p3': 'dynamic'} --> ('256', 'sockets', 'spread', 'dynamic'): evaluated objective: 6.19
+2022-02-18 22:47:29|71585|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-18 22:47:29|71585|DEBUG|ytopt.search.hps.optimizer.optimizer:84] _ask: ['256', 'cores', 'close', 'static'] lie: 6.67
+2022-02-18 22:47:29|71585|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '256', 'p1': 'cores', 'p2': 'close', 'p3': 'static'}
+2022-02-18 22:47:31|71585|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:31.13
+2022-02-18 22:47:32|71585|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:32.54
+2022-02-18 22:47:34|71585|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:34.54
+2022-02-18 22:47:36|71585|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:36.54
+2022-02-18 22:47:38|71585|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:38.54
+2022-02-18 22:47:40|71585|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:40.54
+2022-02-18 22:47:42|71585|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:42.54
+2022-02-18 22:47:42|71585|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "256", "p1": "cores", "p2": "close", "p3": "static"} --> 6.262
+2022-02-18 22:47:42|71585|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '256', 'p1': 'cores', 'p2': 'close', 'p3': 'static'} y: 6.262
+2022-02-18 22:47:42|71585|INFO|ytopt.search.hps.ambs:101] Hyperopt driver finishing

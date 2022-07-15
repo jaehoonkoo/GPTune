@@ -1,0 +1,289 @@
+{
+  "tuning_problem_name": "xsbench",
+  "tuning_problem_category": "Unknown",
+  "surrogate_model": [],
+  "func_eval": [
+    {
+      "task_parameter": {
+        "t": 100000
+      },
+      "tuning_parameter": {
+        "p0": "8",
+        "p1": "128",
+        "p2": " ",
+        "p3": " ",
+        "p4": "16",
+        "p5": "2",
+        "p6": "cores",
+        "p7": "balanced"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 100.800048
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 100.80004753913003,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 3,
+        "tm_mday": 15,
+        "tm_hour": 19,
+        "tm_min": 24,
+        "tm_sec": 59,
+        "tm_wday": 1,
+        "tm_yday": 74,
+        "tm_isdst": 1
+      },
+      "uid": "83a74a2e-a4bf-11ec-832a-6805cac1b126"
+    },
+    {
+      "task_parameter": {
+        "t": 100000
+      },
+      "tuning_parameter": {
+        "p0": "256",
+        "p1": "64",
+        "p2": "#pragma clang loop unrolling full",
+        "p3": " ",
+        "p4": "128",
+        "p5": "128",
+        "p6": "threads",
+        "p7": "disabled"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 100.504385
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 100.50438514409845,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 3,
+        "tm_mday": 15,
+        "tm_hour": 19,
+        "tm_min": 24,
+        "tm_sec": 59,
+        "tm_wday": 1,
+        "tm_yday": 74,
+        "tm_isdst": 1
+      },
+      "uid": "83a7ae2e-a4bf-11ec-832a-6805cac1b126"
+    },
+    {
+      "task_parameter": {
+        "t": 100000
+      },
+      "tuning_parameter": {
+        "p0": "32",
+        "p1": "20",
+        "p2": " ",
+        "p3": "#pragma omp parallel for",
+        "p4": "8",
+        "p5": "64",
+        "p6": "sockets",
+        "p7": "compact"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 100.596032
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 100.59603192884953,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 3,
+        "tm_mday": 15,
+        "tm_hour": 19,
+        "tm_min": 24,
+        "tm_sec": 59,
+        "tm_wday": 1,
+        "tm_yday": 74,
+        "tm_isdst": 1
+      },
+      "uid": "83a813e6-a4bf-11ec-832a-6805cac1b126"
+    },
+    {
+      "task_parameter": {
+        "t": 100000
+      },
+      "tuning_parameter": {
+        "p0": "96",
+        "p1": "10",
+        "p2": " ",
+        "p3": "#pragma omp parallel for",
+        "p4": "96",
+        "p5": "256",
+        "p6": "sockets",
+        "p7": "scatter"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 100.45869
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 100.45869024007573,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 3,
+        "tm_mday": 15,
+        "tm_hour": 19,
+        "tm_min": 25,
+        "tm_sec": 2,
+        "tm_wday": 1,
+        "tm_yday": 74,
+        "tm_isdst": 1
+      },
+      "uid": "859e7d8e-a4bf-11ec-832a-6805cac1b126"
+    },
+    {
+      "task_parameter": {
+        "t": 100000
+      },
+      "tuning_parameter": {
+        "p0": "32",
+        "p1": "160",
+        "p2": "#pragma clang loop unrolling full",
+        "p3": "#pragma omp parallel for",
+        "p4": "4",
+        "p5": "256",
+        "p6": "sockets",
+        "p7": "explicit"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 100.801745
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 100.80174458749268,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 3,
+        "tm_mday": 15,
+        "tm_hour": 19,
+        "tm_min": 25,
+        "tm_sec": 5,
+        "tm_wday": 1,
+        "tm_yday": 74,
+        "tm_isdst": 1
+      },
+      "uid": "873b1774-a4bf-11ec-832a-6805cac1b126"
+    },
+    {
+      "task_parameter": {
+        "t": 100000
+      },
+      "tuning_parameter": {
+        "p0": "192",
+        "p1": "10",
+        "p2": " ",
+        "p3": " ",
+        "p4": "256",
+        "p5": "64",
+        "p6": "cores",
+        "p7": "none"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 100.747953
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 100.74795314753263,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 3,
+        "tm_mday": 15,
+        "tm_hour": 19,
+        "tm_min": 25,
+        "tm_sec": 8,
+        "tm_wday": 1,
+        "tm_yday": 74,
+        "tm_isdst": 1
+      },
+      "uid": "88c24554-a4bf-11ec-832a-6805cac1b126"
+    }
+  ]
+}

@@ -1,0 +1,144 @@
+machine: mymachine processor: haswell num_nodes: 1 num_cores: 2
+[HistoryDB] use filelock for synchronization
+[HistoryDB] Found a history database file
+{'tuning_problem_name': 'GPTune-Demo', 'modeler': 'Model_LCM', 'task_parameters': [[0.8]], 'input_space': [{'name': 't', 'type': 'real', 'transformer': 'normalize', 'lower_bound': 0.0, 'upper_bound': 10.0}], 'parameter_space': [{'name': 'x', 'type': 'real', 'transformer': 'normalize', 'lower_bound': 0.0, 'upper_bound': 1.0}], 'output_space': [{'name': 'y', 'type': 'real', 'transformer': 'identity'}], 'loadable_machine_configurations': {'mymachine': {'myprocessor': {'nodes': [1], 'cores': 2}}}, 'loadable_software_configurations': {}}
+task_parameters_given:  [[0.8]]
+GPTune History Database Init
+[HistoryDB] use filelock for synchronization
+[HistoryDB] Found a history database file
+MODEL DATA:  {'hyperparameters': [0.024476989553736454, 1.0, 0.4582032318445954, 1e-10, 0.48706898581626973], 'model_stats': {'log_likelihood': -0.4203827155694029, 'neg_log_likelihood': 0.4203827155694029, 'gradients': [1.4479883247986436e-06, 0.0, -1.1920928955078125e-07, -0.47156194508385735, -2.384185791015625e-07], 'iterations': 47}, 'task_parameters': [[0.8]], 'function_evaluations': ['17f2f7c0-89fc-11ec-b70d-acde48001122', '17f31f02-89fc-11ec-b70d-acde48001122', '17f34112-89fc-11ec-b70d-acde48001122', '17f3666a-89fc-11ec-b70d-acde48001122', '17f38e24-89fc-11ec-b70d-acde48001122', '17f3bbd8-89fc-11ec-b70d-acde48001122', '17f3ea90-89fc-11ec-b70d-acde48001122', '17f420c8-89fc-11ec-b70d-acde48001122', '17f455b6-89fc-11ec-b70d-acde48001122', '17f49f9e-89fc-11ec-b70d-acde48001122', '17f508b2-89fc-11ec-b70d-acde48001122', '17f5542a-89fc-11ec-b70d-acde48001122', '17f5a52e-89fc-11ec-b70d-acde48001122', '17f5ffb0-89fc-11ec-b70d-acde48001122', '17f65924-89fc-11ec-b70d-acde48001122', '17f6ac8a-89fc-11ec-b70d-acde48001122', '17f6fffa-89fc-11ec-b70d-acde48001122', '17f7773c-89fc-11ec-b70d-acde48001122', '17f7e3c0-89fc-11ec-b70d-acde48001122', '17f854b8-89fc-11ec-b70d-acde48001122', '17f8bc64-89fc-11ec-b70d-acde48001122', '17f92cd0-89fc-11ec-b70d-acde48001122', '17f9968e-89fc-11ec-b70d-acde48001122', '17fa23ba-89fc-11ec-b70d-acde48001122', '17faa7a4-89fc-11ec-b70d-acde48001122', '1ab0da68-89fc-11ec-b70d-acde48001122', '1d8987c6-89fc-11ec-b70d-acde48001122', '201baabe-89fc-11ec-b70d-acde48001122', '22a9eebc-89fc-11ec-b70d-acde48001122', '2534fc58-89fc-11ec-b70d-acde48001122', '27fa088e-89fc-11ec-b70d-acde48001122', '2ac58160-89fc-11ec-b70d-acde48001122', '2db885e8-89fc-11ec-b70d-acde48001122', '304903be-89fc-11ec-b70d-acde48001122', '32feef60-89fc-11ec-b70d-acde48001122', '35f92a82-89fc-11ec-b70d-acde48001122', '38983a30-89fc-11ec-b70d-acde48001122', '3b3a06e2-89fc-11ec-b70d-acde48001122', '3d9ee1dc-89fc-11ec-b70d-acde48001122', '405f5be0-89fc-11ec-b70d-acde48001122', '4335bc2e-89fc-11ec-b70d-acde48001122', '464d6ee8-89fc-11ec-b70d-acde48001122', '49178a46-89fc-11ec-b70d-acde48001122', '4befdeda-89fc-11ec-b70d-acde48001122', '4e8d0e10-89fc-11ec-b70d-acde48001122', '515bd6da-89fc-11ec-b70d-acde48001122', '54214210-89fc-11ec-b70d-acde48001122', '57255b68-89fc-11ec-b70d-acde48001122', '59f33bbc-89fc-11ec-b70d-acde48001122'], 'input_space': [{'name': 't', 'transformer': 'normalize', 'type': 'real', 'lower_bound': 0.0, 'upper_bound': 10.0, 'optimize': True}], 'parameter_space': [{'name': 'x', 'transformer': 'normalize', 'type': 'real', 'lower_bound': 0.0, 'upper_bound': 1.0, 'optimize': True}], 'output_space': [{'name': 'y', 'transformer': 'identity', 'type': 'real', 'lower_bound': -inf, 'upper_bound': inf, 'optimize': True}], 'modeler': 'Model_LCM', 'objective': {'name': 'y', 'transformer': 'identity', 'type': 'real', 'lower_bound': -inf, 'upper_bound': inf, 'optimize': True, 'objective_id': 0}, 'time': {'tm_year': 2022, 'tm_mon': 2, 'tm_mday': 9, 'tm_hour': 17, 'tm_min': 2, 'tm_sec': 29, 'tm_wday': 2, 'tm_yday': 40, 'tm_isdst': 0}, 'uid': '5b2e9eea-89fc-11ec-b70d-acde48001122'}
+,,,,,,,, {'hyperparameters': [0.024476989553736454, 1.0, 0.4582032318445954, 1e-10, 0.48706898581626973], 'model_stats': {'log_likelihood': -0.4203827155694029, 'neg_log_likelihood': 0.4203827155694029, 'gradients': [1.4479883247986436e-06, 0.0, -1.1920928955078125e-07, -0.47156194508385735, -2.384185791015625e-07], 'iterations': 47}, 'task_parameters': [[0.8]], 'function_evaluations': ['17f2f7c0-89fc-11ec-b70d-acde48001122', '17f31f02-89fc-11ec-b70d-acde48001122', '17f34112-89fc-11ec-b70d-acde48001122', '17f3666a-89fc-11ec-b70d-acde48001122', '17f38e24-89fc-11ec-b70d-acde48001122', '17f3bbd8-89fc-11ec-b70d-acde48001122', '17f3ea90-89fc-11ec-b70d-acde48001122', '17f420c8-89fc-11ec-b70d-acde48001122', '17f455b6-89fc-11ec-b70d-acde48001122', '17f49f9e-89fc-11ec-b70d-acde48001122', '17f508b2-89fc-11ec-b70d-acde48001122', '17f5542a-89fc-11ec-b70d-acde48001122', '17f5a52e-89fc-11ec-b70d-acde48001122', '17f5ffb0-89fc-11ec-b70d-acde48001122', '17f65924-89fc-11ec-b70d-acde48001122', '17f6ac8a-89fc-11ec-b70d-acde48001122', '17f6fffa-89fc-11ec-b70d-acde48001122', '17f7773c-89fc-11ec-b70d-acde48001122', '17f7e3c0-89fc-11ec-b70d-acde48001122', '17f854b8-89fc-11ec-b70d-acde48001122', '17f8bc64-89fc-11ec-b70d-acde48001122', '17f92cd0-89fc-11ec-b70d-acde48001122', '17f9968e-89fc-11ec-b70d-acde48001122', '17fa23ba-89fc-11ec-b70d-acde48001122', '17faa7a4-89fc-11ec-b70d-acde48001122', '1ab0da68-89fc-11ec-b70d-acde48001122', '1d8987c6-89fc-11ec-b70d-acde48001122', '201baabe-89fc-11ec-b70d-acde48001122', '22a9eebc-89fc-11ec-b70d-acde48001122', '2534fc58-89fc-11ec-b70d-acde48001122', '27fa088e-89fc-11ec-b70d-acde48001122', '2ac58160-89fc-11ec-b70d-acde48001122', '2db885e8-89fc-11ec-b70d-acde48001122', '304903be-89fc-11ec-b70d-acde48001122', '32feef60-89fc-11ec-b70d-acde48001122', '35f92a82-89fc-11ec-b70d-acde48001122', '38983a30-89fc-11ec-b70d-acde48001122', '3b3a06e2-89fc-11ec-b70d-acde48001122', '3d9ee1dc-89fc-11ec-b70d-acde48001122', '405f5be0-89fc-11ec-b70d-acde48001122', '4335bc2e-89fc-11ec-b70d-acde48001122', '464d6ee8-89fc-11ec-b70d-acde48001122', '49178a46-89fc-11ec-b70d-acde48001122', '4befdeda-89fc-11ec-b70d-acde48001122', '4e8d0e10-89fc-11ec-b70d-acde48001122', '515bd6da-89fc-11ec-b70d-acde48001122', '54214210-89fc-11ec-b70d-acde48001122', '57255b68-89fc-11ec-b70d-acde48001122', '59f33bbc-89fc-11ec-b70d-acde48001122'], 'input_space': [{'name': 't', 'transformer': 'normalize', 'type': 'real', 'lower_bound': 0.0, 'upper_bound': 10.0, 'optimize': True}], 'parameter_space': [{'name': 'x', 'transformer': 'normalize', 'type': 'real', 'lower_bound': 0.0, 'upper_bound': 1.0, 'optimize': True}], 'output_space': [{'name': 'y', 'transformer': 'identity', 'type': 'real', 'lower_bound': -inf, 'upper_bound': inf, 'optimize': True}], 'modeler': 'Model_LCM', 'objective': {'name': 'y', 'transformer': 'identity', 'type': 'real', 'lower_bound': -inf, 'upper_bound': inf, 'optimize': True, 'objective_id': 0}, 'time': {'tm_year': 2022, 'tm_mon': 2, 'tm_mday': 9, 'tm_hour': 17, 'tm_min': 2, 'tm_sec': 29, 'tm_wday': 2, 'tm_yday': 40, 'tm_isdst': 0}, 'uid': '5b2e9eea-89fc-11ec-b70d-acde48001122'}
+GPTune History Database Init
+[HistoryDB] use filelock for synchronization
+[HistoryDB] Found a history database file
+[HistoryDB] Found a history database file
+
+
+
+------Starting MLA with HistoryDB with 2 tasks and 10 samples each 
+store_func_eval
+problem.constants
+None
+store_func_eval
+problem.constants
+None
+store_func_eval
+problem.constants
+None
+store_func_eval
+problem.constants
+None
+store_func_eval
+problem.constants
+None
+Task:  0.8
+model ret:  {'y': [[0.9419017811754308]], 'y_var': array([[0.0009]]), 'source': 'model_function'}
+store_func_eval
+problem.constants
+None
+Task:  0.8
+model ret:  {'y': [[0.9638723791052605]], 'y_var': array([[0.0041]]), 'source': 'model_function'}
+store_func_eval
+problem.constants
+None
+Task:  0.8
+model ret:  {'y': [[1.0134746429762882]], 'y_var': array([[0.0002]]), 'source': 'model_function'}
+store_func_eval
+problem.constants
+None
+Task:  0.8
+model ret:  {'y': [[1.8246561228371192]], 'y_var': array([[0.0018]]), 'source': 'model_function'}
+store_func_eval
+problem.constants
+None
+Task:  0.8
+model ret:  {'y': [[0.9891924755891989]], 'y_var': array([[0.0026]]), 'source': 'model_function'}
+store_func_eval
+problem.constants
+None
+MLA iteration:  0
+exec /Users/jkoo/research/github/GPTune/GPTune/lcm.py args None nproc 1
+exec /Users/jkoo/research/github/GPTune/GPTune/search.py args None nproc 1
+[-0.00573701]
+bestX [array([[0.6313463]])]
+[-0.11766744]
+bestX [array([[0.64837922]])]
+store_func_eval
+problem.constants
+None
+Task:  0.8
+model ret:  {'y': [[0.9819753542500025]], 'y_var': array([[0.0001]]), 'source': 'model_function'}
+store_func_eval
+problem.constants
+None
+MLA iteration:  1
+exec /Users/jkoo/research/github/GPTune/GPTune/lcm.py args None nproc 1
+exec /Users/jkoo/research/github/GPTune/GPTune/search.py args None nproc 1
+[-0.0693889]
+bestX [array([[0.69599154]])]
+[-0.20837853]
+bestX [array([[0.70783037]])]
+store_func_eval
+problem.constants
+None
+Task:  0.8
+model ret:  {'y': [[1.0057353761347292]], 'y_var': array([[5.4667e-05]]), 'source': 'model_function'}
+store_func_eval
+problem.constants
+None
+MLA iteration:  2
+exec /Users/jkoo/research/github/GPTune/GPTune/lcm.py args None nproc 1
+exec /Users/jkoo/research/github/GPTune/GPTune/search.py args None nproc 1
+[-0.01620549]
+bestX [array([[0.6478969]])]
+[-0.08321189]
+bestX [array([[0.67907693]])]
+store_func_eval
+problem.constants
+None
+Task:  0.8
+model ret:  {'y': [[1.026327313635425]], 'y_var': array([[0.0003]]), 'source': 'model_function'}
+store_func_eval
+problem.constants
+None
+MLA iteration:  3
+exec /Users/jkoo/research/github/GPTune/GPTune/lcm.py args None nproc 1
+exec /Users/jkoo/research/github/GPTune/GPTune/search.py args None nproc 1
+[-0.00300311]
+bestX [array([[0.63726661]])]
+[-0.08179827]
+bestX [array([[0.55102993]])]
+store_func_eval
+problem.constants
+None
+Task:  0.8
+model ret:  {'y': [[0.867660448887115]], 'y_var': array([[0.0005]]), 'source': 'model_function'}
+store_func_eval
+problem.constants
+None
+MLA iteration:  4
+exec /Users/jkoo/research/github/GPTune/GPTune/lcm.py args None nproc 1
+exec /Users/jkoo/research/github/GPTune/GPTune/search.py args None nproc 1
+[-0.00608096]
+bestX [array([[0.23159491]])]
+[-0.05153997]
+bestX [array([[0.53404007]])]
+store_func_eval
+problem.constants
+None
+Task:  0.8
+model ret:  {'y': [[0.9811607284041177]], 'y_var': array([[0.0019]]), 'source': 'model_function'}
+store_func_eval
+problem.constants
+None
+stats:  {'time_total': 21.876384, 'time_sample_init': 0.009546, 'time_fun': 0.220657, 'time_search': 13.025555, 'time_model': 8.619689, 'func_eval_time': [0.100897], 'search_time': [2.686626, 2.596781, 2.536734, 2.697013, 2.508401], 'modeling_time': [1.666429, 1.765369, 1.707451, 1.720815, 1.759625], 'modeling_iteration': [182, 243, 245, 250, 106]}
+tid: 0
+    t:0.600000 
+    Ps  [[0.634105], [0.21301], [0.989777], [0.593126], [0.161679], [0.631346], [0.695992], [0.647897], [0.637267], [0.231595]]
+    Os  [[0.9287914683453165], [0.9432085980541967], [0.961967062311608], [0.9742994951211846], [1.0284508239335157], [0.940121096464987], [1.0290855936805252], [0.9728890904503892], [0.9241594866279574], [0.9836965119875618]]
+    Popt  [0.637267] Oopt  0.9241594866279574 nth  8
+tid: 1
+    t:0.800000 
+    Ps  [[0.65427], [0.565748], [0.871351], [0.056187], [0.308539], [0.648379], [0.70783], [0.679077], [0.55103], [0.53404]]
+    Os  [[0.9419017811754308], [0.9638723791052605], [1.0134746429762882], [1.8246561228371192], [0.9891924755891989], [0.9819753542500025], [1.0057353761347292], [1.026327313635425], [0.867660448887115], [0.9811607284041177]]
+    Popt  [0.55103] Oopt  0.867660448887115 nth  8

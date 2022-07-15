@@ -85,6 +85,9 @@ class GPTune(object):
             parameter_arr = []
             for k in range(len(self.problem.PS)):
                 if type(self.problem.PS[k]).__name__ == "Categoricalnorm":
+#                     print ('...........................................',func_eval)
+#                     print ('...........................................',func_eval["tuning_parameter"])
+#                     print ('...........................................',type(self.problem.PS[k].name))
                     parameter_arr.append(str(func_eval["tuning_parameter"][self.problem.PS[k].name]))
                 elif type(self.problem.PS[k]).__name__ == "Integer":
                     parameter_arr.append(int(func_eval["tuning_parameter"][self.problem.PS[k].name]))
@@ -1962,6 +1965,121 @@ def LoadSurrogateModelFunction(meta_path="./.gptune/model.json", meta_dict=None,
     model_data = LoadSurrogateModelData(meta_path, meta_dict, tuning_configuration)
     gt = CreateGPTuneFromModelData(model_data)
     (models, model_function) = gt.LoadSurrogateModel(model_data = model_data)
+
+    return (model_function)
+
+def BuildSurrogateModel_tl(metadata_path="./.gptune/model.json", metadata =None, function_evaluations:dict = None):
+    meta_data = {}
+    if metadata_path != None and os.path.exists(metadata_path):
+        try:
+            with open(metadata_path) as f_in:
+                meta_data.update(json.load(f_in))
+        except:
+            print ("[Error] not able to get model load configuration from path")
+
+    if metadata != None:
+        try:
+            meta_data.update(metadata)
+        except:
+            print ("[Error] not able to get model load configuration from dict")
+
+    input_space_info = meta_data["input_space"]
+    parameter_space_info = meta_data["parameter_space"]
+    output_space_info = meta_data["output_space"]
+
+    input_space_arr = []
+    for input_space_info in meta_data["input_space"]:
+        name_ = input_space_info["name"]
+        type_ = input_space_info["type"]
+        transformer_ = input_space_info["transformer"]
+
+        if type_ == "int" or type_ == "Int" or type_ == "Integer" or type_ == "integer":
+            lower_bound_ = input_space_info["lower_bound"]
+            upper_bound_ = input_space_info["upper_bound"]
+            input_space = Integer(lower_bound_, upper_bound_, transform=transformer_, name=name_)
+            input_space_arr.append(input_space)
+        elif type_ == "real" or type_ == "Real" or type_ == "float" or type_ == "Float":
+            lower_bound_ = input_space_info["lower_bound"]
+            upper_bound_ = input_space_info["upper_bound"]
+            input_space = Real(lower_bound_, upper_bound_, transform=transformer_, name=name_)
+            input_space_arr.append(input_space)
+        elif type_ == "categorical" or type_ == "Categorical" or type_ == "category" or type_ == "Category":
+            categories = input_space_info["categories"]
+            input_space = Categoricalnorm(categories, transform=transformer_, name=name_)
+            input_space_arr.append(input_space)
+    IS = Space(input_space_arr)
+
+    parameter_space_arr = []
+    for parameter_space_info in meta_data["parameter_space"]:
+        name_ = parameter_space_info["name"]
+        type_ = parameter_space_info["type"]
+        transformer_ = parameter_space_info["transformer"]
+
+        if type_ == "int" or type_ == "Int" or type_ == "Integer" or type_ == "integer":
+            lower_bound_ = parameter_space_info["lower_bound"]
+            upper_bound_ = parameter_space_info["upper_bound"]
+            parameter_space = Integer(lower_bound_, upper_bound_, transform=transformer_, name=name_)
+            parameter_space_arr.append(parameter_space)
+        elif type_ == "real" or type_ == "Real" or type_ == "float" or type_ == "Float":
+            lower_bound_ = parameter_space_info["lower_bound"]
+            upper_bound_ = parameter_space_info["upper_bound"]
+            parameter_space = Real(lower_bound_, upper_bound_, transform=transformer_, name=name_)
+            parameter_space_arr.append(parameter_space)
+        elif type_ == "categorical" or type_ == "Categorical" or type_ == "category" or type_ == "Category":
+            categories = parameter_space_info["categories"]
+            parameter_space = Categoricalnorm(categories, transform=transformer_, name=name_)
+            parameter_space_arr.append(parameter_space)
+    PS = Space(parameter_space_arr)
+
+    output_space_arr = []
+    for output_space_info in meta_data["output_space"]:
+        name_ = output_space_info["name"]
+        type_ = output_space_info["type"]
+        transformer_ = output_space_info["transformer"]
+#         print (',...',output_space_info)
+        if type_ == "int" or type_ == "Int" or type_ == "Integer" or type_ == "integer":
+            lower_bound_ = output_space_info["lower_bound"]
+            upper_bound_ = output_space_info["upper_bound"]
+            output_space = Integer(lower_bound_, upper_bound_, transform=transformer_, name=name_)
+            output_space_arr.append(output_space)
+        elif type_ == "real" or type_ == "Real" or type_ == "float" or type_ == "Float":
+            lower_bound_ = output_space_info["lower_bound"]
+            upper_bound_ = output_space_info["upper_bound"]
+            output_space = Real(lower_bound_, upper_bound_, transform=transformer_, name=name_)
+            output_space_arr.append(output_space)
+        elif type_ == "categorical" or type_ == "Categorical" or type_ == "category" or type_ == "Category":
+            categories = output_space_info["categories"]
+            output_space = Category(categories, transform=transformer_, name=name_)
+            output_space_arr.append(output_space)
+    OS = Space(output_space_arr)
+
+    problem = TuningProblem(IS, PS, OS, objective=None, constraints=None, models=None, constants=None)
+    computer = Computer(nodes=1, cores=2) # number of nodes/cores is not actually used when reproducing only surrogate models
+    data = Data(problem)
+    options = Options()
+    options['model_restarts'] = 1
+
+    options['distributed_memory_parallelism'] = False
+    options['shared_memory_parallelism'] = False
+
+    options['objective_evaluation_parallelism'] = False
+    options['objective_multisample_threads'] = 1
+    options['objective_multisample_processes'] = 1
+    options['objective_nprocmax'] = 1
+
+    options['model_processes'] = 1
+    options['model_class'] = 'Model_GPy_LCM' #'Model_LCM' #'Model_GPy_LCM'
+    options['verbose'] = False
+    options.validate(computer=computer)
+
+    if "modeler" in meta_data:
+        options['model_class'] = meta_data['modeler']
+    else:
+        options['model_class'] = 'Model_LCM'
+    historydb = HistoryDB(meta_dict=meta_data)
+    gt = GPTune(problem, computer=computer, data=data, options=options, historydb=historydb)
+    #gt = GPTune(problem, computer=computer, data=data, options=options)
+    (models, model_function) = gt.GenSurrogateModel(meta_data["task_parameter"], function_evaluations)
 
     return (model_function)
 

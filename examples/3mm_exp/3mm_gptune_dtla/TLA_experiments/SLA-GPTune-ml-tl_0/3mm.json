@@ -1,0 +1,1597 @@
+{
+  "tuning_problem_name": "3mm",
+  "tuning_problem_category": null,
+  "surrogate_model": [],
+  "func_eval": [
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": "#pragma clang loop(i1) pack array(B) allocate(malloc)",
+        "p2": " ",
+        "p3": "32",
+        "p4": "2048",
+        "p5": "32",
+        "p6": " ",
+        "p7": "#pragma clang loop(i1) pack array(D) allocate(malloc)",
+        "p8": " ",
+        "p9": " "
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 1.359074
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.3590735,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 3,
+        "tm_sec": 1,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "595108da-e157-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": "#pragma clang loop(i1) pack array(B) allocate(malloc)",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "16",
+        "p4": "32",
+        "p5": "100",
+        "p6": "#pragma clang loop(j2) pack array(C) allocate(malloc)",
+        "p7": "#pragma clang loop(i1) pack array(D) allocate(malloc)",
+        "p8": " ",
+        "p9": " "
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 2.05164
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 2.0516405,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 3,
+        "tm_sec": 16,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "6203efb0-e157-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "4",
+        "p4": "4",
+        "p5": "100",
+        "p6": "#pragma clang loop(j2) pack array(C) allocate(malloc)",
+        "p7": " ",
+        "p8": "#pragma clang loop(j2) pack array(E) allocate(malloc)",
+        "p9": "#pragma clang loop(i1) pack array(F) allocate(malloc)"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 1.982752
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.9827515,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 3,
+        "tm_sec": 30,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "6a55ae9c-e157-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "20",
+        "p4": "8",
+        "p5": "50",
+        "p6": "#pragma clang loop(j2) pack array(C) allocate(malloc)",
+        "p7": "#pragma clang loop(i1) pack array(D) allocate(malloc)",
+        "p8": "#pragma clang loop(j2) pack array(E) allocate(malloc)",
+        "p9": "#pragma clang loop(i1) pack array(F) allocate(malloc)"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 1.685917
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.6859175,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 3,
+        "tm_sec": 43,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "72468630-e157-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": "#pragma clang loop(i1) pack array(B) allocate(malloc)",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "96",
+        "p4": "16",
+        "p5": "80",
+        "p6": "#pragma clang loop(j2) pack array(C) allocate(malloc)",
+        "p7": " ",
+        "p8": "#pragma clang loop(j2) pack array(E) allocate(malloc)",
+        "p9": " "
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 1.961507
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.9615065,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 3,
+        "tm_sec": 57,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "7a46b67a-e157-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": "#pragma clang loop(i1) pack array(B) allocate(malloc)",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "128",
+        "p4": "20",
+        "p5": "50",
+        "p6": " ",
+        "p7": " ",
+        "p8": " ",
+        "p9": " "
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 1.60698
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.60698,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 4,
+        "tm_sec": 9,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "81587476-e157-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": "#pragma clang loop(i1) pack array(B) allocate(malloc)",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "100",
+        "p4": "4",
+        "p5": "64",
+        "p6": " ",
+        "p7": "#pragma clang loop(i1) pack array(D) allocate(malloc)",
+        "p8": " ",
+        "p9": "#pragma clang loop(i1) pack array(F) allocate(malloc)"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 1.839935
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.8399355,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 4,
+        "tm_sec": 23,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "89c9fa3a-e157-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": "#pragma clang loop(i1) pack array(B) allocate(malloc)",
+        "p2": " ",
+        "p3": "80",
+        "p4": "128",
+        "p5": "256",
+        "p6": " ",
+        "p7": " ",
+        "p8": "#pragma clang loop(j2) pack array(E) allocate(malloc)",
+        "p9": "#pragma clang loop(i1) pack array(F) allocate(malloc)"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 2.222688
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 2.2226879999999998,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 4,
+        "tm_sec": 37,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "928e1ed0-e157-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": "#pragma clang loop(i1) pack array(B) allocate(malloc)",
+        "p2": " ",
+        "p3": "96",
+        "p4": "50",
+        "p5": "128",
+        "p6": "#pragma clang loop(j2) pack array(C) allocate(malloc)",
+        "p7": "#pragma clang loop(i1) pack array(D) allocate(malloc)",
+        "p8": "#pragma clang loop(j2) pack array(E) allocate(malloc)",
+        "p9": "#pragma clang loop(i1) pack array(F) allocate(malloc)"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 2.040534
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 2.0405335,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 4,
+        "tm_sec": 54,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "9c7aabac-e157-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": " ",
+        "p3": "50",
+        "p4": "80",
+        "p5": "8",
+        "p6": "#pragma clang loop(j2) pack array(C) allocate(malloc)",
+        "p7": " ",
+        "p8": " ",
+        "p9": " "
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.479538
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.479538,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 5,
+        "tm_sec": 2,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "a1555942-e157-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "20",
+        "p4": "50",
+        "p5": "20",
+        "p6": "#pragma clang loop(j2) pack array(C) allocate(malloc)",
+        "p7": "#pragma clang loop(i1) pack array(D) allocate(malloc)",
+        "p8": " ",
+        "p9": "#pragma clang loop(i1) pack array(F) allocate(malloc)"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.910206
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.9102060000000001,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 5,
+        "tm_sec": 12,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "a6fe919c-e157-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": " ",
+        "p3": "100",
+        "p4": "50",
+        "p5": "4",
+        "p6": " ",
+        "p7": " ",
+        "p8": "#pragma clang loop(j2) pack array(E) allocate(malloc)",
+        "p9": "#pragma clang loop(i1) pack array(F) allocate(malloc)"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.404303
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.4043025,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 5,
+        "tm_sec": 19,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "ab72182a-e157-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "64",
+        "p4": "2048",
+        "p5": "16",
+        "p6": "#pragma clang loop(j2) pack array(C) allocate(malloc)",
+        "p7": "#pragma clang loop(i1) pack array(D) allocate(malloc)",
+        "p8": "#pragma clang loop(j2) pack array(E) allocate(malloc)",
+        "p9": " "
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.94889
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.9488905,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 5,
+        "tm_sec": 28,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "b0f6fffe-e157-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": "#pragma clang loop(i1) pack array(B) allocate(malloc)",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "8",
+        "p4": "80",
+        "p5": "4",
+        "p6": " ",
+        "p7": " ",
+        "p8": "#pragma clang loop(j2) pack array(E) allocate(malloc)",
+        "p9": " "
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.466084
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.466084,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 5,
+        "tm_sec": 37,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "b60fa4b4-e157-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "8",
+        "p4": "100",
+        "p5": "80",
+        "p6": " ",
+        "p7": "#pragma clang loop(i1) pack array(D) allocate(malloc)",
+        "p8": " ",
+        "p9": "#pragma clang loop(i1) pack array(F) allocate(malloc)"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 1.891952
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 1.8919525,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 5,
+        "tm_sec": 49,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "bd00d68a-e157-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": "#pragma clang loop(i1) pack array(B) allocate(malloc)",
+        "p2": " ",
+        "p3": "32",
+        "p4": "32",
+        "p5": "4",
+        "p6": " ",
+        "p7": " ",
+        "p8": " ",
+        "p9": "#pragma clang loop(i1) pack array(F) allocate(malloc)"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.420733
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.4207325,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 6,
+        "tm_sec": 1,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "c4932150-e157-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "4",
+        "p4": "4",
+        "p5": "4",
+        "p6": "#pragma clang loop(j2) pack array(C) allocate(malloc)",
+        "p7": " ",
+        "p8": " ",
+        "p9": "#pragma clang loop(i1) pack array(F) allocate(malloc)"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.552042
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.552042,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 6,
+        "tm_sec": 13,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "cb4ae9a6-e157-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": "#pragma clang loop(i1) pack array(B) allocate(malloc)",
+        "p2": " ",
+        "p3": "96",
+        "p4": "2048",
+        "p5": "8",
+        "p6": " ",
+        "p7": " ",
+        "p8": " ",
+        "p9": "#pragma clang loop(i1) pack array(F) allocate(malloc)"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.524114
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.524114,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 6,
+        "tm_sec": 23,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "d1b20e0a-e157-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": " ",
+        "p3": "96",
+        "p4": "16",
+        "p5": "8",
+        "p6": " ",
+        "p7": " ",
+        "p8": "#pragma clang loop(j2) pack array(E) allocate(malloc)",
+        "p9": " "
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.60477
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.60477,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 6,
+        "tm_sec": 34,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "d8597bd0-e157-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": " ",
+        "p3": "16",
+        "p4": "64",
+        "p5": "4",
+        "p6": " ",
+        "p7": " ",
+        "p8": " ",
+        "p9": "#pragma clang loop(i1) pack array(F) allocate(malloc)"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.392425
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.392425,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 6,
+        "tm_sec": 45,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "de8c9c76-e157-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": " ",
+        "p3": "4",
+        "p4": "100",
+        "p5": "8",
+        "p6": "#pragma clang loop(j2) pack array(C) allocate(malloc)",
+        "p7": " ",
+        "p8": " ",
+        "p9": " "
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.494909
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.494909,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 6,
+        "tm_sec": 56,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "e4f2eafc-e157-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "8",
+        "p4": "80",
+        "p5": "8",
+        "p6": " ",
+        "p7": " ",
+        "p8": " ",
+        "p9": "#pragma clang loop(i1) pack array(F) allocate(malloc)"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.537755
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.5377545,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 7,
+        "tm_sec": 6,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "eb64d378-e157-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": "#pragma clang loop(i1) pack array(B) allocate(malloc)",
+        "p2": " ",
+        "p3": "50",
+        "p4": "100",
+        "p5": "4",
+        "p6": "#pragma clang loop(j2) pack array(C) allocate(malloc)",
+        "p7": " ",
+        "p8": " ",
+        "p9": " "
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.427573
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.427573,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 7,
+        "tm_sec": 17,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "f18d0f04-e157-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": " ",
+        "p3": "64",
+        "p4": "20",
+        "p5": "4",
+        "p6": "#pragma clang loop(j2) pack array(C) allocate(malloc)",
+        "p7": " ",
+        "p8": " ",
+        "p9": "#pragma clang loop(i1) pack array(F) allocate(malloc)"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.399967
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.39996699999999996,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 7,
+        "tm_sec": 27,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "f7d441c0-e157-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": " ",
+        "p3": "128",
+        "p4": "64",
+        "p5": "4",
+        "p6": " ",
+        "p7": " ",
+        "p8": " ",
+        "p9": "#pragma clang loop(i1) pack array(F) allocate(malloc)"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.396568
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.3965675,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 7,
+        "tm_sec": 38,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "fe0c3624-e157-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": " ",
+        "p3": "128",
+        "p4": "64",
+        "p5": "4",
+        "p6": " ",
+        "p7": " ",
+        "p8": "#pragma clang loop(j2) pack array(E) allocate(malloc)",
+        "p9": "#pragma clang loop(i1) pack array(F) allocate(malloc)"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.404232
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.404232,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 7,
+        "tm_sec": 48,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "0461f554-e158-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": "#pragma clang loop(j2) pack array(A) allocate(malloc)",
+        "p1": " ",
+        "p2": "#pragma clang loop(i1,j1,k1,i2,j2) interchange permutation(j1,k1,i1,j2,i2)",
+        "p3": "96",
+        "p4": "64",
+        "p5": "8",
+        "p6": "#pragma clang loop(j2) pack array(C) allocate(malloc)",
+        "p7": " ",
+        "p8": "#pragma clang loop(j2) pack array(E) allocate(malloc)",
+        "p9": " "
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.557457
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.557457,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 7,
+        "tm_sec": 59,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "0aff6e46-e158-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "4",
+        "p4": "50",
+        "p5": "4",
+        "p6": "#pragma clang loop(j2) pack array(C) allocate(malloc)",
+        "p7": " ",
+        "p8": " ",
+        "p9": " "
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.410392
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.410392,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 8,
+        "tm_sec": 10,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "114475c6-e158-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "128",
+        "p4": "16",
+        "p5": "8",
+        "p6": "#pragma clang loop(j2) pack array(C) allocate(malloc)",
+        "p7": " ",
+        "p8": " ",
+        "p9": " "
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.506633
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.5066335,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 8,
+        "tm_sec": 21,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "17f2ca3a-e158-11ec-86fd-5cff35e3510b"
+    },
+    {
+      "task_parameter": {
+        "t0": 490,
+        "t1": 545,
+        "t2": 600,
+        "t3": 655,
+        "t4": 710
+      },
+      "tuning_parameter": {
+        "p0": " ",
+        "p1": " ",
+        "p2": " ",
+        "p3": "4",
+        "p4": "16",
+        "p5": "4",
+        "p6": " ",
+        "p7": " ",
+        "p8": " ",
+        "p9": " "
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "swing",
+        "intel": {
+          "nodes": 1,
+          "cores": 128
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.432265
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.43226549999999997,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 5,
+        "tm_mday": 31,
+        "tm_hour": 22,
+        "tm_min": 8,
+        "tm_sec": 32,
+        "tm_wday": 1,
+        "tm_yday": 151,
+        "tm_isdst": 1
+      },
+      "uid": "1e81a1d2-e158-11ec-86fd-5cff35e3510b"
+    }
+  ]
+}

@@ -1,0 +1,4370 @@
+{
+  "tuning_problem_name": "xsbench",
+  "surrogate_model": [
+    {
+      "hyperparameters": [
+        4.016203931485766,
+        0.04919497757064989,
+        2.055761730868898,
+        210.46371884397328,
+        1.4830177110484903,
+        1.2181100102107694,
+        21.304472422596792,
+        0.041927150879583173,
+        1.0,
+        0.07679082297281849,
+        9.999251256526273e-06,
+        0.0823316177530478
+      ],
+      "model_stats": {
+        "log_likelihood": -0.35591793470124866,
+        "neg_log_likelihood": 0.35591793470124866,
+        "gradients": [
+          2.4533752929362357e-89,
+          4.544544424688963e-85,
+          1.5746245462504766e-88,
+          1.8436367784667186e-92,
+          6.233969741160287e-88,
+          1.1720846818690207e-87,
+          9.667594168082588e-91,
+          6.354093730843745e-85,
+          0.0,
+          5.03945867794691e-08,
+          6.56208796401017e-12,
+          8.896882609894959e-09
+        ],
+        "iterations": 11
+      },
+      "task_parameters": [
+        [
+          100000
+        ]
+      ],
+      "function_evaluations": [
+        "af4e40fe-8fa4-11ec-b17a-a4bf013856df",
+        "af4e795c-8fa4-11ec-b17a-a4bf013856df"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "int",
+          "lower_bound": 100000,
+          "upper_bound": 10000000,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "p0",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "name": "p1",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "10",
+            "20",
+            "40",
+            "64",
+            "80",
+            "100",
+            "128",
+            "160",
+            "200"
+          ]
+        },
+        {
+          "name": "p2",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma clang loop unrolling full",
+            " "
+          ]
+        },
+        {
+          "name": "p3",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma omp parallel for",
+            " "
+          ]
+        },
+        {
+          "name": "p4",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p5",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p6",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "cores",
+            "threads",
+            "sockets"
+          ]
+        },
+        {
+          "name": "p7",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "compact",
+            "scatter",
+            "balanced",
+            "none",
+            "disabled",
+            "explicit"
+          ]
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 50,
+        "tm_sec": 3,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "b072574a-8fa4-11ec-b17a-a4bf013856df"
+    },
+    {
+      "hyperparameters": [
+        2.1553627695207225,
+        0.008064307113439468,
+        0.2893356283457107,
+        1.3608011345932585,
+        39.36007784646546,
+        0.11126523960465581,
+        0.5038582256684423,
+        18.07811567041882,
+        1.0,
+        0.13181785356477274,
+        1e-05,
+        0.009000587100754952
+      ],
+      "model_stats": {
+        "log_likelihood": -1.218350652853234,
+        "neg_log_likelihood": 1.218350652853234,
+        "gradients": [
+          1.410342816425492e-57,
+          1.2211807239429021e-53,
+          4.2942759933097396e-55,
+          8.027458494304057e-60,
+          4.290582349596287e-61,
+          3.5338650933333206e-54,
+          1.3012945080786884e-55,
+          6.753212072309143e-59,
+          0.0,
+          1.0784819839887578e-06,
+          8.181607838695692e-11,
+          1.3255933989405208e-09
+        ],
+        "iterations": 9
+      },
+      "task_parameters": [
+        [
+          100000
+        ]
+      ],
+      "function_evaluations": [
+        "af4e40fe-8fa4-11ec-b17a-a4bf013856df",
+        "af4e795c-8fa4-11ec-b17a-a4bf013856df",
+        "b1b84c5e-8fa4-11ec-b17a-a4bf013856df"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "int",
+          "lower_bound": 100000,
+          "upper_bound": 10000000,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "p0",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "name": "p1",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "10",
+            "20",
+            "40",
+            "64",
+            "80",
+            "100",
+            "128",
+            "160",
+            "200"
+          ]
+        },
+        {
+          "name": "p2",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma clang loop unrolling full",
+            " "
+          ]
+        },
+        {
+          "name": "p3",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma omp parallel for",
+            " "
+          ]
+        },
+        {
+          "name": "p4",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p5",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p6",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "cores",
+            "threads",
+            "sockets"
+          ]
+        },
+        {
+          "name": "p7",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "compact",
+            "scatter",
+            "balanced",
+            "none",
+            "disabled",
+            "explicit"
+          ]
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 50,
+        "tm_sec": 7,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "b2daa690-8fa4-11ec-b17a-a4bf013856df"
+    },
+    {
+      "hyperparameters": [
+        994785.1452934208,
+        24707.372899532533,
+        100000000.0,
+        100000000.0,
+        0.9297180607664678,
+        10331.8810635989,
+        0.8694616918375956,
+        1807.2401415596746,
+        1.0,
+        0.07036395775430095,
+        1e-10,
+        9.941391824792858e-10
+      ],
+      "model_stats": {
+        "log_likelihood": 2.3102670061337935,
+        "neg_log_likelihood": -2.3102670061337935,
+        "gradients": [
+          4.2716607399095036e-13,
+          -9.518426347032462e-11,
+          7.794770107206725e-16,
+          3.078684202469553e-17,
+          -6.15768696032859e-07,
+          1.1105771800545747e-07,
+          -1.3938722494000189e-06,
+          1.137042934484664e-06,
+          0.0,
+          2.833504272572017e-06,
+          -2.5794642277772413e-08,
+          7.959723665859395e-23
+        ],
+        "iterations": 145
+      },
+      "task_parameters": [
+        [
+          100000
+        ]
+      ],
+      "function_evaluations": [
+        "af4e40fe-8fa4-11ec-b17a-a4bf013856df",
+        "af4e795c-8fa4-11ec-b17a-a4bf013856df",
+        "b1b84c5e-8fa4-11ec-b17a-a4bf013856df",
+        "b4157c60-8fa4-11ec-b17a-a4bf013856df"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "int",
+          "lower_bound": 100000,
+          "upper_bound": 10000000,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "p0",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "name": "p1",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "10",
+            "20",
+            "40",
+            "64",
+            "80",
+            "100",
+            "128",
+            "160",
+            "200"
+          ]
+        },
+        {
+          "name": "p2",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma clang loop unrolling full",
+            " "
+          ]
+        },
+        {
+          "name": "p3",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma omp parallel for",
+            " "
+          ]
+        },
+        {
+          "name": "p4",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p5",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p6",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "cores",
+            "threads",
+            "sockets"
+          ]
+        },
+        {
+          "name": "p7",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "compact",
+            "scatter",
+            "balanced",
+            "none",
+            "disabled",
+            "explicit"
+          ]
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 50,
+        "tm_sec": 12,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "b5469f42-8fa4-11ec-b17a-a4bf013856df"
+    },
+    {
+      "hyperparameters": [
+        0.6714708200459883,
+        1.5817024785827314,
+        58.85727165742351,
+        0.010748349849384168,
+        5.886061790452607,
+        0.8517473540742493,
+        0.5487390469681758,
+        3.49558860646152,
+        1.0,
+        0.07904321991878181,
+        9.99938770739739e-06,
+        0.0770392446802542
+      ],
+      "model_stats": {
+        "log_likelihood": -0.3726350967579013,
+        "neg_log_likelihood": 0.3726350967579013,
+        "gradients": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          1.167946864914228e-07,
+          1.4775149010766774e-11,
+          1.7539309421464922e-08
+        ],
+        "iterations": 7
+      },
+      "task_parameters": [
+        [
+          1000000
+        ]
+      ],
+      "function_evaluations": [
+        "b83b3f6e-8fa4-11ec-82b1-a4bf013856df",
+        "b83b733a-8fa4-11ec-82b1-a4bf013856df"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "int",
+          "lower_bound": 100000,
+          "upper_bound": 10000000,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "p0",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "name": "p1",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "10",
+            "20",
+            "40",
+            "64",
+            "80",
+            "100",
+            "128",
+            "160",
+            "200"
+          ]
+        },
+        {
+          "name": "p2",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma clang loop unrolling full",
+            " "
+          ]
+        },
+        {
+          "name": "p3",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma omp parallel for",
+            " "
+          ]
+        },
+        {
+          "name": "p4",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p5",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p6",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "cores",
+            "threads",
+            "sockets"
+          ]
+        },
+        {
+          "name": "p7",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "compact",
+            "scatter",
+            "balanced",
+            "none",
+            "disabled",
+            "explicit"
+          ]
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 50,
+        "tm_sec": 18,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "b96cce2a-8fa4-11ec-82b1-a4bf013856df"
+    },
+    {
+      "hyperparameters": [
+        100000000.0,
+        0.6350251499963705,
+        4422566.037329327,
+        51340.67855975414,
+        100000000.0,
+        15315100.680754313,
+        9985846.945271462,
+        50866321.840525076,
+        1.0,
+        0.006900357902627007,
+        1e-10,
+        0.22262438716966504
+      ],
+      "model_stats": {
+        "log_likelihood": 5.0150289091345375,
+        "neg_log_likelihood": -5.0150289091345375,
+        "gradients": [
+          1.2517568406182175e-13,
+          4.157483324718214e-06,
+          2.2797299777195243e-12,
+          1.2691867292689e-09,
+          1.8510253441251208e-13,
+          5.835971094123753e-12,
+          1.2140066490126185e-14,
+          1.3246669310272975e-12,
+          0.0,
+          -4.327903699958164e-07,
+          -9.26018852941087e-06,
+          -6.217008910509478e-06
+        ],
+        "iterations": 182
+      },
+      "task_parameters": [
+        [
+          1000000
+        ]
+      ],
+      "function_evaluations": [
+        "b83b3f6e-8fa4-11ec-82b1-a4bf013856df",
+        "b83b733a-8fa4-11ec-82b1-a4bf013856df",
+        "bab241ac-8fa4-11ec-82b1-a4bf013856df"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "int",
+          "lower_bound": 100000,
+          "upper_bound": 10000000,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "p0",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "name": "p1",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "10",
+            "20",
+            "40",
+            "64",
+            "80",
+            "100",
+            "128",
+            "160",
+            "200"
+          ]
+        },
+        {
+          "name": "p2",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma clang loop unrolling full",
+            " "
+          ]
+        },
+        {
+          "name": "p3",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma omp parallel for",
+            " "
+          ]
+        },
+        {
+          "name": "p4",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p5",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p6",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "cores",
+            "threads",
+            "sockets"
+          ]
+        },
+        {
+          "name": "p7",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "compact",
+            "scatter",
+            "balanced",
+            "none",
+            "disabled",
+            "explicit"
+          ]
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 50,
+        "tm_sec": 23,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "bbe5b5b8-8fa4-11ec-82b1-a4bf013856df"
+    },
+    {
+      "hyperparameters": [
+        100000000.0,
+        0.8625089195912632,
+        100000000.0,
+        4406.06939561267,
+        100000000.0,
+        100000000.0,
+        0.5060447448219138,
+        100000000.0,
+        1.0,
+        0.1135767434952142,
+        1e-10,
+        0.0015348032971386652
+      ],
+      "model_stats": {
+        "log_likelihood": 3.0172392013576155,
+        "neg_log_likelihood": -3.0172392013576155,
+        "gradients": [
+          1.4175156237977516e-14,
+          5.6043513723125216e-06,
+          6.6632195751343725e-16,
+          9.846436064115849e-09,
+          2.2435671393716303e-14,
+          1.7656894872518208e-14,
+          1.0528697202971671e-07,
+          4.467309018994395e-14,
+          0.0,
+          2.7798123264546903e-06,
+          -5.504456422516297e-07,
+          1.1530854810585356e-10
+        ],
+        "iterations": 159
+      },
+      "task_parameters": [
+        [
+          1000000
+        ]
+      ],
+      "function_evaluations": [
+        "b83b3f6e-8fa4-11ec-82b1-a4bf013856df",
+        "b83b733a-8fa4-11ec-82b1-a4bf013856df",
+        "bab241ac-8fa4-11ec-82b1-a4bf013856df",
+        "bd227d44-8fa4-11ec-82b1-a4bf013856df"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "int",
+          "lower_bound": 100000,
+          "upper_bound": 10000000,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "p0",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "name": "p1",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "10",
+            "20",
+            "40",
+            "64",
+            "80",
+            "100",
+            "128",
+            "160",
+            "200"
+          ]
+        },
+        {
+          "name": "p2",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma clang loop unrolling full",
+            " "
+          ]
+        },
+        {
+          "name": "p3",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma omp parallel for",
+            " "
+          ]
+        },
+        {
+          "name": "p4",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p5",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p6",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "cores",
+            "threads",
+            "sockets"
+          ]
+        },
+        {
+          "name": "p7",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "compact",
+            "scatter",
+            "balanced",
+            "none",
+            "disabled",
+            "explicit"
+          ]
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 50,
+        "tm_sec": 27,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "be55886e-8fa4-11ec-82b1-a4bf013856df"
+    },
+    {
+      "hyperparameters": [
+        0.0007554019967840925,
+        0.6798154104760873,
+        0.12680561580724536,
+        1.4674224726400038,
+        0.5643484124338943,
+        0.00990158568540326,
+        0.7966813116580175,
+        0.0019017685035580055,
+        1.0,
+        0.10992138374562935,
+        9.99964647288255e-06,
+        0.08446384408660752
+      ],
+      "model_stats": {
+        "log_likelihood": -0.6928555309846751,
+        "neg_log_likelihood": 0.6928555309846751,
+        "gradients": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -6.808645369225695e-08,
+          -6.193885512087115e-12,
+          -8.83792290784167e-09
+        ],
+        "iterations": 7
+      },
+      "task_parameters": [
+        [
+          5000000
+        ]
+      ],
+      "function_evaluations": [
+        "c1567bc2-8fa4-11ec-a055-a4bf013856df",
+        "c156b042-8fa4-11ec-a055-a4bf013856df"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "int",
+          "lower_bound": 100000,
+          "upper_bound": 10000000,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "p0",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "name": "p1",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "10",
+            "20",
+            "40",
+            "64",
+            "80",
+            "100",
+            "128",
+            "160",
+            "200"
+          ]
+        },
+        {
+          "name": "p2",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma clang loop unrolling full",
+            " "
+          ]
+        },
+        {
+          "name": "p3",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma omp parallel for",
+            " "
+          ]
+        },
+        {
+          "name": "p4",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p5",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p6",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "cores",
+            "threads",
+            "sockets"
+          ]
+        },
+        {
+          "name": "p7",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "compact",
+            "scatter",
+            "balanced",
+            "none",
+            "disabled",
+            "explicit"
+          ]
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 50,
+        "tm_sec": 34,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "c28f4ab4-8fa4-11ec-a055-a4bf013856df"
+    },
+    {
+      "hyperparameters": [
+        120.37923052161916,
+        100000000.0,
+        0.4870888772256546,
+        1.3319468131885401,
+        100000000.0,
+        193.70869977905835,
+        2414.4965252797856,
+        100000000.0,
+        1.0,
+        0.2863409158389149,
+        1e-05,
+        0.07467282332327027
+      ],
+      "model_stats": {
+        "log_likelihood": -1.7033994716524026,
+        "neg_log_likelihood": 1.7033994716524026,
+        "gradients": [
+          4.319562312530106e-06,
+          1.7402074713123144e-17,
+          1.8046232749258095e-06,
+          6.177251897308139e-06,
+          1.8776403268442363e-17,
+          7.1988592029639945e-06,
+          1.0698146061665586e-08,
+          1.6257798127311326e-17,
+          0.0,
+          3.5491191233971272e-06,
+          1.0609535863236626e-06,
+          1.382268166090099e-07
+        ],
+        "iterations": 162
+      },
+      "task_parameters": [
+        [
+          5000000
+        ]
+      ],
+      "function_evaluations": [
+        "c1567bc2-8fa4-11ec-a055-a4bf013856df",
+        "c156b042-8fa4-11ec-a055-a4bf013856df",
+        "c3d3f578-8fa4-11ec-a055-a4bf013856df"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "int",
+          "lower_bound": 100000,
+          "upper_bound": 10000000,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "p0",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "name": "p1",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "10",
+            "20",
+            "40",
+            "64",
+            "80",
+            "100",
+            "128",
+            "160",
+            "200"
+          ]
+        },
+        {
+          "name": "p2",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma clang loop unrolling full",
+            " "
+          ]
+        },
+        {
+          "name": "p3",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma omp parallel for",
+            " "
+          ]
+        },
+        {
+          "name": "p4",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p5",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p6",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "cores",
+            "threads",
+            "sockets"
+          ]
+        },
+        {
+          "name": "p7",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "compact",
+            "scatter",
+            "balanced",
+            "none",
+            "disabled",
+            "explicit"
+          ]
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 50,
+        "tm_sec": 38,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "c5133c82-8fa4-11ec-a055-a4bf013856df"
+    },
+    {
+      "hyperparameters": [
+        100000000.0,
+        100000000.0,
+        100000000.0,
+        0.40565176147525545,
+        28110.47270732367,
+        12671.70264084636,
+        100000000.0,
+        100000000.0,
+        1.0,
+        0.5425010052432984,
+        1e-10,
+        0.015096752865219193
+      ],
+      "model_stats": {
+        "log_likelihood": -2.3110540921314024,
+        "neg_log_likelihood": 2.3110540921314024,
+        "gradients": [
+          1.7655424922668202e-16,
+          8.301236942475958e-17,
+          2.685083300880756e-16,
+          7.132731882908416e-06,
+          3.9366032516169775e-10,
+          3.940059036308126e-09,
+          1.6496364034787087e-17,
+          1.077195632475619e-15,
+          0.0,
+          -4.748331636208727e-06,
+          -3.178827374381333e-09,
+          -3.989675589084394e-09
+        ],
+        "iterations": 97
+      },
+      "task_parameters": [
+        [
+          5000000
+        ]
+      ],
+      "function_evaluations": [
+        "c1567bc2-8fa4-11ec-a055-a4bf013856df",
+        "c156b042-8fa4-11ec-a055-a4bf013856df",
+        "c3d3f578-8fa4-11ec-a055-a4bf013856df",
+        "c64e0e2e-8fa4-11ec-a055-a4bf013856df"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "int",
+          "lower_bound": 100000,
+          "upper_bound": 10000000,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "p0",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "name": "p1",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "10",
+            "20",
+            "40",
+            "64",
+            "80",
+            "100",
+            "128",
+            "160",
+            "200"
+          ]
+        },
+        {
+          "name": "p2",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma clang loop unrolling full",
+            " "
+          ]
+        },
+        {
+          "name": "p3",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma omp parallel for",
+            " "
+          ]
+        },
+        {
+          "name": "p4",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p5",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p6",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "cores",
+            "threads",
+            "sockets"
+          ]
+        },
+        {
+          "name": "p7",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "compact",
+            "scatter",
+            "balanced",
+            "none",
+            "disabled",
+            "explicit"
+          ]
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 50,
+        "tm_sec": 42,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "c7866642-8fa4-11ec-a055-a4bf013856df"
+    },
+    {
+      "hyperparameters": [
+        717.3682408794799,
+        43.57862309816151,
+        14.513210406324538,
+        49.38272223694771,
+        171.17833595461298,
+        1.853911769304891,
+        154.01759612178023,
+        90.72885641251966,
+        0.1203535953274132,
+        6.813137304881809,
+        0.9169041971922682,
+        0.7144381503125639,
+        0.4525322440095696,
+        0.4473741407524023,
+        8.518385535147655,
+        2.1539345416461826,
+        4.077661458843283,
+        2.41551898483521,
+        0.027583710261529656,
+        2.5386315272145845,
+        7.48020469071829,
+        1.4301269726776342,
+        9.262062392014993,
+        10.161102983974034,
+        1.3022764719682889,
+        0.10204055551550813,
+        0.16676378347254472,
+        0.49466047874791347,
+        10.307045065366617,
+        1.1206677095524205,
+        0.9926775149252627,
+        0.21423303871550387,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        7.241171673491134e-05,
+        0.03165138099041019,
+        1.5605196043994382e-06,
+        0.24694301340214012,
+        1.8392554836781157e-05,
+        0.000765724547497231,
+        0.0228347779712527,
+        8.25731877922161e-06,
+        0.00017049675588617062,
+        0.0002489121391391503,
+        6.197852733345714e-05,
+        6.384129265681094e-05,
+        1.5616634476659455e-05,
+        4.525920700516857e-05,
+        0.0021796506368520173,
+        0.00026199300321057126,
+        9.915247883806112e-06,
+        9.972098922556822e-06,
+        1e-05,
+        1e-05,
+        0.3554569522648246,
+        0.12550344323906307,
+        0.11828948300927869,
+        6.016681796184526e-05,
+        0.0028646656987389827,
+        1.293348244563193e-06,
+        0.03083015134611565,
+        0.0048639952054892925,
+        7.365951822780838e-07,
+        0.00021654846350248897,
+        0.023790531640816476,
+        0.016727024793701036,
+        0.0018849164292246538,
+        0.0003061273228996111,
+        0.05437960059482818,
+        0.008647116753951682
+      ],
+      "model_stats": {
+        "log_likelihood": 2.0547441601254093,
+        "neg_log_likelihood": -2.0547441601254093,
+        "gradients": [
+          5.711287103453175e-06,
+          0.0029247179298226103,
+          0.04782629656396023,
+          -1.6627008232220016e-05,
+          0.0005106488651206073,
+          -0.04708010389134282,
+          1.6554860705410248e-05,
+          0.0006110818525679532,
+          -0.0005457261335024554,
+          4.2954104411379195e-06,
+          -0.0003280750666905594,
+          9.618049008564599e-05,
+          0.0008482083647259732,
+          -0.0015515799933850415,
+          1.3698129498057262e-06,
+          7.990606497106221e-05,
+          0.00017601106392684942,
+          1.4793413409123038e-05,
+          0.0001284392221049665,
+          0.00014447166857169545,
+          5.13232690800351e-05,
+          8.383879638297224e-05,
+          1.3015145095379132e-05,
+          5.731957723669671e-06,
+          0.000154517007958185,
+          0.0005714237230371692,
+          -0.00016118061689641736,
+          0.00024503708534202634,
+          2.337787617822175e-06,
+          -1.502895759554038e-05,
+          7.671425509091023e-05,
+          0.0012374878005598248,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.0003624227199100973,
+          -0.626919238116334,
+          -4.914149329741925e-05,
+          -0.0527072394645438,
+          -0.001599595847059617,
+          -0.09246049711944607,
+          0.01506099736534375,
+          -7.159718827762025e-05,
+          -0.014828174502093068,
+          -0.03005590301341277,
+          4.0894867372755934e-05,
+          -0.0005535523758389921,
+          -0.001358185262539015,
+          -0.005465006009410778,
+          0.0014381839573042127,
+          -0.0022716778241390714,
+          -0.0008623332748380546,
+          -0.0012041214184775938,
+          6.59823153795397e-06,
+          -8.670757636671008e-05,
+          -0.027965336768989223,
+          -0.010450339624415656,
+          -0.18375083078686036,
+          0.00016916761569218266,
+          -0.001131706496464149,
+          -5.101964289890473e-07,
+          0.0009304212149635924,
+          -0.0007246462732167533,
+          1.9439563523802293e-08,
+          -2.7996061598676332e-05,
+          0.003419269432535831,
+          -0.002163048701396174,
+          -0.0006333610194699574,
+          -7.615398047537492e-05,
+          0.004105623283188131,
+          -0.0010441581201186695
+        ],
+        "iterations": 98
+      },
+      "task_parameters": [
+        [
+          10000000
+        ],
+        [
+          100000
+        ],
+        [
+          1000000
+        ],
+        [
+          5000000
+        ]
+      ],
+      "function_evaluations": [
+        "c6b6607c-8fa5-11ec-befa-a4bf013573c5",
+        "c6b766c0-8fa5-11ec-befa-a4bf013573c5",
+        "c6b84d42-8fa5-11ec-befa-a4bf013573c5",
+        "c6b952f0-8fa5-11ec-befa-a4bf013573c5",
+        "c6ba47a0-8fa5-11ec-befa-a4bf013573c5",
+        "c6bb242c-8fa5-11ec-befa-a4bf013573c5",
+        "c6bc1be8-8fa5-11ec-befa-a4bf013573c5",
+        "c6bcfb6c-8fa5-11ec-befa-a4bf013573c5"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "int",
+          "lower_bound": 100000,
+          "upper_bound": 10000000,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "p0",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "name": "p1",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "10",
+            "20",
+            "40",
+            "64",
+            "80",
+            "100",
+            "128",
+            "160",
+            "200"
+          ]
+        },
+        {
+          "name": "p2",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma clang loop unrolling full",
+            " "
+          ]
+        },
+        {
+          "name": "p3",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma omp parallel for",
+            " "
+          ]
+        },
+        {
+          "name": "p4",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p5",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p6",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "cores",
+            "threads",
+            "sockets"
+          ]
+        },
+        {
+          "name": "p7",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "compact",
+            "scatter",
+            "balanced",
+            "none",
+            "disabled",
+            "explicit"
+          ]
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 57,
+        "tm_sec": 52,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "c7dedf92-8fa5-11ec-befa-a4bf013573c5"
+    },
+    {
+      "hyperparameters": [
+        5.056605498299639,
+        69.36337250483254,
+        48.01860854689184,
+        2.195795151866496,
+        50.36000598566342,
+        2063.588064639494,
+        49.64127348029466,
+        144.94176343707713,
+        1.7554861828846144,
+        6.358443050577871,
+        6.511989374875963,
+        143.47957029186935,
+        9.963997783558467,
+        0.05045600012959268,
+        7.106487622797388,
+        17.145744180855306,
+        0.23815469055780836,
+        1.3731945134926125,
+        0.24591661224125272,
+        38.81781943451623,
+        0.7243458859538238,
+        2.5655910196233176,
+        0.1855521915939482,
+        8.369255291158167,
+        24.881613810666696,
+        0.09581876484655175,
+        115.47726124434212,
+        0.01590737259990347,
+        0.7897011644141603,
+        0.38320287109707085,
+        1.8682911238036244,
+        182.11232339418098,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.06525090340548913,
+        0.07174438467357724,
+        0.03987493647190957,
+        0.5944124320390327,
+        0.0011990072924023224,
+        0.0009947926153770874,
+        0.0008056977437062672,
+        0.0002076875400954659,
+        0.0018066957054389042,
+        0.0024726769433201894,
+        0.0018764219191813249,
+        0.0008544316904275607,
+        0.0008527762851873728,
+        0.002314733040033918,
+        0.0001894669924731368,
+        0.0009315317957472865,
+        9.950865944226189e-06,
+        9.983637582035027e-06,
+        9.98136368754189e-06,
+        1e-05,
+        0.40728303445824643,
+        0.1402647721831637,
+        0.028845525725710666,
+        3.106828531978983e-05,
+        0.008248336476253632,
+        0.24636809115613012,
+        0.22676659311350936,
+        0.0032388561534355174,
+        0.001262650370970432,
+        0.027312372094716503,
+        0.004218336105736331,
+        0.005641588036249492,
+        0.013775065650170868,
+        0.026105120477324488,
+        0.018922501856634893,
+        0.009734141948352341
+      ],
+      "model_stats": {
+        "log_likelihood": -0.6627505501305864,
+        "neg_log_likelihood": 0.6627505501305864,
+        "gradients": [
+          0.10482293995476141,
+          0.001835015560557558,
+          0.002655355700837783,
+          0.609987750432698,
+          0.003486091244498787,
+          -7.967426684206574e-07,
+          0.006113191168589071,
+          0.00048411748919663735,
+          0.09220561363162641,
+          0.00339594382938825,
+          0.017809471287700978,
+          3.5756147761713204e-06,
+          0.013855526706916477,
+          0.0976080849656964,
+          0.0064823432363850615,
+          0.0008414617323808231,
+          -0.005986583224212758,
+          -0.002317630217422038,
+          -0.002069372854711151,
+          -2.863622657754966e-06,
+          -0.0023645192060857056,
+          -0.004862414251846532,
+          0.001725568589601584,
+          -4.073778514755359e-05,
+          -3.638260744313103e-08,
+          -0.0016440942806362061,
+          -4.9110921846324315e-09,
+          -0.000304541673437284,
+          -0.00011786347006711865,
+          -0.00036103610232770405,
+          -2.2064218857506842e-05,
+          -3.2317327968095045e-10,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.12144085620908462,
+          -0.20260635911579924,
+          0.0410946898398538,
+          -0.08847388549060783,
+          -0.022578450520073786,
+          -0.02498019452753944,
+          -0.008006723662891745,
+          0.006203709801461007,
+          -0.03407892720484942,
+          -0.06148173820886783,
+          -0.018179505108654112,
+          -0.01923022718784882,
+          -0.016058589894936845,
+          -0.058218367708674154,
+          -0.0018684049908982941,
+          0.03981137222417067,
+          -0.0001873842859768429,
+          -0.00025110069877109327,
+          -9.842996641310037e-05,
+          0.0004273753446304373,
+          -0.3645926814677853,
+          0.1196558290603373,
+          0.08018275851371776,
+          2.0702316257393154e-05,
+          0.06443999528378189,
+          -1.6071737680596423,
+          0.4391614998949274,
+          0.05171048221522032,
+          -7.982407250167942e-05,
+          -0.03697047187053851,
+          -0.0002294094194534981,
+          -0.0015274309718333614,
+          -0.007153899206328046,
+          -0.034344346747690865,
+          -0.007175303994729635,
+          0.008041960843850388
+        ],
+        "iterations": 74
+      },
+      "task_parameters": [
+        [
+          10000000
+        ],
+        [
+          100000
+        ],
+        [
+          1000000
+        ],
+        [
+          5000000
+        ]
+      ],
+      "function_evaluations": [
+        "c6b6607c-8fa5-11ec-befa-a4bf013573c5",
+        "c6b766c0-8fa5-11ec-befa-a4bf013573c5",
+        "c6b84d42-8fa5-11ec-befa-a4bf013573c5",
+        "c6b952f0-8fa5-11ec-befa-a4bf013573c5",
+        "c6ba47a0-8fa5-11ec-befa-a4bf013573c5",
+        "c6bb242c-8fa5-11ec-befa-a4bf013573c5",
+        "c6bc1be8-8fa5-11ec-befa-a4bf013573c5",
+        "c6bcfb6c-8fa5-11ec-befa-a4bf013573c5",
+        "ccdf04cc-8fa5-11ec-befa-a4bf013573c5",
+        "cce06c40-8fa5-11ec-befa-a4bf013573c5",
+        "cce18d28-8fa5-11ec-befa-a4bf013573c5",
+        "cce29934-8fa5-11ec-befa-a4bf013573c5"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "int",
+          "lower_bound": 100000,
+          "upper_bound": 10000000,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "p0",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "name": "p1",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "10",
+            "20",
+            "40",
+            "64",
+            "80",
+            "100",
+            "128",
+            "160",
+            "200"
+          ]
+        },
+        {
+          "name": "p2",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma clang loop unrolling full",
+            " "
+          ]
+        },
+        {
+          "name": "p3",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma omp parallel for",
+            " "
+          ]
+        },
+        {
+          "name": "p4",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p5",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p6",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "cores",
+            "threads",
+            "sockets"
+          ]
+        },
+        {
+          "name": "p7",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "compact",
+            "scatter",
+            "balanced",
+            "none",
+            "disabled",
+            "explicit"
+          ]
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 58,
+        "tm_sec": 3,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "ce0540be-8fa5-11ec-befa-a4bf013573c5"
+    },
+    {
+      "hyperparameters": [
+        21.77580904879301,
+        52.07173837089249,
+        18.190739672181955,
+        59.996666913560304,
+        33.33427808018097,
+        3.2729667319976126,
+        1.0666618114823079,
+        75.19498774381836,
+        5.818182461016354,
+        1.799743577852559,
+        5.642032753269469,
+        51.28986433028116,
+        15.472848946662205,
+        0.05020743719411738,
+        46.938059538006165,
+        4.222404787095921,
+        7.20168423780488,
+        0.02535368983828316,
+        1.1930204885609335,
+        362.63918169253503,
+        10.066649543108218,
+        0.016859603214435234,
+        12.559544927473487,
+        0.18866593379467964,
+        2.0520825731596966,
+        9.540997427516407,
+        0.15760604051829216,
+        0.018912602982775938,
+        0.024543924840287657,
+        0.047209800536576765,
+        109.63323365123513,
+        1.1376548261893542,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0015488112821173527,
+        0.0008470232213702559,
+        0.00021258510263797125,
+        0.12899879137721112,
+        0.0004998150140418205,
+        0.00043360684812501765,
+        0.000698418396220888,
+        0.0010249387677127417,
+        0.007852144051592102,
+        0.00047183753116565726,
+        0.0013958204324322923,
+        0.0007040500013527021,
+        0.0024356767088642073,
+        0.01680528342732544,
+        0.0008495240941905748,
+        1.5194323263977499e-05,
+        9.999534071779821e-06,
+        1e-05,
+        9.986491493508116e-06,
+        9.981421146160002e-06,
+        0.2246671064248694,
+        0.18850076130403953,
+        0.08749458485251195,
+        0.23751644651074208,
+        0.01334185329123273,
+        0.14427643473348478,
+        0.2139722491614259,
+        0.0019586547848177145,
+        0.1380809856987732,
+        5.026257874535011e-07,
+        1.904956860930861e-05,
+        0.025881400055389078,
+        0.01572990425275952,
+        0.0006181387249112353,
+        0.022428975913368798,
+        0.005519191621842471
+      ],
+      "model_stats": {
+        "log_likelihood": -0.16231225873565513,
+        "neg_log_likelihood": 0.16231225873565513,
+        "gradients": [
+          0.010783408038436363,
+          0.0024779698657478666,
+          0.010335095507405353,
+          -0.0014028896686791637,
+          0.009844159721228644,
+          0.1945460181241574,
+          0.05429246191693249,
+          0.0013637527041679362,
+          0.0036390556368134995,
+          0.015904986636946908,
+          0.018318943158046,
+          1.3295953231508163e-05,
+          0.005034512853430544,
+          0.08431295821713837,
+          -1.0598842345051142e-05,
+          0.009121044378059346,
+          3.4682527932257245e-07,
+          0.004833457080567698,
+          5.519098161661185e-08,
+          1.0980477574155433e-09,
+          6.406980320863542e-08,
+          0.00014402117837182806,
+          2.5871180887007073e-06,
+          0.0004696941859550314,
+          -2.621536222776363e-10,
+          -1.938919417096002e-11,
+          -7.449127731435949e-10,
+          -4.118382594036942e-06,
+          -8.207891213115756e-07,
+          -4.6260689869063384e-08,
+          -3.858520003949664e-12,
+          -5.111197300941962e-11,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          -0.02053913099481219,
+          -0.026088001438003897,
+          -0.009721694397740996,
+          -0.01876995287393411,
+          -0.0073767392559231475,
+          -0.01373011803957796,
+          -0.00687522311851726,
+          -0.017831622493161826,
+          -0.03368028617524492,
+          0.002047068159839826,
+          -0.012553306851830391,
+          -0.042089210609263995,
+          -0.010444698786543723,
+          0.07290975886588351,
+          -0.007640192391518853,
+          -0.0009152126789849052,
+          -4.288012485623522e-05,
+          4.338502184814805e-05,
+          -8.981348114581533e-05,
+          -0.0006012194836548665,
+          0.32334970287191106,
+          -0.2022220458512403,
+          -0.09898992399498682,
+          -0.19726781984893,
+          0.06521139035490972,
+          -0.17564015082780532,
+          0.26814887609895494,
+          0.017537335329010927,
+          -0.16356301335310608,
+          4.4611000924326993e-13,
+          -6.528946815198001e-09,
+          -0.08008892572925161,
+          -0.0021220637693535912,
+          3.138121637732053e-06,
+          -0.00904869582590564,
+          -0.003669624334906236
+        ],
+        "iterations": 123
+      },
+      "task_parameters": [
+        [
+          10000000
+        ],
+        [
+          100000
+        ],
+        [
+          1000000
+        ],
+        [
+          5000000
+        ]
+      ],
+      "function_evaluations": [
+        "c6b6607c-8fa5-11ec-befa-a4bf013573c5",
+        "c6b766c0-8fa5-11ec-befa-a4bf013573c5",
+        "c6b84d42-8fa5-11ec-befa-a4bf013573c5",
+        "c6b952f0-8fa5-11ec-befa-a4bf013573c5",
+        "c6ba47a0-8fa5-11ec-befa-a4bf013573c5",
+        "c6bb242c-8fa5-11ec-befa-a4bf013573c5",
+        "c6bc1be8-8fa5-11ec-befa-a4bf013573c5",
+        "c6bcfb6c-8fa5-11ec-befa-a4bf013573c5",
+        "ccdf04cc-8fa5-11ec-befa-a4bf013573c5",
+        "cce06c40-8fa5-11ec-befa-a4bf013573c5",
+        "cce18d28-8fa5-11ec-befa-a4bf013573c5",
+        "cce29934-8fa5-11ec-befa-a4bf013573c5",
+        "d2fad0a2-8fa5-11ec-befa-a4bf013573c5",
+        "d2fc6b60-8fa5-11ec-befa-a4bf013573c5",
+        "d2fdb894-8fa5-11ec-befa-a4bf013573c5",
+        "d2feeb92-8fa5-11ec-befa-a4bf013573c5"
+      ],
+      "input_space": [
+        {
+          "name": "t",
+          "transformer": "normalize",
+          "type": "int",
+          "lower_bound": 100000,
+          "upper_bound": 10000000,
+          "optimize": true
+        }
+      ],
+      "parameter_space": [
+        {
+          "name": "p0",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "3",
+            "4",
+            "5",
+            "6",
+            "7",
+            "8"
+          ]
+        },
+        {
+          "name": "p1",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "10",
+            "20",
+            "40",
+            "64",
+            "80",
+            "100",
+            "128",
+            "160",
+            "200"
+          ]
+        },
+        {
+          "name": "p2",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma clang loop unrolling full",
+            " "
+          ]
+        },
+        {
+          "name": "p3",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "#pragma omp parallel for",
+            " "
+          ]
+        },
+        {
+          "name": "p4",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p5",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "2",
+            "4",
+            "8",
+            "16",
+            "32",
+            "64",
+            "96",
+            "128",
+            "256"
+          ]
+        },
+        {
+          "name": "p6",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "cores",
+            "threads",
+            "sockets"
+          ]
+        },
+        {
+          "name": "p7",
+          "transformer": "onehot",
+          "type": "categorical",
+          "categories": [
+            "compact",
+            "scatter",
+            "balanced",
+            "none",
+            "disabled",
+            "explicit"
+          ]
+        }
+      ],
+      "output_space": [
+        {
+          "name": "y",
+          "transformer": "identity",
+          "type": "real",
+          "lower_bound": -Infinity,
+          "upper_bound": Infinity,
+          "optimize": true
+        }
+      ],
+      "modeler": "Model_LCM",
+      "objective": {
+        "name": "y",
+        "transformer": "identity",
+        "type": "real",
+        "lower_bound": -Infinity,
+        "upper_bound": Infinity,
+        "optimize": true,
+        "objective_id": 0
+      },
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 58,
+        "tm_sec": 13,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "d422bb48-8fa5-11ec-befa-a4bf013573c5"
+    }
+  ],
+  "func_eval": [
+    {
+      "task_parameter": {
+        "t": 100000
+      },
+      "tuning_parameter": {
+        "p0": "5",
+        "p1": "100",
+        "p2": " ",
+        "p3": " ",
+        "p4": "256",
+        "p5": "2",
+        "p6": "threads",
+        "p7": "explicit"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "skylake",
+        "intel": {
+          "nodes": 1,
+          "cores": 56
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.268594
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.2685937901885564,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 50,
+        "tm_sec": 2,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "af4e40fe-8fa4-11ec-b17a-a4bf013856df"
+    },
+    {
+      "task_parameter": {
+        "t": 100000
+      },
+      "tuning_parameter": {
+        "p0": "7",
+        "p1": "10",
+        "p2": "#pragma clang loop unrolling full",
+        "p3": "#pragma omp parallel for",
+        "p4": "8",
+        "p5": "128",
+        "p6": "sockets",
+        "p7": "scatter"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "skylake",
+        "intel": {
+          "nodes": 1,
+          "cores": 56
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.308247
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.3082466873342621,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 50,
+        "tm_sec": 2,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "af4e795c-8fa4-11ec-b17a-a4bf013856df"
+    },
+    {
+      "task_parameter": {
+        "t": 100000
+      },
+      "tuning_parameter": {
+        "p0": "5",
+        "p1": "20",
+        "p2": " ",
+        "p3": "#pragma omp parallel for",
+        "p4": "4",
+        "p5": "2",
+        "p6": "cores",
+        "p7": "explicit"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "skylake",
+        "intel": {
+          "nodes": 1,
+          "cores": 56
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.478088
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.47808810175270205,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 50,
+        "tm_sec": 6,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "b1b84c5e-8fa4-11ec-b17a-a4bf013856df"
+    },
+    {
+      "task_parameter": {
+        "t": 100000
+      },
+      "tuning_parameter": {
+        "p0": "6",
+        "p1": "40",
+        "p2": "#pragma clang loop unrolling full",
+        "p3": " ",
+        "p4": "16",
+        "p5": "128",
+        "p6": "cores",
+        "p7": "balanced"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "skylake",
+        "intel": {
+          "nodes": 1,
+          "cores": 56
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.447429
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.44742906334781085,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 50,
+        "tm_sec": 10,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "b4157c60-8fa4-11ec-b17a-a4bf013856df"
+    },
+    {
+      "task_parameter": {
+        "t": 100000
+      },
+      "tuning_parameter": {
+        "p0": "7",
+        "p1": "200",
+        "p2": "#pragma clang loop unrolling full",
+        "p3": "#pragma omp parallel for",
+        "p4": "256",
+        "p5": "2",
+        "p6": "sockets",
+        "p7": "explicit"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "skylake",
+        "intel": {
+          "nodes": 1,
+          "cores": 56
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.42163
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.4216295655066648,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 50,
+        "tm_sec": 14,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "b682987a-8fa4-11ec-b17a-a4bf013856df"
+    },
+    {
+      "task_parameter": {
+        "t": 1000000
+      },
+      "tuning_parameter": {
+        "p0": "5",
+        "p1": "100",
+        "p2": " ",
+        "p3": " ",
+        "p4": "256",
+        "p5": "2",
+        "p6": "threads",
+        "p7": "explicit"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "skylake",
+        "intel": {
+          "nodes": 1,
+          "cores": 56
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.365815
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.36581500230983827,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 50,
+        "tm_sec": 16,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "b83b3f6e-8fa4-11ec-82b1-a4bf013856df"
+    },
+    {
+      "task_parameter": {
+        "t": 1000000
+      },
+      "tuning_parameter": {
+        "p0": "7",
+        "p1": "10",
+        "p2": "#pragma clang loop unrolling full",
+        "p3": "#pragma omp parallel for",
+        "p4": "8",
+        "p5": "128",
+        "p6": "sockets",
+        "p7": "scatter"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "skylake",
+        "intel": {
+          "nodes": 1,
+          "cores": 56
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.190147
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.19014713956655244,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 50,
+        "tm_sec": 16,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "b83b733a-8fa4-11ec-82b1-a4bf013856df"
+    },
+    {
+      "task_parameter": {
+        "t": 1000000
+      },
+      "tuning_parameter": {
+        "p0": "8",
+        "p1": "100",
+        "p2": " ",
+        "p3": " ",
+        "p4": "16",
+        "p5": "64",
+        "p6": "threads",
+        "p7": "compact"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "skylake",
+        "intel": {
+          "nodes": 1,
+          "cores": 56
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.366975
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.3669750227320833,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 50,
+        "tm_sec": 21,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "bab241ac-8fa4-11ec-82b1-a4bf013856df"
+    },
+    {
+      "task_parameter": {
+        "t": 1000000
+      },
+      "tuning_parameter": {
+        "p0": "8",
+        "p1": "10",
+        "p2": " ",
+        "p3": " ",
+        "p4": "96",
+        "p5": "2",
+        "p6": "cores",
+        "p7": "explicit"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "skylake",
+        "intel": {
+          "nodes": 1,
+          "cores": 56
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.585598
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.5855981278840858,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 50,
+        "tm_sec": 25,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "bd227d44-8fa4-11ec-82b1-a4bf013856df"
+    },
+    {
+      "task_parameter": {
+        "t": 1000000
+      },
+      "tuning_parameter": {
+        "p0": "2",
+        "p1": "200",
+        "p2": "#pragma clang loop unrolling full",
+        "p3": "#pragma omp parallel for",
+        "p4": "8",
+        "p5": "2",
+        "p6": "cores",
+        "p7": "explicit"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "skylake",
+        "intel": {
+          "nodes": 1,
+          "cores": 56
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.166049
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.16604895566289735,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 50,
+        "tm_sec": 29,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "bf91f06e-8fa4-11ec-82b1-a4bf013856df"
+    },
+    {
+      "task_parameter": {
+        "t": 5000000
+      },
+      "tuning_parameter": {
+        "p0": "5",
+        "p1": "100",
+        "p2": " ",
+        "p3": " ",
+        "p4": "256",
+        "p5": "2",
+        "p6": "threads",
+        "p7": "explicit"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "skylake",
+        "intel": {
+          "nodes": 1,
+          "cores": 56
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.457662
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.45766185085888494,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 50,
+        "tm_sec": 32,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "c1567bc2-8fa4-11ec-a055-a4bf013856df"
+    },
+    {
+      "task_parameter": {
+        "t": 5000000
+      },
+      "tuning_parameter": {
+        "p0": "7",
+        "p1": "10",
+        "p2": "#pragma clang loop unrolling full",
+        "p3": "#pragma omp parallel for",
+        "p4": "8",
+        "p5": "128",
+        "p6": "sockets",
+        "p7": "scatter"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "skylake",
+        "intel": {
+          "nodes": 1,
+          "cores": 56
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.157088
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.15708807144776626,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 50,
+        "tm_sec": 32,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "c156b042-8fa4-11ec-a055-a4bf013856df"
+    },
+    {
+      "task_parameter": {
+        "t": 5000000
+      },
+      "tuning_parameter": {
+        "p0": "7",
+        "p1": "20",
+        "p2": " ",
+        "p3": "#pragma omp parallel for",
+        "p4": "4",
+        "p5": "32",
+        "p6": "sockets",
+        "p7": "scatter"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "skylake",
+        "intel": {
+          "nodes": 1,
+          "cores": 56
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.839937
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.8399369639573546,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 50,
+        "tm_sec": 36,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "c3d3f578-8fa4-11ec-a055-a4bf013856df"
+    },
+    {
+      "task_parameter": {
+        "t": 5000000
+      },
+      "tuning_parameter": {
+        "p0": "2",
+        "p1": "100",
+        "p2": "#pragma clang loop unrolling full",
+        "p3": " ",
+        "p4": "256",
+        "p5": "2",
+        "p6": "cores",
+        "p7": "compact"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "skylake",
+        "intel": {
+          "nodes": 1,
+          "cores": 56
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.660922
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.6609221625988069,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 50,
+        "tm_sec": 40,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "c64e0e2e-8fa4-11ec-a055-a4bf013856df"
+    },
+    {
+      "task_parameter": {
+        "t": 5000000
+      },
+      "tuning_parameter": {
+        "p0": "3",
+        "p1": "160",
+        "p2": "#pragma clang loop unrolling full",
+        "p3": "#pragma omp parallel for",
+        "p4": "4",
+        "p5": "4",
+        "p6": "cores",
+        "p7": "none"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "skylake",
+        "intel": {
+          "nodes": 1,
+          "cores": 56
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.797115
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.7971154806564695,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 50,
+        "tm_sec": 44,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "c8c1a68e-8fa4-11ec-a055-a4bf013856df"
+    },
+    {
+      "task_parameter": {
+        "t": 10000000
+      },
+      "tuning_parameter": {
+        "p0": "4",
+        "p1": "10",
+        "p2": "#pragma clang loop unrolling full",
+        "p3": " ",
+        "p4": "256",
+        "p5": "96",
+        "p6": "cores",
+        "p7": "explicit"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mymachine",
+        "haswell": {
+          "nodes": 1,
+          "cores": 53
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.634756
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.6347563207147511,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 57,
+        "tm_sec": 50,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "c6b6607c-8fa5-11ec-befa-a4bf013573c5"
+    },
+    {
+      "task_parameter": {
+        "t": 10000000
+      },
+      "tuning_parameter": {
+        "p0": "8",
+        "p1": "128",
+        "p2": " ",
+        "p3": "#pragma omp parallel for",
+        "p4": "4",
+        "p5": "16",
+        "p6": "sockets",
+        "p7": "compact"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mymachine",
+        "haswell": {
+          "nodes": 1,
+          "cores": 53
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.532019
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.53201879513516,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 57,
+        "tm_sec": 50,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "c6b766c0-8fa5-11ec-befa-a4bf013573c5"
+    },
+    {
+      "task_parameter": {
+        "t": 100000
+      },
+      "tuning_parameter": {
+        "p0": "2",
+        "p1": "20",
+        "p2": " ",
+        "p3": " ",
+        "p4": "16",
+        "p5": "128",
+        "p6": "cores",
+        "p7": "none"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mymachine",
+        "haswell": {
+          "nodes": 1,
+          "cores": 53
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.282318
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.2823179559907547,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 57,
+        "tm_sec": 50,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "c6b84d42-8fa5-11ec-befa-a4bf013573c5"
+    },
+    {
+      "task_parameter": {
+        "t": 100000
+      },
+      "tuning_parameter": {
+        "p0": "6",
+        "p1": "100",
+        "p2": "#pragma clang loop unrolling full",
+        "p3": "#pragma omp parallel for",
+        "p4": "96",
+        "p5": "8",
+        "p6": "sockets",
+        "p7": "compact"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mymachine",
+        "haswell": {
+          "nodes": 1,
+          "cores": 53
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.191853
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.19185289631847685,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 57,
+        "tm_sec": 50,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "c6b952f0-8fa5-11ec-befa-a4bf013573c5"
+    },
+    {
+      "task_parameter": {
+        "t": 1000000
+      },
+      "tuning_parameter": {
+        "p0": "2",
+        "p1": "40",
+        "p2": " ",
+        "p3": "#pragma omp parallel for",
+        "p4": "96",
+        "p5": "4",
+        "p6": "sockets",
+        "p7": "none"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mymachine",
+        "haswell": {
+          "nodes": 1,
+          "cores": 53
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.016778
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.01677802314309551,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 57,
+        "tm_sec": 50,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "c6ba47a0-8fa5-11ec-befa-a4bf013573c5"
+    },
+    {
+      "task_parameter": {
+        "t": 1000000
+      },
+      "tuning_parameter": {
+        "p0": "6",
+        "p1": "160",
+        "p2": "#pragma clang loop unrolling full",
+        "p3": " ",
+        "p4": "8",
+        "p5": "64",
+        "p6": "threads",
+        "p7": "compact"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mymachine",
+        "haswell": {
+          "nodes": 1,
+          "cores": 53
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.397078
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.39707847522727546,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 57,
+        "tm_sec": 50,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "c6bb242c-8fa5-11ec-befa-a4bf013573c5"
+    },
+    {
+      "task_parameter": {
+        "t": 5000000
+      },
+      "tuning_parameter": {
+        "p0": "7",
+        "p1": "20",
+        "p2": " ",
+        "p3": " ",
+        "p4": "2",
+        "p5": "2",
+        "p6": "cores",
+        "p7": "scatter"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mymachine",
+        "haswell": {
+          "nodes": 1,
+          "cores": 53
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.460745
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.4607453275552585,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 57,
+        "tm_sec": 50,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "c6bc1be8-8fa5-11ec-befa-a4bf013573c5"
+    },
+    {
+      "task_parameter": {
+        "t": 5000000
+      },
+      "tuning_parameter": {
+        "p0": "3",
+        "p1": "100",
+        "p2": "#pragma clang loop unrolling full",
+        "p3": "#pragma omp parallel for",
+        "p4": "96",
+        "p5": "96",
+        "p6": "sockets",
+        "p7": "none"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mymachine",
+        "haswell": {
+          "nodes": 1,
+          "cores": 53
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.623178
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.6231783133233206,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 57,
+        "tm_sec": 50,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "c6bcfb6c-8fa5-11ec-befa-a4bf013573c5"
+    },
+    {
+      "task_parameter": {
+        "t": 10000000
+      },
+      "tuning_parameter": {
+        "p0": "3",
+        "p1": "160",
+        "p2": " ",
+        "p3": "#pragma omp parallel for",
+        "p4": "64",
+        "p5": "2",
+        "p6": "sockets",
+        "p7": "compact"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mymachine",
+        "haswell": {
+          "nodes": 1,
+          "cores": 53
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.676984
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.6769838845751577,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 58,
+        "tm_sec": 1,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "ccdf04cc-8fa5-11ec-befa-a4bf013573c5"
+    },
+    {
+      "task_parameter": {
+        "t": 100000
+      },
+      "tuning_parameter": {
+        "p0": "4",
+        "p1": "80",
+        "p2": "#pragma clang loop unrolling full",
+        "p3": "#pragma omp parallel for",
+        "p4": "2",
+        "p5": "2",
+        "p6": "threads",
+        "p7": "disabled"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mymachine",
+        "haswell": {
+          "nodes": 1,
+          "cores": 53
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.872818
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.87281845133379,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 58,
+        "tm_sec": 1,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "cce06c40-8fa5-11ec-befa-a4bf013573c5"
+    },
+    {
+      "task_parameter": {
+        "t": 1000000
+      },
+      "tuning_parameter": {
+        "p0": "3",
+        "p1": "64",
+        "p2": " ",
+        "p3": "#pragma omp parallel for",
+        "p4": "128",
+        "p5": "2",
+        "p6": "cores",
+        "p7": "none"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mymachine",
+        "haswell": {
+          "nodes": 1,
+          "cores": 53
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.702128
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.7021276400556771,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 58,
+        "tm_sec": 1,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "cce18d28-8fa5-11ec-befa-a4bf013573c5"
+    },
+    {
+      "task_parameter": {
+        "t": 5000000
+      },
+      "tuning_parameter": {
+        "p0": "2",
+        "p1": "200",
+        "p2": "#pragma clang loop unrolling full",
+        "p3": "#pragma omp parallel for",
+        "p4": "256",
+        "p5": "2",
+        "p6": "sockets",
+        "p7": "disabled"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mymachine",
+        "haswell": {
+          "nodes": 1,
+          "cores": 53
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.781602
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.7816023127495948,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 58,
+        "tm_sec": 1,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "cce29934-8fa5-11ec-befa-a4bf013573c5"
+    },
+    {
+      "task_parameter": {
+        "t": 10000000
+      },
+      "tuning_parameter": {
+        "p0": "8",
+        "p1": "160",
+        "p2": " ",
+        "p3": " ",
+        "p4": "16",
+        "p5": "16",
+        "p6": "sockets",
+        "p7": "disabled"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mymachine",
+        "haswell": {
+          "nodes": 1,
+          "cores": 53
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.267681
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.2676808560406936,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 58,
+        "tm_sec": 11,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "d2fad0a2-8fa5-11ec-befa-a4bf013573c5"
+    },
+    {
+      "task_parameter": {
+        "t": 100000
+      },
+      "tuning_parameter": {
+        "p0": "2",
+        "p1": "20",
+        "p2": " ",
+        "p3": " ",
+        "p4": "96",
+        "p5": "8",
+        "p6": "cores",
+        "p7": "none"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mymachine",
+        "haswell": {
+          "nodes": 1,
+          "cores": 53
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.477186
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.477186498984,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 58,
+        "tm_sec": 11,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "d2fc6b60-8fa5-11ec-befa-a4bf013573c5"
+    },
+    {
+      "task_parameter": {
+        "t": 1000000
+      },
+      "tuning_parameter": {
+        "p0": "2",
+        "p1": "10",
+        "p2": " ",
+        "p3": "#pragma omp parallel for",
+        "p4": "64",
+        "p5": "16",
+        "p6": "sockets",
+        "p7": "scatter"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mymachine",
+        "haswell": {
+          "nodes": 1,
+          "cores": 53
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.080424
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.08042354178481737,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 58,
+        "tm_sec": 11,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "d2fdb894-8fa5-11ec-befa-a4bf013573c5"
+    },
+    {
+      "task_parameter": {
+        "t": 5000000
+      },
+      "tuning_parameter": {
+        "p0": "2",
+        "p1": "128",
+        "p2": "#pragma clang loop unrolling full",
+        "p3": " ",
+        "p4": "128",
+        "p5": "128",
+        "p6": "cores",
+        "p7": "disabled"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mymachine",
+        "haswell": {
+          "nodes": 1,
+          "cores": 53
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.350998
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.35099787475435407,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 58,
+        "tm_sec": 11,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "d2feeb92-8fa5-11ec-befa-a4bf013573c5"
+    },
+    {
+      "task_parameter": {
+        "t": 10000000
+      },
+      "tuning_parameter": {
+        "p0": "5",
+        "p1": "160",
+        "p2": "#pragma clang loop unrolling full",
+        "p3": " ",
+        "p4": "64",
+        "p5": "16",
+        "p6": "cores",
+        "p7": "disabled"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mymachine",
+        "haswell": {
+          "nodes": 1,
+          "cores": 53
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.540548
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.5405475272755471,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 58,
+        "tm_sec": 21,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "d91d4ad2-8fa5-11ec-befa-a4bf013573c5"
+    },
+    {
+      "task_parameter": {
+        "t": 100000
+      },
+      "tuning_parameter": {
+        "p0": "8",
+        "p1": "200",
+        "p2": "#pragma clang loop unrolling full",
+        "p3": "#pragma omp parallel for",
+        "p4": "16",
+        "p5": "8",
+        "p6": "cores",
+        "p7": "scatter"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mymachine",
+        "haswell": {
+          "nodes": 1,
+          "cores": 53
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.605897
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.6058974600202521,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 58,
+        "tm_sec": 21,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "d91f02f0-8fa5-11ec-befa-a4bf013573c5"
+    },
+    {
+      "task_parameter": {
+        "t": 1000000
+      },
+      "tuning_parameter": {
+        "p0": "7",
+        "p1": "200",
+        "p2": "#pragma clang loop unrolling full",
+        "p3": " ",
+        "p4": "4",
+        "p5": "8",
+        "p6": "cores",
+        "p7": "scatter"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mymachine",
+        "haswell": {
+          "nodes": 1,
+          "cores": 53
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.445911
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.44591106166015765,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 58,
+        "tm_sec": 21,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "d9205b64-8fa5-11ec-befa-a4bf013573c5"
+    },
+    {
+      "task_parameter": {
+        "t": 5000000
+      },
+      "tuning_parameter": {
+        "p0": "8",
+        "p1": "160",
+        "p2": " ",
+        "p3": " ",
+        "p4": "2",
+        "p5": "256",
+        "p6": "cores",
+        "p7": "none"
+      },
+      "constants": {},
+      "machine_configuration": {
+        "machine_name": "mymachine",
+        "haswell": {
+          "nodes": 1,
+          "cores": 53
+        }
+      },
+      "software_configuration": {},
+      "evaluation_result": {
+        "y": 0.821315
+      },
+      "evaluation_detail": {
+        "y": {
+          "evaluations": 0.8213146426568729,
+          "objective_scheme": "average"
+        }
+      },
+      "additional_output": {},
+      "source": "measure",
+      "time": {
+        "tm_year": 2022,
+        "tm_mon": 2,
+        "tm_mday": 17,
+        "tm_hour": 3,
+        "tm_min": 58,
+        "tm_sec": 21,
+        "tm_wday": 3,
+        "tm_yday": 48,
+        "tm_isdst": 0
+      },
+      "uid": "d921b630-8fa5-11ec-befa-a4bf013573c5"
+    }
+  ]
+}

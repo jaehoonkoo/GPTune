@@ -1,0 +1,1221 @@
+2022-02-25 15:56:03|737069|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-25 15:56:03|737069|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-25 15:56:12|737069|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x146c4e027170>', proc_info: {'node_ip_address': '10.70.150.12', 'raylet_ip_address': '10.70.150.12', 'redis_address': '10.70.150.12:6379', 'object_store_address': '/tmp/ray/session_2022-02-25_15-56-03_244519_737069/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-02-25_15-56-03_244519_737069/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-02-25_15-56-03_244519_737069', 'metrics_export_port': 54179, 'gcs_address': '10.70.150.12:37235', 'node_id': '1fd0f75132f4861215d09ca37924cf2d72c981f95959d257a1a299e8'}
+2022-02-25 15:56:12|737069|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 10.70.150.12
+2022-02-25 15:56:12|737069|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 54179,
+  'NodeID': '1fd0f75132f4861215d09ca37924cf2d72c981f95959d257a1a299e8',
+  'NodeManagerAddress': '10.70.150.12',
+  'NodeManagerHostname': 'gpu2',
+  'NodeManagerPort': 43031,
+  'ObjectManagerPort': 40417,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-02-25_15-56-03_244519_737069/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-02-25_15-56-03_244519_737069/sockets/raylet',
+  'Resources': {'CPU': 256.0,
+                'GPU': 1.0,
+                'accelerator_type:A100': 1.0,
+                'memory': 852998409216.0,
+                'node:10.70.150.12': 1.0,
+                'object_store_memory': 200000000000.0},
+  'alive': True}]
+2022-02-25 15:56:12|737069|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem_all.Problem'}
+2022-02-25 15:56:12|737069|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    p0, Type: Ordinal, Sequence: {2, 4, 8, 16, 21, 32, 42}, Default: 42
+    p1, Type: Categorical, Choices: {cores, threads, sockets}, Default: cores
+    p2, Type: Categorical, Choices: {close, spread, master}, Default: close
+    p3, Type: Categorical, Choices: {#pragma omp parallel for,  }, Default:  
+    p4, Type: Categorical, Choices: {simd,  }, Default:  
+    p5, Type: Categorical, Choices: {schedule(static,1), schedule(static,2), schedule(static,4), schedule(static,8), schedule(static,16), schedule(static,32),  }, Default:  
+    p6, Type: Categorical, Choices: {dynamic, static}, Default: static
+
+2022-02-25 15:56:12|737069|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-02-25 15:56:12|737069|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-02-25 15:56:12|737069|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-02-25 15:56:12|737069|INFO|ytopt.search.hps.optimizer.optimizer:58] Using skopt.Optimizer with RF base_estimator
+2022-02-25 15:56:12|737069|INFO|ytopt.search.hps.ambs:79] Generating 1 initial points...
+2022-02-25 15:56:13|737069|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'}
+2022-02-25 15:56:13|737069|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:0.00
+2022-02-25 15:56:16|737069|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:2.54
+2022-02-25 15:56:16|737069|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "16", "p1": "threads", "p2": "spread", "p3": " ", "p4": "simd", "p5": "schedule(static,4)", "p6": "static"} --> 1.7976931348623157e+308
+2022-02-25 15:56:16|737069|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} y: 1.7976931348623157e+308
+2022-02-25 15:56:16|737069|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-25 15:56:16|737069|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} --> ('16', 'threads', 'spread', ' ', 'simd', 'schedule(static,4)', 'static'): evaluated objective: 1.7976931348623157e+308
+2022-02-25 15:56:16|737069|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-25 15:56:17|737069|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['32', 'threads', 'master', '#pragma omp parallel for', 'simd', 'schedule(static,4)', 'static'] lie: 0.0
+2022-02-25 15:56:17|737069|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'}
+2022-02-25 15:56:19|737069|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:5.59
+2022-02-25 15:56:19|737069|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "32", "p1": "threads", "p2": "master", "p3": "#pragma omp parallel for", "p4": "simd", "p5": "schedule(static,4)", "p6": "static"} --> 1.7976931348623157e+308
+2022-02-25 15:56:19|737069|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} y: 1.7976931348623157e+308
+2022-02-25 15:56:19|737069|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-25 15:56:19|737069|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} --> ('32', 'threads', 'master', '#pragma omp parallel for', 'simd', 'schedule(static,4)', 'static'): evaluated objective: 1.7976931348623157e+308
+2022-02-25 15:56:19|737069|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-25 15:56:20|737069|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['4', 'cores', 'close', '#pragma omp parallel for', ' ', 'schedule(static,1)', 'dynamic'] lie: 0.0
+2022-02-25 15:56:20|737069|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '4', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,1)', 'p6': 'dynamic'}
+2022-02-25 15:56:21|737069|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:7.52
+2022-02-25 15:56:21|737069|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "4", "p1": "cores", "p2": "close", "p3": "#pragma omp parallel for", "p4": " ", "p5": "schedule(static,1)", "p6": "dynamic"} --> 1.7976931348623157e+308
+2022-02-25 15:56:21|737069|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '4', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,1)', 'p6': 'dynamic'} y: 1.7976931348623157e+308
+2022-02-25 15:56:21|737069|INFO|ytopt.search.hps.ambs:101] Hyperopt driver finishing
+2022-02-25 15:56:41|745394|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-25 15:56:42|745394|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-25 15:56:51|745394|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x149f9f5e1320>', proc_info: {'node_ip_address': '10.70.150.12', 'raylet_ip_address': '10.70.150.12', 'redis_address': '10.70.150.12:6379', 'object_store_address': '/tmp/ray/session_2022-02-25_15-56-42_272790_745394/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-02-25_15-56-42_272790_745394/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-02-25_15-56-42_272790_745394', 'metrics_export_port': 44335, 'gcs_address': '10.70.150.12:46173', 'node_id': '017cbd2a62c8a530ac31b365994686bdca7e0e90d305711b3c8c4d66'}
+2022-02-25 15:56:51|745394|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 10.70.150.12
+2022-02-25 15:56:51|745394|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 44335,
+  'NodeID': '017cbd2a62c8a530ac31b365994686bdca7e0e90d305711b3c8c4d66',
+  'NodeManagerAddress': '10.70.150.12',
+  'NodeManagerHostname': 'gpu2',
+  'NodeManagerPort': 44193,
+  'ObjectManagerPort': 46391,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-02-25_15-56-42_272790_745394/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-02-25_15-56-42_272790_745394/sockets/raylet',
+  'Resources': {'CPU': 256.0,
+                'GPU': 1.0,
+                'accelerator_type:A100': 1.0,
+                'memory': 852950813696.0,
+                'node:10.70.150.12': 1.0,
+                'object_store_memory': 200000000000.0},
+  'alive': True}]
+2022-02-25 15:56:51|745394|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem_all.Problem'}
+2022-02-25 15:56:51|745394|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    p0, Type: Ordinal, Sequence: {2, 4, 8, 16, 21, 32, 42}, Default: 42
+    p1, Type: Categorical, Choices: {cores, threads, sockets}, Default: cores
+    p2, Type: Categorical, Choices: {close, spread, master}, Default: close
+    p3, Type: Categorical, Choices: {#pragma omp parallel for,  }, Default:  
+    p4, Type: Categorical, Choices: {simd,  }, Default:  
+    p5, Type: Categorical, Choices: {schedule(static,1), schedule(static,2), schedule(static,4), schedule(static,8), schedule(static,16), schedule(static,32),  }, Default:  
+    p6, Type: Categorical, Choices: {dynamic, static}, Default: static
+
+2022-02-25 15:56:51|745394|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-02-25 15:56:51|745394|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-02-25 15:56:51|745394|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-02-25 15:56:51|745394|INFO|ytopt.search.hps.optimizer.optimizer:58] Using skopt.Optimizer with RF base_estimator
+2022-02-25 15:56:51|745394|INFO|ytopt.search.hps.ambs:79] Generating 1 initial points...
+2022-02-25 15:56:52|745394|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'}
+2022-02-25 15:56:52|745394|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:0.00
+2022-02-25 15:56:55|745394|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:2.54
+2022-02-25 15:56:55|745394|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "16", "p1": "threads", "p2": "spread", "p3": " ", "p4": "simd", "p5": "schedule(static,4)", "p6": "static"} --> 1.7976931348623157e+308
+2022-02-25 15:56:55|745394|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} y: 1.7976931348623157e+308
+2022-02-25 15:56:55|745394|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-25 15:56:55|745394|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} --> ('16', 'threads', 'spread', ' ', 'simd', 'schedule(static,4)', 'static'): evaluated objective: 1.7976931348623157e+308
+2022-02-25 15:56:55|745394|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-25 15:56:56|745394|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['32', 'threads', 'master', '#pragma omp parallel for', 'simd', 'schedule(static,4)', 'static'] lie: 0.0
+2022-02-25 15:56:56|745394|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'}
+2022-02-25 15:56:58|745394|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:5.72
+2022-02-25 15:56:58|745394|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "32", "p1": "threads", "p2": "master", "p3": "#pragma omp parallel for", "p4": "simd", "p5": "schedule(static,4)", "p6": "static"} --> 1.7976931348623157e+308
+2022-02-25 15:56:58|745394|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} y: 1.7976931348623157e+308
+2022-02-25 15:56:58|745394|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-25 15:56:58|745394|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} --> ('32', 'threads', 'master', '#pragma omp parallel for', 'simd', 'schedule(static,4)', 'static'): evaluated objective: 1.7976931348623157e+308
+2022-02-25 15:56:58|745394|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-25 15:56:59|745394|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['4', 'cores', 'close', '#pragma omp parallel for', ' ', 'schedule(static,1)', 'dynamic'] lie: 0.0
+2022-02-25 15:56:59|745394|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '4', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,1)', 'p6': 'dynamic'}
+2022-02-25 15:57:00|745394|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:7.52
+2022-02-25 15:57:00|745394|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "4", "p1": "cores", "p2": "close", "p3": "#pragma omp parallel for", "p4": " ", "p5": "schedule(static,1)", "p6": "dynamic"} --> 1.7976931348623157e+308
+2022-02-25 15:57:00|745394|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '4', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,1)', 'p6': 'dynamic'} y: 1.7976931348623157e+308
+2022-02-25 15:57:00|745394|INFO|ytopt.search.hps.ambs:101] Hyperopt driver finishing
+2022-02-25 15:58:36|754523|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-25 15:58:36|754523|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-25 15:58:45|754523|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x152e08b3e320>', proc_info: {'node_ip_address': '10.70.150.12', 'raylet_ip_address': '10.70.150.12', 'redis_address': '10.70.150.12:6379', 'object_store_address': '/tmp/ray/session_2022-02-25_15-58-36_815441_754523/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-02-25_15-58-36_815441_754523/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-02-25_15-58-36_815441_754523', 'metrics_export_port': 54266, 'gcs_address': '10.70.150.12:33949', 'node_id': 'd126f0b1d2e27a646db96a0fa062fb587c876647b9d6f33ad65e97a0'}
+2022-02-25 15:58:45|754523|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 10.70.150.12
+2022-02-25 15:58:45|754523|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 54266,
+  'NodeID': 'd126f0b1d2e27a646db96a0fa062fb587c876647b9d6f33ad65e97a0',
+  'NodeManagerAddress': '10.70.150.12',
+  'NodeManagerHostname': 'gpu2',
+  'NodeManagerPort': 43651,
+  'ObjectManagerPort': 41621,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-02-25_15-58-36_815441_754523/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-02-25_15-58-36_815441_754523/sockets/raylet',
+  'Resources': {'CPU': 256.0,
+                'GPU': 1.0,
+                'accelerator_type:A100': 1.0,
+                'memory': 852932938752.0,
+                'node:10.70.150.12': 1.0,
+                'object_store_memory': 200000000000.0},
+  'alive': True}]
+2022-02-25 15:58:45|754523|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem_all.Problem'}
+2022-02-25 15:58:45|754523|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    p0, Type: Ordinal, Sequence: {2, 4, 8, 16, 21, 32, 42}, Default: 42
+    p1, Type: Categorical, Choices: {cores, threads, sockets}, Default: cores
+    p2, Type: Categorical, Choices: {close, spread, master}, Default: close
+    p3, Type: Categorical, Choices: {#pragma omp parallel for,  }, Default:  
+    p4, Type: Categorical, Choices: {simd,  }, Default:  
+    p5, Type: Categorical, Choices: {schedule(static,1), schedule(static,2), schedule(static,4), schedule(static,8), schedule(static,16), schedule(static,32),  }, Default:  
+    p6, Type: Categorical, Choices: {dynamic, static}, Default: static
+
+2022-02-25 15:58:45|754523|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-02-25 15:58:45|754523|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-02-25 15:58:45|754523|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-02-25 15:58:45|754523|INFO|ytopt.search.hps.optimizer.optimizer:58] Using skopt.Optimizer with RF base_estimator
+2022-02-25 15:58:45|754523|INFO|ytopt.search.hps.ambs:79] Generating 1 initial points...
+2022-02-25 15:58:47|754523|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'}
+2022-02-25 15:58:47|754523|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:0.00
+2022-02-25 15:58:49|754523|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:2.54
+2022-02-25 15:58:51|754523|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:4.54
+2022-02-25 15:58:53|754523|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:6.54
+2022-02-25 15:58:55|754523|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:8.54
+2022-02-25 15:58:57|754523|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:10.54
+2022-02-25 15:58:58|754523|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "16", "p1": "threads", "p2": "spread", "p3": " ", "p4": "simd", "p5": "schedule(static,4)", "p6": "static"} --> 0.041965
+2022-02-25 15:58:58|754523|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} y: 0.041965
+2022-02-25 15:58:58|754523|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-25 15:58:58|754523|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} --> ('16', 'threads', 'spread', ' ', 'simd', 'schedule(static,4)', 'static'): evaluated objective: 0.041965
+2022-02-25 15:58:58|754523|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-25 15:58:59|754523|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['32', 'threads', 'master', '#pragma omp parallel for', 'simd', 'schedule(static,4)', 'static'] lie: 0.041965
+2022-02-25 15:58:59|754523|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'}
+2022-02-25 15:59:01|754523|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:13.84
+2022-02-25 15:59:01|754523|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:14.54
+2022-02-25 15:59:03|754523|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:16.54
+2022-02-25 15:59:05|754523|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:18.50
+2022-02-25 15:59:07|754523|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:20.54
+2022-02-25 15:59:09|754523|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:22.54
+2022-02-25 15:59:09|754523|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "32", "p1": "threads", "p2": "master", "p3": "#pragma omp parallel for", "p4": "simd", "p5": "schedule(static,4)", "p6": "static"} --> 0.044735
+2022-02-25 15:59:09|754523|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} y: 0.044735
+2022-02-25 15:59:09|754523|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-25 15:59:09|754523|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} --> ('32', 'threads', 'master', '#pragma omp parallel for', 'simd', 'schedule(static,4)', 'static'): evaluated objective: 0.044735
+2022-02-25 15:59:10|754523|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-25 15:59:11|754523|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['4', 'cores', 'close', '#pragma omp parallel for', ' ', 'schedule(static,1)', 'dynamic'] lie: 0.044735
+2022-02-25 15:59:11|754523|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '4', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,1)', 'p6': 'dynamic'}
+2022-02-25 15:59:12|754523|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:25.54
+2022-02-25 15:59:13|754523|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:26.54
+2022-02-25 15:59:15|754523|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:28.54
+2022-02-25 15:59:17|754523|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:30.54
+2022-02-25 15:59:19|754523|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:32.54
+2022-02-25 15:59:21|754523|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:34.54
+2022-02-25 15:59:21|754523|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "4", "p1": "cores", "p2": "close", "p3": "#pragma omp parallel for", "p4": " ", "p5": "schedule(static,1)", "p6": "dynamic"} --> 0.101465
+2022-02-25 15:59:21|754523|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '4', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,1)', 'p6': 'dynamic'} y: 0.101465
+2022-02-25 15:59:21|754523|INFO|ytopt.search.hps.ambs:101] Hyperopt driver finishing
+2022-02-25 16:31:56|855773|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-25 16:31:56|855773|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-25 16:32:06|855773|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x155430caf290>', proc_info: {'node_ip_address': '10.70.150.12', 'raylet_ip_address': '10.70.150.12', 'redis_address': '10.70.150.12:6379', 'object_store_address': '/tmp/ray/session_2022-02-25_16-31-56_691545_855773/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-02-25_16-31-56_691545_855773/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-02-25_16-31-56_691545_855773', 'metrics_export_port': 59007, 'gcs_address': '10.70.150.12:46293', 'node_id': 'b24ce52a8e8506f3450913fc339dbdd20916af1a746d1a84c1f1130d'}
+2022-02-25 16:32:06|855773|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 10.70.150.12
+2022-02-25 16:32:06|855773|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 59007,
+  'NodeID': 'b24ce52a8e8506f3450913fc339dbdd20916af1a746d1a84c1f1130d',
+  'NodeManagerAddress': '10.70.150.12',
+  'NodeManagerHostname': 'gpu2',
+  'NodeManagerPort': 43681,
+  'ObjectManagerPort': 35389,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-02-25_16-31-56_691545_855773/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-02-25_16-31-56_691545_855773/sockets/raylet',
+  'Resources': {'CPU': 256.0,
+                'GPU': 1.0,
+                'accelerator_type:A100': 1.0,
+                'memory': 852830125056.0,
+                'node:10.70.150.12': 1.0,
+                'object_store_memory': 200000000000.0},
+  'alive': True}]
+2022-02-25 16:32:06|855773|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem_all.Problem'}
+2022-02-25 16:32:06|855773|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    p0, Type: Ordinal, Sequence: {2, 4, 8, 16, 21, 32, 42}, Default: 42
+    p1, Type: Categorical, Choices: {cores, threads, sockets}, Default: cores
+    p2, Type: Categorical, Choices: {close, spread, master}, Default: close
+    p3, Type: Categorical, Choices: {#pragma omp parallel for,  }, Default:  
+    p4, Type: Categorical, Choices: {simd,  }, Default:  
+    p5, Type: Categorical, Choices: {schedule(static,1), schedule(static,2), schedule(static,4), schedule(static,8), schedule(static,16), schedule(static,32),  }, Default:  
+    p6, Type: Categorical, Choices: {dynamic, static}, Default: static
+
+2022-02-25 16:32:06|855773|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-02-25 16:32:06|855773|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-02-25 16:32:06|855773|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-02-25 16:32:06|855773|INFO|ytopt.search.hps.optimizer.optimizer:58] Using skopt.Optimizer with RF base_estimator
+2022-02-25 16:32:06|855773|INFO|ytopt.search.hps.ambs:79] Generating 1 initial points...
+2022-02-25 16:32:07|855773|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'}
+2022-02-25 16:32:07|855773|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:0.00
+2022-02-25 16:32:10|855773|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:2.54
+2022-02-25 16:32:12|855773|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:4.54
+2022-02-25 16:32:14|855773|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:6.54
+2022-02-25 16:32:16|855773|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:8.54
+2022-02-25 16:32:18|855773|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:10.54
+2022-02-25 16:32:18|855773|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "16", "p1": "threads", "p2": "spread", "p3": " ", "p4": "simd", "p5": "schedule(static,4)", "p6": "static"} --> 0.041795
+2022-02-25 16:32:18|855773|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} y: 0.041795
+2022-02-25 16:32:18|855773|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-25 16:32:18|855773|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} --> ('16', 'threads', 'spread', ' ', 'simd', 'schedule(static,4)', 'static'): evaluated objective: 0.041795
+2022-02-25 16:32:18|855773|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-25 16:32:19|855773|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['32', 'threads', 'master', '#pragma omp parallel for', 'simd', 'schedule(static,4)', 'static'] lie: 0.041795
+2022-02-25 16:32:19|855773|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'}
+2022-02-25 16:32:21|855773|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:13.56
+2022-02-25 16:32:22|855773|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:14.54
+2022-02-25 16:32:24|855773|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:16.54
+2022-02-25 16:32:26|855773|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:18.54
+2022-02-25 16:32:28|855773|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:20.54
+2022-02-25 16:32:28|855773|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "32", "p1": "threads", "p2": "master", "p3": "#pragma omp parallel for", "p4": "simd", "p5": "schedule(static,4)", "p6": "static"} --> 0.049780000000000005
+2022-02-25 16:32:28|855773|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} y: 0.049780000000000005
+2022-02-25 16:32:28|855773|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-25 16:32:28|855773|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} --> ('32', 'threads', 'master', '#pragma omp parallel for', 'simd', 'schedule(static,4)', 'static'): evaluated objective: 0.049780000000000005
+2022-02-25 16:32:29|855773|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-25 16:32:30|855773|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['4', 'cores', 'close', '#pragma omp parallel for', ' ', 'schedule(static,1)', 'dynamic'] lie: 0.049780000000000005
+2022-02-25 16:32:30|855773|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '4', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,1)', 'p6': 'dynamic'}
+2022-02-25 16:32:31|855773|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:24.04
+2022-02-25 16:32:32|855773|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:24.58
+2022-02-25 16:32:34|855773|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:26.58
+2022-02-25 16:32:36|855773|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:28.58
+2022-02-25 16:32:38|855773|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:30.58
+2022-02-25 16:32:40|855773|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:32.58
+2022-02-25 16:32:40|855773|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "4", "p1": "cores", "p2": "close", "p3": "#pragma omp parallel for", "p4": " ", "p5": "schedule(static,1)", "p6": "dynamic"} --> 0.10017000000000001
+2022-02-25 16:32:40|855773|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '4', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,1)', 'p6': 'dynamic'} y: 0.10017000000000001
+2022-02-25 16:32:40|855773|INFO|ytopt.search.hps.ambs:101] Hyperopt driver finishing
+2022-02-25 16:40:00|3943778|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-25 16:40:02|3943778|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-25 16:40:12|3943778|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x14976f76a320>', proc_info: {'node_ip_address': '10.70.150.16', 'raylet_ip_address': '10.70.150.16', 'redis_address': '10.70.150.16:6379', 'object_store_address': '/tmp/ray/session_2022-02-25_16-40-02_899214_3943778/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-02-25_16-40-02_899214_3943778/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-02-25_16-40-02_899214_3943778', 'metrics_export_port': 49405, 'gcs_address': '10.70.150.16:46649', 'node_id': '52cc4f481e8363eb01a35f234b52ce178753dd7a6e3cab608ea1fe32'}
+2022-02-25 16:40:12|3943778|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 10.70.150.16
+2022-02-25 16:40:12|3943778|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 49405,
+  'NodeID': '52cc4f481e8363eb01a35f234b52ce178753dd7a6e3cab608ea1fe32',
+  'NodeManagerAddress': '10.70.150.16',
+  'NodeManagerHostname': 'gpu6',
+  'NodeManagerPort': 41855,
+  'ObjectManagerPort': 37493,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-02-25_16-40-02_899214_3943778/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-02-25_16-40-02_899214_3943778/sockets/raylet',
+  'Resources': {'CPU': 256.0,
+                'GPU': 1.0,
+                'accelerator_type:A100': 1.0,
+                'memory': 823966444544.0,
+                'node:10.70.150.16': 1.0,
+                'object_store_memory': 200000000000.0},
+  'alive': True}]
+2022-02-25 16:40:12|3943778|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem_all.Problem'}
+2022-02-25 16:40:12|3943778|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    p0, Type: Ordinal, Sequence: {2, 4, 8, 16, 21, 32, 42}, Default: 42
+    p1, Type: Categorical, Choices: {cores, threads, sockets}, Default: cores
+    p2, Type: Categorical, Choices: {close, spread, master}, Default: close
+    p3, Type: Categorical, Choices: {#pragma omp parallel for,  }, Default:  
+    p4, Type: Categorical, Choices: {simd,  }, Default:  
+    p5, Type: Categorical, Choices: {schedule(static,1), schedule(static,2), schedule(static,4), schedule(static,8), schedule(static,16), schedule(static,32),  }, Default:  
+    p6, Type: Categorical, Choices: {dynamic, static}, Default: static
+
+2022-02-25 16:40:12|3943778|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-02-25 16:40:12|3943778|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-02-25 16:40:12|3943778|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-02-25 16:40:12|3943778|INFO|ytopt.search.hps.optimizer.optimizer:58] Using skopt.Optimizer with RF base_estimator
+2022-02-25 16:40:12|3943778|INFO|ytopt.search.hps.ambs:79] Generating 1 initial points...
+2022-02-25 16:40:13|3943778|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'}
+2022-02-25 16:40:13|3943778|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:0.00
+2022-02-25 16:40:16|3943778|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:2.54
+2022-02-25 16:40:18|3943778|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:4.54
+2022-02-25 16:40:20|3943778|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:6.54
+2022-02-25 16:40:22|3943778|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:8.54
+2022-02-25 16:40:24|3943778|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:10.54
+2022-02-25 16:40:26|3943778|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:12.54
+2022-02-25 16:40:26|3943778|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "16", "p1": "threads", "p2": "spread", "p3": " ", "p4": "simd", "p5": "schedule(static,4)", "p6": "static"} --> 0.042045
+2022-02-25 16:40:26|3943778|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} y: 0.042045
+2022-02-25 16:40:26|3943778|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-25 16:40:26|3943778|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} --> ('16', 'threads', 'spread', ' ', 'simd', 'schedule(static,4)', 'static'): evaluated objective: 0.042045
+2022-02-25 16:40:27|3943778|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-25 16:40:28|3943778|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['32', 'threads', 'master', '#pragma omp parallel for', 'simd', 'schedule(static,4)', 'static'] lie: 0.042045
+2022-02-25 16:40:28|3943778|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'}
+2022-02-25 16:40:29|3943778|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:16.07
+2022-02-25 16:40:30|3943778|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:16.60
+2022-02-25 16:40:32|3943778|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:18.61
+2022-02-25 16:40:34|3943778|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:20.61
+2022-02-25 16:40:36|3943778|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:22.61
+2022-02-25 16:40:38|3943778|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:24.61
+2022-02-25 16:40:38|3943778|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "32", "p1": "threads", "p2": "master", "p3": "#pragma omp parallel for", "p4": "simd", "p5": "schedule(static,4)", "p6": "static"} --> 0.0487
+2022-02-25 16:40:38|3943778|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} y: 0.0487
+2022-02-25 16:40:38|3943778|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-25 16:40:38|3943778|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} --> ('32', 'threads', 'master', '#pragma omp parallel for', 'simd', 'schedule(static,4)', 'static'): evaluated objective: 0.0487
+2022-02-25 16:40:38|3943778|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-25 16:40:39|3943778|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['4', 'cores', 'close', '#pragma omp parallel for', ' ', 'schedule(static,1)', 'dynamic'] lie: 0.0487
+2022-02-25 16:40:39|3943778|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '4', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,1)', 'p6': 'dynamic'}
+2022-02-25 16:40:41|3943778|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:27.73
+2022-02-25 16:40:42|3943778|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:28.60
+2022-02-25 16:40:44|3943778|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:30.60
+2022-02-25 16:40:46|3943778|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:32.61
+2022-02-25 16:40:48|3943778|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:34.61
+2022-02-25 16:40:50|3943778|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:36.61
+2022-02-25 16:40:50|3943778|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "4", "p1": "cores", "p2": "close", "p3": "#pragma omp parallel for", "p4": " ", "p5": "schedule(static,1)", "p6": "dynamic"} --> 0.10141
+2022-02-25 16:40:50|3943778|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '4', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,1)', 'p6': 'dynamic'} y: 0.10141
+2022-02-25 16:40:50|3943778|INFO|ytopt.search.hps.ambs:101] Hyperopt driver finishing
+2022-02-25 16:46:55|579356|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-25 16:46:58|579356|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-25 16:47:07|579356|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x14a8d8df1320>', proc_info: {'node_ip_address': '10.70.150.16', 'raylet_ip_address': '10.70.150.16', 'redis_address': '10.70.150.16:6379', 'object_store_address': '/tmp/ray/session_2022-02-25_16-46-58_598066_579356/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-02-25_16-46-58_598066_579356/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-02-25_16-46-58_598066_579356', 'metrics_export_port': 48836, 'gcs_address': '10.70.150.16:35561', 'node_id': '194ff2e5eea2d8c2606ebca1a241489749aff96cf5abecc1f42242c4'}
+2022-02-25 16:47:07|579356|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 10.70.150.16
+2022-02-25 16:47:07|579356|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 48836,
+  'NodeID': '194ff2e5eea2d8c2606ebca1a241489749aff96cf5abecc1f42242c4',
+  'NodeManagerAddress': '10.70.150.16',
+  'NodeManagerHostname': 'gpu6',
+  'NodeManagerPort': 35941,
+  'ObjectManagerPort': 41993,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-02-25_16-46-58_598066_579356/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-02-25_16-46-58_598066_579356/sockets/raylet',
+  'Resources': {'CPU': 256.0,
+                'GPU': 1.0,
+                'accelerator_type:A100': 1.0,
+                'memory': 816341785600.0,
+                'node:10.70.150.16': 1.0,
+                'object_store_memory': 200000000000.0},
+  'alive': True}]
+2022-02-25 16:47:07|579356|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem_all.Problem'}
+2022-02-25 16:47:07|579356|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    p0, Type: Ordinal, Sequence: {2, 4, 8, 16, 21, 32, 42}, Default: 42
+    p1, Type: Categorical, Choices: {cores, threads, sockets}, Default: cores
+    p2, Type: Categorical, Choices: {close, spread, master}, Default: close
+    p3, Type: Categorical, Choices: {#pragma omp parallel for,  }, Default:  
+    p4, Type: Categorical, Choices: {simd,  }, Default:  
+    p5, Type: Categorical, Choices: {schedule(static,1), schedule(static,2), schedule(static,4), schedule(static,8), schedule(static,16), schedule(static,32),  }, Default:  
+    p6, Type: Categorical, Choices: {dynamic, static}, Default: static
+
+2022-02-25 16:47:07|579356|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-02-25 16:47:07|579356|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-02-25 16:47:07|579356|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-02-25 16:47:07|579356|INFO|ytopt.search.hps.optimizer.optimizer:58] Using skopt.Optimizer with RF base_estimator
+2022-02-25 16:47:07|579356|INFO|ytopt.search.hps.ambs:79] Generating 1 initial points...
+2022-02-25 16:47:09|579356|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'}
+2022-02-25 16:47:09|579356|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:0.00
+2022-02-25 16:47:11|579356|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:2.54
+2022-02-25 16:47:13|579356|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:4.54
+2022-02-25 16:47:15|579356|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:6.54
+2022-02-25 16:47:17|579356|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:8.54
+2022-02-25 16:47:19|579356|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:10.54
+2022-02-25 16:47:21|579356|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:12.54
+2022-02-25 16:47:22|579356|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "16", "p1": "threads", "p2": "spread", "p3": " ", "p4": "simd", "p5": "schedule(static,4)", "p6": "static"} --> 0.044590000000000005
+2022-02-25 16:47:22|579356|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} y: 0.044590000000000005
+2022-02-25 16:47:22|579356|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-25 16:47:22|579356|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} --> ('16', 'threads', 'spread', ' ', 'simd', 'schedule(static,4)', 'static'): evaluated objective: 0.044590000000000005
+2022-02-25 16:47:23|579356|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-25 16:47:23|579356|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['32', 'threads', 'master', '#pragma omp parallel for', 'simd', 'schedule(static,4)', 'static'] lie: 0.044590000000000005
+2022-02-25 16:47:23|579356|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'}
+2022-02-25 16:47:25|579356|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:16.09
+2022-02-25 16:47:25|579356|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:16.62
+2022-02-25 16:47:27|579356|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:18.62
+2022-02-25 16:47:29|579356|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:20.62
+2022-02-25 16:47:31|579356|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:22.62
+2022-02-25 16:47:33|579356|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:24.62
+2022-02-25 16:47:33|579356|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "32", "p1": "threads", "p2": "master", "p3": "#pragma omp parallel for", "p4": "simd", "p5": "schedule(static,4)", "p6": "static"} --> 0.06489
+2022-02-25 16:47:33|579356|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} y: 0.06489
+2022-02-25 16:47:33|579356|INFO|ytopt.search.hps.ambs:92] Refitting model with batch of 1 evals
+2022-02-25 16:47:33|579356|DEBUG|ytopt.search.hps.optimizer.optimizer:132] tell: {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} --> ('32', 'threads', 'master', '#pragma omp parallel for', 'simd', 'schedule(static,4)', 'static'): evaluated objective: 0.06489
+2022-02-25 16:47:34|579356|INFO|ytopt.search.hps.ambs:94] Drawing 1 points with strategy cl_max
+2022-02-25 16:47:35|579356|DEBUG|ytopt.search.hps.optimizer.optimizer:97] _ask: ['4', 'cores', 'close', '#pragma omp parallel for', ' ', 'schedule(static,1)', 'dynamic'] lie: 0.06489
+2022-02-25 16:47:35|579356|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '4', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,1)', 'p6': 'dynamic'}
+2022-02-25 16:47:36|579356|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:27.63
+2022-02-25 16:47:37|579356|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:28.62
+2022-02-25 16:47:39|579356|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:30.62
+2022-02-25 16:47:41|579356|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:32.62
+2022-02-25 16:47:43|579356|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:34.62
+2022-02-25 16:47:45|579356|INFO|ytopt.search.hps.ambs:85] Elapsed time: 00:00:36.62
+2022-02-25 16:47:45|579356|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "4", "p1": "cores", "p2": "close", "p3": "#pragma omp parallel for", "p4": " ", "p5": "schedule(static,1)", "p6": "dynamic"} --> 0.10000999999999999
+2022-02-25 16:47:45|579356|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '4', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,1)', 'p6': 'dynamic'} y: 0.10000999999999999
+2022-02-25 16:47:45|579356|INFO|ytopt.search.hps.ambs:101] Hyperopt driver finishing
+2022-02-25 18:09:06|2660447|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-25 18:09:08|2660447|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-25 18:09:26|2660447|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x1498b2fea200>', proc_info: {'node_ip_address': '10.70.150.16', 'raylet_ip_address': '10.70.150.16', 'redis_address': '10.70.150.16:34020', 'object_store_address': '/tmp/ray/session_2022-02-25_18-09-08_963601_2660447/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-02-25_18-09-08_963601_2660447/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-02-25_18-09-08_963601_2660447', 'metrics_export_port': 40758, 'gcs_address': '10.70.150.16:45171', 'node_id': '983444800e9f6be17ae2859209353bb678cacd05fd3736089e163193'}
+2022-02-25 18:09:26|2660447|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 10.70.150.16
+2022-02-25 18:09:26|2660447|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 40758,
+  'NodeID': '983444800e9f6be17ae2859209353bb678cacd05fd3736089e163193',
+  'NodeManagerAddress': '10.70.150.16',
+  'NodeManagerHostname': 'gpu6',
+  'NodeManagerPort': 33439,
+  'ObjectManagerPort': 36133,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-02-25_18-09-08_963601_2660447/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-02-25_18-09-08_963601_2660447/sockets/raylet',
+  'Resources': {'CPU': 256.0,
+                'GPU': 1.0,
+                'accelerator_type:A100': 1.0,
+                'memory': 817320082432.0,
+                'node:10.70.150.16': 1.0,
+                'object_store_memory': 200000000000.0},
+  'alive': True}]
+2022-02-25 18:09:26|2660447|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem_all.Problem'}
+2022-02-25 18:09:26|2660447|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    p0, Type: Ordinal, Sequence: {2, 4, 8, 16, 21, 32, 42}, Default: 42
+    p1, Type: Categorical, Choices: {cores, threads, sockets}, Default: cores
+    p2, Type: Categorical, Choices: {close, spread, master}, Default: close
+    p3, Type: Categorical, Choices: {#pragma omp parallel for,  }, Default:  
+    p4, Type: Categorical, Choices: {simd,  }, Default:  
+    p5, Type: Categorical, Choices: {schedule(static,1), schedule(static,2), schedule(static,4), schedule(static,8), schedule(static,16), schedule(static,32),  }, Default:  
+    p6, Type: Categorical, Choices: {dynamic, static}, Default: static
+
+2022-02-25 18:09:26|2660447|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-02-25 18:09:26|2660447|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-02-25 18:09:26|2660447|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-02-25 18:09:26|2660447|INFO|ytopt.search.hps.optimizer.optimizer:64] Using skopt.Optimizer with RF base_estimator
+2022-02-25 18:09:26|2660447|INFO|ytopt.search.hps.ambs:94] Generating 1 initial points...
+2022-02-25 18:09:27|2660447|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'}
+2022-02-25 18:09:27|2660447|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:0.00
+2022-02-25 18:09:29|2660447|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:2.54
+2022-02-25 18:09:31|2660447|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:4.54
+2022-02-25 18:09:33|2660447|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:6.54
+2022-02-25 18:09:35|2660447|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:8.54
+2022-02-25 18:09:37|2660447|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:10.54
+2022-02-25 18:09:39|2660447|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:12.54
+2022-02-25 18:09:39|2660447|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "16", "p1": "threads", "p2": "spread", "p3": " ", "p4": "simd", "p5": "schedule(static,4)", "p6": "static"} --> 0.042255
+2022-02-25 18:09:39|2660447|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} y: 0.042255
+2022-02-25 18:09:39|2660447|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:09:39|2660447|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} --> ('16', 'threads', 'spread', ' ', 'simd', 'schedule(static,4)', 'static'): evaluated objective: 0.042255
+2022-02-25 18:09:40|2660447|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:09:41|2660447|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['32', 'threads', 'master', '#pragma omp parallel for', 'simd', 'schedule(static,4)', 'static'] lie: 0.042255
+2022-02-25 18:09:41|2660447|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'}
+2022-02-25 18:09:43|2660447|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:15.60
+2022-02-25 18:09:43|2660447|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:16.54
+2022-02-25 18:09:45|2660447|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:18.54
+2022-02-25 18:09:47|2660447|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:20.54
+2022-02-25 18:09:49|2660447|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:22.54
+2022-02-25 18:09:51|2660447|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:24.54
+2022-02-25 18:09:51|2660447|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "32", "p1": "threads", "p2": "master", "p3": "#pragma omp parallel for", "p4": "simd", "p5": "schedule(static,4)", "p6": "static"} --> 0.05105
+2022-02-25 18:09:51|2660447|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} y: 0.05105
+2022-02-25 18:09:51|2660447|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:09:51|2660447|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} --> ('32', 'threads', 'master', '#pragma omp parallel for', 'simd', 'schedule(static,4)', 'static'): evaluated objective: 0.05105
+2022-02-25 18:09:52|2660447|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:09:53|2660447|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['4', 'cores', 'close', '#pragma omp parallel for', ' ', 'schedule(static,1)', 'dynamic'] lie: 0.05105
+2022-02-25 18:09:53|2660447|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '4', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,1)', 'p6': 'dynamic'}
+2022-02-25 18:09:54|2660447|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:27.55
+2022-02-25 18:09:55|2660447|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:28.54
+2022-02-25 18:09:57|2660447|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:30.54
+2022-02-25 18:09:59|2660447|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:32.54
+2022-02-25 18:10:01|2660447|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:34.54
+2022-02-25 18:10:03|2660447|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:36.54
+2022-02-25 18:10:03|2660447|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "4", "p1": "cores", "p2": "close", "p3": "#pragma omp parallel for", "p4": " ", "p5": "schedule(static,1)", "p6": "dynamic"} --> 0.12930999999999998
+2022-02-25 18:10:03|2660447|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '4', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,1)', 'p6': 'dynamic'} y: 0.12930999999999998
+2022-02-25 18:10:03|2660447|INFO|ytopt.search.hps.ambs:116] Hyperopt driver finishing
+2022-02-25 18:10:09|2677911|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-25 18:10:10|2677911|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-25 18:10:26|2677911|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x154a95f12290>', proc_info: {'node_ip_address': '10.70.150.16', 'raylet_ip_address': '10.70.150.16', 'redis_address': '10.70.150.16:6379', 'object_store_address': '/tmp/ray/session_2022-02-25_18-10-10_196789_2677911/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-02-25_18-10-10_196789_2677911/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-02-25_18-10-10_196789_2677911', 'metrics_export_port': 55257, 'gcs_address': '10.70.150.16:39485', 'node_id': '1c13e328fe0b101f1f41e1344db988a8d8de8317a793cf2f5081c880'}
+2022-02-25 18:10:26|2677911|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 10.70.150.16
+2022-02-25 18:10:26|2677911|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 55257,
+  'NodeID': '1c13e328fe0b101f1f41e1344db988a8d8de8317a793cf2f5081c880',
+  'NodeManagerAddress': '10.70.150.16',
+  'NodeManagerHostname': 'gpu6',
+  'NodeManagerPort': 40841,
+  'ObjectManagerPort': 33613,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-02-25_18-10-10_196789_2677911/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-02-25_18-10-10_196789_2677911/sockets/raylet',
+  'Resources': {'CPU': 256.0,
+                'GPU': 1.0,
+                'accelerator_type:A100': 1.0,
+                'memory': 817199922176.0,
+                'node:10.70.150.16': 1.0,
+                'object_store_memory': 200000000000.0},
+  'alive': True}]
+2022-02-25 18:10:26|2677911|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem_all.Problem'}
+2022-02-25 18:10:26|2677911|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    p0, Type: Ordinal, Sequence: {2, 4, 8, 16, 21, 32, 42}, Default: 42
+    p1, Type: Categorical, Choices: {cores, threads, sockets}, Default: cores
+    p2, Type: Categorical, Choices: {close, spread, master}, Default: close
+    p3, Type: Categorical, Choices: {#pragma omp parallel for,  }, Default:  
+    p4, Type: Categorical, Choices: {simd,  }, Default:  
+    p5, Type: Categorical, Choices: {schedule(static,1), schedule(static,2), schedule(static,4), schedule(static,8), schedule(static,16), schedule(static,32),  }, Default:  
+    p6, Type: Categorical, Choices: {dynamic, static}, Default: static
+
+2022-02-25 18:10:26|2677911|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-02-25 18:10:26|2677911|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-02-25 18:10:26|2677911|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-02-25 18:10:26|2677911|INFO|ytopt.search.hps.optimizer.optimizer:64] Using skopt.Optimizer with DUMMY base_estimator
+2022-02-25 18:10:26|2677911|INFO|ytopt.search.hps.ambs:94] Generating 1 initial points...
+2022-02-25 18:10:27|2677911|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'}
+2022-02-25 18:10:27|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:0.00
+2022-02-25 18:10:29|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:2.54
+2022-02-25 18:10:31|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:4.54
+2022-02-25 18:10:33|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:6.54
+2022-02-25 18:10:35|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:8.54
+2022-02-25 18:10:37|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:10.54
+2022-02-25 18:10:39|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:12.54
+2022-02-25 18:10:39|2677911|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "16", "p1": "threads", "p2": "spread", "p3": " ", "p4": "simd", "p5": "schedule(static,4)", "p6": "static"} --> 0.060715000000000005
+2022-02-25 18:10:39|2677911|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} y: 0.060715000000000005
+2022-02-25 18:10:39|2677911|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:10:39|2677911|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} --> ('16', 'threads', 'spread', ' ', 'simd', 'schedule(static,4)', 'static'): evaluated objective: 0.060715000000000005
+2022-02-25 18:10:39|2677911|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:10:40|2677911|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['4', 'sockets', 'close', ' ', 'simd', 'schedule(static,1)', 'dynamic'] lie: 0.060715000000000005
+2022-02-25 18:10:40|2677911|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '4', 'p1': 'sockets', 'p2': 'close', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,1)', 'p6': 'dynamic'}
+2022-02-25 18:10:41|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:14.56
+2022-02-25 18:10:43|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:16.54
+2022-02-25 18:10:45|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:18.54
+2022-02-25 18:10:47|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:20.54
+2022-02-25 18:10:49|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:22.54
+2022-02-25 18:10:49|2677911|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "4", "p1": "sockets", "p2": "close", "p3": " ", "p4": "simd", "p5": "schedule(static,1)", "p6": "dynamic"} --> 0.10182
+2022-02-25 18:10:49|2677911|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '4', 'p1': 'sockets', 'p2': 'close', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,1)', 'p6': 'dynamic'} y: 0.10182
+2022-02-25 18:10:49|2677911|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:10:49|2677911|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '4', 'p1': 'sockets', 'p2': 'close', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,1)', 'p6': 'dynamic'} --> ('4', 'sockets', 'close', ' ', 'simd', 'schedule(static,1)', 'dynamic'): evaluated objective: 0.10182
+2022-02-25 18:10:49|2677911|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:10:50|2677911|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['32', 'threads', 'master', '#pragma omp parallel for', 'simd', 'schedule(static,4)', 'static'] lie: 0.10182
+2022-02-25 18:10:50|2677911|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'}
+2022-02-25 18:10:51|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:24.59
+2022-02-25 18:10:53|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:26.54
+2022-02-25 18:10:55|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:28.54
+2022-02-25 18:10:57|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:30.54
+2022-02-25 18:10:59|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:32.54
+2022-02-25 18:10:59|2677911|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "32", "p1": "threads", "p2": "master", "p3": "#pragma omp parallel for", "p4": "simd", "p5": "schedule(static,4)", "p6": "static"} --> 0.045205
+2022-02-25 18:10:59|2677911|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} y: 0.045205
+2022-02-25 18:10:59|2677911|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:10:59|2677911|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} --> ('32', 'threads', 'master', '#pragma omp parallel for', 'simd', 'schedule(static,4)', 'static'): evaluated objective: 0.045205
+2022-02-25 18:10:59|2677911|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:11:00|2677911|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['2', 'threads', 'master', '#pragma omp parallel for', 'simd', 'schedule(static,32)', 'static'] lie: 0.10182
+2022-02-25 18:11:00|2677911|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '2', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,32)', 'p6': 'static'}
+2022-02-25 18:11:01|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:34.61
+2022-02-25 18:11:03|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:36.54
+2022-02-25 18:11:05|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:38.54
+2022-02-25 18:11:07|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:40.54
+2022-02-25 18:11:09|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:42.54
+2022-02-25 18:11:10|2677911|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "2", "p1": "threads", "p2": "master", "p3": "#pragma omp parallel for", "p4": "simd", "p5": "schedule(static,32)", "p6": "static"} --> 0.19186999999999999
+2022-02-25 18:11:10|2677911|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '2', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,32)', 'p6': 'static'} y: 0.19186999999999999
+2022-02-25 18:11:10|2677911|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:11:10|2677911|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '2', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,32)', 'p6': 'static'} --> ('2', 'threads', 'master', '#pragma omp parallel for', 'simd', 'schedule(static,32)', 'static'): evaluated objective: 0.19186999999999999
+2022-02-25 18:11:10|2677911|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:11:10|2677911|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['4', 'cores', 'close', '#pragma omp parallel for', ' ', 'schedule(static,1)', 'dynamic'] lie: 0.19186999999999999
+2022-02-25 18:11:10|2677911|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '4', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,1)', 'p6': 'dynamic'}
+2022-02-25 18:11:12|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:44.92
+2022-02-25 18:11:13|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:46.54
+2022-02-25 18:11:15|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:48.54
+2022-02-25 18:11:17|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:50.55
+2022-02-25 18:11:19|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:52.54
+2022-02-25 18:11:19|2677911|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "4", "p1": "cores", "p2": "close", "p3": "#pragma omp parallel for", "p4": " ", "p5": "schedule(static,1)", "p6": "dynamic"} --> 0.10094
+2022-02-25 18:11:19|2677911|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '4', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,1)', 'p6': 'dynamic'} y: 0.10094
+2022-02-25 18:11:19|2677911|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:11:19|2677911|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '4', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,1)', 'p6': 'dynamic'} --> ('4', 'cores', 'close', '#pragma omp parallel for', ' ', 'schedule(static,1)', 'dynamic'): evaluated objective: 0.10094
+2022-02-25 18:11:19|2677911|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:11:20|2677911|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['4', 'threads', 'master', '#pragma omp parallel for', ' ', 'schedule(static,16)', 'dynamic'] lie: 0.19186999999999999
+2022-02-25 18:11:20|2677911|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '4', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,16)', 'p6': 'dynamic'}
+2022-02-25 18:11:22|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:54.84
+2022-02-25 18:11:23|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:56.50
+2022-02-25 18:11:25|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:58.54
+2022-02-25 18:11:27|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:0.54
+2022-02-25 18:11:29|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:2.54
+2022-02-25 18:11:30|2677911|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "4", "p1": "threads", "p2": "master", "p3": "#pragma omp parallel for", "p4": " ", "p5": "schedule(static,16)", "p6": "dynamic"} --> 0.10305500000000001
+2022-02-25 18:11:30|2677911|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '4', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,16)', 'p6': 'dynamic'} y: 0.10305500000000001
+2022-02-25 18:11:30|2677911|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:11:30|2677911|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '4', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,16)', 'p6': 'dynamic'} --> ('4', 'threads', 'master', '#pragma omp parallel for', ' ', 'schedule(static,16)', 'dynamic'): evaluated objective: 0.10305500000000001
+2022-02-25 18:11:30|2677911|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:11:30|2677911|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['4', 'cores', 'master', ' ', 'simd', 'schedule(static,8)', 'static'] lie: 0.19186999999999999
+2022-02-25 18:11:30|2677911|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '4', 'p1': 'cores', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,8)', 'p6': 'static'}
+2022-02-25 18:11:32|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:4.93
+2022-02-25 18:11:33|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:6.54
+2022-02-25 18:11:35|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:8.54
+2022-02-25 18:11:37|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:10.54
+2022-02-25 18:11:39|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:12.54
+2022-02-25 18:11:40|2677911|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "4", "p1": "cores", "p2": "master", "p3": " ", "p4": "simd", "p5": "schedule(static,8)", "p6": "static"} --> 0.100285
+2022-02-25 18:11:40|2677911|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '4', 'p1': 'cores', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,8)', 'p6': 'static'} y: 0.100285
+2022-02-25 18:11:40|2677911|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:11:40|2677911|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '4', 'p1': 'cores', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,8)', 'p6': 'static'} --> ('4', 'cores', 'master', ' ', 'simd', 'schedule(static,8)', 'static'): evaluated objective: 0.100285
+2022-02-25 18:11:40|2677911|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:11:40|2677911|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['21', 'sockets', 'master', ' ', 'simd', 'schedule(static,16)', 'dynamic'] lie: 0.19186999999999999
+2022-02-25 18:11:40|2677911|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '21', 'p1': 'sockets', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,16)', 'p6': 'dynamic'}
+2022-02-25 18:11:42|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:14.97
+2022-02-25 18:11:43|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:16.54
+2022-02-25 18:11:45|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:18.54
+2022-02-25 18:11:47|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:20.54
+2022-02-25 18:11:49|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:22.54
+2022-02-25 18:11:49|2677911|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "21", "p1": "sockets", "p2": "master", "p3": " ", "p4": "simd", "p5": "schedule(static,16)", "p6": "dynamic"} --> 0.037155
+2022-02-25 18:11:49|2677911|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '21', 'p1': 'sockets', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,16)', 'p6': 'dynamic'} y: 0.037155
+2022-02-25 18:11:49|2677911|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:11:49|2677911|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '21', 'p1': 'sockets', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,16)', 'p6': 'dynamic'} --> ('21', 'sockets', 'master', ' ', 'simd', 'schedule(static,16)', 'dynamic'): evaluated objective: 0.037155
+2022-02-25 18:11:49|2677911|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:11:50|2677911|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['21', 'cores', 'spread', ' ', ' ', 'schedule(static,4)', 'static'] lie: 0.19186999999999999
+2022-02-25 18:11:50|2677911|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '21', 'p1': 'cores', 'p2': 'spread', 'p3': ' ', 'p4': ' ', 'p5': 'schedule(static,4)', 'p6': 'static'}
+2022-02-25 18:11:51|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:24.76
+2022-02-25 18:11:53|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:26.54
+2022-02-25 18:11:55|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:28.54
+2022-02-25 18:11:57|2677911|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:30.54
+2022-02-25 18:11:58|2677911|INFO|ytopt.search.hps.ambs:116] Hyperopt driver finishing
+2022-02-25 18:14:06|2701957|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-25 18:14:07|2701957|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-25 18:14:16|2701957|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x14b7d16b8290>', proc_info: {'node_ip_address': '10.70.150.16', 'raylet_ip_address': '10.70.150.16', 'redis_address': '10.70.150.16:6379', 'object_store_address': '/tmp/ray/session_2022-02-25_18-14-07_820478_2701957/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-02-25_18-14-07_820478_2701957/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-02-25_18-14-07_820478_2701957', 'metrics_export_port': 60225, 'gcs_address': '10.70.150.16:39199', 'node_id': '1db75f9057a64bb617fd921be4322e0f0dc6d3ecc89bae5f5fdd458a'}
+2022-02-25 18:14:16|2701957|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 10.70.150.16
+2022-02-25 18:14:16|2701957|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 60225,
+  'NodeID': '1db75f9057a64bb617fd921be4322e0f0dc6d3ecc89bae5f5fdd458a',
+  'NodeManagerAddress': '10.70.150.16',
+  'NodeManagerHostname': 'gpu6',
+  'NodeManagerPort': 36455,
+  'ObjectManagerPort': 38255,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-02-25_18-14-07_820478_2701957/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-02-25_18-14-07_820478_2701957/sockets/raylet',
+  'Resources': {'CPU': 256.0,
+                'GPU': 1.0,
+                'accelerator_type:A100': 1.0,
+                'memory': 802421533696.0,
+                'node:10.70.150.16': 1.0,
+                'object_store_memory': 200000000000.0},
+  'alive': True}]
+2022-02-25 18:14:16|2701957|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem_all.Problem'}
+2022-02-25 18:14:16|2701957|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    p0, Type: Ordinal, Sequence: {2, 4, 8, 16, 21, 32, 42}, Default: 42
+    p1, Type: Categorical, Choices: {cores, threads, sockets}, Default: cores
+    p2, Type: Categorical, Choices: {close, spread, master}, Default: close
+    p3, Type: Categorical, Choices: {#pragma omp parallel for,  }, Default:  
+    p4, Type: Categorical, Choices: {simd,  }, Default:  
+    p5, Type: Categorical, Choices: {schedule(static,1), schedule(static,2), schedule(static,4), schedule(static,8), schedule(static,16), schedule(static,32),  }, Default:  
+    p6, Type: Categorical, Choices: {dynamic, static}, Default: static
+
+2022-02-25 18:14:16|2701957|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-02-25 18:14:16|2701957|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-02-25 18:14:16|2701957|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-02-25 18:14:16|2701957|INFO|ytopt.search.hps.optimizer.optimizer:64] Using skopt.Optimizer with RF base_estimator
+2022-02-25 18:14:16|2701957|INFO|ytopt.search.hps.ambs:94] Generating 1 initial points...
+2022-02-25 18:14:18|2701957|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'}
+2022-02-25 18:14:18|2701957|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:0.00
+2022-02-25 18:14:20|2701957|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:2.54
+2022-02-25 18:14:22|2701957|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:4.54
+2022-02-25 18:14:24|2701957|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:6.54
+2022-02-25 18:14:26|2701957|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:8.54
+2022-02-25 18:14:28|2701957|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:10.54
+2022-02-25 18:14:30|2701957|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:12.54
+2022-02-25 18:14:32|2701957|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:14.54
+2022-02-25 18:14:32|2701957|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "16", "p1": "threads", "p2": "spread", "p3": " ", "p4": "simd", "p5": "schedule(static,4)", "p6": "static"} --> 0.4264
+2022-02-25 18:14:32|2701957|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} y: 0.4264
+2022-02-25 18:14:32|2701957|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:14:32|2701957|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} --> ('16', 'threads', 'spread', ' ', 'simd', 'schedule(static,4)', 'static'): evaluated objective: 0.4264
+2022-02-25 18:14:33|2701957|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:14:34|2701957|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['32', 'threads', 'master', '#pragma omp parallel for', 'simd', 'schedule(static,4)', 'static'] lie: 0.4264
+2022-02-25 18:14:34|2701957|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'}
+2022-02-25 18:14:35|2701957|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:17.61
+2022-02-25 18:14:36|2701957|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:18.54
+2022-02-25 18:14:38|2701957|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:20.54
+2022-02-25 18:14:40|2701957|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:22.54
+2022-02-25 18:14:42|2701957|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:24.54
+2022-02-25 18:14:44|2701957|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:26.54
+2022-02-25 18:14:44|2701957|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "32", "p1": "threads", "p2": "master", "p3": "#pragma omp parallel for", "p4": "simd", "p5": "schedule(static,4)", "p6": "static"} --> 0.487755
+2022-02-25 18:14:44|2701957|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} y: 0.487755
+2022-02-25 18:14:44|2701957|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:14:44|2701957|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} --> ('32', 'threads', 'master', '#pragma omp parallel for', 'simd', 'schedule(static,4)', 'static'): evaluated objective: 0.487755
+2022-02-25 18:14:45|2701957|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:14:46|2701957|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['4', 'cores', 'close', '#pragma omp parallel for', ' ', 'schedule(static,1)', 'dynamic'] lie: 0.487755
+2022-02-25 18:14:46|2701957|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '4', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,1)', 'p6': 'dynamic'}
+2022-02-25 18:14:47|2701957|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:29.68
+2022-02-25 18:14:48|2701957|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:30.54
+2022-02-25 18:14:50|2701957|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:32.54
+2022-02-25 18:14:52|2701957|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:34.54
+2022-02-25 18:14:54|2701957|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:36.54
+2022-02-25 18:14:56|2701957|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:38.54
+2022-02-25 18:14:58|2701957|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:40.54
+2022-02-25 18:14:58|2701957|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "4", "p1": "cores", "p2": "close", "p3": "#pragma omp parallel for", "p4": " ", "p5": "schedule(static,1)", "p6": "dynamic"} --> 1.02708
+2022-02-25 18:14:58|2701957|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '4', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,1)', 'p6': 'dynamic'} y: 1.02708
+2022-02-25 18:14:58|2701957|INFO|ytopt.search.hps.ambs:116] Hyperopt driver finishing
+2022-02-25 18:15:03|2710767|INFO|ytopt:46] 
+
+Loading ytopt
+--------------
+2022-02-25 18:15:04|2710767|INFO|ytopt.evaluator.ray_evaluator:84] RAY Evaluator init: redis-address=None
+2022-02-25 18:15:13|2710767|INFO|ytopt.evaluator.ray_evaluator:106] RAY Evaluator will execute: '<function myobj at 0x14f435eab290>', proc_info: {'node_ip_address': '10.70.150.16', 'raylet_ip_address': '10.70.150.16', 'redis_address': '10.70.150.16:6379', 'object_store_address': '/tmp/ray/session_2022-02-25_18-15-04_565127_2710767/sockets/plasma_store', 'raylet_socket_name': '/tmp/ray/session_2022-02-25_18-15-04_565127_2710767/sockets/raylet', 'webui_url': None, 'session_dir': '/tmp/ray/session_2022-02-25_18-15-04_565127_2710767', 'metrics_export_port': 63881, 'gcs_address': '10.70.150.16:41211', 'node_id': '7edec141ac90fc378be595cf73dfd09b4cf3d2044aad4a3f2a8c7e05'}
+2022-02-25 18:15:13|2710767|INFO|ytopt.evaluator.ray_evaluator:107] Driver started on: 10.70.150.16
+2022-02-25 18:15:13|2710767|INFO|ytopt.evaluator.ray_evaluator:109] Cluster as 1 nodes:
+ [{'Alive': True,
+  'MetricsExportPort': 63881,
+  'NodeID': '7edec141ac90fc378be595cf73dfd09b4cf3d2044aad4a3f2a8c7e05',
+  'NodeManagerAddress': '10.70.150.16',
+  'NodeManagerHostname': 'gpu6',
+  'NodeManagerPort': 41949,
+  'ObjectManagerPort': 33839,
+  'ObjectStoreSocketName': '/tmp/ray/session_2022-02-25_18-15-04_565127_2710767/sockets/plasma_store',
+  'RayletSocketName': '/tmp/ray/session_2022-02-25_18-15-04_565127_2710767/sockets/raylet',
+  'Resources': {'CPU': 256.0,
+                'GPU': 1.0,
+                'accelerator_type:A100': 1.0,
+                'memory': 799786920960.0,
+                'node:10.70.150.16': 1.0,
+                'object_store_memory': 200000000000.0},
+  'alive': True}]
+2022-02-25 18:15:13|2710767|INFO|ytopt.search.search:51] Options: {'cache_key': None, 'evaluator': 'ray', 'problem': 'problem_all.Problem'}
+2022-02-25 18:15:13|2710767|INFO|ytopt.search.search:52] Hyperparameter space definition: Configuration space object:
+  Hyperparameters:
+    p0, Type: Ordinal, Sequence: {2, 4, 8, 16, 21, 32, 42}, Default: 42
+    p1, Type: Categorical, Choices: {cores, threads, sockets}, Default: cores
+    p2, Type: Categorical, Choices: {close, spread, master}, Default: close
+    p3, Type: Categorical, Choices: {#pragma omp parallel for,  }, Default:  
+    p4, Type: Categorical, Choices: {simd,  }, Default:  
+    p5, Type: Categorical, Choices: {schedule(static,1), schedule(static,2), schedule(static,4), schedule(static,8), schedule(static,16), schedule(static,32),  }, Default:  
+    p6, Type: Categorical, Choices: {dynamic, static}, Default: static
+
+2022-02-25 18:15:13|2710767|INFO|ytopt.search.search:53] Created "ray" evaluator
+2022-02-25 18:15:13|2710767|INFO|ytopt.search.search:54] Evaluator: num_workers is 1
+2022-02-25 18:15:13|2710767|INFO|ytopt.search.hps.ambs:47] Initializing AMBS
+2022-02-25 18:15:13|2710767|INFO|ytopt.search.hps.optimizer.optimizer:64] Using skopt.Optimizer with DUMMY base_estimator
+2022-02-25 18:15:13|2710767|INFO|ytopt.search.hps.ambs:94] Generating 1 initial points...
+2022-02-25 18:15:14|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'}
+2022-02-25 18:15:14|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:0.00
+2022-02-25 18:15:16|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:2.54
+2022-02-25 18:15:18|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:4.54
+2022-02-25 18:15:20|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:6.54
+2022-02-25 18:15:22|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:8.54
+2022-02-25 18:15:24|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:10.54
+2022-02-25 18:15:26|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:12.54
+2022-02-25 18:15:26|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "16", "p1": "threads", "p2": "spread", "p3": " ", "p4": "simd", "p5": "schedule(static,4)", "p6": "static"} --> 0.5059549999999999
+2022-02-25 18:15:26|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} y: 0.5059549999999999
+2022-02-25 18:15:26|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:15:26|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '16', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} --> ('16', 'threads', 'spread', ' ', 'simd', 'schedule(static,4)', 'static'): evaluated objective: 0.5059549999999999
+2022-02-25 18:15:26|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:15:27|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['4', 'sockets', 'close', ' ', 'simd', 'schedule(static,1)', 'dynamic'] lie: 0.5059549999999999
+2022-02-25 18:15:27|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '4', 'p1': 'sockets', 'p2': 'close', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,1)', 'p6': 'dynamic'}
+2022-02-25 18:15:28|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:14.55
+2022-02-25 18:15:30|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:16.54
+2022-02-25 18:15:32|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:18.54
+2022-02-25 18:15:34|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:20.54
+2022-02-25 18:15:36|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:22.54
+2022-02-25 18:15:38|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:24.54
+2022-02-25 18:15:40|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:26.54
+2022-02-25 18:15:40|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "4", "p1": "sockets", "p2": "close", "p3": " ", "p4": "simd", "p5": "schedule(static,1)", "p6": "dynamic"} --> 1.0189650000000001
+2022-02-25 18:15:40|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '4', 'p1': 'sockets', 'p2': 'close', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,1)', 'p6': 'dynamic'} y: 1.0189650000000001
+2022-02-25 18:15:40|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:15:40|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '4', 'p1': 'sockets', 'p2': 'close', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,1)', 'p6': 'dynamic'} --> ('4', 'sockets', 'close', ' ', 'simd', 'schedule(static,1)', 'dynamic'): evaluated objective: 1.0189650000000001
+2022-02-25 18:15:40|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:15:41|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['32', 'threads', 'master', '#pragma omp parallel for', 'simd', 'schedule(static,4)', 'static'] lie: 1.0189650000000001
+2022-02-25 18:15:41|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'}
+2022-02-25 18:15:42|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:28.59
+2022-02-25 18:15:44|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:30.54
+2022-02-25 18:15:46|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:32.54
+2022-02-25 18:15:48|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:34.54
+2022-02-25 18:15:50|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:36.54
+2022-02-25 18:15:52|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:38.51
+2022-02-25 18:15:52|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "32", "p1": "threads", "p2": "master", "p3": "#pragma omp parallel for", "p4": "simd", "p5": "schedule(static,4)", "p6": "static"} --> 0.52898
+2022-02-25 18:15:52|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} y: 0.52898
+2022-02-25 18:15:52|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:15:52|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '32', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} --> ('32', 'threads', 'master', '#pragma omp parallel for', 'simd', 'schedule(static,4)', 'static'): evaluated objective: 0.52898
+2022-02-25 18:15:52|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:15:53|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['2', 'threads', 'master', '#pragma omp parallel for', 'simd', 'schedule(static,32)', 'static'] lie: 1.0189650000000001
+2022-02-25 18:15:53|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '2', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,32)', 'p6': 'static'}
+2022-02-25 18:15:54|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:40.59
+2022-02-25 18:15:56|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:42.54
+2022-02-25 18:15:58|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:44.54
+2022-02-25 18:16:00|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:46.54
+2022-02-25 18:16:02|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:48.54
+2022-02-25 18:16:04|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:50.54
+2022-02-25 18:16:06|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:52.54
+2022-02-25 18:16:08|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:54.54
+2022-02-25 18:16:08|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "2", "p1": "threads", "p2": "master", "p3": "#pragma omp parallel for", "p4": "simd", "p5": "schedule(static,32)", "p6": "static"} --> 2.055825
+2022-02-25 18:16:08|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '2', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,32)', 'p6': 'static'} y: 2.055825
+2022-02-25 18:16:08|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:16:08|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '2', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,32)', 'p6': 'static'} --> ('2', 'threads', 'master', '#pragma omp parallel for', 'simd', 'schedule(static,32)', 'static'): evaluated objective: 2.055825
+2022-02-25 18:16:08|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:16:09|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['4', 'cores', 'close', '#pragma omp parallel for', ' ', 'schedule(static,1)', 'dynamic'] lie: 2.055825
+2022-02-25 18:16:09|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '4', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,1)', 'p6': 'dynamic'}
+2022-02-25 18:16:10|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:56.54
+2022-02-25 18:16:12|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:00:58.54
+2022-02-25 18:16:14|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:0.54
+2022-02-25 18:16:16|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:2.54
+2022-02-25 18:16:18|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:4.54
+2022-02-25 18:16:20|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:6.54
+2022-02-25 18:16:22|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:8.54
+2022-02-25 18:16:22|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "4", "p1": "cores", "p2": "close", "p3": "#pragma omp parallel for", "p4": " ", "p5": "schedule(static,1)", "p6": "dynamic"} --> 1.027815
+2022-02-25 18:16:22|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '4', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,1)', 'p6': 'dynamic'} y: 1.027815
+2022-02-25 18:16:22|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:16:22|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '4', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,1)', 'p6': 'dynamic'} --> ('4', 'cores', 'close', '#pragma omp parallel for', ' ', 'schedule(static,1)', 'dynamic'): evaluated objective: 1.027815
+2022-02-25 18:16:22|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:16:23|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['4', 'threads', 'master', '#pragma omp parallel for', ' ', 'schedule(static,16)', 'dynamic'] lie: 2.055825
+2022-02-25 18:16:23|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '4', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,16)', 'p6': 'dynamic'}
+2022-02-25 18:16:24|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:10.59
+2022-02-25 18:16:26|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:12.54
+2022-02-25 18:16:28|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:14.54
+2022-02-25 18:16:30|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:16.54
+2022-02-25 18:16:32|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:18.54
+2022-02-25 18:16:34|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:20.54
+2022-02-25 18:16:36|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:22.54
+2022-02-25 18:16:36|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "4", "p1": "threads", "p2": "master", "p3": "#pragma omp parallel for", "p4": " ", "p5": "schedule(static,16)", "p6": "dynamic"} --> 1.058865
+2022-02-25 18:16:36|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '4', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,16)', 'p6': 'dynamic'} y: 1.058865
+2022-02-25 18:16:36|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:16:36|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '4', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,16)', 'p6': 'dynamic'} --> ('4', 'threads', 'master', '#pragma omp parallel for', ' ', 'schedule(static,16)', 'dynamic'): evaluated objective: 1.058865
+2022-02-25 18:16:36|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:16:37|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['4', 'cores', 'master', ' ', 'simd', 'schedule(static,8)', 'static'] lie: 2.055825
+2022-02-25 18:16:37|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '4', 'p1': 'cores', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,8)', 'p6': 'static'}
+2022-02-25 18:16:38|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:24.54
+2022-02-25 18:16:40|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:26.54
+2022-02-25 18:16:42|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:28.54
+2022-02-25 18:16:44|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:30.54
+2022-02-25 18:16:46|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:32.54
+2022-02-25 18:16:48|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:34.54
+2022-02-25 18:16:50|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:36.54
+2022-02-25 18:16:50|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "4", "p1": "cores", "p2": "master", "p3": " ", "p4": "simd", "p5": "schedule(static,8)", "p6": "static"} --> 1.01159
+2022-02-25 18:16:50|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '4', 'p1': 'cores', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,8)', 'p6': 'static'} y: 1.01159
+2022-02-25 18:16:50|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:16:50|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '4', 'p1': 'cores', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,8)', 'p6': 'static'} --> ('4', 'cores', 'master', ' ', 'simd', 'schedule(static,8)', 'static'): evaluated objective: 1.01159
+2022-02-25 18:16:50|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:16:51|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['21', 'sockets', 'master', ' ', 'simd', 'schedule(static,16)', 'dynamic'] lie: 2.055825
+2022-02-25 18:16:51|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '21', 'p1': 'sockets', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,16)', 'p6': 'dynamic'}
+2022-02-25 18:16:52|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:38.57
+2022-02-25 18:16:54|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:40.54
+2022-02-25 18:16:56|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:42.54
+2022-02-25 18:16:58|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:44.54
+2022-02-25 18:17:00|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:46.54
+2022-02-25 18:17:02|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:48.54
+2022-02-25 18:17:02|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "21", "p1": "sockets", "p2": "master", "p3": " ", "p4": "simd", "p5": "schedule(static,16)", "p6": "dynamic"} --> 0.36295
+2022-02-25 18:17:02|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '21', 'p1': 'sockets', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,16)', 'p6': 'dynamic'} y: 0.36295
+2022-02-25 18:17:02|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:17:02|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '21', 'p1': 'sockets', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,16)', 'p6': 'dynamic'} --> ('21', 'sockets', 'master', ' ', 'simd', 'schedule(static,16)', 'dynamic'): evaluated objective: 0.36295
+2022-02-25 18:17:02|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:17:03|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['21', 'cores', 'spread', ' ', ' ', 'schedule(static,4)', 'static'] lie: 2.055825
+2022-02-25 18:17:03|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '21', 'p1': 'cores', 'p2': 'spread', 'p3': ' ', 'p4': ' ', 'p5': 'schedule(static,4)', 'p6': 'static'}
+2022-02-25 18:17:04|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:50.54
+2022-02-25 18:17:06|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:52.54
+2022-02-25 18:17:08|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:54.54
+2022-02-25 18:17:10|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:56.54
+2022-02-25 18:17:12|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:01:58.54
+2022-02-25 18:17:14|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:0.54
+2022-02-25 18:17:14|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "21", "p1": "cores", "p2": "spread", "p3": " ", "p4": " ", "p5": "schedule(static,4)", "p6": "static"} --> 0.365005
+2022-02-25 18:17:14|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '21', 'p1': 'cores', 'p2': 'spread', 'p3': ' ', 'p4': ' ', 'p5': 'schedule(static,4)', 'p6': 'static'} y: 0.365005
+2022-02-25 18:17:14|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:17:14|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '21', 'p1': 'cores', 'p2': 'spread', 'p3': ' ', 'p4': ' ', 'p5': 'schedule(static,4)', 'p6': 'static'} --> ('21', 'cores', 'spread', ' ', ' ', 'schedule(static,4)', 'static'): evaluated objective: 0.365005
+2022-02-25 18:17:14|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:17:15|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['16', 'cores', 'master', '#pragma omp parallel for', ' ', ' ', 'dynamic'] lie: 2.055825
+2022-02-25 18:17:15|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '16', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': ' ', 'p6': 'dynamic'}
+2022-02-25 18:17:16|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:2.58
+2022-02-25 18:17:18|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:4.54
+2022-02-25 18:17:20|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:6.54
+2022-02-25 18:17:22|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:8.55
+2022-02-25 18:17:24|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:10.54
+2022-02-25 18:17:26|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:12.54
+2022-02-25 18:17:26|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "16", "p1": "cores", "p2": "master", "p3": "#pragma omp parallel for", "p4": " ", "p5": " ", "p6": "dynamic"} --> 0.375765
+2022-02-25 18:17:26|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '16', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': ' ', 'p6': 'dynamic'} y: 0.375765
+2022-02-25 18:17:26|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:17:26|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '16', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': ' ', 'p6': 'dynamic'} --> ('16', 'cores', 'master', '#pragma omp parallel for', ' ', ' ', 'dynamic'): evaluated objective: 0.375765
+2022-02-25 18:17:26|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:17:27|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['4', 'cores', 'spread', ' ', 'simd', 'schedule(static,8)', 'dynamic'] lie: 2.055825
+2022-02-25 18:17:27|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '4', 'p1': 'cores', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,8)', 'p6': 'dynamic'}
+2022-02-25 18:17:28|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:14.59
+2022-02-25 18:17:30|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:16.54
+2022-02-25 18:17:32|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:18.54
+2022-02-25 18:17:34|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:20.54
+2022-02-25 18:17:36|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:22.54
+2022-02-25 18:17:38|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:24.54
+2022-02-25 18:17:40|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:26.54
+2022-02-25 18:17:40|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "4", "p1": "cores", "p2": "spread", "p3": " ", "p4": "simd", "p5": "schedule(static,8)", "p6": "dynamic"} --> 1.0171649999999999
+2022-02-25 18:17:40|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '4', 'p1': 'cores', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,8)', 'p6': 'dynamic'} y: 1.0171649999999999
+2022-02-25 18:17:40|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:17:40|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '4', 'p1': 'cores', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,8)', 'p6': 'dynamic'} --> ('4', 'cores', 'spread', ' ', 'simd', 'schedule(static,8)', 'dynamic'): evaluated objective: 1.0171649999999999
+2022-02-25 18:17:40|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:17:41|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['21', 'threads', 'master', '#pragma omp parallel for', 'simd', 'schedule(static,4)', 'static'] lie: 2.055825
+2022-02-25 18:17:41|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '21', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'}
+2022-02-25 18:17:42|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:28.54
+2022-02-25 18:17:44|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:30.54
+2022-02-25 18:17:46|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:32.54
+2022-02-25 18:17:48|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:34.54
+2022-02-25 18:17:50|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:36.54
+2022-02-25 18:17:51|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "21", "p1": "threads", "p2": "master", "p3": "#pragma omp parallel for", "p4": "simd", "p5": "schedule(static,4)", "p6": "static"} --> 0.36539
+2022-02-25 18:17:51|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '21', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} y: 0.36539
+2022-02-25 18:17:51|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:17:51|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '21', 'p1': 'threads', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} --> ('21', 'threads', 'master', '#pragma omp parallel for', 'simd', 'schedule(static,4)', 'static'): evaluated objective: 0.36539
+2022-02-25 18:17:51|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:17:51|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['8', 'threads', 'spread', ' ', 'simd', 'schedule(static,1)', 'dynamic'] lie: 2.055825
+2022-02-25 18:17:51|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '8', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,1)', 'p6': 'dynamic'}
+2022-02-25 18:17:53|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:39.08
+2022-02-25 18:17:54|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:40.54
+2022-02-25 18:17:56|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:42.54
+2022-02-25 18:17:58|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:44.54
+2022-02-25 18:18:00|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:46.54
+2022-02-25 18:18:02|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:48.54
+2022-02-25 18:18:02|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "8", "p1": "threads", "p2": "spread", "p3": " ", "p4": "simd", "p5": "schedule(static,1)", "p6": "dynamic"} --> 0.54082
+2022-02-25 18:18:02|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '8', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,1)', 'p6': 'dynamic'} y: 0.54082
+2022-02-25 18:18:02|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:18:02|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '8', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,1)', 'p6': 'dynamic'} --> ('8', 'threads', 'spread', ' ', 'simd', 'schedule(static,1)', 'dynamic'): evaluated objective: 0.54082
+2022-02-25 18:18:02|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:18:03|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['2', 'cores', 'close', '#pragma omp parallel for', 'simd', 'schedule(static,4)', 'static'] lie: 2.055825
+2022-02-25 18:18:03|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '2', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'}
+2022-02-25 18:18:04|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:50.68
+2022-02-25 18:18:06|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:52.54
+2022-02-25 18:18:08|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:54.54
+2022-02-25 18:18:10|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:56.54
+2022-02-25 18:18:12|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:02:58.54
+2022-02-25 18:18:14|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:0.54
+2022-02-25 18:18:16|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:2.54
+2022-02-25 18:18:18|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:4.54
+2022-02-25 18:18:18|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "2", "p1": "cores", "p2": "close", "p3": "#pragma omp parallel for", "p4": "simd", "p5": "schedule(static,4)", "p6": "static"} --> 1.9658449999999998
+2022-02-25 18:18:18|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '2', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} y: 1.9658449999999998
+2022-02-25 18:18:18|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:18:18|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '2', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} --> ('2', 'cores', 'close', '#pragma omp parallel for', 'simd', 'schedule(static,4)', 'static'): evaluated objective: 1.9658449999999998
+2022-02-25 18:18:18|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:18:19|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['2', 'sockets', 'close', ' ', 'simd', 'schedule(static,2)', 'dynamic'] lie: 2.055825
+2022-02-25 18:18:19|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '2', 'p1': 'sockets', 'p2': 'close', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,2)', 'p6': 'dynamic'}
+2022-02-25 18:18:20|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:6.60
+2022-02-25 18:18:22|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:8.54
+2022-02-25 18:18:24|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:10.54
+2022-02-25 18:18:26|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:12.54
+2022-02-25 18:18:28|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:14.54
+2022-02-25 18:18:30|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:16.54
+2022-02-25 18:18:32|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:18.54
+2022-02-25 18:18:34|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:20.54
+2022-02-25 18:18:34|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "2", "p1": "sockets", "p2": "close", "p3": " ", "p4": "simd", "p5": "schedule(static,2)", "p6": "dynamic"} --> 1.917195
+2022-02-25 18:18:34|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '2', 'p1': 'sockets', 'p2': 'close', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,2)', 'p6': 'dynamic'} y: 1.917195
+2022-02-25 18:18:34|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:18:34|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '2', 'p1': 'sockets', 'p2': 'close', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,2)', 'p6': 'dynamic'} --> ('2', 'sockets', 'close', ' ', 'simd', 'schedule(static,2)', 'dynamic'): evaluated objective: 1.917195
+2022-02-25 18:18:34|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:18:35|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['21', 'sockets', 'master', ' ', ' ', 'schedule(static,8)', 'dynamic'] lie: 2.055825
+2022-02-25 18:18:35|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '21', 'p1': 'sockets', 'p2': 'master', 'p3': ' ', 'p4': ' ', 'p5': 'schedule(static,8)', 'p6': 'dynamic'}
+2022-02-25 18:18:36|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:22.55
+2022-02-25 18:18:38|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:24.54
+2022-02-25 18:18:40|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:26.54
+2022-02-25 18:18:42|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:28.54
+2022-02-25 18:18:44|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:30.54
+2022-02-25 18:18:46|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:32.52
+2022-02-25 18:18:46|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "21", "p1": "sockets", "p2": "master", "p3": " ", "p4": " ", "p5": "schedule(static,8)", "p6": "dynamic"} --> 0.44802
+2022-02-25 18:18:46|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '21', 'p1': 'sockets', 'p2': 'master', 'p3': ' ', 'p4': ' ', 'p5': 'schedule(static,8)', 'p6': 'dynamic'} y: 0.44802
+2022-02-25 18:18:46|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:18:46|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '21', 'p1': 'sockets', 'p2': 'master', 'p3': ' ', 'p4': ' ', 'p5': 'schedule(static,8)', 'p6': 'dynamic'} --> ('21', 'sockets', 'master', ' ', ' ', 'schedule(static,8)', 'dynamic'): evaluated objective: 0.44802
+2022-02-25 18:18:46|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:18:47|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['32', 'threads', 'close', '#pragma omp parallel for', ' ', 'schedule(static,2)', 'static'] lie: 2.055825
+2022-02-25 18:18:47|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '32', 'p1': 'threads', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,2)', 'p6': 'static'}
+2022-02-25 18:18:48|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:34.59
+2022-02-25 18:18:50|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:36.54
+2022-02-25 18:18:52|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:38.54
+2022-02-25 18:18:54|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:40.54
+2022-02-25 18:18:56|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:42.54
+2022-02-25 18:18:58|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:44.54
+2022-02-25 18:18:58|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "32", "p1": "threads", "p2": "close", "p3": "#pragma omp parallel for", "p4": " ", "p5": "schedule(static,2)", "p6": "static"} --> 0.580295
+2022-02-25 18:18:58|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '32', 'p1': 'threads', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,2)', 'p6': 'static'} y: 0.580295
+2022-02-25 18:18:58|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:18:58|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '32', 'p1': 'threads', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,2)', 'p6': 'static'} --> ('32', 'threads', 'close', '#pragma omp parallel for', ' ', 'schedule(static,2)', 'static'): evaluated objective: 0.580295
+2022-02-25 18:18:58|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:18:59|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['21', 'cores', 'master', '#pragma omp parallel for', ' ', 'schedule(static,1)', 'static'] lie: 2.055825
+2022-02-25 18:18:59|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '21', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,1)', 'p6': 'static'}
+2022-02-25 18:19:00|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:46.59
+2022-02-25 18:19:02|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:48.54
+2022-02-25 18:19:04|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:50.54
+2022-02-25 18:19:06|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:52.54
+2022-02-25 18:19:08|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:54.54
+2022-02-25 18:19:10|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:56.54
+2022-02-25 18:19:10|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "21", "p1": "cores", "p2": "master", "p3": "#pragma omp parallel for", "p4": " ", "p5": "schedule(static,1)", "p6": "static"} --> 0.36332
+2022-02-25 18:19:10|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '21', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,1)', 'p6': 'static'} y: 0.36332
+2022-02-25 18:19:10|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:19:10|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '21', 'p1': 'cores', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,1)', 'p6': 'static'} --> ('21', 'cores', 'master', '#pragma omp parallel for', ' ', 'schedule(static,1)', 'static'): evaluated objective: 0.36332
+2022-02-25 18:19:10|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:19:11|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['32', 'sockets', 'master', ' ', 'simd', 'schedule(static,32)', 'dynamic'] lie: 2.055825
+2022-02-25 18:19:11|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '32', 'p1': 'sockets', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,32)', 'p6': 'dynamic'}
+2022-02-25 18:19:12|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:03:58.54
+2022-02-25 18:19:14|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:0.54
+2022-02-25 18:19:16|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:2.54
+2022-02-25 18:19:18|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:4.54
+2022-02-25 18:19:20|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:6.54
+2022-02-25 18:19:22|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:8.54
+2022-02-25 18:19:22|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "32", "p1": "sockets", "p2": "master", "p3": " ", "p4": "simd", "p5": "schedule(static,32)", "p6": "dynamic"} --> 0.46652
+2022-02-25 18:19:22|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '32', 'p1': 'sockets', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,32)', 'p6': 'dynamic'} y: 0.46652
+2022-02-25 18:19:22|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:19:22|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '32', 'p1': 'sockets', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,32)', 'p6': 'dynamic'} --> ('32', 'sockets', 'master', ' ', 'simd', 'schedule(static,32)', 'dynamic'): evaluated objective: 0.46652
+2022-02-25 18:19:22|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:19:23|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['4', 'sockets', 'master', '#pragma omp parallel for', ' ', 'schedule(static,32)', 'static'] lie: 2.055825
+2022-02-25 18:19:23|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '4', 'p1': 'sockets', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,32)', 'p6': 'static'}
+2022-02-25 18:19:24|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:10.58
+2022-02-25 18:19:26|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:12.54
+2022-02-25 18:19:28|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:14.54
+2022-02-25 18:19:30|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:16.54
+2022-02-25 18:19:32|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:18.54
+2022-02-25 18:19:34|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:20.54
+2022-02-25 18:19:36|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:22.54
+2022-02-25 18:19:36|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "4", "p1": "sockets", "p2": "master", "p3": "#pragma omp parallel for", "p4": " ", "p5": "schedule(static,32)", "p6": "static"} --> 1.037175
+2022-02-25 18:19:36|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '4', 'p1': 'sockets', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,32)', 'p6': 'static'} y: 1.037175
+2022-02-25 18:19:36|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:19:36|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '4', 'p1': 'sockets', 'p2': 'master', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,32)', 'p6': 'static'} --> ('4', 'sockets', 'master', '#pragma omp parallel for', ' ', 'schedule(static,32)', 'static'): evaluated objective: 1.037175
+2022-02-25 18:19:36|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:19:37|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['21', 'cores', 'close', '#pragma omp parallel for', ' ', 'schedule(static,2)', 'static'] lie: 2.055825
+2022-02-25 18:19:37|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '21', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,2)', 'p6': 'static'}
+2022-02-25 18:19:38|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:24.54
+2022-02-25 18:19:40|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:26.54
+2022-02-25 18:19:42|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:28.54
+2022-02-25 18:19:44|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:30.54
+2022-02-25 18:19:46|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:32.54
+2022-02-25 18:19:47|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "21", "p1": "cores", "p2": "close", "p3": "#pragma omp parallel for", "p4": " ", "p5": "schedule(static,2)", "p6": "static"} --> 0.36258
+2022-02-25 18:19:47|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '21', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,2)', 'p6': 'static'} y: 0.36258
+2022-02-25 18:19:47|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:19:47|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '21', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,2)', 'p6': 'static'} --> ('21', 'cores', 'close', '#pragma omp parallel for', ' ', 'schedule(static,2)', 'static'): evaluated objective: 0.36258
+2022-02-25 18:19:47|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:19:47|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['21', 'sockets', 'spread', '#pragma omp parallel for', 'simd', 'schedule(static,4)', 'dynamic'] lie: 2.055825
+2022-02-25 18:19:47|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '21', 'p1': 'sockets', 'p2': 'spread', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'dynamic'}
+2022-02-25 18:19:49|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:35.12
+2022-02-25 18:19:50|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:36.54
+2022-02-25 18:19:52|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:38.54
+2022-02-25 18:19:54|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:40.54
+2022-02-25 18:19:56|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:42.54
+2022-02-25 18:19:58|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:44.54
+2022-02-25 18:19:58|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "21", "p1": "sockets", "p2": "spread", "p3": "#pragma omp parallel for", "p4": "simd", "p5": "schedule(static,4)", "p6": "dynamic"} --> 0.36445
+2022-02-25 18:19:58|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '21', 'p1': 'sockets', 'p2': 'spread', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'dynamic'} y: 0.36445
+2022-02-25 18:19:58|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:19:58|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '21', 'p1': 'sockets', 'p2': 'spread', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'dynamic'} --> ('21', 'sockets', 'spread', '#pragma omp parallel for', 'simd', 'schedule(static,4)', 'dynamic'): evaluated objective: 0.36445
+2022-02-25 18:19:58|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:19:59|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['8', 'sockets', 'master', ' ', ' ', 'schedule(static,1)', 'static'] lie: 2.055825
+2022-02-25 18:19:59|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '8', 'p1': 'sockets', 'p2': 'master', 'p3': ' ', 'p4': ' ', 'p5': 'schedule(static,1)', 'p6': 'static'}
+2022-02-25 18:20:00|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:46.54
+2022-02-25 18:20:02|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:48.54
+2022-02-25 18:20:04|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:50.54
+2022-02-25 18:20:06|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:52.50
+2022-02-25 18:20:08|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:54.54
+2022-02-25 18:20:10|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:56.54
+2022-02-25 18:20:10|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "8", "p1": "sockets", "p2": "master", "p3": " ", "p4": " ", "p5": "schedule(static,1)", "p6": "static"} --> 0.53894
+2022-02-25 18:20:10|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '8', 'p1': 'sockets', 'p2': 'master', 'p3': ' ', 'p4': ' ', 'p5': 'schedule(static,1)', 'p6': 'static'} y: 0.53894
+2022-02-25 18:20:10|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:20:10|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '8', 'p1': 'sockets', 'p2': 'master', 'p3': ' ', 'p4': ' ', 'p5': 'schedule(static,1)', 'p6': 'static'} --> ('8', 'sockets', 'master', ' ', ' ', 'schedule(static,1)', 'static'): evaluated objective: 0.53894
+2022-02-25 18:20:10|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:20:11|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['4', 'threads', 'spread', ' ', 'simd', ' ', 'dynamic'] lie: 2.055825
+2022-02-25 18:20:11|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '4', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': ' ', 'p6': 'dynamic'}
+2022-02-25 18:20:12|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:04:58.57
+2022-02-25 18:20:14|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:0.54
+2022-02-25 18:20:16|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:2.54
+2022-02-25 18:20:18|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:4.54
+2022-02-25 18:20:20|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:6.54
+2022-02-25 18:20:22|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:8.54
+2022-02-25 18:20:24|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:10.54
+2022-02-25 18:20:24|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "4", "p1": "threads", "p2": "spread", "p3": " ", "p4": "simd", "p5": " ", "p6": "dynamic"} --> 1.016025
+2022-02-25 18:20:24|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '4', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': ' ', 'p6': 'dynamic'} y: 1.016025
+2022-02-25 18:20:24|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:20:24|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '4', 'p1': 'threads', 'p2': 'spread', 'p3': ' ', 'p4': 'simd', 'p5': ' ', 'p6': 'dynamic'} --> ('4', 'threads', 'spread', ' ', 'simd', ' ', 'dynamic'): evaluated objective: 1.016025
+2022-02-25 18:20:24|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:20:25|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['16', 'sockets', 'master', ' ', 'simd', 'schedule(static,8)', 'static'] lie: 2.055825
+2022-02-25 18:20:25|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '16', 'p1': 'sockets', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,8)', 'p6': 'static'}
+2022-02-25 18:20:26|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:12.53
+2022-02-25 18:20:28|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:14.54
+2022-02-25 18:20:30|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:16.54
+2022-02-25 18:20:32|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:18.54
+2022-02-25 18:20:34|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:20.54
+2022-02-25 18:20:36|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:22.54
+2022-02-25 18:20:36|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "16", "p1": "sockets", "p2": "master", "p3": " ", "p4": "simd", "p5": "schedule(static,8)", "p6": "static"} --> 0.424115
+2022-02-25 18:20:36|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '16', 'p1': 'sockets', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,8)', 'p6': 'static'} y: 0.424115
+2022-02-25 18:20:36|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:20:36|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '16', 'p1': 'sockets', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,8)', 'p6': 'static'} --> ('16', 'sockets', 'master', ' ', 'simd', 'schedule(static,8)', 'static'): evaluated objective: 0.424115
+2022-02-25 18:20:36|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:20:37|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['2', 'sockets', 'master', ' ', 'simd', 'schedule(static,1)', 'dynamic'] lie: 2.055825
+2022-02-25 18:20:37|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '2', 'p1': 'sockets', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,1)', 'p6': 'dynamic'}
+2022-02-25 18:20:38|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:24.57
+2022-02-25 18:20:40|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:26.54
+2022-02-25 18:20:42|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:28.54
+2022-02-25 18:20:44|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:30.54
+2022-02-25 18:20:46|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:32.54
+2022-02-25 18:20:48|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:34.54
+2022-02-25 18:20:50|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:36.54
+2022-02-25 18:20:52|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:38.54
+2022-02-25 18:20:52|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "2", "p1": "sockets", "p2": "master", "p3": " ", "p4": "simd", "p5": "schedule(static,1)", "p6": "dynamic"} --> 1.89145
+2022-02-25 18:20:52|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '2', 'p1': 'sockets', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,1)', 'p6': 'dynamic'} y: 1.89145
+2022-02-25 18:20:52|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:20:52|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '2', 'p1': 'sockets', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,1)', 'p6': 'dynamic'} --> ('2', 'sockets', 'master', ' ', 'simd', 'schedule(static,1)', 'dynamic'): evaluated objective: 1.89145
+2022-02-25 18:20:52|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:20:53|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['2', 'cores', 'master', ' ', 'simd', 'schedule(static,1)', 'dynamic'] lie: 2.055825
+2022-02-25 18:20:53|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,1)', 'p6': 'dynamic'}
+2022-02-25 18:20:54|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:40.58
+2022-02-25 18:20:56|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:42.54
+2022-02-25 18:20:58|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:44.54
+2022-02-25 18:21:00|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:46.54
+2022-02-25 18:21:02|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:48.54
+2022-02-25 18:21:04|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:50.54
+2022-02-25 18:21:06|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:52.54
+2022-02-25 18:21:08|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:54.54
+2022-02-25 18:21:08|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "2", "p1": "cores", "p2": "master", "p3": " ", "p4": "simd", "p5": "schedule(static,1)", "p6": "dynamic"} --> 1.915955
+2022-02-25 18:21:08|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,1)', 'p6': 'dynamic'} y: 1.915955
+2022-02-25 18:21:08|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:21:08|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '2', 'p1': 'cores', 'p2': 'master', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,1)', 'p6': 'dynamic'} --> ('2', 'cores', 'master', ' ', 'simd', 'schedule(static,1)', 'dynamic'): evaluated objective: 1.915955
+2022-02-25 18:21:08|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:21:09|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['21', 'sockets', 'close', '#pragma omp parallel for', 'simd', 'schedule(static,4)', 'static'] lie: 2.055825
+2022-02-25 18:21:09|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '21', 'p1': 'sockets', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'}
+2022-02-25 18:21:10|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:56.54
+2022-02-25 18:21:12|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:05:58.54
+2022-02-25 18:21:14|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:0.54
+2022-02-25 18:21:16|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:2.54
+2022-02-25 18:21:18|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:4.54
+2022-02-25 18:21:20|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:6.54
+2022-02-25 18:21:20|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "21", "p1": "sockets", "p2": "close", "p3": "#pragma omp parallel for", "p4": "simd", "p5": "schedule(static,4)", "p6": "static"} --> 0.37004000000000004
+2022-02-25 18:21:20|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '21', 'p1': 'sockets', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} y: 0.37004000000000004
+2022-02-25 18:21:20|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:21:20|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '21', 'p1': 'sockets', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,4)', 'p6': 'static'} --> ('21', 'sockets', 'close', '#pragma omp parallel for', 'simd', 'schedule(static,4)', 'static'): evaluated objective: 0.37004000000000004
+2022-02-25 18:21:20|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:21:21|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['2', 'sockets', 'spread', ' ', ' ', 'schedule(static,2)', 'static'] lie: 2.055825
+2022-02-25 18:21:21|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '2', 'p1': 'sockets', 'p2': 'spread', 'p3': ' ', 'p4': ' ', 'p5': 'schedule(static,2)', 'p6': 'static'}
+2022-02-25 18:21:22|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:8.60
+2022-02-25 18:21:24|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:10.54
+2022-02-25 18:21:26|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:12.54
+2022-02-25 18:21:28|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:14.54
+2022-02-25 18:21:30|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:16.54
+2022-02-25 18:21:32|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:18.54
+2022-02-25 18:21:34|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:20.54
+2022-02-25 18:21:36|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:22.54
+2022-02-25 18:21:36|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "2", "p1": "sockets", "p2": "spread", "p3": " ", "p4": " ", "p5": "schedule(static,2)", "p6": "static"} --> 1.9173149999999999
+2022-02-25 18:21:36|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '2', 'p1': 'sockets', 'p2': 'spread', 'p3': ' ', 'p4': ' ', 'p5': 'schedule(static,2)', 'p6': 'static'} y: 1.9173149999999999
+2022-02-25 18:21:36|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:21:36|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '2', 'p1': 'sockets', 'p2': 'spread', 'p3': ' ', 'p4': ' ', 'p5': 'schedule(static,2)', 'p6': 'static'} --> ('2', 'sockets', 'spread', ' ', ' ', 'schedule(static,2)', 'static'): evaluated objective: 1.9173149999999999
+2022-02-25 18:21:36|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:21:37|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['32', 'sockets', 'spread', '#pragma omp parallel for', 'simd', 'schedule(static,1)', 'static'] lie: 2.055825
+2022-02-25 18:21:37|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '32', 'p1': 'sockets', 'p2': 'spread', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,1)', 'p6': 'static'}
+2022-02-25 18:21:38|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:24.53
+2022-02-25 18:21:40|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:26.54
+2022-02-25 18:21:42|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:28.54
+2022-02-25 18:21:44|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:30.54
+2022-02-25 18:21:46|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:32.54
+2022-02-25 18:21:48|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:34.54
+2022-02-25 18:21:48|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "32", "p1": "sockets", "p2": "spread", "p3": "#pragma omp parallel for", "p4": "simd", "p5": "schedule(static,1)", "p6": "static"} --> 0.48429
+2022-02-25 18:21:48|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '32', 'p1': 'sockets', 'p2': 'spread', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,1)', 'p6': 'static'} y: 0.48429
+2022-02-25 18:21:48|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:21:48|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '32', 'p1': 'sockets', 'p2': 'spread', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,1)', 'p6': 'static'} --> ('32', 'sockets', 'spread', '#pragma omp parallel for', 'simd', 'schedule(static,1)', 'static'): evaluated objective: 0.48429
+2022-02-25 18:21:48|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:21:49|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['21', 'cores', 'close', '#pragma omp parallel for', ' ', 'schedule(static,4)', 'static'] lie: 2.055825
+2022-02-25 18:21:49|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '21', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,4)', 'p6': 'static'}
+2022-02-25 18:21:50|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:36.57
+2022-02-25 18:21:52|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:38.54
+2022-02-25 18:21:54|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:40.54
+2022-02-25 18:21:56|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:42.54
+2022-02-25 18:21:58|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:44.54
+2022-02-25 18:22:00|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:46.54
+2022-02-25 18:22:00|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "21", "p1": "cores", "p2": "close", "p3": "#pragma omp parallel for", "p4": " ", "p5": "schedule(static,4)", "p6": "static"} --> 0.36665499999999995
+2022-02-25 18:22:00|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '21', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,4)', 'p6': 'static'} y: 0.36665499999999995
+2022-02-25 18:22:00|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:22:00|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '21', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': ' ', 'p5': 'schedule(static,4)', 'p6': 'static'} --> ('21', 'cores', 'close', '#pragma omp parallel for', ' ', 'schedule(static,4)', 'static'): evaluated objective: 0.36665499999999995
+2022-02-25 18:22:00|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:22:01|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['2', 'cores', 'spread', ' ', ' ', ' ', 'dynamic'] lie: 2.055825
+2022-02-25 18:22:01|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '2', 'p1': 'cores', 'p2': 'spread', 'p3': ' ', 'p4': ' ', 'p5': ' ', 'p6': 'dynamic'}
+2022-02-25 18:22:02|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:48.53
+2022-02-25 18:22:04|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:50.54
+2022-02-25 18:22:06|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:52.54
+2022-02-25 18:22:08|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:54.54
+2022-02-25 18:22:10|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:56.54
+2022-02-25 18:22:12|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:06:58.54
+2022-02-25 18:22:14|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:07:0.54
+2022-02-25 18:22:16|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:07:2.54
+2022-02-25 18:22:16|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "2", "p1": "cores", "p2": "spread", "p3": " ", "p4": " ", "p5": " ", "p6": "dynamic"} --> 1.911175
+2022-02-25 18:22:16|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '2', 'p1': 'cores', 'p2': 'spread', 'p3': ' ', 'p4': ' ', 'p5': ' ', 'p6': 'dynamic'} y: 1.911175
+2022-02-25 18:22:16|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:22:16|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '2', 'p1': 'cores', 'p2': 'spread', 'p3': ' ', 'p4': ' ', 'p5': ' ', 'p6': 'dynamic'} --> ('2', 'cores', 'spread', ' ', ' ', ' ', 'dynamic'): evaluated objective: 1.911175
+2022-02-25 18:22:16|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:22:17|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['21', 'cores', 'close', '#pragma omp parallel for', 'simd', 'schedule(static,32)', 'static'] lie: 2.055825
+2022-02-25 18:22:17|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '21', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,32)', 'p6': 'static'}
+2022-02-25 18:22:18|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:07:4.58
+2022-02-25 18:22:20|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:07:6.54
+2022-02-25 18:22:22|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:07:8.54
+2022-02-25 18:22:24|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:07:10.54
+2022-02-25 18:22:26|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:07:12.54
+2022-02-25 18:22:27|2710767|INFO|ytopt.evaluator.evaluate:206] New eval finished: {"p0": "21", "p1": "cores", "p2": "close", "p3": "#pragma omp parallel for", "p4": "simd", "p5": "schedule(static,32)", "p6": "static"} --> 0.367055
+2022-02-25 18:22:27|2710767|INFO|ytopt.evaluator.evaluate:217] Requested eval x: {'p0': '21', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,32)', 'p6': 'static'} y: 0.367055
+2022-02-25 18:22:27|2710767|INFO|ytopt.search.hps.ambs:107] Refitting model with batch of 1 evals
+2022-02-25 18:22:27|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:138] tell: {'p0': '21', 'p1': 'cores', 'p2': 'close', 'p3': '#pragma omp parallel for', 'p4': 'simd', 'p5': 'schedule(static,32)', 'p6': 'static'} --> ('21', 'cores', 'close', '#pragma omp parallel for', 'simd', 'schedule(static,32)', 'static'): evaluated objective: 0.367055
+2022-02-25 18:22:27|2710767|INFO|ytopt.search.hps.ambs:109] Drawing 1 points with strategy cl_max
+2022-02-25 18:22:27|2710767|DEBUG|ytopt.search.hps.optimizer.optimizer:103] _ask: ['4', 'threads', 'close', ' ', 'simd', 'schedule(static,2)', 'dynamic'] lie: 2.055825
+2022-02-25 18:22:27|2710767|INFO|ytopt.evaluator.evaluate:104] Submitted new eval of {'p0': '4', 'p1': 'threads', 'p2': 'close', 'p3': ' ', 'p4': 'simd', 'p5': 'schedule(static,2)', 'p6': 'dynamic'}
+2022-02-25 18:22:29|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:07:15.11
+2022-02-25 18:22:30|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:07:16.54
+2022-02-25 18:22:32|2710767|INFO|ytopt.search.hps.ambs:100] Elapsed time: 00:07:18.54

@@ -1,0 +1,604 @@
+input,p0,p1,p2,p3,p4,p5,p6,objective,elapsed_sec
+500000000,96,cores,master,#pragma omp parallel for,simd,"schedule(static,4)",dynamic,5.469215,30.43310308456421
+500000000,4,threads,spread,#pragma omp parallel for,simd,"schedule(static,4)",static,5.499745,54.06132197380066
+500000000,2,cores,spread,#pragma omp parallel for,simd,"schedule(static,32)",dynamic,5.38852,77.99408769607544
+500000000,16,threads,spread, ,simd,"schedule(static,1)",dynamic,4.8542000000000005,99.45420289039612
+500000000,16,cores,spread,#pragma omp parallel for,simd,"schedule(static,32)",static,5.651695,123.14226222038269
+500000000,2,threads,spread,#pragma omp parallel for,simd,"schedule(static,8)",dynamic,5.40747,146.30458068847656
+500000000,128,threads,close, ,simd,"schedule(static,1)",static,4.8568549999999995,168.13355135917664
+500000000,192,sockets,close, , , ,static,4.84432,189.56146883964539
+500000000,48,cores,master, , ,"schedule(static,4)",dynamic,5.072815,211.62925696372986
+500000000,16,sockets,close,#pragma omp parallel for,simd,"schedule(static,2)",dynamic,5.576345,235.21229100227356
+500000000,48,sockets,spread, ,simd,"schedule(static,4)",dynamic,5.07637,257.81813502311707
+500000000,128,sockets,close, ,simd,"schedule(static,2)",dynamic,5.08464,280.0005717277527
+500000000,256,sockets,master,#pragma omp parallel for,simd,"schedule(static,4)",dynamic,5.350115,303.2571077346802
+500000000,64,cores,spread,#pragma omp parallel for, ,"schedule(static,16)",static,5.464095,326.72572469711304
+500000000,64,cores,master, , ,"schedule(static,1)",dynamic,4.85022,348.432030916214
+500000000,64,cores,spread, , ,"schedule(static,4)",dynamic,5.073475,370.5817246437073
+500000000,48,sockets,close,#pragma omp parallel for,simd, ,dynamic,5.213995,393.1668858528137
+500000000,4,cores,spread,#pragma omp parallel for, ,"schedule(static,1)",dynamic,5.22943,415.81317162513733
+500000000,16,cores,spread, , , ,dynamic,4.84958,437.2175693511963
+500000000,96,cores,spread,#pragma omp parallel for,simd,"schedule(static,2)",static,5.480445,460.90499567985535
+500000000,8,cores,close, ,simd,"schedule(static,32)",static,5.063715,483.06508207321167
+500000000,96,cores,close,#pragma omp parallel for, ,"schedule(static,2)",static,5.4657800000000005,506.5177824497223
+500000000,96,threads,close, , , ,dynamic,4.846795,528.194837808609
+500000000,8,cores,spread,#pragma omp parallel for,simd,"schedule(static,16)",dynamic,5.5337499999999995,552.1055467128754
+500000000,4,cores,master, , ,"schedule(static,4)",static,5.07671,574.9177718162537
+500000000,16,threads,master,#pragma omp parallel for,simd,"schedule(static,4)",dynamic,5.560465,598.4150891304016
+500000000,256,threads,spread,#pragma omp parallel for, ,"schedule(static,2)",static,5.551415,622.4519889354706
+500000000,8,sockets,close,#pragma omp parallel for, ,"schedule(static,4)",static,5.472225,645.8196692466736
+500000000,256,cores,spread,#pragma omp parallel for,simd,"schedule(static,32)",dynamic,5.42052,670.2050168514252
+500000000,192,sockets,spread,#pragma omp parallel for, ,"schedule(static,1)",dynamic,5.203165,693.1225152015686
+500000000,2,sockets,spread, ,simd,"schedule(static,8)",dynamic,5.0740300000000005,715.3813190460205
+500000000,96,threads,master,#pragma omp parallel for,simd,"schedule(static,2)",dynamic,5.697855000000001,739.4879558086395
+500000000,48,sockets,master, , ,"schedule(static,4)",dynamic,5.06987,761.7819385528564
+500000000,32,threads,master, , ,"schedule(static,2)",static,5.07477,784.3793528079987
+500000000,8,cores,master, ,simd, ,dynamic,4.872745,805.8598763942719
+500000000,48,sockets,close, ,simd,"schedule(static,4)",dynamic,5.0892800000000005,828.1397914886475
+500000000,256,threads,master, , , ,dynamic,4.843495,849.6658339500427
+500000000,4,sockets,master,#pragma omp parallel for, ,"schedule(static,8)",static,5.46658,873.0081207752228
+500000000,64,threads,master,#pragma omp parallel for, ,"schedule(static,16)",static,5.614145,896.6298036575317
+500000000,64,sockets,master,#pragma omp parallel for, ,"schedule(static,1)",dynamic,5.2739899999999995,919.734025478363
+500000000,4,sockets,master, , ,"schedule(static,16)",static,5.08045,941.7651569843292
+500000000,16,cores,master, ,simd,"schedule(static,8)",dynamic,5.08609,963.9730937480927
+500000000,32,sockets,spread, ,simd,"schedule(static,32)",static,5.065975,986.1176540851593
+500000000,192,threads,master,#pragma omp parallel for, ,"schedule(static,32)",static,5.443045,1009.8894429206848
+500000000,256,threads,spread,#pragma omp parallel for,simd,"schedule(static,1)",dynamic,5.36839,1033.2880008220673
+500000000,96,threads,master,#pragma omp parallel for,simd, ,static,5.37378,1056.5214076042175
+500000000,32,threads,spread, , ,"schedule(static,8)",dynamic,4.934760000000001,1078.5132112503052
+500000000,128,sockets,close, ,simd,"schedule(static,2)",static,5.07048,1100.6056153774261
+500000000,128,threads,close, , ,"schedule(static,32)",dynamic,5.071985,1122.6735413074493
+500000000,48,sockets,master,#pragma omp parallel for,simd,"schedule(static,1)",static,5.21247,1145.2728626728058
+500000000,128,cores,close,#pragma omp parallel for, , ,dynamic,5.292945,1168.4455726146698
+500000000,8,sockets,spread,#pragma omp parallel for, , ,static,5.24306,1191.0370149612427
+500000000,64,sockets,master, , ,"schedule(static,32)",static,5.113305,1213.3304958343506
+500000000,32,cores,spread, , ,"schedule(static,16)",static,5.063765,1235.484652519226
+500000000,256,threads,master, , ,"schedule(static,2)",dynamic,5.07591,1257.9822244644165
+500000000,8,threads,close, , ,"schedule(static,1)",static,4.853325,1279.5225834846497
+500000000,256,cores,spread, , ,"schedule(static,1)",static,4.842090000000001,1301.0023431777954
+500000000,192,cores,spread,#pragma omp parallel for,simd,"schedule(static,8)",static,5.452805,1324.6460800170898
+500000000,16,cores,master,#pragma omp parallel for,simd,"schedule(static,2)",static,5.6511949999999995,1348.317540884018
+500000000,192,threads,master,#pragma omp parallel for,simd,"schedule(static,16)",dynamic,5.589215,1372.462072610855
+500000000,8,sockets,spread, , ,"schedule(static,16)",static,5.094725,1394.7670800685883
+500000000,4,threads,spread,#pragma omp parallel for, ,"schedule(static,32)",static,5.45628,1418.046214580536
+500000000,2,sockets,close, ,simd,"schedule(static,16)",static,5.072485,1440.3684012889862
+500000000,48,sockets,close, ,simd, ,dynamic,4.846959999999999,1462.0619537830353
+500000000,2,threads,master,#pragma omp parallel for,simd,"schedule(static,16)",static,5.399789999999999,1485.4787502288818
+500000000,192,threads,master, ,simd,"schedule(static,2)",dynamic,5.08896,1507.8001964092255
+500000000,2,cores,close,#pragma omp parallel for,simd,"schedule(static,8)",static,5.403790000000001,1530.9765470027924
+500000000,8,sockets,master, , ,"schedule(static,32)",static,5.06128,1553.2191421985626
+500000000,16,threads,close,#pragma omp parallel for,simd,"schedule(static,8)",dynamic,5.61523,1576.71315741539
+500000000,4,sockets,close, , ,"schedule(static,16)",dynamic,5.080825,1598.841536283493
+500000000,96,sockets,master, , ,"schedule(static,4)",static,5.080114999999999,1620.9977679252625
+500000000,2,sockets,close,#pragma omp parallel for, ,"schedule(static,8)",dynamic,5.395385,1644.339361667633
+500000000,48,cores,close, , ,"schedule(static,32)",dynamic,5.06914,1667.5466158390045
+500000000,8,sockets,master,#pragma omp parallel for,simd, ,static,5.218825000000001,1690.317110300064
+500000000,8,threads,master,#pragma omp parallel for, ,"schedule(static,1)",static,5.24718,1712.8014011383057
+500000000,64,threads,close,#pragma omp parallel for,simd,"schedule(static,16)",dynamic,5.58975,1736.7777285575867
+500000000,2,sockets,close, ,simd,"schedule(static,1)",static,4.83722,1758.2558436393738
+500000000,16,cores,master,#pragma omp parallel for, ,"schedule(static,8)",static,5.50237,1781.7734599113464
+500000000,2,sockets,spread, , ,"schedule(static,32)",dynamic,4.9850200000000005,1804.2418158054352
+500000000,96,threads,close, , ,"schedule(static,32)",dynamic,5.072735,1826.3734014034271
+500000000,48,sockets,master, , ,"schedule(static,8)",static,5.07962,1848.5448939800262
+500000000,192,threads,close, ,simd,"schedule(static,16)",static,5.07482,1870.9205095767975
+500000000,128,cores,close,#pragma omp parallel for, , ,dynamic,5.017415,1893.125542640686
+500000000,4,threads,spread, ,simd, ,static,4.85262,1914.6646811962128
+500000000,32,threads,spread, ,simd, ,dynamic,4.846845,1936.0455412864685
+500000000,192,threads,close, , ,"schedule(static,1)",static,4.840355,1957.4788501262665
+500000000,32,threads,close,#pragma omp parallel for,simd,"schedule(static,8)",static,5.60051,1981.2730255126953
+500000000,32,threads,spread, ,simd,"schedule(static,2)",static,5.07419,2003.3950083255768
+500000000,64,cores,close,#pragma omp parallel for,simd,"schedule(static,4)",dynamic,5.635994999999999,2027.4136555194855
+500000000,32,cores,spread,#pragma omp parallel for,simd,"schedule(static,16)",dynamic,5.61373,2051.0424637794495
+500000000,192,cores,spread,#pragma omp parallel for, ,"schedule(static,16)",static,5.59303,2076.748185157776
+500000000,32,sockets,close,#pragma omp parallel for,simd,"schedule(static,4)",static,5.577450000000001,2100.332731962204
+500000000,96,cores,spread, , ,"schedule(static,2)",static,5.072915,2122.46507191658
+500000000,4,cores,master, ,simd,"schedule(static,8)",dynamic,5.0719650000000005,2144.7423107624054
+500000000,128,sockets,close,#pragma omp parallel for, ,"schedule(static,32)",dynamic,5.57118,2169.0784492492676
+500000000,128,cores,close, , ,"schedule(static,32)",static,5.064075000000001,2191.5291883945465
+500000000,256,cores,spread,#pragma omp parallel for, ,"schedule(static,1)",dynamic,5.294765,2214.7991392612457
+500000000,256,cores,close,#pragma omp parallel for,simd,"schedule(static,8)",static,5.426965,2238.465208530426
+500000000,64,threads,close,#pragma omp parallel for, ,"schedule(static,2)",static,5.45324,2261.8137741088867
+500000000,128,sockets,master, ,simd,"schedule(static,2)",dynamic,5.076029999999999,2283.9769406318665
+1000000000,192,cores,close,#pragma omp parallel for,simd,"schedule(static,2)",dynamic,9.90131,2320.908788919449
+1000000000,16,cores,spread,#pragma omp parallel for, ,"schedule(static,1)",dynamic,9.4316,2356.1054384708405
+1000000000,8,threads,spread,#pragma omp parallel for,simd,"schedule(static,8)",static,9.92613,2392.6288924217224
+1000000000,128,threads,close, ,simd,"schedule(static,8)",dynamic,9.592694999999999,2428.1655838489532
+1000000000,4,threads,spread,#pragma omp parallel for, ,"schedule(static,4)",dynamic,9.921949999999999,2464.8254108428955
+1000000000,16,cores,spread,#pragma omp parallel for,simd,"schedule(static,8)",dynamic,9.927785,2501.328730583191
+1000000000,96,threads,close, , ,"schedule(static,32)",static,9.58337,2536.978212594986
+1000000000,16,cores,spread,#pragma omp parallel for,simd,"schedule(static,8)",dynamic,9.9241,2573.62509560585
+1000000000,8,sockets,master,#pragma omp parallel for, ,"schedule(static,4)",dynamic,9.947500000000002,2610.177115917206
+1000000000,128,cores,close, ,simd,"schedule(static,1)",dynamic,9.13076,2644.29363489151
+1000000000,48,threads,close, ,simd,"schedule(static,8)",static,9.588295,2679.7770071029663
+1000000000,8,threads,spread,#pragma omp parallel for, ,"schedule(static,1)",static,9.424305,2715.011995792389
+1000000000,2,sockets,spread, , ,"schedule(static,32)",dynamic,9.585215,2750.4891979694366
+1000000000,8,threads,spread,#pragma omp parallel for, ,"schedule(static,16)",dynamic,9.918135,2787.073231935501
+1000000000,64,threads,close, , ,"schedule(static,16)",dynamic,9.59746,2822.67542719841
+1000000000,32,threads,spread,#pragma omp parallel for, ,"schedule(static,8)",static,9.97623,2859.3292388916016
+1000000000,256,sockets,spread,#pragma omp parallel for, ,"schedule(static,1)",dynamic,9.51469,2895.432318210602
+1000000000,2,sockets,master,#pragma omp parallel for,simd, ,static,9.43724,2930.5974164009094
+1000000000,2,sockets,close,#pragma omp parallel for,simd,"schedule(static,4)",dynamic,9.94073,2967.1107029914856
+1000000000,96,cores,master, , , ,static,9.13574,3001.4899702072144
+1000000000,96,cores,master,#pragma omp parallel for,simd,"schedule(static,4)",dynamic,9.878875,3038.278283596039
+1000000000,16,cores,close, , ,"schedule(static,4)",dynamic,9.65589,3074.030353784561
+1000000000,8,cores,master,#pragma omp parallel for, ,"schedule(static,8)",dynamic,9.91556,3110.5697824954987
+1000000000,4,sockets,spread, ,simd,"schedule(static,1)",static,9.210235,3144.8879792690277
+1000000000,48,sockets,spread, ,simd,"schedule(static,2)",static,9.599745,3180.830096244812
+1000000000,64,sockets,close, , ,"schedule(static,32)",static,9.654665000000001,3216.472506761551
+1000000000,192,threads,master, , ,"schedule(static,32)",static,9.58988,3252.8617000579834
+1000000000,48,cores,master,#pragma omp parallel for,simd,"schedule(static,2)",static,9.929545000000001,3289.5337328910828
+1000000000,192,cores,master, , ,"schedule(static,32)",static,9.588905,3325.272702932358
+1000000000,192,threads,close, , ,"schedule(static,2)",static,9.591745,3360.9523446559906
+1000000000,64,sockets,spread, , ,"schedule(static,1)",static,9.04148,3395.4368081092834
+1000000000,48,sockets,close,#pragma omp parallel for, ,"schedule(static,2)",static,9.876355,3432.343584537506
+1000000000,32,threads,spread, , ,"schedule(static,2)",dynamic,9.611265,3468.3846628665924
+1000000000,64,cores,spread,#pragma omp parallel for,simd,"schedule(static,8)",static,9.91884,3505.20179104805
+1000000000,48,sockets,master,#pragma omp parallel for, ,"schedule(static,2)",static,10.003395,3542.3119876384735
+1000000000,256,sockets,master, , ,"schedule(static,1)",dynamic,9.16122,3577.235875606537
+1000000000,2,cores,master,#pragma omp parallel for,simd, ,static,9.532245,3612.929863214493
+1000000000,256,threads,close, ,simd,"schedule(static,1)",static,9.117605000000001,3647.264370918274
+1000000000,128,sockets,close, , ,"schedule(static,32)",static,9.590175,3683.224170446396
+1000000000,256,threads,master, ,simd,"schedule(static,16)",static,9.581085,3719.166783809662
+1000000000,192,sockets,master,#pragma omp parallel for,simd,"schedule(static,32)",static,9.932355,3756.6720464229584
+1000000000,128,threads,spread, ,simd,"schedule(static,32)",static,9.58732,3792.660185098648
+1000000000,16,cores,master, , ,"schedule(static,2)",dynamic,9.594735,3828.4448704719543
+1000000000,2,sockets,spread,#pragma omp parallel for,simd,"schedule(static,32)",dynamic,9.980125000000001,3865.3538057804108
+1000000000,16,sockets,close,#pragma omp parallel for, ,"schedule(static,8)",static,9.890045,3901.90864443779
+1000000000,256,threads,close,#pragma omp parallel for,simd, ,static,9.50336,3937.858214855194
+1000000000,4,sockets,close,#pragma omp parallel for,simd,"schedule(static,16)",dynamic,9.927925,3974.845775604248
+1000000000,256,threads,close, , ,"schedule(static,4)",dynamic,9.59928,4012.8749957084656
+1000000000,64,sockets,spread, , , ,dynamic,9.10897,4047.456931114197
+1000000000,256,threads,master, , , ,dynamic,9.133790000000001,4082.228938102722
+1000000000,192,threads,spread, ,simd,"schedule(static,8)",dynamic,9.588025,4117.917261838913
+1000000000,96,threads,master, , , ,static,8.919105,4152.285967350006
+1000000000,4,cores,master, ,simd,"schedule(static,4)",dynamic,9.592794999999999,4188.012480258942
+1000000000,8,threads,close,#pragma omp parallel for,simd, ,static,9.413250000000001,4223.254907369614
+1000000000,4,threads,spread, , ,"schedule(static,8)",static,9.586115,4258.930095434189
+1000000000,4,cores,master,#pragma omp parallel for, ,"schedule(static,4)",dynamic,9.942734999999999,4295.611907720566
+1000000000,4,cores,spread,#pragma omp parallel for, , ,static,9.430945000000001,4330.829247236252
+1000000000,48,cores,master, , ,"schedule(static,16)",static,9.596644999999999,4366.616013288498
+1000000000,128,sockets,close, , ,"schedule(static,16)",static,9.59329,4402.19867515564
+1000000000,64,threads,spread,#pragma omp parallel for, ,"schedule(static,16)",static,9.935645,4438.781398534775
+1000000000,128,threads,spread, ,simd,"schedule(static,8)",dynamic,9.610515,4474.463819742203
+1000000000,96,threads,close, , ,"schedule(static,8)",dynamic,9.586585,4510.017519235611
+1000000000,128,cores,master,#pragma omp parallel for, ,"schedule(static,4)",static,9.932690000000001,4546.973225355148
+1000000000,96,sockets,spread, ,simd, ,dynamic,9.139745,4581.208407640457
+1000000000,48,threads,close, ,simd,"schedule(static,16)",static,9.5883,4616.703715324402
+1000000000,2,cores,master,#pragma omp parallel for, ,"schedule(static,32)",static,9.932955,4653.272900819778
+1000000000,8,sockets,spread,#pragma omp parallel for,simd, ,static,9.432974999999999,4688.3374264240265
+1000000000,8,sockets,master,#pragma omp parallel for, ,"schedule(static,4)",dynamic,10.005125,4727.6189432144165
+1000000000,16,threads,spread, , ,"schedule(static,32)",static,9.52304,4763.214071989059
+1000000000,96,sockets,master, ,simd,"schedule(static,4)",dynamic,9.59008,4798.636357307434
+1000000000,32,threads,spread,#pragma omp parallel for, ,"schedule(static,2)",static,10.004925,4835.522483587265
+1000000000,32,sockets,close,#pragma omp parallel for,simd,"schedule(static,16)",static,10.041505,4872.357631206512
+1000000000,64,threads,master, ,simd,"schedule(static,2)",static,9.592915,4908.04008936882
+1000000000,4,sockets,master, , ,"schedule(static,1)",dynamic,9.11651,4942.275356292725
+1000000000,96,sockets,master,#pragma omp parallel for, ,"schedule(static,32)",static,9.969394999999999,4979.133937597275
+1000000000,4,cores,spread, , ,"schedule(static,1)",static,9.11768,5013.320120573044
+1000000000,128,cores,master, ,simd,"schedule(static,16)",dynamic,9.653335,5049.037233829498
+1000000000,48,sockets,master,#pragma omp parallel for,simd,"schedule(static,16)",static,9.91652,5086.578937292099
+1000000000,96,cores,spread,#pragma omp parallel for,simd,"schedule(static,8)",dynamic,9.897475,5123.50058221817
+1000000000,32,cores,master,#pragma omp parallel for,simd,"schedule(static,32)",dynamic,9.944885,5160.224841833115
+1000000000,2,threads,close,#pragma omp parallel for,simd,"schedule(static,8)",dynamic,10.025925,5196.93311715126
+1000000000,96,cores,master, , ,"schedule(static,16)",static,9.59151,5232.601823568344
+1000000000,64,cores,close,#pragma omp parallel for, ,"schedule(static,2)",dynamic,9.93249,5269.6091187000275
+1000000000,128,cores,close,#pragma omp parallel for, ,"schedule(static,4)",dynamic,9.95343,5306.73469042778
+1000000000,256,sockets,spread, ,simd,"schedule(static,2)",static,9.597885,5342.739364624023
+1000000000,16,cores,close,#pragma omp parallel for, , ,static,9.423955,5377.716954469681
+1000000000,32,threads,close,#pragma omp parallel for,simd,"schedule(static,2)",dynamic,9.919,5414.449313879013
+1000000000,16,sockets,master,#pragma omp parallel for,simd, ,dynamic,9.445975,5449.559695959091
+1000000000,32,threads,spread,#pragma omp parallel for,simd,"schedule(static,16)",dynamic,9.949335,5486.465332746506
+1000000000,2,cores,master, , ,"schedule(static,2)",dynamic,9.60047,5522.061737060547
+1000000000,192,sockets,close, ,simd,"schedule(static,1)",static,9.140055,5556.189800977707
+1000000000,48,cores,close, ,simd,"schedule(static,16)",dynamic,9.612905000000001,5592.055060148239
+1000000000,192,sockets,master, , , ,dynamic,9.113365,5626.1529994010925
+1000000000,48,sockets,close,#pragma omp parallel for,simd,"schedule(static,2)",static,9.988605,5662.7259953022
+1000000000,2,cores,spread, ,simd,"schedule(static,4)",static,9.595345,5698.568016767502
+1000000000,192,cores,spread, ,simd,"schedule(static,1)",dynamic,9.153385,5733.217755794525
+1000000000,32,threads,close,#pragma omp parallel for,simd,"schedule(static,4)",dynamic,9.93425,5769.867121458054
+1000000000,256,threads,close,#pragma omp parallel for,simd,"schedule(static,1)",dynamic,9.58945,5805.658014297485
+1000000000,8,sockets,master,#pragma omp parallel for,simd,"schedule(static,32)",dynamic,9.97627,5842.23596572876
+1000000000,16,cores,close, ,simd,"schedule(static,1)",dynamic,9.11659,5876.513900756836
+1500000000,128,sockets,close, ,simd, ,static,13.434815,5923.534139633179
+1500000000,256,sockets,spread,#pragma omp parallel for,simd,"schedule(static,2)",dynamic,14.31221,5973.714354753494
+1500000000,8,sockets,close,#pragma omp parallel for,simd,"schedule(static,8)",dynamic,14.238795,6023.324782133102
+1500000000,96,cores,master,#pragma omp parallel for,simd,"schedule(static,1)",dynamic,13.570405000000001,6071.069765329361
+1500000000,2,sockets,close,#pragma omp parallel for,simd, ,static,13.554925,6118.57107925415
+1500000000,64,sockets,close,#pragma omp parallel for, ,"schedule(static,8)",static,14.232099999999999,6168.9604732990265
+1500000000,192,cores,master,#pragma omp parallel for,simd,"schedule(static,1)",dynamic,13.57759,6217.16169834137
+1500000000,8,sockets,spread,#pragma omp parallel for, ,"schedule(static,8)",static,14.243165000000001,6266.68962597847
+1500000000,64,threads,master, , ,"schedule(static,2)",dynamic,14.152565,6315.903938293457
+1500000000,64,cores,spread, , ,"schedule(static,8)",static,14.146355,6364.902136325836
+1500000000,16,cores,master,#pragma omp parallel for,simd,"schedule(static,16)",static,14.247775,6414.6080594062805
+1500000000,48,cores,master,#pragma omp parallel for, ,"schedule(static,4)",static,14.282464999999998,6464.7264857292175
+1500000000,256,cores,master, ,simd,"schedule(static,8)",static,14.141205,6513.7570786476135
+1500000000,8,threads,spread, , ,"schedule(static,8)",dynamic,14.14507,6563.401131391525
+1500000000,48,threads,spread,#pragma omp parallel for,simd,"schedule(static,16)",dynamic,14.27417,6613.1190593242645
+1500000000,2,cores,spread, , ,"schedule(static,4)",dynamic,14.12613,6662.697810411453
+1500000000,128,threads,master,#pragma omp parallel for, ,"schedule(static,16)",static,14.3061,6712.689137458801
+1500000000,4,cores,master, ,simd,"schedule(static,2)",static,14.225214999999999,6761.853907585144
+1500000000,192,threads,close,#pragma omp parallel for, ,"schedule(static,2)",static,14.285035,6812.497629165649
+1500000000,16,sockets,master,#pragma omp parallel for,simd,"schedule(static,8)",dynamic,14.269235,6862.5335648059845
+1500000000,128,sockets,spread,#pragma omp parallel for,simd,"schedule(static,1)",dynamic,13.578275000000001,6910.3079743385315
+1500000000,64,cores,close, , , ,static,13.43122,6957.4613654613495
+1500000000,32,threads,close, ,simd,"schedule(static,16)",dynamic,14.167005,7006.864050388336
+1500000000,2,threads,master, ,simd,"schedule(static,8)",dynamic,14.140979999999999,7055.9317672252655
+1500000000,128,threads,close, ,simd,"schedule(static,4)",static,14.137350000000001,7105.113744735718
+1500000000,2,cores,close,#pragma omp parallel for,simd,"schedule(static,1)",dynamic,13.54982,7152.898787975311
+1500000000,256,sockets,spread,#pragma omp parallel for,simd,"schedule(static,32)",dynamic,14.340060000000001,7203.218314170837
+1500000000,16,sockets,close, ,simd,"schedule(static,4)",dynamic,14.137125000000001,7252.168276786804
+1500000000,2,cores,master,#pragma omp parallel for, ,"schedule(static,32)",dynamic,14.316815,7302.075238704681
+1500000000,8,cores,spread, ,simd,"schedule(static,1)",static,13.508645000000001,7349.1411600112915
+1500000000,48,threads,close,#pragma omp parallel for,simd,"schedule(static,32)",static,14.314245,7399.142364263535
+1500000000,96,sockets,master,#pragma omp parallel for,simd,"schedule(static,16)",static,14.20871,7448.817460775375
+1500000000,128,sockets,master,#pragma omp parallel for, ,"schedule(static,4)",dynamic,14.232765,7498.580976963043
+1500000000,32,sockets,close,#pragma omp parallel for, , ,static,13.58757,7546.153950214386
+1500000000,16,cores,spread,#pragma omp parallel for, ,"schedule(static,1)",static,13.610005000000001,7593.735668420792
+1500000000,48,threads,close,#pragma omp parallel for,simd,"schedule(static,16)",dynamic,14.2266,7643.51374745369
+1500000000,256,sockets,master,#pragma omp parallel for,simd,"schedule(static,4)",dynamic,14.269120000000001,7693.910266637802
+1500000000,8,cores,spread,#pragma omp parallel for, ,"schedule(static,32)",dynamic,14.227219999999999,7743.591614961624
+1500000000,192,sockets,master,#pragma omp parallel for, ,"schedule(static,1)",static,13.618310000000001,7792.650426864624
+1500000000,2,threads,close,#pragma omp parallel for, , ,static,13.675,7840.58515048027
+1500000000,192,threads,spread, , ,"schedule(static,16)",dynamic,14.207625,7889.7053644657135
+1500000000,256,cores,spread, , , ,dynamic,13.49314,7936.624759912491
+1500000000,48,sockets,spread,#pragma omp parallel for, ,"schedule(static,1)",static,13.57413,7984.257507801056
+1500000000,128,threads,master,#pragma omp parallel for, ,"schedule(static,32)",dynamic,14.226345,8034.322922706604
+1500000000,96,threads,close, , ,"schedule(static,2)",dynamic,14.180115,8083.4518892765045
+1500000000,128,sockets,close,#pragma omp parallel for,simd,"schedule(static,16)",static,14.318715000000001,8133.3969810009
+1500000000,2,sockets,close, ,simd,"schedule(static,32)",dynamic,14.148475000000001,8182.355861902237
+1500000000,16,sockets,spread,#pragma omp parallel for,simd,"schedule(static,4)",static,14.254515000000001,8232.387022733688
+1500000000,48,cores,close,#pragma omp parallel for,simd,"schedule(static,32)",static,14.245725,8282.145425081253
+1500000000,32,cores,spread, ,simd,"schedule(static,32)",dynamic,14.1079,8331.014375209808
+1500000000,64,threads,spread,#pragma omp parallel for, ,"schedule(static,4)",static,14.316175,8381.035686016083
+1500000000,32,cores,close, , , ,dynamic,13.41581,8428.00092792511
+1500000000,64,threads,master, , ,"schedule(static,8)",static,14.16695,8478.298434019089
+1500000000,16,sockets,master, ,simd, ,dynamic,13.45725,8525.434563159943
+1500000000,16,threads,close, , ,"schedule(static,1)",dynamic,13.442895,8572.397696971893
+1500000000,96,sockets,spread, ,simd,"schedule(static,8)",static,14.165555,8621.635921478271
+1500000000,16,cores,master, , ,"schedule(static,1)",dynamic,13.423845,8668.645147562027
+1500000000,8,threads,close, , ,"schedule(static,8)",static,14.127289999999999,8718.15246295929
+1500000000,96,cores,spread, ,simd,"schedule(static,8)",static,14.180330000000001,8767.391703128815
+1500000000,96,sockets,master, ,simd,"schedule(static,4)",dynamic,14.125644999999999,8816.504816055298
+1500000000,256,sockets,close, , ,"schedule(static,32)",dynamic,14.131075,8865.911982297897
+1500000000,64,cores,spread,#pragma omp parallel for, ,"schedule(static,1)",dynamic,13.606580000000001,8913.865024089813
+1500000000,192,threads,spread, , ,"schedule(static,2)",dynamic,14.14565,8963.241359472275
+1500000000,4,threads,master,#pragma omp parallel for, ,"schedule(static,2)",static,14.221445,9013.160187482834
+1500000000,96,sockets,spread, ,simd,"schedule(static,2)",static,14.15147,9062.30880856514
+1500000000,4,cores,master, , , ,static,13.425195,9109.478276491165
+1500000000,64,threads,close,#pragma omp parallel for, ,"schedule(static,4)",dynamic,14.238415,9159.099741458893
+1500000000,8,threads,close,#pragma omp parallel for,simd,"schedule(static,1)",static,13.569130000000001,9207.076260328293
+1500000000,128,cores,close,#pragma omp parallel for, , ,static,13.578165,9255.040442466736
+1500000000,192,cores,master,#pragma omp parallel for, ,"schedule(static,32)",static,14.230515,9305.032607793808
+1500000000,192,threads,master,#pragma omp parallel for, ,"schedule(static,2)",dynamic,14.310855,9355.30107498169
+1500000000,8,cores,master, ,simd,"schedule(static,4)",static,14.121739999999999,9404.328640460968
+1500000000,32,sockets,master, ,simd,"schedule(static,32)",static,13.840634999999999,9453.020145893097
+1500000000,48,threads,master, ,simd,"schedule(static,16)",dynamic,14.14321,9502.201394557953
+1500000000,192,sockets,close, , , ,static,13.408404999999998,9549.121111392975
+1500000000,2,threads,spread, ,simd,"schedule(static,16)",static,14.145575000000001,9598.01827120781
+1500000000,4,cores,spread, ,simd,"schedule(static,4)",static,14.140329999999999,9647.030816078186
+1500000000,192,cores,spread,#pragma omp parallel for, , ,dynamic,13.656905,9695.10943722725
+1500000000,96,sockets,close, , ,"schedule(static,32)",static,14.162904999999999,9744.177815675735
+1500000000,256,threads,spread, , ,"schedule(static,16)",dynamic,14.140915,9793.351430654526
+1500000000,32,cores,master, ,simd,"schedule(static,1)",dynamic,13.41888,9840.641782045364
+1500000000,4,threads,master, ,simd, ,dynamic,13.413879999999999,9887.426313638687
+1500000000,32,threads,master, , ,"schedule(static,2)",static,14.129495,9936.56154346466
+1500000000,48,threads,spread, ,simd,"schedule(static,2)",static,14.13853,9985.619443416595
+1500000000,4,sockets,master, ,simd,"schedule(static,4)",static,14.13337,10034.776968717575
+1500000000,16,sockets,close,#pragma omp parallel for, ,"schedule(static,1)",static,13.591439999999999,10082.374572992325
+1500000000,96,threads,close, , ,"schedule(static,16)",dynamic,14.11444,10131.248303413391
+1500000000,4,sockets,close, ,simd,"schedule(static,2)",dynamic,14.158325,10180.12470793724
+1500000000,128,threads,spread, , ,"schedule(static,8)",static,14.14303,10229.196564435959
+1500000000,64,cores,spread,#pragma omp parallel for, ,"schedule(static,4)",static,14.249785,10278.712255954742
+1500000000,256,sockets,close,#pragma omp parallel for,simd,"schedule(static,32)",static,14.277519999999999,10329.012575864792
+1500000000,48,cores,spread, , ,"schedule(static,16)",dynamic,14.157825,10377.949657678604
+1500000000,32,cores,master,#pragma omp parallel for, ,"schedule(static,2)",dynamic,14.284415,10428.005133390427
+1500000000,2,cores,close,#pragma omp parallel for,simd,"schedule(static,4)",dynamic,14.329165,10478.025200843811
+1500000000,4,threads,master, ,simd,"schedule(static,32)",static,14.156835000000001,10527.01923584938
+1500000000,8,threads,spread,#pragma omp parallel for, ,"schedule(static,8)",dynamic,14.24396,10576.621296167374
+1500000000,256,sockets,close,#pragma omp parallel for,simd,"schedule(static,16)",dynamic,14.311705,10626.796551704407
+1500000000,2,threads,close, , ,"schedule(static,16)",static,14.216165,10676.002496957779
+1500000000,32,cores,spread,#pragma omp parallel for,simd, ,dynamic,13.537255,10723.572620868683
+1500000000,48,sockets,spread,#pragma omp parallel for,simd,"schedule(static,1)",dynamic,13.633165,10771.324725866318
+500000000,64,threads,close, , ,"schedule(static,1)",static,4.851495,10834.13566660881
+1000000000,8,threads,close, , ,"schedule(static,1)",dynamic,9.1242,10868.279853343964
+1500000000,2,threads,close, , ,"schedule(static,1)",dynamic,13.425654999999999,10915.295407295227
+500000000,96,cores,spread, ,simd,"schedule(static,1)",static,4.85535,10995.9133310318
+1000000000,2,cores,close, ,simd,"schedule(static,1)",dynamic,9.09713,11030.318705320358
+1500000000,2,threads,close, ,simd,"schedule(static,1)",dynamic,13.432395,11077.086695432663
+500000000,64,sockets,master, ,simd,"schedule(static,1)",static,4.841205,11172.531396865845
+1000000000,16,sockets,master, ,simd,"schedule(static,1)",static,9.12848,11206.743232250214
+1500000000,48,sockets,master, , ,"schedule(static,1)",static,13.408259999999999,11253.668394088745
+500000000,16,sockets,close, ,simd,"schedule(static,1)",dynamic,4.847284999999999,11364.643496513367
+1000000000,32,sockets,close, ,simd,"schedule(static,1)",dynamic,9.138695,11399.10933303833
+1500000000,2,sockets,close, ,simd,"schedule(static,1)",dynamic,13.43461,11446.075834989548
+500000000,2,cores,master, ,simd,"schedule(static,1)",dynamic,4.848535,11565.570738554
+1000000000,2,threads,master, ,simd,"schedule(static,1)",dynamic,9.137550000000001,11599.635091543198
+1500000000,2,threads,master, ,simd,"schedule(static,1)",dynamic,13.417615,11646.46247792244
+500000000,2,threads,spread, ,simd,"schedule(static,1)",dynamic,4.843814999999999,11727.101695299149
+1000000000,4,threads,close, ,simd,"schedule(static,1)",dynamic,9.134989999999998,11761.547501802444
+1500000000,2,cores,spread, ,simd,"schedule(static,1)",dynamic,13.434605000000001,11808.39410686493
+500000000,4,sockets,master, ,simd,"schedule(static,1)",dynamic,4.846399999999999,11857.734555482864
+1000000000,2,sockets,spread, ,simd,"schedule(static,1)",dynamic,9.1567,11891.989466667175
+1500000000,2,threads,spread, ,simd,"schedule(static,1)",dynamic,13.44807,11938.82672405243
+500000000,48,cores,spread, , ,"schedule(static,1)",static,4.84692,12076.237350463867
+1000000000,64,cores,close, , ,"schedule(static,1)",static,9.123525,12110.32470369339
+1500000000,96,threads,close, , ,"schedule(static,1)",dynamic,13.421975,12157.199822425842
+500000000,256,sockets,master, ,simd,"schedule(static,1)",dynamic,4.91417,12215.62400341034
+1000000000,256,sockets,spread, ,simd,"schedule(static,1)",dynamic,9.135415,12249.749489068985
+1500000000,192,sockets,close, ,simd,"schedule(static,1)",dynamic,13.42597,12297.04841375351
+500000000,2,sockets,master, , ,"schedule(static,1)",static,4.841665,12358.418021202087
+1000000000,64,sockets,master, , ,"schedule(static,1)",dynamic,9.13184,12392.574313640594
+1500000000,2,sockets,master, , ,"schedule(static,1)",static,13.445445,12439.482776403427
+500000000,2,sockets,close, ,simd,"schedule(static,1)",dynamic,4.85796,12489.375823020935
+1000000000,2,sockets,close, ,simd,"schedule(static,1)",dynamic,9.143895,12523.721905708313
+1500000000,4,sockets,close, ,simd,"schedule(static,1)",dynamic,13.423860000000001,12570.649946928024
+500000000,48,sockets,master, ,simd,"schedule(static,1)",dynamic,4.84946,12735.57077407837
+1000000000,16,sockets,spread, ,simd,"schedule(static,1)",dynamic,9.135,12769.670057296753
+1500000000,32,sockets,spread, ,simd,"schedule(static,1)",dynamic,13.4154,12816.493464946747
+500000000,32,sockets,close, ,simd,"schedule(static,1)",dynamic,4.84282,13031.1842648983
+1000000000,2,threads,spread, ,simd,"schedule(static,1)",dynamic,9.14616,13065.40059185028
+1500000000,16,sockets,spread, ,simd,"schedule(static,1)",dynamic,13.429235,13112.377709627151
+500000000,2,cores,spread, , ,"schedule(static,1)",static,4.850735,13169.797240495682
+1000000000,2,cores,spread, , ,"schedule(static,1)",static,9.133815,13204.006442308426
+1500000000,2,cores,close, , ,"schedule(static,1)",dynamic,13.41708,13251.182572364807
+500000000,192,threads,master, , ,"schedule(static,1)",dynamic,4.84645,13324.150006532669
+1000000000,64,sockets,close, ,simd,"schedule(static,1)",dynamic,9.12379,13358.271695375443
+1500000000,64,sockets,spread, ,simd,"schedule(static,1)",static,13.42224,13405.197491884232
+500000000,8,sockets,master, , ,"schedule(static,1)",dynamic,4.840745,13454.97088098526
+1000000000,16,sockets,master, , ,"schedule(static,1)",dynamic,9.120805,13489.099189043045
+1500000000,48,sockets,master, , ,"schedule(static,1)",dynamic,13.408645,13535.911036252975
+500000000,2,sockets,close, , ,"schedule(static,1)",dynamic,4.83868,13618.494014024734
+1000000000,4,sockets,close, , ,"schedule(static,1)",dynamic,9.13659,13652.906898021698
+1500000000,32,sockets,close, , ,"schedule(static,1)",dynamic,13.426365,13700.06545162201
+500000000,48,cores,spread, ,simd, ,dynamic,4.84117,13875.815128564835
+1000000000,256,cores,spread, ,simd, ,static,9.147635000000001,13910.167292118073
+1500000000,128,sockets,close, , ,"schedule(static,1)",dynamic,13.418085000000001,13957.138721466064
+500000000,192,sockets,master, ,simd, ,static,4.839365,14107.161330223083
+1000000000,256,sockets,master, ,simd, ,static,9.131755,14141.645701885223
+1500000000,256,sockets,master, ,simd, ,static,13.459254999999999,14188.685691595078
+500000000,4,cores,master, , ,"schedule(static,1)",dynamic,4.84061,14248.946686267853
+1000000000,2,threads,master, , ,"schedule(static,1)",static,9.15977,14283.318982362747
+1500000000,4,cores,master, , ,"schedule(static,1)",dynamic,13.496110000000002,14330.650204658508
+500000000,2,threads,spread, , ,"schedule(static,1)",dynamic,4.843624999999999,14380.638860940933
+1000000000,96,sockets,master, , ,"schedule(static,1)",dynamic,9.12759,14415.11893415451
+1500000000,32,sockets,master, , ,"schedule(static,1)",dynamic,13.64268,14462.708641767502
+500000000,8,sockets,master, ,simd,"schedule(static,1)",dynamic,4.847495,14550.004105091095
+1000000000,2,sockets,master, ,simd,"schedule(static,1)",dynamic,9.14858,14584.33526468277
+1500000000,48,sockets,close, ,simd,"schedule(static,1)",dynamic,13.417245000000001,14631.566116571426
+500000000,8,sockets,spread, , ,"schedule(static,1)",dynamic,4.85152,14740.31725358963
+1000000000,16,sockets,master, ,simd,"schedule(static,1)",dynamic,9.17009,14774.769602537155
+1500000000,8,cores,spread, , ,"schedule(static,1)",static,13.43279,14821.871812820435
+500000000,64,threads,spread, ,simd,"schedule(static,1)",static,4.858005,14910.293325424194
+1000000000,64,threads,spread, ,simd,"schedule(static,1)",static,9.150694999999999,14944.482431173325
+1500000000,16,sockets,close, , ,"schedule(static,1)",dynamic,13.441175000000001,14991.381094455719
+500000000,4,sockets,spread, ,simd,"schedule(static,1)",dynamic,4.85985,15081.592085123062
+1000000000,48,sockets,master, ,simd,"schedule(static,1)",dynamic,9.144404999999999,15116.090950965881
+1500000000,8,sockets,spread, ,simd,"schedule(static,1)",dynamic,13.44141,15163.086154937744
+500000000,4,threads,close, ,simd,"schedule(static,1)",static,4.847519999999999,15276.20717215538
+1000000000,4,threads,close, ,simd,"schedule(static,1)",static,9.126235,15310.408467769623
+1500000000,8,sockets,close, ,simd,"schedule(static,1)",static,13.411335000000001,15357.240124702454
+500000000,2,sockets,master, ,simd,"schedule(static,1)",static,4.8494150000000005,15433.588770151138
+1000000000,4,sockets,master, ,simd,"schedule(static,1)",static,9.12956,15467.912697553635
+1500000000,2,sockets,master, ,simd,"schedule(static,1)",static,13.433455,15515.031346559525
+500000000,2,sockets,master, ,simd, ,static,4.8473749999999995,15709.562926769257
+1000000000,8,cores,master, , , ,static,9.11767,15743.703677892685
+1500000000,4,sockets,master, , ,"schedule(static,1)",dynamic,13.435179999999999,15790.709182739258
+500000000,2,sockets,spread, ,simd,"schedule(static,1)",dynamic,4.8500250000000005,15870.385881185532
+1000000000,2,sockets,close, ,simd,"schedule(static,1)",static,9.146764999999998,15904.774416208267
+1500000000,2,sockets,spread, ,simd,"schedule(static,1)",static,13.422035000000001,15951.919844388962
+500000000,8,threads,close, ,simd,"schedule(static,1)",static,4.857355,16097.822268724442
+1000000000,8,sockets,master, ,simd,"schedule(static,1)",static,9.151135,16132.07682466507
+1500000000,2,threads,close, ,simd,"schedule(static,1)",static,13.431845,16179.121317148209
+500000000,2,sockets,master, ,simd,"schedule(static,1)",dynamic,4.843795,16533.01762366295
+1000000000,32,sockets,master, ,simd,"schedule(static,1)",static,9.11776,16567.725123405457
+1500000000,8,sockets,master, , ,"schedule(static,1)",dynamic,13.43708,16614.80504465103
+500000000,4,sockets,close, ,simd,"schedule(static,1)",dynamic,4.844374999999999,16696.08319377899
+1000000000,2,threads,close, ,simd,"schedule(static,1)",dynamic,9.15098,16730.545780658722
+1500000000,16,sockets,master, ,simd,"schedule(static,1)",dynamic,13.43599,16777.545340299606
+500000000,2,sockets,spread, ,simd,"schedule(static,1)",static,4.8576250000000005,17046.610417604446
+1000000000,8,sockets,master, ,simd,"schedule(static,1)",dynamic,9.149155,17080.912748336792
+1500000000,2,sockets,master, , ,"schedule(static,1)",dynamic,13.431585,17127.893110752106
+500000000,8,threads,master, ,simd, ,static,4.858595,17429.08858704567
+1000000000,4,sockets,master, , , ,static,9.15082,17463.45183968544
+1500000000,8,sockets,master, ,simd, ,static,13.412445,17510.502786636353
+500000000,16,cores,master, , ,"schedule(static,1)",dynamic,4.850524999999999,17612.67806339264
+1000000000,256,cores,master, , ,"schedule(static,1)",dynamic,9.147005,17647.069223880768
+1500000000,4,cores,spread, , ,"schedule(static,1)",dynamic,13.457965,17694.254638671875
+500000000,4,threads,master, , , ,static,4.84159,17872.81050014496
+1000000000,2,cores,master, ,simd, ,static,8.941725,17906.82540488243
+1500000000,2,sockets,master, ,simd,"schedule(static,1)",dynamic,13.436625,17953.927960157394
+500000000,16,sockets,master, ,simd,"schedule(static,1)",dynamic,4.85666,18044.26543736458
+1000000000,8,sockets,close, ,simd,"schedule(static,1)",dynamic,9.13189,18078.556375026703
+1500000000,8,sockets,master, ,simd,"schedule(static,1)",dynamic,13.42074,18125.657554626465
+500000000,8,sockets,close, ,simd,"schedule(static,1)",dynamic,4.849875,18201.638580322266
+1000000000,16,sockets,close, ,simd,"schedule(static,1)",dynamic,9.146155,18236.061383247375
+1500000000,2,sockets,spread, ,simd,"schedule(static,1)",dynamic,13.447545,18283.25744175911
+500000000,8,sockets,spread, ,simd,"schedule(static,1)",static,4.85741,18420.75437617302
+1000000000,96,sockets,close, ,simd,"schedule(static,1)",dynamic,9.16785,18455.205554246902
+1500000000,4,threads,spread, , ,"schedule(static,1)",dynamic,13.45147,18502.316866636276
+500000000,8,sockets,spread, ,simd,"schedule(static,1)",dynamic,4.709325,18838.36479115486
+1000000000,32,sockets,master, ,simd,"schedule(static,1)",dynamic,9.141185,18872.76624059677
+1500000000,4,sockets,close, , ,"schedule(static,1)",dynamic,13.49387,18919.96797990799
+500000000,48,sockets,close, ,simd,"schedule(static,1)",dynamic,4.848599999999999,19111.693911790848
+1000000000,64,threads,close, ,simd,"schedule(static,1)",dynamic,9.17271,19146.16738462448
+1500000000,96,sockets,master, , ,"schedule(static,1)",dynamic,13.423494999999999,19193.40448141098
+500000000,48,sockets,spread, ,simd,"schedule(static,1)",dynamic,4.85616,19473.724113225937
+1000000000,8,sockets,spread, ,simd,"schedule(static,1)",dynamic,9.13229,19508.254652261734
+1500000000,2,sockets,close, , ,"schedule(static,1)",dynamic,13.435615,19555.554139614105
+500000000,4,sockets,spread, ,simd, ,static,4.924155000000001,19863.239010095596
+1000000000,2,sockets,spread, ,simd, ,static,9.141225,19897.68090724945
+1500000000,32,sockets,spread, ,simd, ,static,13.145455,19944.412120342255
+500000000,4,cores,master, ,simd, ,static,4.85004,20181.593653678894
+1000000000,2,cores,close, , ,"schedule(static,1)",static,9.114564999999999,20215.897411108017
+1500000000,256,cores,spread,#pragma omp parallel for,simd,"schedule(static,1)",static,13.63242,20264.157300710678
+500000000,64,sockets,master, ,simd,"schedule(static,1)",dynamic,4.84387,20523.08097720146
+1000000000,48,sockets,close, ,simd,"schedule(static,1)",dynamic,9.124085000000001,20557.465725421906
+1500000000,64,sockets,spread, , ,"schedule(static,1)",dynamic,13.45515,20604.691428899765
+500000000,32,sockets,spread, ,simd, ,dynamic,4.848085,21005.874275922775
+1000000000,256,cores,spread, , ,"schedule(static,1)",dynamic,9.141935,21040.266907930374
+1500000000,256,cores,master, , ,"schedule(static,1)",static,13.437149999999999,21087.245936870575
+500000000,32,sockets,close, ,simd, ,dynamic,4.847189999999999,21330.876785993576
+1000000000,96,cores,close, ,simd, ,dynamic,9.164100000000001,21365.204337835312
+1500000000,256,cores,close, ,simd,"schedule(static,1)",dynamic,13.437725,21412.265950202942
+500000000,16,sockets,spread, ,simd,"schedule(static,1)",dynamic,4.846335,21566.46810746193
+1000000000,32,sockets,spread, ,simd,"schedule(static,1)",dynamic,9.161280000000001,21600.77012705803
+1500000000,64,sockets,close, ,simd,"schedule(static,1)",dynamic,13.413145,21647.783742427826
+500000000,2,cores,close, , ,"schedule(static,1)",dynamic,4.85378,21803.590139389038
+1000000000,4,cores,close, ,simd, ,static,9.106855,21837.814641714096
+1500000000,256,cores,close, ,simd, ,dynamic,13.417635,21885.109495401382
+500000000,4,threads,close, ,simd, ,static,4.85351,22000.410853385925
+1000000000,2,cores,spread, ,simd, ,static,9.153285,22034.7681183815
+1500000000,2,sockets,master, ,simd, ,static,13.41618,22081.911949396133
+500000000,8,cores,spread, , ,"schedule(static,1)",static,4.857585,22423.21168231964
+1000000000,8,cores,master, , ,"schedule(static,1)",static,9.145085,22457.47052836418
+1500000000,128,cores,master, ,simd, ,dynamic,13.41901,22504.63246870041
+500000000,256,cores,close, ,simd,"schedule(static,1)",static,4.85228,22902.7811999321
+1000000000,256,cores,close, ,simd,"schedule(static,1)",dynamic,9.14235,22937.113431692123
+1500000000,256,cores,master, ,simd,"schedule(static,1)",dynamic,13.42272,22984.18588590622
+500000000,32,sockets,close, ,simd, ,static,4.85095,23177.904294490814
+1000000000,64,sockets,master, ,simd, ,static,9.11687,23212.221807956696
+1500000000,256,sockets,master, , ,"schedule(static,1)",static,13.432705,23259.25744533539
+500000000,8,sockets,spread, ,simd, ,static,4.842765,23661.00946044922
+1000000000,2,threads,spread, ,simd, ,static,9.14739,23695.345952272415
+1500000000,2,sockets,close, ,simd, ,dynamic,13.422195,23742.335652589798
+500000000,128,cores,spread, ,simd,"schedule(static,1)",dynamic,4.85763,24064.962134838104
+1000000000,256,threads,spread, ,simd,"schedule(static,1)",static,9.142575,24099.405086517334
+1500000000,128,cores,master,#pragma omp parallel for,simd,"schedule(static,1)",static,13.582844999999999,24147.41318488121
+500000000,192,cores,close, ,simd,"schedule(static,1)",dynamic,4.8473,24395.943665981293
+1000000000,192,cores,close, ,simd,"schedule(static,1)",static,9.136195,24430.310345172882
+1500000000,256,cores,close, ,simd,"schedule(static,1)",static,13.41901,24477.38864994049
+500000000,256,cores,master, ,simd,"schedule(static,1)",dynamic,4.84515,24633.179966688156
+1000000000,256,cores,spread, ,simd,"schedule(static,1)",static,9.129145,24667.532998800278
+1500000000,256,cores,master, , ,"schedule(static,1)",dynamic,13.421215,24714.606135606766
+500000000,48,cores,spread, ,simd, ,static,4.846125,24925.92386007309
+1000000000,2,cores,close, ,simd, ,dynamic,9.135784999999998,24960.181901931763
+1500000000,4,sockets,close, ,simd, ,static,13.43966,25007.464269161224
+500000000,2,cores,close, ,simd,"schedule(static,1)",dynamic,4.857165,25354.715144872665
+1000000000,16,cores,master, , ,"schedule(static,1)",dynamic,9.142505,25389.125207901
+1500000000,8,cores,master, , ,"schedule(static,1)",dynamic,13.435929999999999,25436.165870428085
+500000000,96,sockets,spread, ,simd, ,static,4.8571550000000006,25573.50155568123
+1000000000,256,cores,spread, ,simd,"schedule(static,1)",dynamic,9.216529999999999,25607.92355442047
+1500000000,256,cores,spread, ,simd,"schedule(static,1)",dynamic,13.433309999999999,25655.17498755455
+500000000,4,cores,master, ,simd,"schedule(static,1)",static,4.855919999999999,26058.130846738815
+1000000000,96,cores,master, ,simd,"schedule(static,1)",static,9.14501,26092.39993262291
+1500000000,192,cores,close, , , ,static,13.428180000000001,26139.514612197876
+500000000,4,sockets,close, , , ,static,4.841545,26378.25409221649
+1000000000,32,cores,master, ,simd, ,static,9.134785,26412.56756877899
+1500000000,256,cores,spread, ,simd, ,static,13.42141,26459.562044382095
+500000000,4,cores,close, , ,"schedule(static,1)",static,4.853225,27077.0794506073
+1000000000,4,cores,master, , ,"schedule(static,1)",static,9.14576,27111.384084701538
+1500000000,192,cores,spread, ,simd, ,static,13.442205000000001,27158.359759569168
+500000000,2,sockets,master, , ,"schedule(static,1)",dynamic,4.8407800000000005,27664.447659015656
+1000000000,2,cores,close, , ,"schedule(static,1)",dynamic,9.137765,27698.93932557106
+1500000000,256,sockets,close, , ,"schedule(static,1)",static,13.450990000000001,27746.08378124237
+500000000,2,cores,master, ,simd, ,static,4.850135,28094.36679840088
+1000000000,2,cores,close, ,simd, ,static,9.139925000000002,28128.62748479843
+1500000000,96,cores,master, ,simd, ,static,13.41819,28175.70983171463
+500000000,96,cores,close, , , ,static,4.86068,28401.522109031677
+1000000000,32,cores,close, , ,"schedule(static,1)",static,9.12367,28435.734834194183
+1500000000,256,threads,close, , ,"schedule(static,1)",dynamic,13.438324999999999,28482.65296936035
+500000000,32,sockets,spread, ,simd, ,static,4.85688,28589.656559944153
+1000000000,256,cores,spread, , ,"schedule(static,1)",static,9.19705,28624.044326543808
+1500000000,256,cores,close, , ,"schedule(static,1)",static,13.43309,28671.050644397736
+500000000,48,sockets,master, ,simd, ,static,4.854305,28798.75903749466
+1000000000,256,cores,close, ,simd,"schedule(static,1)",static,9.12705,28833.16049528122
+1500000000,192,cores,spread, ,simd,"schedule(static,1)",static,13.443735,28880.410452842712
+500000000,256,threads,close, ,simd, ,static,4.837785,29271.74434685707
+1000000000,256,cores,close, , ,"schedule(static,1)",static,8.942585000000001,29305.800349473953
+1500000000,128,cores,spread, ,simd,"schedule(static,1)",static,13.14385,29352.38824415207
+500000000,256,threads,close, , ,"schedule(static,1)",dynamic,4.845829999999999,29576.67546725273
+1000000000,192,cores,spread, , ,"schedule(static,1)",static,9.138965,29611.116216421127
+1500000000,192,cores,close, , ,"schedule(static,1)",static,13.512474999999998,29658.364475250244
+500000000,256,sockets,spread, , ,"schedule(static,1)",dynamic,4.917675,30086.021731376648
+1000000000,256,sockets,close, , ,"schedule(static,1)",dynamic,9.128215,30120.35103034973
+1500000000,256,threads,master, ,simd, ,static,13.427765,30167.471815109253
+500000000,256,threads,spread, , ,"schedule(static,1)",dynamic,4.85946,30644.536560297012
+1000000000,256,threads,close, , ,"schedule(static,1)",dynamic,9.139025,30678.921084165573
+1500000000,48,cores,spread, , ,"schedule(static,1)",dynamic,13.433355,30725.92045044899
+500000000,2,sockets,spread, , ,"schedule(static,1)",static,4.84544,31075.244616270065
+1000000000,2,threads,close, , ,"schedule(static,1)",static,9.13209,31109.493355751038
+1500000000,8,cores,close, , ,"schedule(static,1)",dynamic,13.440705000000001,31156.601203918457
+500000000,8,threads,close, , ,"schedule(static,1)",dynamic,4.844175,31678.226940870285
+1000000000,192,threads,spread, , ,"schedule(static,1)",dynamic,9.114985,31712.56987810135
+1500000000,256,sockets,close, , ,"schedule(static,1)",dynamic,13.41052,31759.577675819397
+500000000,128,cores,close, , ,"schedule(static,1)",dynamic,4.849765,31870.581177949905
+1000000000,256,cores,master, ,simd,"schedule(static,1)",static,9.123175,31904.781537532806
+1500000000,256,cores,master, ,simd,"schedule(static,1)",static,13.41363,31951.777579069138
+500000000,256,threads,master, , ,"schedule(static,1)",dynamic,4.836645,32161.82313966751
+1000000000,256,threads,master, ,simd,"schedule(static,1)",static,9.11428,32196.02204632759
+1500000000,256,threads,close, ,simd,"schedule(static,1)",static,13.437664999999999,32243.069595575333
+500000000,256,cores,spread, ,simd,"schedule(static,1)",static,4.84768,32338.150550365448
+1000000000,192,cores,master, ,simd,"schedule(static,1)",static,9.154164999999999,32372.4308924675
+1500000000,2,cores,close,#pragma omp parallel for,simd,"schedule(static,1)",static,13.649754999999999,32420.23269200325
+500000000,2,cores,master, , ,"schedule(static,1)",dynamic,4.85402,32529.407745599747
+1000000000,256,cores,master, , ,"schedule(static,1)",static,9.130825,32563.717377901077
+1500000000,16,cores,close, ,simd,"schedule(static,1)",dynamic,13.44731,32610.699822187424
+500000000,4,sockets,close, , ,"schedule(static,1)",static,4.708655,32889.27119803429
+1000000000,2,sockets,close, , ,"schedule(static,1)",dynamic,9.145855000000001,32923.57818746567
+1500000000,96,cores,close, , ,"schedule(static,1)",static,13.427965,32970.64666199684
+500000000,256,threads,master, ,simd,"schedule(static,1)",dynamic,4.84384,33209.0600335598
+1000000000,256,threads,master, , ,"schedule(static,1)",dynamic,9.145865,33243.304446935654
+1500000000,256,threads,spread, ,simd,"schedule(static,1)",dynamic,13.413495000000001,33290.252163887024
+500000000,256,cores,master, , ,"schedule(static,1)",dynamic,4.8341650000000005,33474.70347619057
+1000000000,256,cores,master, ,simd,"schedule(static,1)",dynamic,9.134360000000001,33509.18666386604
+1500000000,256,sockets,master,#pragma omp parallel for,simd,"schedule(static,1)",static,13.617945,33557.543659448624
+500000000,256,cores,close, , ,"schedule(static,1)",static,4.70252,33987.38729214668
+1000000000,192,threads,master, , ,"schedule(static,1)",static,9.146035000000001,34021.77543258667
+1500000000,256,threads,master, , ,"schedule(static,1)",dynamic,13.42267,34068.779124975204
+500000000,256,threads,master, , ,"schedule(static,1)",static,4.85205,34266.95009613037
+1000000000,256,threads,close, , ,"schedule(static,1)",static,9.13381,34301.49748182297
+1500000000,96,sockets,spread, , ,"schedule(static,1)",static,13.430555,34348.6013815403
+500000000,256,cores,close, , ,"schedule(static,1)",dynamic,4.847345,34452.62876224518
+1000000000,192,cores,spread, , ,"schedule(static,1)",dynamic,9.135505,34487.0887298584
+1500000000,256,cores,spread, ,simd,"schedule(static,1)",static,13.421875,34534.47531938553
+500000000,256,cores,spread, , ,"schedule(static,1)",dynamic,4.8346350000000005,35153.54934382439
+1000000000,192,threads,close, , ,"schedule(static,1)",dynamic,9.135265,35187.830060720444
+1500000000,256,sockets,master, , ,"schedule(static,1)",dynamic,13.4474,35234.89696931839
+500000000,96,threads,spread, , ,"schedule(static,1)",static,4.8484300000000005,35971.42447090149
+1000000000,128,threads,close, , ,"schedule(static,1)",static,9.123565,36005.68657851219
+1500000000,192,sockets,spread, , ,"schedule(static,1)",static,13.42369,36052.67240476608
+500000000,256,threads,close, ,simd,"schedule(static,1)",static,4.85228,36337.12078499794
+1000000000,256,threads,spread, , ,"schedule(static,1)",static,9.145565000000001,36371.5008187294
+1500000000,256,threads,spread, ,simd,"schedule(static,1)",static,13.41385,36418.40229558945
+500000000,192,cores,close, ,simd, ,dynamic,4.84555,36738.067826747894
+1000000000,192,threads,master, , ,"schedule(static,1)",dynamic,9.130285,36772.35572385788
+1500000000,64,sockets,master, , ,"schedule(static,1)",dynamic,13.43993,36819.34255337715
+500000000,128,cores,spread, , ,"schedule(static,1)",dynamic,4.84462,37058.19165825844
+1000000000,256,cores,close, , ,"schedule(static,1)",dynamic,9.14301,37092.722210645676
+1500000000,2,cores,master, ,simd,"schedule(static,1)",static,13.419935,37139.69804644585
+500000000,256,threads,close, ,simd,"schedule(static,1)",dynamic,4.850445000000001,37460.80952501297
+1000000000,64,cores,master, ,simd,"schedule(static,1)",dynamic,9.154630000000001,37495.188737630844
+1500000000,48,cores,close, ,simd,"schedule(static,1)",static,13.500945000000002,37542.29329037666
+500000000,4,cores,spread, , ,"schedule(static,1)",dynamic,4.840255,37808.073348522186
+1000000000,8,cores,master, , ,"schedule(static,1)",dynamic,9.184615,37842.43267965317
+1500000000,128,cores,master, , ,"schedule(static,1)",dynamic,13.423865,37889.42883324623
+500000000,4,cores,close, ,simd, ,static,4.92026,38306.939434051514
+1000000000,128,threads,close, , ,"schedule(static,1)",dynamic,9.140765,38341.16649198532
+1500000000,192,sockets,spread, , ,"schedule(static,1)",dynamic,13.45257,38388.18620991707
+500000000,192,cores,master, ,simd,"schedule(static,1)",dynamic,4.858435,38698.4223845005
+1000000000,64,threads,master, ,simd,"schedule(static,1)",dynamic,9.137655,38732.67015361786
+1500000000,64,threads,spread, , ,"schedule(static,1)",dynamic,13.435485,38779.64984989166
+500000000,128,cores,close, ,simd,"schedule(static,1)",dynamic,4.927415,38904.34548354149
+1000000000,96,cores,spread, ,simd,"schedule(static,1)",dynamic,9.146455,38938.58660840988
+1500000000,192,cores,spread, ,simd,"schedule(static,1)",dynamic,13.426005,38985.64234852791
+500000000,2,cores,close, , ,"schedule(static,1)",static,4.859195,39648.25968003273
+1000000000,256,threads,spread, , ,"schedule(static,1)",dynamic,9.136625,39682.70986843109
+1500000000,256,cores,spread, , ,"schedule(static,1)",dynamic,13.43647,39729.64995288849
+500000000,96,sockets,master, , ,"schedule(static,1)",dynamic,4.85522,40221.6784722805
+1000000000,96,threads,close, , ,"schedule(static,1)",dynamic,9.11228,40255.84627532959
+1500000000,128,threads,spread, , ,"schedule(static,1)",dynamic,13.42772,40302.861132621765
+500000000,64,sockets,master, , ,"schedule(static,1)",dynamic,4.850474999999999,40627.20614075661
+1000000000,64,sockets,master, ,simd,"schedule(static,1)",dynamic,9.143985,40661.52290773392
+1500000000,64,sockets,close, , ,"schedule(static,1)",dynamic,13.494895,40708.64231657982
+500000000,4,sockets,master, , ,"schedule(static,1)",static,4.857905000000001,41229.90891337395
+1000000000,4,sockets,spread, , ,"schedule(static,1)",static,9.150355000000001,41264.26673698425
+1500000000,8,cores,close, , ,"schedule(static,1)",static,13.438035,41311.284641742706
+500000000,128,cores,spread, , ,"schedule(static,1)",static,4.845065,41588.59846663475
+1000000000,48,cores,close, , ,"schedule(static,1)",static,8.91959,41622.70691084862
+1500000000,128,cores,close, , ,"schedule(static,1)",static,13.42638,41669.742367744446
+500000000,4,cores,close, , ,"schedule(static,1)",dynamic,4.8418600000000005,42117.46534490585
+1000000000,4,cores,close, , ,"schedule(static,1)",static,9.10525,42151.74077153206
+1500000000,64,cores,close, , ,"schedule(static,1)",static,13.425055,42198.74036335945
+750000000,128,cores,close, , ,"schedule(static,1)",static,6.99868,42227.019964933395
+1250000000,128,cores,close, , ,"schedule(static,1)",static,11.270420000000001,42267.75656032562
+2000000000,128,cores,close, ,simd,"schedule(static,1)",static,17.683305,42327.48859143257
